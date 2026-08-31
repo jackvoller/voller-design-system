@@ -238,7 +238,7 @@ Per repo, after the edits:
 - **`desk_booking`** — runs a client-facing Salesforce-adjacent palette (`#007ab7` seaside,
   `#13c5e2` ice, `#0d0e20` pepper) with Proxima Nova and Futura PT. Correctly *not* Voller; leave it.
 - **`uk_market`** — Silverfin accounting templates, not a UI product.
-- **`unpickle_website`** — excluded by your scope call. Note it still ships `#00A000`,
+- **`unpickle_website`** — no longer excluded; its README now points here. Note it still ships
   `--background: 0 0% 96.1%` and `--radius: 0.75rem`, so if it is still live it will visibly disagree
   with `studio` the moment studio moves. Its `globals.css` is nearly identical to studio's, so the
-  §5 table applies almost verbatim if you change your mind.
+  §5 table applies almost verbatim when you migrate it.

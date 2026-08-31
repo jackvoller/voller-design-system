@@ -1,3 +1,22 @@
+# Voller design system
+
+Canonical source of truth for colour, type, spacing, components and app icons across
+**UnPickle (studio)**, **Meal Planner**, **UnJumble**, **Riverly** and **voller.uk**.
+
+| File | What |
+|---|---|
+| [`VOLLER.md`](VOLLER.md) | **The spec.** The one file other repos point at. |
+| [`MIGRATION.md`](MIGRATION.md) | Per-repo find/replace checklist and migration state. |
+| `voller-design-system-reference.html` | Live component reference — open in a browser. |
+| `<App>/` | App icon sets: 3 PNGs + `Contents.json` + SVG masters. |
+| `BRAND.md` | Retired stub. Superseded by `VOLLER.md`. |
+
+Raw URL for consuming repos:
+
+    https://raw.githubusercontent.com/jackvoller/voller-design-system/main/VOLLER.md
+
+---
+
 # App icons — drop-in
 
 Each folder is a complete `AppIcon.appiconset` **plus vector source**.

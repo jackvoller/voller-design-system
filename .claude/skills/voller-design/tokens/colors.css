@@ -1,21 +1,26 @@
 :root {
-  /* --- Base palette: six brand values, inherited unchanged from the app icons.
-         Do not add a seventh. --- */
-  --green: #82BA51;        /* the brand; primary fills */
-  --green-deep: #69A63C;   /* interior detail on green shapes only */
-  --green-dark: #3F6B27;   /* links, hover/pressed, detail on top of gold */
+  /* --- Base palette: the twelve values of VOLLER.md §1. Do not introduce a
+         thirteenth without adding it to VOLLER.md first. --- */
+  --green: #82BA51;        /* the brand; primary fills. Tint on dark. Ink labels only */
+  --green-deep: #69A63C;   /* interior detail on green shapes; filled chips and pins */
+  --green-dark: #3F6B27;   /* tint on light: links, glyphs, pressed. Detail on top of gold */
   --gold: #F0C21C;         /* the action colour — rationed, one per view */
-  --cream: #F6F1E3;        /* light surfaces, negative space */
-  --cream-dark: #EFE9DA;   /* the cream substitute on dark */
-  --ink: #1B1B19;          /* body text on light; dark sections */
-  --muted: #8A8A8A;        /* secondary text, both fields */
+  --cream: #F6F1E3;        /* light panels, action bars, negative space */
+  --cream-dark: #EFE9DA;   /* body text and surfaces on dark. Never pure white on dark */
+  --ink: #1B1B19;          /* body text on light; dark base; labels on green and gold */
+  --ink-raised: #24231F;   /* cards and list rows on dark — warm, not iOS #1C1C1E */
+  --muted: #6E6E6B;        /* secondary text and eyebrows on light. 5.0:1 */
+  --muted-dark: #8A8A8A;   /* secondary text and eyebrows on dark. 5.0:1 */
+  --alert: #C4382C;        /* safety and destruction only, on light */
+  --alert-light: #E8705F;  /* the alert substitute on dark */
+
   --white: #FFFFFF;
   --off-white: #FCFCF6;    /* flat page background */
 
   /* --- Fields: the only two gradients in the system --- */
   --field-light: linear-gradient(160deg, #FCFCF6 0%, #F1F0E4 100%);
   --field-dark: linear-gradient(160deg, #302F2C 0%, #1B1B19 100%);
-  /* Tile gloss — belongs to the tile, never to the drawn subject */
+  /* Tile gloss — belongs to the tile, never to the drawn subject, never to product UI */
   --gloss: radial-gradient(120% 90% at 30% 0%, rgba(255,255,255,.7) 0%, rgba(255,255,255,0) 55%);
 
   /* --- Lines --- */
@@ -35,23 +40,44 @@
   --bg-dark: var(--ink);
   --surface-card: var(--white);
   --surface-sunken: var(--cream);
-  --surface-card-dark: #26251F;
+  --surface-card-dark: var(--ink-raised);
 
   --text-body: var(--ink);
   --text-secondary: var(--muted);
   --text-heading: var(--ink);
   --text-on-dark: var(--cream-dark);
-  --text-secondary-on-dark: #9C9C96;
-  --text-on-green: var(--off-white);
+  --text-secondary-on-dark: var(--muted-dark);
+  /* green + cream is 2.3:1 and fails AA. A green fill carries an ink label in
+     both fields — one button, no variants. VOLLER.md §1.1 */
+  --text-on-green: var(--ink);
   --text-link: var(--green-dark);
   --text-link-hover: var(--green);
 
   --action-primary: var(--green);
   --action-primary-hover: var(--green-dark);
-  --action-accent: var(--gold);           /* once per view */
-  --action-accent-detail: var(--green-dark); /* the only ink allowed on gold */
+  --action-accent: var(--gold);              /* once per view */
+  --action-accent-detail: var(--ink);        /* gold + ink is 10.2:1 */
+  --action-destructive: var(--alert);
+  --action-destructive-on-dark: var(--alert-light);
 
   --border-subtle: var(--hairline);
   --border-input: var(--hairline-strong);
   --focus-ring: rgba(105, 166, 60, .45);
+}
+
+/* Dark field. VOLLER.md §1 gives dark a full specification — do not guess per repo. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-page: var(--field-dark);
+    --bg-page-flat: var(--ink);
+    --surface-card: var(--ink-raised);
+    --surface-sunken: var(--ink);
+    --text-body: var(--cream-dark);
+    --text-heading: var(--cream-dark);
+    --text-secondary: var(--muted-dark);
+    --text-link: var(--green);        /* the tint flips — green fails on light, not dark */
+    --text-link-hover: var(--green-deep);
+    --border-subtle: var(--hairline-on-dark);
+    --border-input: var(--hairline-on-dark);
+  }
 }

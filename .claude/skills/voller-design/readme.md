@@ -4,7 +4,11 @@ Voller is a two-person studio in Bristol that ships four iOS apps: **UnPickle**,
 **UnJumble** and **Riverly**. This system is the house brand — the one that has to look like the
 *parent* of those four icons without becoming a fifth app.
 
-The whole thing is derived from two documents written for the icon work, both kept in this project:
+**Authority.** `VOLLER.md` at the root of the `voller-design-system` repo is the spec. It supersedes
+both source documents below, and where this package and `VOLLER.md` disagree, `VOLLER.md` wins — read
+it before designing anything. The tokens in `tokens/` have been reconciled to it.
+
+This package is derived from two documents written for the icon work, both kept here as history:
 
 | Source | What it is |
 |---|---|
@@ -49,14 +53,19 @@ The voice is a maker describing what a thing does, then stopping.
 ## VISUAL FOUNDATIONS
 
 ### Colour
-Six brand values and nothing else: green `#82BA51`, green-deep `#69A63C`, green-dark `#3F6B27`, gold
-`#F0C21C`, cream `#F6F1E3`, cream-dark `#EFE9DA`, plus ink `#1B1B19` and muted `#8A8A8A` for text.
-**Do not add a seventh hue.** If something needs distinguishing, move lightness inside the green ramp.
+Twelve values and nothing else — see `VOLLER.md` §1 for the table and §1.1 for the sanctioned
+contrast pairings. Green `#82BA51`, green-deep `#69A63C`, green-dark `#3F6B27`, gold `#F0C21C`,
+cream `#F6F1E3`, cream-dark `#EFE9DA`, ink `#1B1B19`, ink-raised `#24231F`, muted `#6E6E6B`,
+muted-dark `#8A8A8A`, alert `#C4382C`, alert-light `#E8705F`.
+**Do not add a thirteenth.** If something needs distinguishing, move lightness inside the green ramp.
 Green is never a gradient — flat fills only.
 
-There is **no red, amber or blue in this palette**, which means no conventional semantic colours.
-Errors read as `--green-dark` plus a written message; destructive actions rely on wording and
-confirmation, not colour.
+**Two corrections to the source documents, both AA failures.** `--muted` is `#6E6E6B` on light —
+the old `#8A8A8A` is 3.4:1 there and is now `--muted-dark`, for dark only. And a green fill carries
+an **ink** label, never a light one: `green` + cream is 2.3:1. One button, no variants, both fields.
+
+`alert` / `alert-light` exist for safety and destruction only — not a highlight, not decoration.
+There is still no amber or blue, and no conventional semantic colour set beyond that one pair.
 
 **The gold rule** is the strongest rule in the system: gold appears **exactly once per view**, on the
 thing the user came to do. In a header, that one gold is the wordmark's tile — so a header carrying a
@@ -72,8 +81,11 @@ hand-drawn illustration. The one lighting effect in the system is the tile-level
 (`--gloss`), and it belongs to the *tile* — never to a drawn subject and never to a web surface.
 
 ### Type
-**DM Sans only**, weights 400 / 500 / 600 — 700+ is unused. Never pair a second family. Scale
-44 / 34 / 22 / 16 / 14 / 12. Headings 600 at `-0.02em`; body 400 at `line-height: 1.6`; controls 500 at
+**The platform system sans only** — SF Pro / Segoe UI / Roboto, a documented substitution ladder.
+No webfont; no `<link>` to fonts.googleapis.com anywhere in the family. (DM Sans was dropped when the
+two source specs were reconciled.) Weights 400 / 500 / 600 — 700+ is unused. Never pair a second
+family. Scale 44 / 34 / 22 / 16 / 14 / 12. On iOS this becomes a Dynamic Type mapping, never
+`.system(size:)` — see `VOLLER.md` §2. Headings 600 at `-0.02em`; body 400 at `line-height: 1.6`; controls 500 at
 `-0.01em`. Prose measure 640–720px with `text-wrap: pretty`. A monospace (`--font-mono`) is permitted
 **only** for eyebrows, spec labels and code: 11–12px, uppercase, `.1em` tracking, `--muted`.
 
@@ -121,7 +133,7 @@ No bounces, no springs, no parallax, no scroll-triggered reveals, no looping amb
 - **Selected nav** — a 7% green-dark wash behind the item, green-dark label. No underline, no bar.
 
 ### Wordmark
-`Voller` in DM Sans 600 at `-0.02em`, followed by one gold app tile as a full stop — the hint at what
+`Voller` in the system sans, 600, at `-0.02em`, followed by one gold app tile as a full stop — the hint at what
 the studio does. Tile = 0.33 × cap height, gap = 0.2 × cap height, tile radius 23.5%, baseline-aligned.
 22px header / 32px mid / 64px hero. **The circular icon is not part of the wordmark** and must not sit
 beside it in a header; the footer is the one permitted lockup, at ~34px icon / 18px word.

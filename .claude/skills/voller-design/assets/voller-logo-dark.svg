@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="220" height="56" viewBox="0 0 220 56" role="img" aria-label="Voller">
-  <title>Voller wordmark, on dark — requires DM Sans 600; prefer the CSS lockup in VOLLER-THEME.md §3</title>
-  <text x="0" y="40" font-family="'DM Sans', ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="44" font-weight="600" letter-spacing="-0.88" fill="#EFE9DA">Voller</text>
+  <title>Voller wordmark, on dark — set in the system sans at 600 — prefer the CSS lockup in VOLLER.md §7 for the web</title>
+  <text x="0" y="40" font-family="-apple-system, BlinkMacSystemFont, &apos;SF Pro Text&apos;, system-ui, &apos;Segoe UI&apos;, Roboto, sans-serif" font-size="44" font-weight="600" letter-spacing="-0.88" fill="#EFE9DA">Voller</text>
   <rect x="139" y="29" width="11" height="11" rx="2.6" fill="#F0C21C"></rect>
 </svg>

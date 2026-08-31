@@ -1,4 +1,7 @@
-/* Voller ships one family: DM Sans (400/500/600). Served from Google Fonts —
-   there are no local font binaries in the source material. Swap this @import for
-   @font-face rules if you self-host. */
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap");
+/* Voller ships no webfont. One family: the platform system sans, as a documented
+   substitution ladder — SF Pro on Apple, Segoe UI on Windows, Roboto on Android.
+   All three are neutral grotesques at comparable optical weight, so the scale in
+   typography.css holds on all of them. VOLLER.md §2.
+
+   There must be no <link> or @import to fonts.googleapis.com anywhere in the
+   family. DM Sans was removed when the two source specs were reconciled. */

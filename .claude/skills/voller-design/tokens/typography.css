@@ -1,5 +1,6 @@
 :root {
-  --font-sans: 'DM Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  /* No webfont — the platform system sans. VOLLER.md §2 */
+  --font-sans: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, 'Segoe UI', Roboto, sans-serif;
   --font-mono: ui-monospace, 'SF Mono', Menlo, monospace;
 
   /* Weights: 400/500/600 only. 700+ is unused in this brand. */

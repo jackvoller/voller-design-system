@@ -7,7 +7,8 @@ Canonical source of truth for colour, type, spacing, components and app icons ac
 |---|---|
 | [`VOLLER.md`](VOLLER.md) | **The spec.** The one file other repos point at. |
 | [`MIGRATION.md`](MIGRATION.md) | Per-repo find/replace checklist and migration state. |
-| `voller-design-system-reference.html` | Live component reference — open in a browser. |
+| `voller-design-system-reference.html` | Live component reference — open in a browser. **In-app colour is stale**; see below. |
+| `voller-in-app-colour-reference.dc.html` | In-app colour: the six accent tokens, four screens light and dark, one component set in two accents. |
 | `<App>/` | App icon sets: 3 PNGs + `Contents.json` + SVG masters. |
 | `BRAND.md` | Retired stub. Superseded by `VOLLER.md`. |
 

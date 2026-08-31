@@ -1,6 +1,9 @@
 :root {
-  /* --- Base palette: the twelve values of VOLLER.md §1. Do not introduce a
-         thirteenth without adding it to VOLLER.md first. --- */
+  /* --- The house palette: the twelve values of VOLLER.md §1. Draws the icons, the
+         wordmark, voller.uk and the App Store, plus every neutral, surface, hairline
+         and alert inside a product. Do not introduce a thirteenth without adding it to
+         VOLLER.md first. Inside an app, action and state come from the six accent
+         tokens at the bottom of this file (VOLLER.md §1.2) — not from green and gold. --- */
   --green: #82BA51;        /* the brand; primary fills. Tint on dark. Ink labels only */
   --green-deep: #69A63C;   /* interior detail on green shapes; filled chips and pins */
   --green-dark: #3F6B27;   /* tint on light: links, glyphs, pressed. Detail on top of gold */
@@ -10,7 +13,8 @@
   --ink: #1B1B19;          /* body text on light; dark base; labels on green and gold */
   --ink-raised: #24231F;   /* cards and list rows on dark — warm, not iOS #1C1C1E */
   --muted: #6E6E6B;        /* secondary text and eyebrows on light. 5.0:1 */
-  --muted-dark: #8A8A8A;   /* secondary text and eyebrows on dark. 5.0:1 */
+  --muted-dark: #A09892;   /* secondary text and eyebrows on dark. 4.7:1 at the worst point
+                              of the dark field. #8A8A8A is retired — it was 3.9:1 there */
   --alert: #C4382C;        /* safety and destruction only, on light */
   --alert-light: #E8705F;  /* the alert substitute on dark */
 
@@ -83,5 +87,88 @@
     --text-link-hover: var(--green-deep);
     --border-subtle: var(--hairline-dark);
     --border-input: var(--hairline-dark);
+  }
+}
+
+/* ============================================================================
+   THE APP ACCENT — VOLLER.md §1.2
+
+   Six tokens, published once per app. Everything else is inherited from the
+   house palette above. This block is for PRODUCT UI only; voller.uk, the App
+   Store and the icons stay on green and gold.
+
+   Swap the six and the whole component set becomes another app. Nothing below
+   this comment needs to change.
+
+       accent       fills — primary button, active tab, live state
+       accent-deep  glyphs, links, pressed, on light
+       accent-wash  quiet button, tab pill, selected ground. LIGHT FIELD ONLY
+       field-app        the app's page gradient on light
+       field-app-dark   the same hue at a tenth of the light
+       accent-dark  the tint on dark
+
+   Published apps, and the label each fill takes:
+
+       UnJumble — coral   #FF5A3C #B92F14 #FFE7E0 #FF7358
+                          field #FFFCFA -> #FFEDE6   dark #2C2320 -> #1A1413
+                          label: ink
+       Meal Planner + UnPickle — green
+                          #2BBF4E #116B26 #E3F7E8 #45D268
+                          field #FBFEFB -> #E9F8EC   dark #1F2A21 -> #141A15
+                          label: ink
+       Riverly — blue     #0B5FD0 #0B4E9E #E2EEFC #4E9BF5
+                          field #FAFCFF -> #E6F0FB   dark: NOT YET PUBLISHED
+                          label: cream
+                          PROPOSAL — muted on this field's bottom stop is 4.4:1
+                          and fails AA. See VOLLER.md §1.2.1 before using it.
+
+   The values below are UnJumble's. Replace the six for another app.
+   ========================================================================= */
+:root {
+  --accent: #FF5A3C;
+  --accent-deep: #B92F14;
+  --accent-wash: #FFE7E0;
+  --accent-dark: #FF7358;
+  --field-app:      linear-gradient(160deg, #FFFCFA 0%, #FFEDE6 100%);
+  --field-app-dark: linear-gradient(160deg, #2C2320 0%, #1A1413 100%);
+
+  /* This app's published label. Ink on coral is 5.6:1; cream would be 2.7:1.
+     Riverly is the one app that flips this to var(--cream) — 5.2:1 on #0B5FD0. */
+  --on-accent: var(--ink);
+
+  /* Flips between fields, exactly as --tint does. accent is a FILL only —
+     never text, never a glyph, in either field. */
+  --accent-tint: var(--accent-deep);
+
+  /* --- Semantic aliases. Use these in product UI, not the raw six. --- */
+  --bg-app: var(--field-app);
+  --action-app: var(--accent);              /* once per role per view — §4.2 */
+  --action-app-label: var(--on-accent);
+  --action-app-quiet-bg: var(--accent-wash);
+  --action-app-quiet-label: var(--accent-deep);
+  --text-link-app: var(--accent-tint);
+  --state-current: var(--accent);           /* today, live, recording */
+  --selection-edge: var(--accent);          /* 2px edge + one filled tick */
+
+  /* Neutral by default (§1.2). Counts, tags, dates, durations, avatars and
+     photo slots use these — never the accent. Naming them makes the rule
+     something you can reach for rather than something you must remember. */
+  --text-count: var(--muted);
+  --text-tag: var(--muted);
+  --text-meta: var(--muted);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-app: var(--field-app-dark);
+    --accent-tint: var(--accent-dark);
+    --text-count: var(--muted-dark);
+    --text-tag: var(--muted-dark);
+    --text-meta: var(--muted-dark);
+    /* --accent and --on-accent do NOT change. One button, no variants.
+       --accent-wash has no dark form: the quiet button becomes an outline,
+       rgba(246,241,227,.20), per VOLLER.md §9. */
+    --action-app-quiet-bg: transparent;
+    --action-app-quiet-label: var(--accent-dark);
   }
 }

@@ -53,27 +53,47 @@ The voice is a maker describing what a thing does, then stopping.
 ## VISUAL FOUNDATIONS
 
 ### Colour
-Twelve values and nothing else — see `VOLLER.md` §1 for the table and §1.1 for the sanctioned
-contrast pairings. Green `#82BA51`, green-deep `#69A63C`, green-dark `#3F6B27`, gold `#F0C21C`,
-cream `#F6F1E3`, cream-dark `#EFE9DA`, ink `#1B1B19`, ink-raised `#24231F`, muted `#6E6E6B`,
-muted-dark `#8A8A8A`, alert `#C4382C`, alert-light `#E8705F`.
-**Do not add a thirteenth.** If something needs distinguishing, move lightness inside the green ramp.
+Colour splits in two — see `VOLLER.md` §1 for the split, §1.2 for the app accent, §1.1 and §1.2.1
+for the sanctioned contrast pairings.
+
+**The house palette — twelve values, fixed.** Green `#82BA51`, green-deep `#69A63C`, green-dark
+`#3F6B27`, gold `#F0C21C`, cream `#F6F1E3`, cream-dark `#EFE9DA`, ink `#1B1B19`, ink-raised
+`#24231F`, muted `#6E6E6B`, muted-dark `#A09892`, alert `#C4382C`, alert-light `#E8705F`.
+It draws the icons, the wordmark, voller.uk and the App Store, plus every neutral, surface,
+hairline and alert inside a product. **Do not add a thirteenth.**
 Green is never a gradient — flat fills only.
 
-**Two corrections to the source documents, both AA failures.** `--muted` is `#6E6E6B` on light —
-the old `#8A8A8A` is 3.4:1 there and is now `--muted-dark`, for dark only. And a green fill carries
-an **ink** label, never a light one: `green` + cream is 2.3:1. One button, no variants, both fields.
+**The app accent — six values, published per app.** Inside a product, action and state come from
+the app's own `accent`, `accent-deep`, `accent-wash`, `field`, `field-dark` and `accent-dark`, not
+from green and gold. UnJumble is coral `#FF5A3C`; Meal Planner and UnPickle share green `#2BBF4E`;
+Riverly proposes blue `#0B5FD0`. Full values in `tokens/colors.css` and §1.2. An app may not add a
+seventh colour to its chrome — if it needs a distinction, it moves inside its own accent ramp.
 
-`alert` / `alert-light` exist for safety and destruction only — not a highlight, not decoration.
-There is still no amber or blue, and no conventional semantic colour set beyond that one pair.
+**Three corrections to the source documents, all AA failures.** `--muted` is `#6E6E6B` on light —
+the old `#8A8A8A` is 3.4:1 there. `--muted-dark` is `#A09892`, dark only — `#8A8A8A` was 3.9:1 at
+the top of the dark field and is now retired outright. And a fill carries its published label,
+never the other one: `green` + cream is 2.3:1, coral + cream 2.7:1. One button, no variants,
+both fields.
 
-**The gold rule** is the strongest rule in the system: gold appears **exactly once per view**, on the
+`alert` / `alert-light` exist for safety and destruction only — not a highlight, not decoration,
+and never replaced by an app's accent. There is no amber, and no conventional semantic colour set
+beyond that one pair.
+
+**The gold rule** governs the icons and the shop: gold appears **exactly once per view**, on the
 thing the user came to do. In a header, that one gold is the wordmark's tile — so a header carrying a
 gold button is wrong. Gold is not a warning, a highlight or decoration. Where two golds meet, one
 becomes green-dark. Green-dark is the only ink allowed on top of gold.
+**Gold does not appear in product UI at all.**
+
+**The accent rule** is the same idea inside an app: **one accent per role per view** — one primary
+action, one active tab, one "current" marker. Everything else is **neutral by default**: counts,
+tags, dates, durations, avatars, photo slots and speaker names are ink, muted or white. Colour marks
+the action, the current thing, and the danger. `accent` is a fill only — as text or a glyph it steps
+down to `accent-deep` on light, `accent-dark` on dark.
 
 ### Backgrounds
-Two gradients exist and no third may be invented: `--field-light`
+Two house gradients exist, plus each app's own pair (§1.2), and no others may be invented:
+`--field-light`
 (`160deg, #FCFCF6 → #F1F0E4`) for pages and hero bands, `--field-dark` (`160deg, #302F2C → #1B1B19`)
 for previews and UI. Flat `#FCFCF6` is the everyday page. Dark sections are flat `#1B1B19` with
 cream-dark text. No photographic backgrounds, no repeating patterns, no textures, no noise, no

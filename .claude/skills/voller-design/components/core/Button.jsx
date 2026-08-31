@@ -52,7 +52,7 @@ export function Button({
     quiet: {
       background: 'transparent',
       color: onDark ? 'var(--text-on-dark)' : 'var(--green-dark)',
-      boxShadow: `inset 0 0 0 1px ${onDark ? 'var(--hairline-on-dark)' : 'var(--hairline-strong)'}`,
+      boxShadow: `inset 0 0 0 1px ${onDark ? 'var(--hairline-dark)' : 'var(--hairline-strong)'}`,
     },
     text: { background: 'transparent', color: onDark ? 'var(--text-on-dark)' : 'var(--green-dark)', padding: 0 },
   };

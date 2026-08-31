@@ -1,3 +1,13 @@
+> **Superseded — history only. Do not follow this file.**
+>
+> This is the retired `Brand-Icons/BRAND.md`, kept in this skill so its
+> decisions remain readable. **Every value in it may be wrong.** It predates the contrast
+> fixes: it still shows a light label on `green` (2.3:1) and `#8A8A8A` as `--muted`
+> (3.4:1 on the light field).
+>
+> The spec is `VOLLER.md` at the root of this repo — three levels up from this skill, or
+> https://raw.githubusercontent.com/jackvoller/voller-design-system/main/VOLLER.md
+
 # UnPickle Design Language
 
 The shared visual system for UnPickle, Meal Planner, UnJumble and Riverly — app icons, product UI and web.

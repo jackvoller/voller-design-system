@@ -9,7 +9,7 @@ export function IconButton({ label, variant = 'quiet', size = 'md', onDark = fal
     quiet: {
       background: 'transparent',
       color: onDark ? 'var(--text-on-dark)' : 'var(--ink)',
-      boxShadow: `inset 0 0 0 1px ${onDark ? 'var(--hairline-on-dark)' : 'var(--hairline-strong)'}`,
+      boxShadow: `inset 0 0 0 1px ${onDark ? 'var(--hairline-dark)' : 'var(--hairline-strong)'}`,
     },
     bare: { background: 'transparent', color: onDark ? 'var(--text-on-dark)' : 'var(--muted)', boxShadow: 'none' },
   };

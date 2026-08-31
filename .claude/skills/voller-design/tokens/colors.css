@@ -26,7 +26,7 @@
   /* --- Lines --- */
   --hairline: rgba(20, 40, 10, .10);
   --hairline-strong: rgba(20, 40, 10, .18);
-  --hairline-on-dark: rgba(246, 241, 227, .14);
+  --hairline-dark: rgba(246, 241, 227, .12);
 
   /* --- Glass ring: the token that ties the circular marks together --- */
   --glass-fill: rgba(255,255,255,.62);
@@ -50,7 +50,10 @@
   /* green + cream is 2.3:1 and fails AA. A green fill carries an ink label in
      both fields — one button, no variants. VOLLER.md §1.1 */
   --text-on-green: var(--ink);
-  --text-link: var(--green-dark);
+  /* The tint flips between fields. VOLLER.md §1: this is the only token that does.
+     --text-link and --text-link-hover below are built on it. */
+  --tint: var(--green-dark);
+  --text-link: var(--tint);
   --text-link-hover: var(--green);
 
   --action-primary: var(--green);
@@ -75,9 +78,10 @@
     --text-body: var(--cream-dark);
     --text-heading: var(--cream-dark);
     --text-secondary: var(--muted-dark);
-    --text-link: var(--green);        /* the tint flips — green fails on light, not dark */
+    --tint: var(--green);             /* the tint flips — green fails on light, not dark */
+    --text-link: var(--tint);
     --text-link-hover: var(--green-deep);
-    --border-subtle: var(--hairline-on-dark);
-    --border-input: var(--hairline-on-dark);
+    --border-subtle: var(--hairline-dark);
+    --border-input: var(--hairline-dark);
   }
 }

@@ -78,7 +78,7 @@ function Footer({ go }) {
           </div>
         </div>
       </div>
-      <div style={{ maxWidth: 'var(--container)', margin: '40px auto 0', paddingTop: 24, borderTop: '1px solid var(--hairline-on-dark)', fontSize: 12, color: 'var(--text-secondary-on-dark)' }}>
+      <div style={{ maxWidth: 'var(--container)', margin: '40px auto 0', paddingTop: 24, borderTop: '1px solid var(--hairline-dark)', fontSize: 12, color: 'var(--text-secondary-on-dark)' }}>
         © 2026 Voller. Made in Bristol.
       </div>
     </footer>
@@ -113,7 +113,7 @@ function Btn({ variant = 'primary', size = 'md', iconLeft, iconRight, onDark, on
   const v = {
     primary: { background: 'var(--green)', color: 'var(--off-white)' },
     accent: { background: 'var(--gold)', color: 'var(--green-dark)', fontWeight: 600 },
-    quiet: { background: 'transparent', color: onDark ? 'var(--cream-dark)' : 'var(--green-dark)', boxShadow: `inset 0 0 0 1px ${onDark ? 'var(--hairline-on-dark)' : 'var(--hairline-strong)'}` },
+    quiet: { background: 'transparent', color: onDark ? 'var(--cream-dark)' : 'var(--green-dark)', boxShadow: `inset 0 0 0 1px ${onDark ? 'var(--hairline-dark)' : 'var(--hairline-strong)'}` },
     text: { background: 'transparent', color: onDark ? 'var(--cream-dark)' : 'var(--green-dark)', padding: 0 },
   }[variant];
   return (

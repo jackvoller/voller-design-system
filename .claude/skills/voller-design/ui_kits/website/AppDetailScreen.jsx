@@ -52,7 +52,7 @@ function AppDetailScreen({ app, go }) {
           <Eyebrow>Also from Voller</Eyebrow>
           <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}>
             {APPS.filter((a) => a.id !== app.id).map((a) => (
-              <div key={a.id} onClick={() => go('app', a.id)} style={{ display: 'flex', alignItems: 'center', gap: 14, padding: 16, background: 'var(--white)', border: '1px solid var(--hairline)', borderRadius: 'var(--radius-panel)', cursor: 'pointer', minWidth: 230, flex: 1 }}>
+              <div key={a.id} onClick={() => go('app', a.id)} style={{ display: 'flex', alignItems: 'center', gap: 14, padding: 16, background: 'var(--white)', border: '1px solid var(--hairline)', borderRadius: 'var(--radius-row)', cursor: 'pointer', minWidth: 230, flex: 1 }}>
                 <img src={`../../assets/app-icons/${a.id}.png`} width="48" height="48" alt="" style={{ borderRadius: 'var(--radius-icon)', display: 'block' }} />
                 <div>
                   <div style={{ fontSize: 16, fontWeight: 600, letterSpacing: '-0.02em' }}>{a.name}</div>

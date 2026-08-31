@@ -78,7 +78,7 @@ function HomeScreen({ go }) {
           </div>
           <div style={{ flex: '1 1 300px', display: 'flex', flexDirection: 'column', gap: 12 }}>
             {['On-device by default', 'One-time purchase, universal', 'Updated for each OS release'].map((t) => (
-              <div key={t} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '14px 18px', background: 'var(--surface-card-dark)', border: '1px solid var(--hairline-on-dark)', borderRadius: 'var(--radius-panel)' }}>
+              <div key={t} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '14px 18px', background: 'var(--surface-card-dark)', border: '1px solid var(--hairline-dark)', borderRadius: 'var(--radius-row)' }}>
                 <span style={{ color: 'var(--green)', display: 'flex' }}><Icon name="check" size={18} /></span>
                 <span style={{ fontSize: 15, color: 'var(--cream-dark)' }}>{t}</span>
               </div>

@@ -1,0 +1,27 @@
+<!-- @dsCard group="Spacing" viewport="700x160" name="Corner radii" subtitle="20 cards, 16 panels, 10 controls, pill capsules, 23.5% app tiles." -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    body { background: var(--bg-page-flat); padding: 20px; }
+    .row { display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap; }
+    .col { display: flex; flex-direction: column; gap: var(--space-2); }
+    .sw { display: flex; flex-direction: column; gap: 6px; }
+    .chip { height: 56px; border-radius: 12px; border: 1px solid var(--hairline); }
+    .hex { font-family: var(--font-mono); font-size: 11px; letter-spacing: .04em; color: var(--muted); }
+    .tok { font-family: var(--font-mono); font-size: 11px; color: var(--ink); }
+
+  </style>
+</head>
+<body>
+<div class="row" style="gap:14px">
+  <div class="col" style="gap:6px;align-items:center"><div style="width:88px;height:64px;background:var(--white);border:1px solid var(--hairline);border-radius:20px"></div><span class="hex">20 · card</span></div>
+  <div class="col" style="gap:6px;align-items:center"><div style="width:88px;height:64px;background:var(--cream);border:1px solid var(--hairline);border-radius:16px"></div><span class="hex">16 · panel</span></div>
+  <div class="col" style="gap:6px;align-items:center"><div style="width:88px;height:40px;background:var(--green);border-radius:10px"></div><span class="hex">10 · control</span></div>
+  <div class="col" style="gap:6px;align-items:center"><div style="width:88px;height:28px;background:var(--cream-dark);border-radius:999px"></div><span class="hex">pill · capsule</span></div>
+  <div class="col" style="gap:6px;align-items:center"><div style="width:64px;height:64px;background:var(--green);border-radius:23.5%"></div><span class="hex">23.5% · app tile</span></div>
+</div>
+</body>
+</html>

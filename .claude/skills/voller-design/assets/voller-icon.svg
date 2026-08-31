@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-label="Voller">
+  <title>Voller app icon — light / any appearance</title>
+  <defs>
+    <linearGradient id="field" gradientUnits="userSpaceOnUse" x1="287.4" y1="-104.9" x2="736.6" y2="1128.9"><stop offset="0" stop-color="#FCFCF6"></stop><stop offset="1" stop-color="#F1F0E4"></stop></linearGradient>
+    <radialGradient id="gloss" gradientUnits="userSpaceOnUse" cx="307.2" cy="0" r="1228.8" gradientTransform="matrix(1 0 0 0.75 0 0)"><stop offset="0" stop-color="#fff" stop-opacity=".7"></stop><stop offset=".55" stop-color="#fff" stop-opacity="0"></stop></radialGradient>
+    <clipPath id="disc"><circle cx="512" cy="512" r="376"></circle></clipPath>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#field)"></rect>
+  <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.62)" stroke="rgba(255,255,255,.9)" stroke-width="5"></circle>
+  <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+  <g clip-path="url(#disc)">
+  <path d="M 166 250 L 512 744 L 858 250" fill="none" stroke="#F6F1E3" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+  <rect x="430" y="546" width="164" height="164" rx="38.5" fill="#F0C21C"></rect>
+  </g>
+  <rect width="1024" height="1024" fill="url(#gloss)"></rect>
+</svg>

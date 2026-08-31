@@ -1,0 +1,54 @@
+<!-- @dsCard group="Components" viewport="700x300" name="Forms" subtitle="Input, Select, Checkbox, Switch" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    body { background: var(--bg-page-flat); padding: 20px; }
+    .grid { display: flex; flex-direction: column; gap: 16px; }
+    .row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .lbl { font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
+
+  </style>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.26.4/babel.min.js"></script>
+  <script src="../../_ds_bundle.js"></script>
+  <script src="../../assets/ds-resolve.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+const { Input, Select, Checkbox, Switch } = window.__DS;
+
+function Demo() {
+  const [notes, setNotes] = React.useState(true);
+  const [beta, setBeta] = React.useState(false);
+  const [dark, setDark] = React.useState(true);
+  return (
+    <div className="grid">
+      <div className="row" style={{ alignItems: 'flex-start', gap: 16 }}>
+        <div style={{ flex: 1, minWidth: 200 }}>
+          <Input label="Email" type="email" placeholder="you@example.com" hint="For release notes only." />
+        </div>
+        <div style={{ flex: 1, minWidth: 200 }}>
+          <Select label="App" options={['UnPickle', 'Meal Planner', 'UnJumble', 'Riverly']} hint="Pick one to follow." />
+        </div>
+      </div>
+      <div style={{ maxWidth: 320 }}>
+        <Input label="Email" error="That address looks incomplete." defaultValue="you@" />
+      </div>
+      <div className="row" style={{ gap: 24 }}>
+        <Checkbox label="Send me release notes" checked={notes} onChange={(e) => setNotes(e.target.checked)} />
+        <Checkbox label="Join the beta" checked={beta} onChange={(e) => setBeta(e.target.checked)} />
+        <Checkbox label="Disabled" checked={false} disabled />
+        <Switch label="Dark app icon" checked={dark} onChange={(e) => setDark(e.target.checked)} />
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+  </script>
+</body>
+</html>

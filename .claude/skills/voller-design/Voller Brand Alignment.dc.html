@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Inter:wght@700&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #FCFCF6; -webkit-font-smoothing: antialiased; }
+  a { color: #3F6B27; text-decoration: none; border-bottom: 1px solid rgba(63,107,39,.3); }
+  a:hover { color: #82BA51; }
+</style>
+</helmet>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="field" gradientUnits="userSpaceOnUse" x1="287.4" y1="-104.9" x2="736.6" y2="1128.9"><stop offset="0" stop-color="#FCFCF6"></stop><stop offset="1" stop-color="#F1F0E4"></stop></linearGradient>
+    <radialGradient id="gloss" gradientUnits="userSpaceOnUse" cx="307.2" cy="0" r="1228.8" gradientTransform="matrix(1 0 0 0.75 0 0)"><stop offset="0" stop-color="#fff" stop-opacity="0.7"></stop><stop offset="0.55" stop-color="#fff" stop-opacity="0"></stop></radialGradient>
+    <clipPath id="disc"><circle cx="512" cy="512" r="376"></circle></clipPath>
+  </defs>
+</svg>
+
+<section style="padding: 40px 40px 24px; font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif; color: #1B1B19; display: flex; flex-direction: column; gap: 28px; border-bottom: 1px solid rgba(20,40,10,.10)">
+
+  <div style="display: flex; flex-direction: column; gap: 14px; max-width: 720px">
+    <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">Turn 5 · the whole set · 3a wordmark + 4a icon</div>
+    <h1 style="margin: 0; font-size: 34px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.15">Voller, end to end</h1>
+    <p style="margin: 0; font-size: 16px; line-height: 1.6; text-wrap: pretty">Everything that ships, in one place: the wordmark, the three appearance variants, the size ladder down to the favicon, the family line-up, and the marks in place on a page.</p>
+  </div>
+
+  <div id="5a" style="display: flex; flex-direction: column; gap: 24px; padding: 34px; background: #FFFFFF; border: 1px solid rgba(20,40,10,.10); border-radius: 20px">
+    <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">01 · Wordmark</div>
+    <div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-end">
+      <div style="display: flex; align-items: flex-end; gap: 9px">
+        <span style="font-size: 64px; font-weight: 600; letter-spacing: -0.02em; line-height: .85">Voller</span>
+        <div style="width: 15px; height: 15px; border-radius: 3.5px; background: #F0C21C"></div>
+      </div>
+      <div style="display: flex; align-items: flex-end; gap: 5px">
+        <span style="font-size: 32px; font-weight: 600; letter-spacing: -0.02em; line-height: .85">Voller</span>
+        <div style="width: 8px; height: 8px; border-radius: 2px; background: #F0C21C"></div>
+      </div>
+      <div style="display: flex; align-items: flex-end; gap: 4px">
+        <span style="font-size: 22px; font-weight: 600; letter-spacing: -0.02em; line-height: .85">Voller</span>
+        <div style="width: 6px; height: 6px; border-radius: 1.5px; background: #F0C21C"></div>
+      </div>
+      <div style="display: flex; align-items: flex-end; gap: 4px; padding: 16px 22px; background: #1B1B19; border-radius: 12px">
+        <span style="font-size: 22px; font-weight: 600; letter-spacing: -0.02em; line-height: .85; color: #EFE9DA">Voller</span>
+        <div style="width: 6px; height: 6px; border-radius: 1.5px; background: #F0C21C"></div>
+      </div>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 32px; font-size: 13px; line-height: 1.6; color: #8A8A8A">
+      <span>DM Sans · 600 · <span style="font-family: ui-monospace, monospace">-0.02em</span></span>
+      <span>Ink <span style="font-family: ui-monospace, monospace; color: #1B1B19">#1B1B19</span> · on dark <span style="font-family: ui-monospace, monospace; color: #1B1B19">#EFE9DA</span></span>
+      <span>Tile = 0.33 × cap height, gap 0.2 × cap height, radius 23.5%</span>
+    </div>
+  </div>
+
+  <div id="5b" style="display: flex; flex-direction: column; gap: 24px; padding: 34px; background: #FFFFFF; border: 1px solid rgba(20,40,10,.10); border-radius: 20px">
+    <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">02 · App icon · three appearance variants</div>
+    <div style="display: flex; flex-wrap: wrap; gap: 26px">
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div style="width: 180px; height: 180px; border-radius: 23.5%; overflow: hidden">
+          <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+            <rect width="1024" height="1024" fill="url(#field)"></rect>
+            <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.62)" stroke="rgba(255,255,255,.9)" stroke-width="5"></circle>
+            <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+            <g clip-path="url(#disc)">
+              <path d="M 166 250 L 512 744 L 858 250" fill="none" stroke="#F6F1E3" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+              <rect x="430" y="546" width="164" height="164" rx="38.5" fill="#F0C21C"></rect>
+            </g>
+            <rect width="1024" height="1024" fill="url(#gloss)"></rect>
+          </svg>
+        </div>
+        <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #8A8A8A">Light / any · opaque</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div style="width: 180px; height: 180px; border-radius: 23.5%; overflow: hidden; background: linear-gradient(160deg, #302F2C 0%, #1B1B19 100%)">
+          <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+            <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.10)" stroke="rgba(255,255,255,.22)" stroke-width="6"></circle>
+            <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+            <g clip-path="url(#disc)">
+              <path d="M 166 250 L 512 744 L 858 250" fill="none" stroke="#EFE9DA" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+              <rect x="430" y="546" width="164" height="164" rx="38.5" fill="#F0C21C"></rect>
+            </g>
+          </svg>
+        </div>
+        <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #8A8A8A">Dark · transparent art</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div style="width: 180px; height: 180px; border-radius: 23.5%; overflow: hidden">
+          <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+            <rect width="1024" height="1024" fill="#000000"></rect>
+            <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.13)" stroke="rgba(255,255,255,.26)" stroke-width="6"></circle>
+            <circle cx="512" cy="512" r="376" fill="#8E8E8E"></circle>
+            <g clip-path="url(#disc)">
+              <path d="M 166 250 L 512 744 L 858 250" fill="none" stroke="#D2D2D2" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+              <rect x="430" y="546" width="164" height="164" rx="38.5" fill="#FFFFFF"></rect>
+            </g>
+          </svg>
+        </div>
+        <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #8A8A8A">Tinted · grayscale on black</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 14px; justify-content: flex-end; min-width: 200px; flex: 1 1 200px">
+        <div style="display: flex; align-items: flex-end; gap: 16px">
+          <div style="display: flex; flex-direction: column; gap: 8px; align-items: center">
+            <div style="width: 64px; height: 64px; border-radius: 23.5%; overflow: hidden">
+              <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+                <rect width="1024" height="1024" fill="url(#field)"></rect>
+                <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.62)" stroke="rgba(255,255,255,.9)" stroke-width="5"></circle>
+                <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+                <g clip-path="url(#disc)">
+                  <path d="M 166 250 L 512 744 L 858 250" fill="none" stroke="#F6F1E3" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+                  <rect x="430" y="546" width="164" height="164" rx="38.5" fill="#F0C21C"></rect>
+                </g>
+              </svg>
+            </div>
+            <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; color: #8A8A8A">64</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px; align-items: center">
+            <div style="width: 32px; height: 32px; border-radius: 23.5%; overflow: hidden">
+              <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+                <rect width="1024" height="1024" fill="#82BA51"></rect>
+                <g><path d="M 150 230 L 512 760 L 874 230" fill="none" stroke="#F6F1E3" stroke-width="212" stroke-linejoin="round" stroke-linecap="round"></path></g>
+              </svg>
+            </div>
+            <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; color: #8A8A8A">32</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px; align-items: center">
+            <div style="width: 16px; height: 16px; border-radius: 23.5%; overflow: hidden">
+              <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+                <rect width="1024" height="1024" fill="#82BA51"></rect>
+                <g><path d="M 150 230 L 512 760 L 874 230" fill="none" stroke="#F6F1E3" stroke-width="212" stroke-linejoin="round" stroke-linecap="round"></path></g>
+              </svg>
+            </div>
+            <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; color: #8A8A8A">16</div>
+          </div>
+        </div>
+        <div style="font-size: 13px; line-height: 1.6; color: #8A8A8A; text-wrap: pretty">≤ 32px: full-bleed green, channel only. The ring, tile and field come off.</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="5c" style="display: flex; flex-direction: column; gap: 22px; padding: 34px; background: #FFFFFF; border: 1px solid rgba(20,40,10,.10); border-radius: 20px">
+    <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">03 · The family, side by side</div>
+    <div style="display: flex; flex-wrap: wrap; gap: 22px; align-items: flex-start">
+      <div style="display: flex; flex-direction: column; gap: 10px; align-items: center">
+        <div style="width: 112px; height: 112px; border-radius: 23.5%; overflow: hidden; outline: 2px solid #F0C21C; outline-offset: 4px">
+          <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+            <rect width="1024" height="1024" fill="url(#field)"></rect>
+            <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.62)" stroke="rgba(255,255,255,.9)" stroke-width="5"></circle>
+            <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+            <g clip-path="url(#disc)">
+              <path d="M 166 250 L 512 744 L 858 250" fill="none" stroke="#F6F1E3" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+              <rect x="430" y="546" width="164" height="164" rx="38.5" fill="#F0C21C"></rect>
+            </g>
+            <rect width="1024" height="1024" fill="url(#gloss)"></rect>
+          </svg>
+        </div>
+        <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: #3F6B27">Voller · new</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px; align-items: center">
+        <img src="uploads/Brand-Icons/UnPickle/AppIcon-512@2x.png" alt="UnPickle" style="width: 112px; height: 112px; border-radius: 23.5%; display: block">
+        <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: #8A8A8A">UnPickle</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px; align-items: center">
+        <img src="uploads/Brand-Icons/MealPlanner/appstore.png" alt="Meal Planner" style="width: 112px; height: 112px; border-radius: 23.5%; display: block">
+        <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: #8A8A8A">Meal Planner</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px; align-items: center">
+        <img src="uploads/Brand-Icons/UnJumble/UnJumble-AppIcon.png" alt="UnJumble" style="width: 112px; height: 112px; border-radius: 23.5%; display: block">
+        <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: #8A8A8A">UnJumble</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px; align-items: center">
+        <img src="uploads/Brand-Icons/Riverly/AppIcon-1024.png" alt="Riverly" style="width: 112px; height: 112px; border-radius: 23.5%; display: block">
+        <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: #8A8A8A">Riverly</div>
+      </div>
+    </div>
+    <div style="font-size: 13px; line-height: 1.6; color: #8A8A8A; max-width: 640px; text-wrap: pretty">Same field, same gloss, same glass ring, same single gold element — and the only one whose subject is a letter, which is how the parent stays distinguishable from its apps.</div>
+  </div>
+
+  <div id="5d" style="display: flex; flex-direction: column; gap: 22px; padding: 34px; background: #FFFFFF; border: 1px solid rgba(20,40,10,.10); border-radius: 20px">
+    <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">04 · In place</div>
+    <div style="display: flex; flex-direction: column; border: 1px solid rgba(20,40,10,.10); border-radius: 16px; overflow: hidden">
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px 26px; background: #FCFCF6; border-bottom: 1px solid rgba(20,40,10,.10)">
+        <div style="display: flex; align-items: flex-end; gap: 6px">
+          <span style="font-size: 22px; font-weight: 600; letter-spacing: -0.02em; line-height: .9">Voller</span>
+          <div style="width: 8px; height: 8px; border-radius: 2px; background: #F0C21C"></div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 26px; font-size: 14px; color: #1B1B19">
+          <span>Apps</span>
+          <span>About</span>
+          <span style="padding: 9px 16px; background: #82BA51; color: #FCFCF6; border-radius: 10px; font-weight: 500">Get in touch</span>
+        </div>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center; padding: 44px 26px; background: linear-gradient(160deg, #FCFCF6 0%, #F1F0E4 100%)">
+        <div style="display: flex; flex-direction: column; gap: 14px; flex: 1 1 300px; min-width: 280px">
+          <h3 style="margin: 0; font-size: 32px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.2">Four small apps, made carefully.</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #1B1B19; max-width: 420px; text-wrap: pretty">Voller writes and maintains UnPickle, Meal Planner, UnJumble and Riverly. <a href="#5c">See the apps</a>.</p>
+        </div>
+        <div style="display: flex; gap: 14px; flex: none">
+          <img src="uploads/Brand-Icons/UnPickle/AppIcon-512@2x.png" alt="UnPickle" style="width: 76px; height: 76px; border-radius: 23.5%; display: block">
+          <img src="uploads/Brand-Icons/MealPlanner/appstore.png" alt="Meal Planner" style="width: 76px; height: 76px; border-radius: 23.5%; display: block">
+          <img src="uploads/Brand-Icons/UnJumble/UnJumble-AppIcon.png" alt="UnJumble" style="width: 76px; height: 76px; border-radius: 23.5%; display: block">
+          <img src="uploads/Brand-Icons/Riverly/AppIcon-1024.png" alt="Riverly" style="width: 76px; height: 76px; border-radius: 23.5%; display: block">
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 26px; background: #1B1B19">
+        <div style="display: flex; align-items: center; gap: 14px">
+          <div style="width: 34px; height: 34px; border-radius: 23.5%; overflow: hidden; flex: none">
+            <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+              <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.10)" stroke="rgba(255,255,255,.22)" stroke-width="6"></circle>
+              <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+              <g clip-path="url(#disc)">
+                <path d="M 166 250 L 512 744 L 858 250" fill="none" stroke="#EFE9DA" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+                <rect x="430" y="546" width="164" height="164" rx="38.5" fill="#F0C21C"></rect>
+              </g>
+            </svg>
+          </div>
+          <div style="display: flex; align-items: flex-end; gap: 5px">
+            <span style="font-size: 18px; font-weight: 600; letter-spacing: -0.02em; line-height: .9; color: #EFE9DA">Voller</span>
+            <div style="width: 7px; height: 7px; border-radius: 2px; background: #F0C21C"></div>
+          </div>
+        </div>
+        <div style="font-size: 13px; color: #8A8A8A">© 2026 Voller</div>
+      </div>
+    </div>
+    <div style="font-size: 13px; line-height: 1.6; color: #8A8A8A; max-width: 640px; text-wrap: pretty">Header uses the wordmark alone; the footer is the one place icon and word sit together, at a size where the disc reads as a stamp rather than a competing headline.</div>
+  </div>
+</section>
+
+<section style="padding: 40px 40px 24px; font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif; color: #1B1B19; display: flex; flex-direction: column; gap: 32px; border-bottom: 1px solid rgba(20,40,10,.10)">
+
+  <div style="display: flex; flex-direction: column; gap: 14px; max-width: 720px">
+    <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">Turn 4 · the icon that goes with 3a</div>
+    <h1 style="margin: 0; font-size: 34px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.15">One icon, five sizes, one favicon</h1>
+    <p style="margin: 0; font-size: 16px; line-height: 1.6; text-wrap: pretty">With 3a the word carries the name, so the icon is free to be pure symbol — it never has to sit next to type. Both candidates below are the same disc-and-glass-ring silhouette as your other four apps, run down the real size ladder: 1024 app icon, 180 touch icon, 64, 32 and 16px favicon, in a light and dark browser tab. <a href="#4a">4a</a> is the channel; <a href="#4b">4b</a> is the five tiles.</p>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+
+    <div id="4a" style="flex: 1 1 440px; min-width: 340px; max-width: 560px; display: flex; flex-direction: column; gap: 20px; padding: 28px; background: #FFFFFF; border: 1px solid rgba(20,40,10,.10); border-radius: 20px">
+      <div style="display: flex; align-items: baseline; gap: 12px">
+        <span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 12px; font-weight: 500; letter-spacing: .08em; color: #3F6B27; background: #F6F1E3; padding: 4px 9px; border-radius: 6px">4a</span>
+        <h2 style="margin: 0; font-size: 20px; font-weight: 600; letter-spacing: -0.02em">Channel + one app <span style="font-weight: 400; color: #8A8A8A; font-size: 15px">· recommended</span></h2>
+      </div>
+      <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #8A8A8A; text-wrap: pretty">Two shapes only, so it holds all the way down to 16px. Below 32px the gold tile is under 3px and turns to mud — so at 32px and below the favicon goes full-bleed green with the channel alone — no ring, no tile, no field. One documented simplification, same mark.</p>
+      <div style="display: flex; align-items: flex-end; gap: 22px; flex-wrap: wrap">
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <div style="width: 120px; height: 120px; border-radius: 23.5%; overflow: hidden">
+            <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+              <rect width="1024" height="1024" fill="url(#field)"></rect>
+              <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.62)" stroke="rgba(255,255,255,.9)" stroke-width="5"></circle>
+              <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+              <g clip-path="url(#disc)">
+                <path d="M 166 250 L 512 744 L 858 250" fill="none" stroke="#F6F1E3" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+                <rect x="430" y="546" width="164" height="164" rx="38.5" fill="#F0C21C"></rect>
+              </g>
+              <rect width="1024" height="1024" fill="url(#gloss)"></rect>
+            </svg>
+          </div>
+          <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: .06em; color: #8A8A8A">1024 · app icon</div>
+        </div>
+        <div style="display: flex; align-items: flex-end; gap: 16px">
+          <div style="display: flex; flex-direction: column; gap: 8px; align-items: center">
+            <div style="width: 64px; height: 64px; border-radius: 23.5%; overflow: hidden">
+              <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+                <rect width="1024" height="1024" fill="url(#field)"></rect>
+                <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.62)" stroke="rgba(255,255,255,.9)" stroke-width="5"></circle>
+                <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+                <g clip-path="url(#disc)">
+                  <path d="M 166 250 L 512 744 L 858 250" fill="none" stroke="#F6F1E3" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+                  <rect x="430" y="546" width="164" height="164" rx="38.5" fill="#F0C21C"></rect>
+                </g>
+              </svg>
+            </div>
+            <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; color: #8A8A8A">64</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px; align-items: center">
+            <div style="width: 32px; height: 32px; border-radius: 23.5%; overflow: hidden">
+              <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+                <rect width="1024" height="1024" fill="#82BA51"></rect>
+                <g><path d="M 150 230 L 512 760 L 874 230" fill="none" stroke="#F6F1E3" stroke-width="212" stroke-linejoin="round" stroke-linecap="round"></path></g>
+              </svg>
+            </div>
+            <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; color: #8A8A8A">32</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px; align-items: center">
+            <div style="width: 16px; height: 16px; border-radius: 23.5%; overflow: hidden">
+              <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+                <rect width="1024" height="1024" fill="#82BA51"></rect>
+                <g><path d="M 150 230 L 512 760 L 874 230" fill="none" stroke="#F6F1E3" stroke-width="212" stroke-linejoin="round" stroke-linecap="round"></path></g>
+              </svg>
+            </div>
+            <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; color: #8A8A8A">16</div>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px 0; background: #EFEFEA; border-radius: 12px 12px 0 0">
+          <div style="display: flex; align-items: center; gap: 8px; padding: 8px 14px; background: #FFFFFF; border-radius: 9px 9px 0 0">
+            <div style="width: 16px; height: 16px; border-radius: 23.5%; overflow: hidden; flex: none">
+              <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+                <rect width="1024" height="1024" fill="#82BA51"></rect>
+                <g><path d="M 150 230 L 512 760 L 874 230" fill="none" stroke="#F6F1E3" stroke-width="212" stroke-linejoin="round" stroke-linecap="round"></path></g>
+              </svg>
+            </div>
+            <span style="font-size: 12px; font-weight: 500">Voller — apps</span>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px 0; background: #2A2A27; border-radius: 12px 12px 0 0">
+          <div style="display: flex; align-items: center; gap: 8px; padding: 8px 14px; background: #1B1B19; border-radius: 9px 9px 0 0">
+            <div style="width: 16px; height: 16px; border-radius: 23.5%; overflow: hidden; flex: none">
+              <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+                <rect width="1024" height="1024" fill="#82BA51"></rect>
+                <g><path d="M 150 230 L 512 760 L 874 230" fill="none" stroke="#F6F1E3" stroke-width="212" stroke-linejoin="round" stroke-linecap="round"></path></g>
+              </svg>
+            </div>
+            <span style="font-size: 12px; font-weight: 500; color: #EFE9DA">Voller — apps</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="4b" style="flex: 1 1 440px; min-width: 340px; max-width: 560px; display: flex; flex-direction: column; gap: 20px; padding: 28px; background: #FFFFFF; border: 1px solid rgba(20,40,10,.10); border-radius: 20px">
+      <div style="display: flex; align-items: baseline; gap: 12px">
+        <span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 12px; font-weight: 500; letter-spacing: .08em; color: #3F6B27; background: #F6F1E3; padding: 4px 9px; border-radius: 6px">4b</span>
+        <h2 style="margin: 0; font-size: 20px; font-weight: 600; letter-spacing: -0.02em">Five apps in the disc</h2>
+      </div>
+      <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #8A8A8A; text-wrap: pretty">More literal about what Voller is — five apps, one house. But six shapes is five too many for a favicon: at 16px the cluster closes up into a blob, and at 32px it reads as a face. Worth it only if the app icon matters more to you than the tab.</p>
+      <div style="display: flex; align-items: flex-end; gap: 22px; flex-wrap: wrap">
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <div style="width: 120px; height: 120px; border-radius: 23.5%; overflow: hidden">
+            <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+              <rect width="1024" height="1024" fill="url(#field)"></rect>
+              <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.62)" stroke="rgba(255,255,255,.9)" stroke-width="5"></circle>
+              <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+              <rect x="252" y="310" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="642" y="310" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="349" y="447" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="544" y="447" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="447" y="584" width="130" height="130" rx="30.5" fill="#F0C21C"></rect>
+              <rect width="1024" height="1024" fill="url(#gloss)"></rect>
+            </svg>
+          </div>
+          <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: .06em; color: #8A8A8A">1024 · app icon</div>
+        </div>
+        <div style="display: flex; align-items: flex-end; gap: 16px">
+          <div style="display: flex; flex-direction: column; gap: 8px; align-items: center">
+            <div style="width: 64px; height: 64px; border-radius: 23.5%; overflow: hidden">
+              <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+                <rect width="1024" height="1024" fill="url(#field)"></rect>
+                <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.62)" stroke="rgba(255,255,255,.9)" stroke-width="5"></circle>
+                <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+                <rect x="252" y="310" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="642" y="310" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="349" y="447" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="544" y="447" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="447" y="584" width="130" height="130" rx="30.5" fill="#F0C21C"></rect>
+              </svg>
+            </div>
+            <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; color: #8A8A8A">64</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px; align-items: center">
+            <div style="width: 32px; height: 32px; border-radius: 23.5%; overflow: hidden">
+              <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+                <rect width="1024" height="1024" fill="url(#field)"></rect>
+                <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+                <rect x="252" y="310" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="642" y="310" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="349" y="447" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="544" y="447" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="447" y="584" width="130" height="130" rx="30.5" fill="#F0C21C"></rect>
+              </svg>
+            </div>
+            <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; color: #8A8A8A">32</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px; align-items: center">
+            <div style="width: 16px; height: 16px; border-radius: 23.5%; overflow: hidden">
+              <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+                <rect width="1024" height="1024" fill="url(#field)"></rect>
+                <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+                <rect x="252" y="310" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="642" y="310" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="349" y="447" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="544" y="447" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="447" y="584" width="130" height="130" rx="30.5" fill="#F0C21C"></rect>
+              </svg>
+            </div>
+            <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; color: #8A8A8A">16</div>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px 0; background: #EFEFEA; border-radius: 12px 12px 0 0">
+          <div style="display: flex; align-items: center; gap: 8px; padding: 8px 14px; background: #FFFFFF; border-radius: 9px 9px 0 0">
+            <div style="width: 16px; height: 16px; border-radius: 23.5%; overflow: hidden; flex: none">
+              <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+                <rect width="1024" height="1024" fill="url(#field)"></rect>
+                <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+                <rect x="252" y="310" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="642" y="310" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="349" y="447" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="544" y="447" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="447" y="584" width="130" height="130" rx="30.5" fill="#F0C21C"></rect>
+              </svg>
+            </div>
+            <span style="font-size: 12px; font-weight: 500">Voller — apps</span>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px 0; background: #2A2A27; border-radius: 12px 12px 0 0">
+          <div style="display: flex; align-items: center; gap: 8px; padding: 8px 14px; background: #1B1B19; border-radius: 9px 9px 0 0">
+            <div style="width: 16px; height: 16px; border-radius: 23.5%; overflow: hidden; flex: none">
+              <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+                <rect width="1024" height="1024" fill="#82BA51"></rect>
+                <rect x="252" y="310" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="642" y="310" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="349" y="447" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="544" y="447" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="447" y="584" width="130" height="130" rx="30.5" fill="#F0C21C"></rect>
+              </svg>
+            </div>
+            <span style="font-size: 12px; font-weight: 500; color: #EFE9DA">Voller — apps</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 32px; padding: 22px 26px; background: #F6F1E3; border-radius: 18px; align-items: center">
+    <div style="display: flex; flex-direction: column; gap: 8px; min-width: 240px; flex: 1 1 240px">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">How they work together</div>
+      <div style="font-size: 14px; line-height: 1.6; text-wrap: pretty">Header, footer, email signature and anywhere the name is spelled out: the 3a wordmark. App Store, home screen, avatar, tab and OG image: the icon alone. They never appear side by side, which is why neither has to compromise.</div>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; flex: 1 1 320px; padding: 16px 22px; background: #FFFFFF; border-radius: 14px; border: 1px solid rgba(20,40,10,.10)">
+      <div style="display: flex; align-items: flex-end; gap: 6px">
+        <span style="font-size: 22px; font-weight: 600; letter-spacing: -0.02em; line-height: .9">Voller</span>
+        <div style="width: 8px; height: 8px; border-radius: 2px; background: #F0C21C"></div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 22px; font-size: 14px; color: #8A8A8A">
+        <span>Apps</span>
+        <span>About</span>
+        <div style="width: 28px; height: 28px; border-radius: 23.5%; overflow: hidden">
+          <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+            <rect width="1024" height="1024" fill="url(#field)"></rect>
+            <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+            <g clip-path="url(#disc)">
+              <path d="M 166 250 L 512 744 L 858 250" fill="none" stroke="#F6F1E3" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+              <rect x="430" y="546" width="164" height="164" rx="38.5" fill="#F0C21C"></rect>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding: 40px 40px 24px; font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif; color: #1B1B19; display: flex; flex-direction: column; gap: 32px; border-bottom: 1px solid rgba(20,40,10,.10)">
+
+  <div style="display: flex; flex-direction: column; gap: 14px; max-width: 720px">
+    <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">Turn 3 · lockups</div>
+    <h1 style="margin: 0; font-size: 34px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.15">Fixing the icon-plus-name problem</h1>
+    <p style="margin: 0; font-size: 16px; line-height: 1.6; text-wrap: pretty">The pairing reads wrong because the disc is a second focal point next to the word — and the gold tile inside it pulls the eye away from the name. Either the word leads and the mark shrinks to a signature (<a href="#3a">3a</a>, <a href="#3c">3c</a>), or the mark is deliberately oversized and the type steps back (<a href="#3b">3b</a>, <a href="#3d">3d</a>). Each is shown at hero size and at 22px header size.</p>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: stretch">
+
+    <div id="3a" style="flex: 1 1 320px; min-width: 300px; max-width: 460px; display: flex; flex-direction: column; gap: 18px; padding: 28px; background: #FFFFFF; border: 1px solid rgba(20,40,10,.10); border-radius: 20px">
+      <div style="display: flex; align-items: baseline; gap: 12px">
+        <span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 12px; font-weight: 500; letter-spacing: .08em; color: #3F6B27; background: #F6F1E3; padding: 4px 9px; border-radius: 6px">3a</span>
+        <h2 style="margin: 0; font-size: 20px; font-weight: 600; letter-spacing: -0.02em">Word leads, tile signs</h2>
+      </div>
+      <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #8A8A8A; text-wrap: pretty">No disc in the wordmark at all. One gold app tile sits after the name as a full stop — gold spent once, nothing competing. The circular icon stays for app stores, avatars and the favicon.</p>
+      <div style="display: flex; flex-direction: column; gap: 22px; padding: 26px 0 6px">
+        <div style="display: flex; align-items: flex-end; gap: 9px">
+          <span style="font-size: 40px; font-weight: 600; letter-spacing: -0.02em; line-height: .9">Voller</span>
+          <div style="width: 15px; height: 15px; border-radius: 3.5px; background: #F0C21C"></div>
+        </div>
+        <div style="display: flex; align-items: flex-end; gap: 5px">
+          <span style="font-size: 22px; font-weight: 600; letter-spacing: -0.02em; line-height: .9">Voller</span>
+          <div style="width: 8px; height: 8px; border-radius: 2px; background: #F0C21C"></div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: flex-end; gap: 6px; padding: 18px 22px; background: #1B1B19; border-radius: 14px">
+        <span style="font-size: 22px; font-weight: 600; letter-spacing: -0.02em; line-height: .9; color: #EFE9DA">Voller</span>
+        <div style="width: 8px; height: 8px; border-radius: 2px; background: #F0C21C"></div>
+      </div>
+    </div>
+
+    <div id="3b" style="flex: 1 1 320px; min-width: 300px; max-width: 460px; display: flex; flex-direction: column; gap: 18px; padding: 28px; background: #FFFFFF; border: 1px solid rgba(20,40,10,.10); border-radius: 20px">
+      <div style="display: flex; align-items: baseline; gap: 12px">
+        <span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 12px; font-weight: 500; letter-spacing: .08em; color: #3F6B27; background: #F6F1E3; padding: 4px 9px; border-radius: 6px">3b</span>
+        <h2 style="margin: 0; font-size: 20px; font-weight: 600; letter-spacing: -0.02em">Optically tuned pair</h2>
+      </div>
+      <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #8A8A8A; text-wrap: pretty">Keeps both, but stops them fighting: disc at 1.3× cap height, gap set to a third of the disc, type dropped to 500 weight so the dense mark carries the weight instead of the letters.</p>
+      <div style="display: flex; flex-direction: column; gap: 22px; padding: 20px 0 6px">
+        <div style="display: flex; align-items: center; gap: 15px">
+          <svg viewBox="100 100 824 824" style="width: 46px; height: 46px; display: block; flex: none">
+            <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+            <rect x="252" y="310" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="642" y="310" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="349" y="447" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="544" y="447" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="447" y="584" width="130" height="130" rx="30.5" fill="#F0C21C"></rect>
+          </svg>
+          <span style="font-size: 36px; font-weight: 500; letter-spacing: -0.012em; line-height: 1">Voller</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 9px">
+          <svg viewBox="100 100 824 824" style="width: 28px; height: 28px; display: block; flex: none">
+            <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+            <rect x="252" y="310" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="642" y="310" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="349" y="447" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="544" y="447" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="447" y="584" width="130" height="130" rx="30.5" fill="#F0C21C"></rect>
+          </svg>
+          <span style="font-size: 22px; font-weight: 500; letter-spacing: -0.012em; line-height: 1">Voller</span>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 9px; padding: 16px 22px; background: #1B1B19; border-radius: 14px">
+        <svg viewBox="100 100 824 824" style="width: 28px; height: 28px; display: block; flex: none">
+          <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+          <rect x="252" y="310" width="130" height="130" rx="30.5" fill="#EFE9DA"></rect><rect x="642" y="310" width="130" height="130" rx="30.5" fill="#EFE9DA"></rect><rect x="349" y="447" width="130" height="130" rx="30.5" fill="#EFE9DA"></rect><rect x="544" y="447" width="130" height="130" rx="30.5" fill="#EFE9DA"></rect><rect x="447" y="584" width="130" height="130" rx="30.5" fill="#F0C21C"></rect>
+        </svg>
+        <span style="font-size: 22px; font-weight: 500; letter-spacing: -0.012em; line-height: 1; color: #EFE9DA">Voller</span>
+      </div>
+    </div>
+
+    <div id="3c" style="flex: 1 1 320px; min-width: 300px; max-width: 460px; display: flex; flex-direction: column; gap: 18px; padding: 28px; background: #FFFFFF; border: 1px solid rgba(20,40,10,.10); border-radius: 20px">
+      <div style="display: flex; align-items: baseline; gap: 12px">
+        <span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 12px; font-weight: 500; letter-spacing: .08em; color: #3F6B27; background: #F6F1E3; padding: 4px 9px; border-radius: 6px">3c</span>
+        <h2 style="margin: 0; font-size: 20px; font-weight: 600; letter-spacing: -0.02em">Uncontained tiles</h2>
+      </div>
+      <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #8A8A8A; text-wrap: pretty">The disc is what makes the lockup feel like an app icon glued to a name. Drop it and the five tiles become a light V-cluster the eye reads as a signature, not a badge.</p>
+      <div style="display: flex; flex-direction: column; gap: 22px; padding: 22px 0 6px">
+        <div style="display: flex; align-items: center; gap: 14px">
+          <svg viewBox="240 298 544 428" style="width: 50px; height: 39px; display: block; flex: none">
+            <rect x="252" y="310" width="130" height="130" rx="30.5" fill="#82BA51"></rect><rect x="642" y="310" width="130" height="130" rx="30.5" fill="#82BA51"></rect><rect x="349" y="447" width="130" height="130" rx="30.5" fill="#82BA51"></rect><rect x="544" y="447" width="130" height="130" rx="30.5" fill="#82BA51"></rect><rect x="447" y="584" width="130" height="130" rx="30.5" fill="#F0C21C"></rect>
+          </svg>
+          <span style="font-size: 38px; font-weight: 600; letter-spacing: -0.02em; line-height: 1">Voller</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 9px">
+          <svg viewBox="240 298 544 428" style="width: 29px; height: 23px; display: block; flex: none">
+            <rect x="252" y="310" width="130" height="130" rx="30.5" fill="#82BA51"></rect><rect x="642" y="310" width="130" height="130" rx="30.5" fill="#82BA51"></rect><rect x="349" y="447" width="130" height="130" rx="30.5" fill="#82BA51"></rect><rect x="544" y="447" width="130" height="130" rx="30.5" fill="#82BA51"></rect><rect x="447" y="584" width="130" height="130" rx="30.5" fill="#F0C21C"></rect>
+          </svg>
+          <span style="font-size: 22px; font-weight: 600; letter-spacing: -0.02em; line-height: 1">Voller</span>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 9px; padding: 16px 22px; background: #1B1B19; border-radius: 14px">
+        <svg viewBox="240 298 544 428" style="width: 29px; height: 23px; display: block; flex: none">
+          <rect x="252" y="310" width="130" height="130" rx="30.5" fill="#82BA51"></rect><rect x="642" y="310" width="130" height="130" rx="30.5" fill="#82BA51"></rect><rect x="349" y="447" width="130" height="130" rx="30.5" fill="#82BA51"></rect><rect x="544" y="447" width="130" height="130" rx="30.5" fill="#82BA51"></rect><rect x="447" y="584" width="130" height="130" rx="30.5" fill="#F0C21C"></rect>
+        </svg>
+        <span style="font-size: 22px; font-weight: 600; letter-spacing: -0.02em; line-height: 1; color: #EFE9DA">Voller</span>
+      </div>
+    </div>
+
+    <div id="3d" style="flex: 1 1 320px; min-width: 300px; max-width: 460px; display: flex; flex-direction: column; gap: 18px; padding: 28px; background: #FFFFFF; border: 1px solid rgba(20,40,10,.10); border-radius: 20px">
+      <div style="display: flex; align-items: baseline; gap: 12px">
+        <span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 12px; font-weight: 500; letter-spacing: .08em; color: #3F6B27; background: #F6F1E3; padding: 4px 9px; border-radius: 6px">3d</span>
+        <h2 style="margin: 0; font-size: 20px; font-weight: 600; letter-spacing: -0.02em">Stacked</h2>
+      </div>
+      <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #8A8A8A; text-wrap: pretty">Side-by-side is the hard arrangement; stacked, the disc gets to be the focal point and the name becomes a caption under it. Good for an About page, a footer or the app-store card — less good in a tight header.</p>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 14px 0 6px">
+        <svg viewBox="100 100 824 824" style="width: 74px; height: 74px; display: block">
+          <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+          <rect x="252" y="310" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="642" y="310" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="349" y="447" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="544" y="447" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="447" y="584" width="130" height="130" rx="30.5" fill="#F0C21C"></rect>
+        </svg>
+        <span style="font-size: 26px; font-weight: 600; letter-spacing: -0.01em; line-height: 1">Voller</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 18px 22px; background: #1B1B19; border-radius: 14px">
+        <svg viewBox="100 100 824 824" style="width: 44px; height: 44px; display: block">
+          <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+          <rect x="252" y="310" width="130" height="130" rx="30.5" fill="#EFE9DA"></rect><rect x="642" y="310" width="130" height="130" rx="30.5" fill="#EFE9DA"></rect><rect x="349" y="447" width="130" height="130" rx="30.5" fill="#EFE9DA"></rect><rect x="544" y="447" width="130" height="130" rx="30.5" fill="#EFE9DA"></rect><rect x="447" y="584" width="130" height="130" rx="30.5" fill="#F0C21C"></rect>
+        </svg>
+        <span style="font-size: 20px; font-weight: 600; letter-spacing: -0.01em; line-height: 1; color: #EFE9DA">Voller</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section style="padding: 40px 40px 24px; font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif; color: #1B1B19; display: flex; flex-direction: column; gap: 32px">
+
+  <div style="display: flex; flex-direction: column; gap: 14px; max-width: 720px">
+    <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">Turn 2 · the house brand · verb: shipping apps</div>
+    <h1 style="margin: 0; font-size: 34px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.15">Three that say “the company that writes the apps”</h1>
+    <p style="margin: 0; font-size: 16px; line-height: 1.6; text-wrap: pretty">Now that gold has a verb, it goes on the app. <a href="#2a">2a</a> makes your squares literal app icons at the system's own 23.5% radius. <a href="#2b">2b</a> inverts figure and ground so the parent reads as the field the family sits in. <a href="#2c">2c</a> is the 1b channel with one gold app coming off it — my pick.</p>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start">
+
+    <div id="2a" style="flex: 1 1 420px; min-width: 320px; max-width: 476px; display: flex; flex-direction: column; gap: 20px; padding: 28px; background: #FFFFFF; border: 1px solid rgba(20,40,10,.10); border-radius: 20px">
+      <div style="display: flex; align-items: baseline; gap: 12px">
+        <span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 12px; font-weight: 500; letter-spacing: .08em; color: #3F6B27; background: #F6F1E3; padding: 4px 9px; border-radius: 6px">2a</span>
+        <h2 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.02em">Five apps, contained</h2>
+      </div>
+      <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #8A8A8A; text-wrap: pretty">Your original idea, on-system: the dots become squircles at the same <span style="font-family: ui-monospace, monospace; font-size: 13px">23.5%</span> radius as a real app icon, held in the glass ring. Gold is the next app shipped.</p>
+      <div style="display: flex; gap: 14px">
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <div style="width: 132px; height: 132px; border-radius: 23.5%; overflow: hidden">
+            <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+              <rect width="1024" height="1024" fill="url(#field)"></rect>
+              <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.62)" stroke="rgba(255,255,255,.9)" stroke-width="5"></circle>
+              <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+              <rect x="252" y="310" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="642" y="310" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="349" y="447" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="544" y="447" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="447" y="584" width="130" height="130" rx="30.5" fill="#F0C21C"></rect>
+              <rect width="1024" height="1024" fill="url(#gloss)"></rect>
+            </svg>
+          </div>
+          <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">Light</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <div style="width: 132px; height: 132px; border-radius: 23.5%; overflow: hidden; background: linear-gradient(160deg, #302F2C 0%, #1B1B19 100%)">
+            <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+              <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.10)" stroke="rgba(255,255,255,.22)" stroke-width="6"></circle>
+              <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+              <rect x="252" y="310" width="130" height="130" rx="30.5" fill="#EFE9DA"></rect><rect x="642" y="310" width="130" height="130" rx="30.5" fill="#EFE9DA"></rect><rect x="349" y="447" width="130" height="130" rx="30.5" fill="#EFE9DA"></rect><rect x="544" y="447" width="130" height="130" rx="30.5" fill="#EFE9DA"></rect><rect x="447" y="584" width="130" height="130" rx="30.5" fill="#F0C21C"></rect>
+            </svg>
+          </div>
+          <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">Dark · alpha</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <div style="width: 132px; height: 132px; border-radius: 23.5%; overflow: hidden">
+            <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+              <rect width="1024" height="1024" fill="#000000"></rect>
+              <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.13)" stroke="rgba(255,255,255,.26)" stroke-width="6"></circle>
+              <circle cx="512" cy="512" r="376" fill="#8E8E8E"></circle>
+              <rect x="252" y="310" width="130" height="130" rx="30.5" fill="#D2D2D2"></rect><rect x="642" y="310" width="130" height="130" rx="30.5" fill="#D2D2D2"></rect><rect x="349" y="447" width="130" height="130" rx="30.5" fill="#D2D2D2"></rect><rect x="544" y="447" width="130" height="130" rx="30.5" fill="#D2D2D2"></rect><rect x="447" y="584" width="130" height="130" rx="30.5" fill="#FFFFFF"></rect>
+            </svg>
+          </div>
+          <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">Tinted</div>
+        </div>
+      </div>
+      <div style="height: 1px; background: rgba(20,40,10,.10)"></div>
+      <div style="display: flex; align-items: center; gap: 28px">
+        <div style="display: flex; align-items: center; gap: 12px">
+          <svg viewBox="100 100 824 824" style="width: 48px; height: 48px; display: block">
+            <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+            <rect x="252" y="310" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="642" y="310" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="349" y="447" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="544" y="447" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="447" y="584" width="130" height="130" rx="30.5" fill="#F0C21C"></rect>
+          </svg>
+          <span style="font-size: 32px; font-weight: 600; letter-spacing: -0.02em">Voller</span>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 6px">
+          <div style="width: 29px; height: 29px; border-radius: 23.5%; overflow: hidden">
+            <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+              <rect width="1024" height="1024" fill="url(#field)"></rect>
+              <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.62)" stroke="rgba(255,255,255,.9)" stroke-width="5"></circle>
+              <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+              <rect x="252" y="310" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="642" y="310" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="349" y="447" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="544" y="447" width="130" height="130" rx="30.5" fill="#F6F1E3"></rect><rect x="447" y="584" width="130" height="130" rx="30.5" fill="#F0C21C"></rect>
+            </svg>
+          </div>
+          <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: .06em; color: #8A8A8A">29pt</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="2b" style="flex: 1 1 420px; min-width: 320px; max-width: 476px; display: flex; flex-direction: column; gap: 20px; padding: 28px; background: #FFFFFF; border: 1px solid rgba(20,40,10,.10); border-radius: 20px">
+      <div style="display: flex; align-items: baseline; gap: 12px">
+        <span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 12px; font-weight: 500; letter-spacing: .08em; color: #3F6B27; background: #F6F1E3; padding: 4px 9px; border-radius: 6px">2b</span>
+        <h2 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.02em">Inverted channel</h2>
+      </div>
+      <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #8A8A8A; text-wrap: pretty">1b with figure and ground swapped: cream disc, green V. The parent brand becomes the field its apps sit in — related but never mistaken for one of them on a home screen.</p>
+      <div style="display: flex; gap: 14px">
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <div style="width: 132px; height: 132px; border-radius: 23.5%; overflow: hidden">
+            <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+              <rect width="1024" height="1024" fill="url(#field)"></rect>
+              <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.62)" stroke="rgba(255,255,255,.9)" stroke-width="5"></circle>
+              <circle cx="512" cy="512" r="376" fill="#F6F1E3"></circle>
+              <g clip-path="url(#disc)">
+                <path d="M 166 250 L 512 744 L 858 250" fill="none" stroke="#82BA51" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+                <path d="M 397 580 L 512 744 L 627 580" fill="none" stroke="#F0C21C" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+              </g>
+              <rect width="1024" height="1024" fill="url(#gloss)"></rect>
+            </svg>
+          </div>
+          <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">Light</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <div style="width: 132px; height: 132px; border-radius: 23.5%; overflow: hidden; background: linear-gradient(160deg, #302F2C 0%, #1B1B19 100%)">
+            <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+              <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.10)" stroke="rgba(255,255,255,.22)" stroke-width="6"></circle>
+              <circle cx="512" cy="512" r="376" fill="#EFE9DA"></circle>
+              <g clip-path="url(#disc)">
+                <path d="M 166 250 L 512 744 L 858 250" fill="none" stroke="#82BA51" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+                <path d="M 397 580 L 512 744 L 627 580" fill="none" stroke="#F0C21C" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+              </g>
+            </svg>
+          </div>
+          <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">Dark · alpha</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <div style="width: 132px; height: 132px; border-radius: 23.5%; overflow: hidden">
+            <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+              <rect width="1024" height="1024" fill="#000000"></rect>
+              <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.13)" stroke="rgba(255,255,255,.26)" stroke-width="6"></circle>
+              <circle cx="512" cy="512" r="376" fill="#D2D2D2"></circle>
+              <g clip-path="url(#disc)">
+                <path d="M 166 250 L 512 744 L 858 250" fill="none" stroke="#8E8E8E" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+                <path d="M 397 580 L 512 744 L 627 580" fill="none" stroke="#FFFFFF" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+              </g>
+            </svg>
+          </div>
+          <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">Tinted</div>
+        </div>
+      </div>
+      <div style="height: 1px; background: rgba(20,40,10,.10)"></div>
+      <div style="display: flex; align-items: center; gap: 28px">
+        <div style="display: flex; align-items: center; gap: 12px">
+          <svg viewBox="100 100 824 824" style="width: 48px; height: 48px; display: block">
+            <circle cx="512" cy="512" r="376" fill="#F6F1E3"></circle>
+            <g clip-path="url(#disc)">
+              <path d="M 166 250 L 512 744 L 858 250" fill="none" stroke="#82BA51" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+              <path d="M 397 580 L 512 744 L 627 580" fill="none" stroke="#F0C21C" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+            </g>
+          </svg>
+          <span style="font-size: 32px; font-weight: 600; letter-spacing: -0.02em">Voller</span>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 6px">
+          <div style="width: 29px; height: 29px; border-radius: 23.5%; overflow: hidden">
+            <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+              <rect width="1024" height="1024" fill="url(#field)"></rect>
+              <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.62)" stroke="rgba(255,255,255,.9)" stroke-width="5"></circle>
+              <circle cx="512" cy="512" r="376" fill="#F6F1E3"></circle>
+              <g clip-path="url(#disc)">
+                <path d="M 166 250 L 512 744 L 858 250" fill="none" stroke="#82BA51" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+                <path d="M 397 580 L 512 744 L 627 580" fill="none" stroke="#F0C21C" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+              </g>
+            </svg>
+          </div>
+          <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: .06em; color: #8A8A8A">29pt</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="2c" style="flex: 1 1 420px; min-width: 320px; max-width: 476px; display: flex; flex-direction: column; gap: 20px; padding: 28px; background: #FFFFFF; border: 1px solid rgba(20,40,10,.10); border-radius: 20px">
+      <div style="display: flex; align-items: baseline; gap: 12px">
+        <span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 12px; font-weight: 500; letter-spacing: .08em; color: #3F6B27; background: #F6F1E3; padding: 4px 9px; border-radius: 6px">2c</span>
+        <h2 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.02em">Channel + one app</h2>
+      </div>
+      <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #8A8A8A; text-wrap: pretty">The 1b channel, but gold is spent on a single app tile resting in the V — squircle at the system radius. The V reads as the letter and as the funnel the apps come out of. One focal point, survives 29pt.</p>
+      <div style="display: flex; gap: 14px">
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <div style="width: 132px; height: 132px; border-radius: 23.5%; overflow: hidden">
+            <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+              <rect width="1024" height="1024" fill="url(#field)"></rect>
+              <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.62)" stroke="rgba(255,255,255,.9)" stroke-width="5"></circle>
+              <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+              <g clip-path="url(#disc)">
+                <path d="M 166 250 L 512 744 L 858 250" fill="none" stroke="#F6F1E3" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+                <rect x="430" y="546" width="164" height="164" rx="38.5" fill="#F0C21C"></rect>
+              </g>
+              <rect width="1024" height="1024" fill="url(#gloss)"></rect>
+            </svg>
+          </div>
+          <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">Light</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <div style="width: 132px; height: 132px; border-radius: 23.5%; overflow: hidden; background: linear-gradient(160deg, #302F2C 0%, #1B1B19 100%)">
+            <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+              <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.10)" stroke="rgba(255,255,255,.22)" stroke-width="6"></circle>
+              <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+              <g clip-path="url(#disc)">
+                <path d="M 166 250 L 512 744 L 858 250" fill="none" stroke="#EFE9DA" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+                <rect x="430" y="546" width="164" height="164" rx="38.5" fill="#F0C21C"></rect>
+              </g>
+            </svg>
+          </div>
+          <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">Dark · alpha</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <div style="width: 132px; height: 132px; border-radius: 23.5%; overflow: hidden">
+            <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+              <rect width="1024" height="1024" fill="#000000"></rect>
+              <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.13)" stroke="rgba(255,255,255,.26)" stroke-width="6"></circle>
+              <circle cx="512" cy="512" r="376" fill="#8E8E8E"></circle>
+              <g clip-path="url(#disc)">
+                <path d="M 166 250 L 512 744 L 858 250" fill="none" stroke="#D2D2D2" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+                <rect x="430" y="546" width="164" height="164" rx="38.5" fill="#FFFFFF"></rect>
+              </g>
+            </svg>
+          </div>
+          <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">Tinted</div>
+        </div>
+      </div>
+      <div style="height: 1px; background: rgba(20,40,10,.10)"></div>
+      <div style="display: flex; align-items: center; gap: 28px">
+        <div style="display: flex; align-items: center; gap: 12px">
+          <svg viewBox="100 100 824 824" style="width: 48px; height: 48px; display: block">
+            <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+            <g clip-path="url(#disc)">
+              <path d="M 166 250 L 512 744 L 858 250" fill="none" stroke="#F6F1E3" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+              <rect x="430" y="546" width="164" height="164" rx="38.5" fill="#F0C21C"></rect>
+            </g>
+          </svg>
+          <span style="font-size: 32px; font-weight: 600; letter-spacing: -0.02em">Voller</span>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 6px">
+          <div style="width: 29px; height: 29px; border-radius: 23.5%; overflow: hidden">
+            <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+              <rect width="1024" height="1024" fill="url(#field)"></rect>
+              <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.62)" stroke="rgba(255,255,255,.9)" stroke-width="5"></circle>
+              <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+              <g clip-path="url(#disc)">
+                <path d="M 166 250 L 512 744 L 858 250" fill="none" stroke="#F6F1E3" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+                <rect x="430" y="546" width="164" height="164" rx="38.5" fill="#F0C21C"></rect>
+              </g>
+            </svg>
+          </div>
+          <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: .06em; color: #8A8A8A">29pt</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section style="padding: 40px 40px 80px; font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif; color: #1B1B19; display: flex; flex-direction: column; gap: 40px">
+
+  <div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px">
+    <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">Turn 1 · Voller × UnPickle design language</div>
+    <h1 style="margin: 0; font-size: 34px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.15">Three ways to bring Voller into the family</h1>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start">
+
+    <div id="1a" style="flex: 1 1 420px; min-width: 320px; max-width: 476px; display: flex; flex-direction: column; gap: 20px; padding: 28px; background: #FFFFFF; border: 1px solid rgba(20,40,10,.10); border-radius: 20px">
+      <div style="display: flex; align-items: baseline; gap: 12px">
+        <span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 12px; font-weight: 500; letter-spacing: .08em; color: #3F6B27; background: #F6F1E3; padding: 4px 9px; border-radius: 6px">1a</span>
+        <h2 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.02em">Quincunx, refit</h2>
+      </div>
+      <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #8A8A8A; text-wrap: pretty"><span style="color:#1B1B19">Verb: choosing.</span> Your five-square V, rebuilt from circles on the light field. The apex — the one you land on — takes the gold. 778pt footprint, minimum change from today.</p>
+
+      <div style="display: flex; gap: 14px">
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <div style="width: 132px; height: 132px; border-radius: 23.5%; overflow: hidden">
+            <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+              <rect width="1024" height="1024" fill="url(#field)"></rect>
+              <circle cx="220" cy="307" r="97" fill="#82BA51"></circle><circle cx="804" cy="307" r="97" fill="#82BA51"></circle><circle cx="366" cy="512" r="97" fill="#82BA51"></circle><circle cx="658" cy="512" r="97" fill="#82BA51"></circle><circle cx="512" cy="718" r="97" fill="#F0C21C"></circle>
+              <rect width="1024" height="1024" fill="url(#gloss)"></rect>
+            </svg>
+          </div>
+          <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">Light</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <div style="width: 132px; height: 132px; border-radius: 23.5%; overflow: hidden; background: linear-gradient(160deg, #302F2C 0%, #1B1B19 100%)">
+            <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+              <circle cx="220" cy="307" r="97" fill="#82BA51"></circle><circle cx="804" cy="307" r="97" fill="#82BA51"></circle><circle cx="366" cy="512" r="97" fill="#82BA51"></circle><circle cx="658" cy="512" r="97" fill="#82BA51"></circle><circle cx="512" cy="718" r="97" fill="#F0C21C"></circle>
+            </svg>
+          </div>
+          <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">Dark · alpha</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <div style="width: 132px; height: 132px; border-radius: 23.5%; overflow: hidden">
+            <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+              <rect width="1024" height="1024" fill="#000000"></rect>
+              <circle cx="220" cy="307" r="97" fill="#8E8E8E"></circle><circle cx="804" cy="307" r="97" fill="#8E8E8E"></circle><circle cx="366" cy="512" r="97" fill="#8E8E8E"></circle><circle cx="658" cy="512" r="97" fill="#8E8E8E"></circle><circle cx="512" cy="718" r="97" fill="#FFFFFF"></circle>
+            </svg>
+          </div>
+          <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">Tinted</div>
+        </div>
+      </div>
+
+      <div style="height: 1px; background: rgba(20,40,10,.10)"></div>
+
+      <div style="display: flex; align-items: center; gap: 28px">
+        <div style="display: flex; align-items: center; gap: 12px">
+          <svg viewBox="123 210 778 605" style="width: 62px; height: 48px; display: block">
+            <circle cx="220" cy="307" r="97" fill="#82BA51"></circle><circle cx="804" cy="307" r="97" fill="#82BA51"></circle><circle cx="366" cy="512" r="97" fill="#82BA51"></circle><circle cx="658" cy="512" r="97" fill="#82BA51"></circle><circle cx="512" cy="718" r="97" fill="#F0C21C"></circle>
+          </svg>
+          <span style="font-size: 32px; font-weight: 600; letter-spacing: -0.02em">Voller</span>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 6px">
+          <div style="width: 29px; height: 29px; border-radius: 23.5%; overflow: hidden">
+            <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+              <rect width="1024" height="1024" fill="url(#field)"></rect>
+              <circle cx="220" cy="307" r="97" fill="#82BA51"></circle><circle cx="804" cy="307" r="97" fill="#82BA51"></circle><circle cx="366" cy="512" r="97" fill="#82BA51"></circle><circle cx="658" cy="512" r="97" fill="#82BA51"></circle><circle cx="512" cy="718" r="97" fill="#F0C21C"></circle>
+            </svg>
+          </div>
+          <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: .06em; color: #8A8A8A">29pt</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="1b" style="flex: 1 1 420px; min-width: 320px; max-width: 476px; display: flex; flex-direction: column; gap: 20px; padding: 28px; background: #FFFFFF; border: 1px solid rgba(20,40,10,.10); border-radius: 20px">
+      <div style="display: flex; align-items: baseline; gap: 12px">
+        <span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 12px; font-weight: 500; letter-spacing: .08em; color: #3F6B27; background: #F6F1E3; padding: 4px 9px; border-radius: 6px">1b</span>
+        <h2 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.02em">V channel</h2>
+      </div>
+      <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #8A8A8A; text-wrap: pretty"><span style="color:#1B1B19">Verb: travelling through.</span> The V becomes a cream channel across a green disc, arms on the system's 35° axis, and the turn at the vertex in gold. Closest sibling to Riverly and Meal Planner; strongest at 29pt.</p>
+
+      <div style="display: flex; gap: 14px">
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <div style="width: 132px; height: 132px; border-radius: 23.5%; overflow: hidden">
+            <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+              <rect width="1024" height="1024" fill="url(#field)"></rect>
+              <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.62)" stroke="rgba(255,255,255,.9)" stroke-width="5"></circle>
+              <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+              <g clip-path="url(#disc)">
+                <path d="M 166 250 L 512 744 L 858 250" fill="none" stroke="#F6F1E3" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+                <path d="M 397 580 L 512 744 L 627 580" fill="none" stroke="#F0C21C" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+              </g>
+              <rect width="1024" height="1024" fill="url(#gloss)"></rect>
+            </svg>
+          </div>
+          <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">Light</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <div style="width: 132px; height: 132px; border-radius: 23.5%; overflow: hidden; background: linear-gradient(160deg, #302F2C 0%, #1B1B19 100%)">
+            <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+              <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.10)" stroke="rgba(255,255,255,.22)" stroke-width="6"></circle>
+              <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+              <g clip-path="url(#disc)">
+                <path d="M 166 250 L 512 744 L 858 250" fill="none" stroke="#EFE9DA" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+                <path d="M 397 580 L 512 744 L 627 580" fill="none" stroke="#F0C21C" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+              </g>
+            </svg>
+          </div>
+          <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">Dark · alpha</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <div style="width: 132px; height: 132px; border-radius: 23.5%; overflow: hidden">
+            <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+              <rect width="1024" height="1024" fill="#000000"></rect>
+              <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.13)" stroke="rgba(255,255,255,.26)" stroke-width="6"></circle>
+              <circle cx="512" cy="512" r="376" fill="#8E8E8E"></circle>
+              <g clip-path="url(#disc)">
+                <path d="M 166 250 L 512 744 L 858 250" fill="none" stroke="#D2D2D2" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+                <path d="M 397 580 L 512 744 L 627 580" fill="none" stroke="#FFFFFF" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+              </g>
+            </svg>
+          </div>
+          <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">Tinted</div>
+        </div>
+      </div>
+
+      <div style="height: 1px; background: rgba(20,40,10,.10)"></div>
+
+      <div style="display: flex; align-items: center; gap: 28px">
+        <div style="display: flex; align-items: center; gap: 12px">
+          <svg viewBox="100 100 824 824" style="width: 48px; height: 48px; display: block">
+            <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+            <g clip-path="url(#disc)">
+              <path d="M 166 250 L 512 744 L 858 250" fill="none" stroke="#F6F1E3" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+              <path d="M 397 580 L 512 744 L 627 580" fill="none" stroke="#F0C21C" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+            </g>
+          </svg>
+          <span style="font-size: 32px; font-weight: 600; letter-spacing: -0.02em">Voller</span>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 6px">
+          <div style="width: 29px; height: 29px; border-radius: 23.5%; overflow: hidden">
+            <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+              <rect width="1024" height="1024" fill="url(#field)"></rect>
+              <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.62)" stroke="rgba(255,255,255,.9)" stroke-width="5"></circle>
+              <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+              <g clip-path="url(#disc)">
+                <path d="M 166 250 L 512 744 L 858 250" fill="none" stroke="#F6F1E3" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+                <path d="M 397 580 L 512 744 L 627 580" fill="none" stroke="#F0C21C" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
+              </g>
+            </svg>
+          </div>
+          <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: .06em; color: #8A8A8A">29pt</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="1c" style="flex: 1 1 420px; min-width: 320px; max-width: 476px; display: flex; flex-direction: column; gap: 20px; padding: 28px; background: #FFFFFF; border: 1px solid rgba(20,40,10,.10); border-radius: 20px">
+      <div style="display: flex; align-items: baseline; gap: 12px">
+        <span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 12px; font-weight: 500; letter-spacing: .08em; color: #3F6B27; background: #F6F1E3; padding: 4px 9px; border-radius: 6px">1c</span>
+        <h2 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.02em">Contained quincunx</h2>
+      </div>
+      <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #8A8A8A; text-wrap: pretty"><span style="color:#1B1B19">Verb: choosing.</span> The same five-dot V, but held inside the glass ring and green disc — the token that ties the circular icons together. Keeps your mark's identity while joining the family's silhouette.</p>
+
+      <div style="display: flex; gap: 14px">
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <div style="width: 132px; height: 132px; border-radius: 23.5%; overflow: hidden">
+            <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+              <rect width="1024" height="1024" fill="url(#field)"></rect>
+              <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.62)" stroke="rgba(255,255,255,.9)" stroke-width="5"></circle>
+              <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+              <circle cx="317" cy="375" r="65" fill="#F6F1E3"></circle><circle cx="707" cy="375" r="65" fill="#F6F1E3"></circle><circle cx="414" cy="512" r="65" fill="#F6F1E3"></circle><circle cx="609" cy="512" r="65" fill="#F6F1E3"></circle><circle cx="512" cy="649" r="65" fill="#F0C21C"></circle>
+              <rect width="1024" height="1024" fill="url(#gloss)"></rect>
+            </svg>
+          </div>
+          <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">Light</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <div style="width: 132px; height: 132px; border-radius: 23.5%; overflow: hidden; background: linear-gradient(160deg, #302F2C 0%, #1B1B19 100%)">
+            <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+              <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.10)" stroke="rgba(255,255,255,.22)" stroke-width="6"></circle>
+              <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+              <circle cx="317" cy="375" r="65" fill="#EFE9DA"></circle><circle cx="707" cy="375" r="65" fill="#EFE9DA"></circle><circle cx="414" cy="512" r="65" fill="#EFE9DA"></circle><circle cx="609" cy="512" r="65" fill="#EFE9DA"></circle><circle cx="512" cy="649" r="65" fill="#F0C21C"></circle>
+            </svg>
+          </div>
+          <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">Dark · alpha</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <div style="width: 132px; height: 132px; border-radius: 23.5%; overflow: hidden">
+            <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+              <rect width="1024" height="1024" fill="#000000"></rect>
+              <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.13)" stroke="rgba(255,255,255,.26)" stroke-width="6"></circle>
+              <circle cx="512" cy="512" r="376" fill="#8E8E8E"></circle>
+              <circle cx="317" cy="375" r="65" fill="#D2D2D2"></circle><circle cx="707" cy="375" r="65" fill="#D2D2D2"></circle><circle cx="414" cy="512" r="65" fill="#D2D2D2"></circle><circle cx="609" cy="512" r="65" fill="#D2D2D2"></circle><circle cx="512" cy="649" r="65" fill="#FFFFFF"></circle>
+            </svg>
+          </div>
+          <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">Tinted</div>
+        </div>
+      </div>
+
+      <div style="height: 1px; background: rgba(20,40,10,.10)"></div>
+
+      <div style="display: flex; align-items: center; gap: 28px">
+        <div style="display: flex; align-items: center; gap: 12px">
+          <svg viewBox="100 100 824 824" style="width: 48px; height: 48px; display: block">
+            <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+            <circle cx="317" cy="375" r="65" fill="#F6F1E3"></circle><circle cx="707" cy="375" r="65" fill="#F6F1E3"></circle><circle cx="414" cy="512" r="65" fill="#F6F1E3"></circle><circle cx="609" cy="512" r="65" fill="#F6F1E3"></circle><circle cx="512" cy="649" r="65" fill="#F0C21C"></circle>
+          </svg>
+          <span style="font-size: 32px; font-weight: 600; letter-spacing: -0.02em">Voller</span>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 6px">
+          <div style="width: 29px; height: 29px; border-radius: 23.5%; overflow: hidden">
+            <svg viewBox="0 0 1024 1024" style="width:100%;height:100%;display:block">
+              <rect width="1024" height="1024" fill="url(#field)"></rect>
+              <circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.62)" stroke="rgba(255,255,255,.9)" stroke-width="5"></circle>
+              <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
+              <circle cx="317" cy="375" r="65" fill="#F6F1E3"></circle><circle cx="707" cy="375" r="65" fill="#F6F1E3"></circle><circle cx="414" cy="512" r="65" fill="#F6F1E3"></circle><circle cx="609" cy="512" r="65" fill="#F6F1E3"></circle><circle cx="512" cy="649" r="65" fill="#F0C21C"></circle>
+            </svg>
+          </div>
+          <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: .06em; color: #8A8A8A">29pt</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+    <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #1B1B19; text-wrap: pretty">Every direction below is on the 1024 grid, uses only the six brand values, ships all three appearance variants, and spends gold exactly once. They differ in how far they move from your current five-square mark — and in which shape carries the verb. Reference ids in chat: <a href="#1a">1a</a>, <a href="#1b">1b</a>, <a href="#1c">1c</a>.</p>
+  <div style="display: flex; gap: 28px; align-items: flex-start; padding: 24px; background: #FFFFFF; border: 1px solid rgba(20,40,10,.10); border-radius: 20px">
+    <div style="display: flex; flex-direction: column; gap: 10px">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">Current</div>
+      <div style="width: 108px; height: 108px; border-radius: 23.5%; overflow: hidden">
+        <svg viewBox="0 0 96 96" style="width:100%;height:100%;display:block">
+          <rect width="96" height="96" rx="22" fill="#FBFAF7"></rect>
+          <g transform="translate(6 13) scale(1.1667)">
+            <rect x="0" y="2" width="18" height="18" rx="5.2" fill="#00A000"></rect><rect x="54" y="2" width="18" height="18" rx="5.2" fill="#00A000"></rect><rect x="13.5" y="21" width="18" height="18" rx="5.2" fill="#00A000"></rect><rect x="40.5" y="21" width="18" height="18" rx="5.2" fill="#00A000"></rect><rect x="27" y="40" width="18" height="18" rx="5.2" fill="#00A000"></rect>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 14px; padding-top: 26px">
+      <svg viewBox="0 0 205 60" style="width: 205px; height: 60px; display: block">
+        <rect x="0" y="2" width="18" height="18" rx="5.2" fill="#00A000"></rect><rect x="54" y="2" width="18" height="18" rx="5.2" fill="#00A000"></rect><rect x="13.5" y="21" width="18" height="18" rx="5.2" fill="#00A000"></rect><rect x="40.5" y="21" width="18" height="18" rx="5.2" fill="#00A000"></rect><rect x="27" y="40" width="18" height="18" rx="5.2" fill="#00A000"></rect>
+        <text x="88" y="42" font-family="Inter, sans-serif" font-size="32" font-weight="700" letter-spacing="-1.4" fill="#111827">Voller</text>
+      </svg>
+      <div style="font-size: 14px; line-height: 1.6; color: #8A8A8A; max-width: 420px; text-wrap: pretty">Off-system: <span style="color:#1B1B19">#00A000</span> instead of brand green, cool <span style="color:#1B1B19">#111827</span> text on a near-white tile rather than the cream field, no gloss, no gold, squares aren't a system primitive, and a second type family (Inter).</div>
+    </div>
+  </div>
+
+  <div style="display: flex; gap: 40px; flex-wrap: wrap; padding: 24px 28px; background: #F6F1E3; border-radius: 20px; max-width: 1480px">
+    <div style="display: flex; flex-direction: column; gap: 10px; min-width: 220px">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">Applied to all three</div>
+      <div style="font-size: 14px; line-height: 1.6; text-wrap: pretty">Brand green <span style="font-family: ui-monospace, monospace; font-size: 13px">#82BA51</span> replaces <span style="font-family: ui-monospace, monospace; font-size: 13px">#00A000</span>. Light field gradient plus baked gloss. 23.5% squircle. 1024 grid, 96pt safe margin.</div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 10px; min-width: 220px">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">Gold, once</div>
+      <div style="font-size: 14px; line-height: 1.6; text-wrap: pretty">One gold element per icon, on the shape that performs the verb — as with UnPickle's ribbon and Riverly's hull.</div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 10px; min-width: 220px">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">Wordmark</div>
+      <div style="font-size: 14px; line-height: 1.6; text-wrap: pretty">One sans, 600 weight, <span style="font-family: ui-monospace, monospace; font-size: 13px">-0.02em</span>, ink <span style="font-family: ui-monospace, monospace; font-size: 13px">#1B1B19</span> — no second family, no cool grey.</div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 10px; min-width: 220px">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A">Ships as</div>
+      <div style="font-size: 14px; line-height: 1.6; text-wrap: pretty">Once you pick: <span style="font-family: ui-monospace, monospace; font-size: 13px">source-{light,dark,tinted}.svg</span>, 1024 PNGs, <span style="font-family: ui-monospace, monospace; font-size: 13px">Contents.json</span>, plus web icon / mark / logo SVGs.</div>
+    </div>
+  </div>
+
+</section>
+</x-dc>
+</body>
+</html>

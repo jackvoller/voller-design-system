@@ -1,0 +1,79 @@
+<!-- @dsCard group="Components" viewport="700x300" name="Core" subtitle="Button, IconButton, Badge, Eyebrow, Card" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    body { background: var(--bg-page-flat); padding: 20px; }
+    .grid { display: flex; flex-direction: column; gap: 16px; }
+    .row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .lbl { font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
+
+  </style>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.26.4/babel.min.js"></script>
+  <script src="../../_ds_bundle.js"></script>
+  <script src="../../assets/ds-resolve.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+const { Button, IconButton, Card, Badge, Eyebrow } = window.__DS;
+
+const Ico = ({ d }) => (
+  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+       strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><path d={d} /></svg>
+);
+const DOWNLOAD = 'M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3';
+const ARROW = 'M5 12h14M13 5l7 7-7 7';
+const CLOSE = 'M18 6 6 18M6 6l12 12';
+
+function Demo() {
+  return (
+    <div className="grid">
+      <div>
+        <div className="lbl" style={{ marginBottom: 8 }}>Button — variants</div>
+        <div className="row">
+          <Button variant="primary">Browse the apps</Button>
+          <Button variant="accent" iconLeft={<Ico d={DOWNLOAD} />}>Download</Button>
+          <Button variant="quiet">Details</Button>
+          <Button variant="text" iconRight={<Ico d={ARROW} />}>Read the notes</Button>
+          <Button variant="primary" disabled>Unavailable</Button>
+        </div>
+      </div>
+      <div>
+        <div className="lbl" style={{ marginBottom: 8 }}>Sizes · IconButton · Badge · Eyebrow</div>
+        <div className="row">
+          <Button size="sm">Small</Button>
+          <Button size="md">Medium</Button>
+          <Button size="lg">Large</Button>
+          <IconButton label="Close"><Ico d={CLOSE} /></IconButton>
+          <IconButton label="Get" variant="primary"><Ico d={DOWNLOAD} /></IconButton>
+          <Badge tone="green">iOS 18</Badge>
+          <Badge tone="neutral">Free</Badge>
+          <Badge tone="gold">New</Badge>
+          <Eyebrow as="span">The family</Eyebrow>
+        </div>
+      </div>
+      <div>
+        <div className="lbl" style={{ marginBottom: 8 }}>Card — tones</div>
+        <div className="row" style={{ alignItems: 'stretch' }}>
+          {[['white', 'White on field'], ['cream', 'Sunken step'], ['dark', 'On dark section']].map(([tone, text]) => (
+            <Card key={tone} tone={tone} padding={16} radius="panel" style={{ flex: 1, minWidth: 150 }}>
+              <div style={{ fontSize: 14, fontWeight: 500 }}>{text}</div>
+              <div style={{ fontSize: 12, color: tone === 'dark' ? 'var(--text-secondary-on-dark)' : 'var(--muted)', marginTop: 4 }}>
+                tone="{tone}"
+              </div>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+:root {
+  --font-sans: 'DM Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* Weights: 400/500/600 only. 700+ is unused in this brand. */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+
+  /* Scale: 44 / 34 / 22 / 16 / 14 / 12 */
+  --fs-display: 44px;
+  --fs-h1: 34px;
+  --fs-h2: 22px;
+  --fs-body: 16px;
+  --fs-small: 14px;
+  --fs-caption: 12px;
+  --fs-eyebrow: 11px;
+
+  --lh-tight: 1.1;
+  --lh-heading: 1.2;
+  --lh-body: 1.6;
+
+  --tracking-heading: -0.02em;
+  --tracking-control: -0.01em;
+  --tracking-eyebrow: .1em;
+
+  --measure-prose: 680px;
+}

@@ -1,0 +1,26 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Creams & ink" subtitle="Surfaces and text. cream-dark is the cream substitute on dark." -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    body { background: var(--bg-page-flat); padding: 20px; }
+    .row { display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap; }
+    .col { display: flex; flex-direction: column; gap: var(--space-2); }
+    .sw { display: flex; flex-direction: column; gap: 6px; }
+    .chip { height: 56px; border-radius: 12px; border: 1px solid var(--hairline); }
+    .hex { font-family: var(--font-mono); font-size: 11px; letter-spacing: .04em; color: var(--muted); }
+    .tok { font-family: var(--font-mono); font-size: 11px; color: var(--ink); }
+
+  </style>
+</head>
+<body>
+<div class="row" style="gap:12px">
+  <div class="sw" style="flex:1"><div class="chip" style="background:var(--cream)"></div><span class="tok">--cream</span><span class="hex">#F6F1E3</span></div>
+  <div class="sw" style="flex:1"><div class="chip" style="background:var(--cream-dark)"></div><span class="tok">--cream-dark</span><span class="hex">#EFE9DA</span></div>
+  <div class="sw" style="flex:1"><div class="chip" style="background:var(--ink)"></div><span class="tok">--ink</span><span class="hex">#1B1B19</span></div>
+  <div class="sw" style="flex:1"><div class="chip" style="background:var(--muted)"></div><span class="tok">--muted</span><span class="hex">#8A8A8A</span></div>
+</div>
+</body>
+</html>

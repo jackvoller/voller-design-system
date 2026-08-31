@@ -1,0 +1,57 @@
+:root {
+  /* --- Base palette: six brand values, inherited unchanged from the app icons.
+         Do not add a seventh. --- */
+  --green: #82BA51;        /* the brand; primary fills */
+  --green-deep: #69A63C;   /* interior detail on green shapes only */
+  --green-dark: #3F6B27;   /* links, hover/pressed, detail on top of gold */
+  --gold: #F0C21C;         /* the action colour — rationed, one per view */
+  --cream: #F6F1E3;        /* light surfaces, negative space */
+  --cream-dark: #EFE9DA;   /* the cream substitute on dark */
+  --ink: #1B1B19;          /* body text on light; dark sections */
+  --muted: #8A8A8A;        /* secondary text, both fields */
+  --white: #FFFFFF;
+  --off-white: #FCFCF6;    /* flat page background */
+
+  /* --- Fields: the only two gradients in the system --- */
+  --field-light: linear-gradient(160deg, #FCFCF6 0%, #F1F0E4 100%);
+  --field-dark: linear-gradient(160deg, #302F2C 0%, #1B1B19 100%);
+  /* Tile gloss — belongs to the tile, never to the drawn subject */
+  --gloss: radial-gradient(120% 90% at 30% 0%, rgba(255,255,255,.7) 0%, rgba(255,255,255,0) 55%);
+
+  /* --- Lines --- */
+  --hairline: rgba(20, 40, 10, .10);
+  --hairline-strong: rgba(20, 40, 10, .18);
+  --hairline-on-dark: rgba(246, 241, 227, .14);
+
+  /* --- Glass ring: the token that ties the circular marks together --- */
+  --glass-fill: rgba(255,255,255,.62);
+  --glass-stroke: rgba(255,255,255,.9);
+  --glass-fill-dark: rgba(255,255,255,.10);
+  --glass-stroke-dark: rgba(255,255,255,.22);
+
+  /* --- Semantic aliases: use these in UI, not the base values --- */
+  --bg-page: var(--field-light);
+  --bg-page-flat: var(--off-white);
+  --bg-dark: var(--ink);
+  --surface-card: var(--white);
+  --surface-sunken: var(--cream);
+  --surface-card-dark: #26251F;
+
+  --text-body: var(--ink);
+  --text-secondary: var(--muted);
+  --text-heading: var(--ink);
+  --text-on-dark: var(--cream-dark);
+  --text-secondary-on-dark: #9C9C96;
+  --text-on-green: var(--off-white);
+  --text-link: var(--green-dark);
+  --text-link-hover: var(--green);
+
+  --action-primary: var(--green);
+  --action-primary-hover: var(--green-dark);
+  --action-accent: var(--gold);           /* once per view */
+  --action-accent-detail: var(--green-dark); /* the only ink allowed on gold */
+
+  --border-subtle: var(--hairline);
+  --border-input: var(--hairline-strong);
+  --focus-ring: rgba(105, 166, 60, .45);
+}

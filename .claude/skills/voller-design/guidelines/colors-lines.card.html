@@ -1,0 +1,33 @@
+<!-- @dsCard group="Colors" viewport="700x160" name="Hairlines & glass ring" subtitle="Separation comes from lines and background steps — never drop shadows." -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    body { background: var(--bg-page-flat); padding: 20px; }
+    .row { display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap; }
+    .col { display: flex; flex-direction: column; gap: var(--space-2); }
+    .sw { display: flex; flex-direction: column; gap: 6px; }
+    .chip { height: 56px; border-radius: 12px; border: 1px solid var(--hairline); }
+    .hex { font-family: var(--font-mono); font-size: 11px; letter-spacing: .04em; color: var(--muted); }
+    .tok { font-family: var(--font-mono); font-size: 11px; color: var(--ink); }
+
+  </style>
+</head>
+<body>
+<div class="row" style="gap:16px;align-items:stretch">
+  <div style="flex:1;padding:14px;border:1px solid var(--hairline);border-radius:var(--radius-panel);background:var(--white)">
+    <div class="tok">--hairline</div><div class="hex">rgba(20,40,10,.10) · card edges</div>
+    <div style="height:1px;background:var(--hairline);margin:10px 0"></div>
+    <div class="tok">--hairline-strong</div><div class="hex">rgba(20,40,10,.18) · inputs</div>
+  </div>
+  <div style="flex:1;display:flex;align-items:center;gap:14px;padding:14px;border-radius:var(--radius-panel);background:var(--field-light)">
+    <span style="width:74px;height:74px;border-radius:50%;background:var(--glass-fill);box-shadow:inset 0 0 0 2px var(--glass-stroke);display:grid;place-items:center;flex:none">
+      <span style="width:62px;height:62px;border-radius:50%;background:var(--green)"></span>
+    </span>
+    <div><div class="tok">glass ring</div><div class="hex">r + 7% · .62 fill / .9 stroke<br>on dark: .10 / .22</div></div>
+  </div>
+</div>
+</body>
+</html>

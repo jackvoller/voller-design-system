@@ -1,0 +1,29 @@
+<!-- @dsCard group="Spacing" viewport="700x210" name="Spacing in use" subtitle="A card: 28px padding, 12px stack, 24px before the action." -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    body { background: var(--bg-page-flat); padding: 20px; }
+    .row { display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap; }
+    .col { display: flex; flex-direction: column; gap: var(--space-2); }
+    .sw { display: flex; flex-direction: column; gap: 6px; }
+    .chip { height: 56px; border-radius: 12px; border: 1px solid var(--hairline); }
+    .hex { font-family: var(--font-mono); font-size: 11px; letter-spacing: .04em; color: var(--muted); }
+    .tok { font-family: var(--font-mono); font-size: 11px; color: var(--ink); }
+
+  </style>
+</head>
+<body>
+<div style="background:var(--white);border:1px solid var(--hairline);border-radius:20px;padding:28px;max-width:420px;display:flex;flex-direction:column;gap:12px">
+  <div style="font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)">Riverly</div>
+  <div style="font-size:var(--fs-h2);font-weight:600;letter-spacing:-.02em">Navigation, simplified</div>
+  <p style="font-size:var(--fs-small);color:var(--muted)">Plot a course, read the water, get home.</p>
+  <div style="display:flex;gap:8px;margin-top:12px">
+    <span style="padding:11px 18px;border-radius:10px;background:var(--green);color:var(--off-white);font-size:15px;font-weight:500">Open</span>
+    <span style="padding:11px 18px;border-radius:10px;box-shadow:inset 0 0 0 1px var(--hairline-strong);color:var(--green-dark);font-size:15px;font-weight:500">Details</span>
+  </div>
+</div>
+</body>
+</html>

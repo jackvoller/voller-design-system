@@ -6,7 +6,9 @@ user-invocable: true
 
 ## Read first, in this order
 
-1. **`../../../VOLLER.md`** — the repo root. **This is the spec and it wins any disagreement.**
+1. **`VOLLER.md` at the root of the `voller-design-system` repo** — `../../../VOLLER.md` from
+   here, or `/Users/jackvoller/repos/voller-design-system/VOLLER.md` outright.
+   **This is the spec and it wins any disagreement.**
    It supersedes `brand/VOLLER-THEME.md` and `uploads/Brand-Icons/BRAND.md`, both of which are kept
    in this skill only as history. Read §1.1 (the contrast table) and §4 (the gold rule) before
    choosing any colour.

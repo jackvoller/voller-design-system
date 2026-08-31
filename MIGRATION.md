@@ -9,6 +9,20 @@ Recommended order across the family: `voller_website` (smallest, becomes the ref
 `unjumble` (one asset unlocks eight call sites) → `mealplanner` (one file) → `riverly` (specced
 separately) → `studio` (largest).
 
+## State — 31 Aug 2026
+
+| Repo | State | Left |
+|---|---|---|
+| `voller_website` | **done**, on `main` | — |
+| `unjumble` | **done** bar §2.3's gold row | Gold and the orange draft set: deferred by Jack |
+| `mealplanner` | **done** bar the tag cull | Tag/pastel sets — needs a data migration, see §3 |
+| `studio` | **done** bar the safelist | Safelist — needs a data migration, see §5 |
+| `riverly` | **not started** | Blocked: its spec is in `Riverly Brand Review.dc.html`, which is not in this repo |
+
+Each migrated repo built clean before commit (`xcodebuild` for the two iOS apps, `npm run build`
+for studio). The three open items are all the same shape: a palette that looks like drift but is
+actually persisted user choice. None is a find/replace.
+
 ---
 
 ## 0. Shared: the two-appearance accent
@@ -138,16 +152,28 @@ No theme file, no colour definitions. Highest ratio of result to effort in the f
 |---|---|---|
 | 5 | `static let brand = Color(red: 0/255, green: 160/255, blue: 0/255) // #00A000` | `static let brand = Color(red: 130/255, green: 186/255, blue: 81/255) // #82BA51` |
 | 15 | `static let destructive = Color(red: 239/255, green: 68/255, blue: 68/255) // #EF4444` | `static let destructive = Color.brandAlert // #C4382C / #E8705F` |
-| 19–30 | 12 `tagX` colours | Cull to **8**, rename by domain not hue (§8 rule 1) |
-| 33–39 | 7 `pastelX` colours | Delete, or keep as the fill behind an 8-value tag set — not as a second palette |
+| 19–30 | 12 `tagX` colours | **Do not cull or rename without a data migration — see below.** |
+| 33–39 | 7 `pastelX` colours | Same caveat; audit usage before deleting |
 
 Also add the §0 `AccentColor.colorset` and the token block, and audit every `brand` call site for a
 white label — `#82BA51` cannot carry one.
 
-**On the tags:** these are the Tailwind palette transcribed into Swift. Under §8 Meal Planner keeps
-its own set — it just has to be eight values, named for what they mean, measured on the surface they
-sit on, and free of `gold` and `alert`. `tagRed` at `#EF4444` now collides with house `alert`, which
-is the concrete reason to rename rather than merely trim.
+**On the tags — corrected 2026-08-31.** An earlier version of this file said to cull these to eight
+and rename them by domain under §8 rule 1. **That is unsafe as written.** These are not colours the
+app assigns; they are `MemberAvatarColor`, the set a household member *picks* for their avatar, and
+the choice is persisted as the `WorkspaceMember.colorName` raw value and synced between devices.
+
+Two consequences:
+
+- **Culling silently resets people.** A member on a removed case falls back to brand green. There is
+  a fallback so nothing crashes, but the user loses a choice they made, on every device.
+- **Hue names are correct here.** The picker's own labels are "Blue", "Pink", "Bright green". §8's
+  "named for its domain, not its hue" governs colour *the app* assigns meaning to. When the user is
+  choosing a colour, the hue **is** the domain.
+
+`tagRed` at `#EF4444` colliding with house `alert` is still real and still worth fixing — but the fix
+is to change that one value and migrate stored rows, not to delete cases from a persisted enum. Treat
+this as a data migration with its own plan, not a line in a find/replace table.
 
 **Timer numerals**: keep `design: .rounded` in the timer only — that is the §2 instrument exception.
 Remove it anywhere else it appears.
@@ -206,10 +232,16 @@ Dark block:
 
 **`tailwind.config.ts`**
 
-1. **Delete the entire `safelist` array** (34 entries, lines 10–47). A safelist of 17 vibrant plus 17
-   pastel utilities is not a palette — it is the absence of one, kept alive so arbitrary class strings
-   resolve at runtime. Replace with **eight named status tokens** in `globals.css` under §8's rules,
-   and reference those.
+1. **The `safelist` array** (35 entries — 18 vibrant, 17 pastel). An earlier version of this file
+   said to delete it outright. **Do not.** It is load-bearing: project status colours are persisted
+   **as Tailwind class strings** (`{ value: 'in-progress', color: 'bg-orange-500' }`, see
+   `src/app/projects/page.tsx`), and components match on them by substring. Purging the safelist
+   stops those classes compiling, and every saved project loses its status colours in production —
+   with no error to notice.
+
+   The end state in §8 is still right: eight named status tokens in `globals.css`. Reaching it means
+   migrating stored `color` values to token names and updating the matchers **first**, then removing
+   the safelist last. That is its own piece of work, not a config edit.
 2. **`fontFamily`** — all four keys currently repeat the same four-font stack. Collapse to one `sans`
    key with the §2 ladder (`'SF Pro Text'` and `system-ui` are missing today), and delete `body`,
    `headline` and `code` unless something reads them.

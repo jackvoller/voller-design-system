@@ -35,7 +35,8 @@ The voice is a maker describing what a thing does, then stopping.
   names (`Meal Planner`) and proper nouns. ALL CAPS only in eyebrows/spec labels, where it is a
   typographic device rather than emphasis.
 - **Name the verb.** Every app is described by its action first — unwrapping, ticking off, recording,
-  navigating. This is the same discipline that places the gold in each icon (§ gold rule), and it
+  navigating. This is the same discipline that places the rationed element in each icon (§ the
+  ration rule), and it
   applies to copy: if you cannot name the verb, the page isn't written yet.
 - **Say what it does not do.** A signature move. "No accounts, no recipe feed, no video of someone
   making it." "No roadmap deck and no growth team." Absence is a feature; state it plainly, never
@@ -56,34 +57,51 @@ The voice is a maker describing what a thing does, then stopping.
 Colour splits in two — see `VOLLER.md` §1 for the split, §1.2 for the app accent, §1.1 and §1.2.1
 for the sanctioned contrast pairings.
 
-**The house palette — twelve values, fixed.** Green `#82BA51`, green-deep `#69A63C`, green-dark
-`#3F6B27`, gold `#F0C21C`, cream `#F6F1E3`, cream-dark `#EFE9DA`, ink `#1B1B19`, ink-raised
+**The house palette — twelve values, fixed.** Yellow `#FFC400`, yellow-deep `#E0A200`, yellow-dark
+`#8A5A00`, yellow-wash `#FFF3CE`, cream `#F6F1E3`, cream-dark `#EFE9DA`, ink `#1B1B19`, ink-raised
 `#24231F`, muted `#6E6E6B`, muted-dark `#A09892`, alert `#C4382C`, alert-light `#E8705F`.
-It draws the icons, the wordmark, voller.uk and the App Store, plus every neutral, surface,
+It draws the Voller mark, the wordmark, voller.uk and the App Store, plus every neutral, surface,
 hairline and alert inside a product. **Do not add a thirteenth.**
-Green is never a gradient — flat fills only.
+Yellow is never a gradient — flat fills only.
+
+**The house went yellow on 1 Sep 2026.** Green `#82BA51`, green-deep `#69A63C`, green-dark `#3F6B27`
+and gold `#FECA00` are retired from the house. Green is not gone from the family — it is now Meal
+Planner's and UnPickle's published `accent`. The house no longer owns a green.
 
 **The app accent — six values, published per app.** Inside a product, action and state come from
 the app's own `accent`, `accent-deep`, `accent-wash`, `field`, `field-dark` and `accent-dark`, not
-from green and gold. UnJumble is coral `#FF5A3C`; Meal Planner and UnPickle share green `#2BBF4E`;
+from the house colour. **The same six also draw that app's icon** (§4.1). UnJumble is coral
+`#FF5A3C`; Meal Planner and UnPickle share green `#2BBF4E`;
 Riverly proposes blue `#0B5FD0`. Full values in `tokens/colors.css` and §1.2. An app may not add a
 seventh colour to its chrome — if it needs a distinction, it moves inside its own accent ramp.
 
 **Three corrections to the source documents, all AA failures.** `--muted` is `#6E6E6B` on light —
 the old `#8A8A8A` is 3.4:1 there. `--muted-dark` is `#A09892`, dark only — `#8A8A8A` was 3.9:1 at
 the top of the dark field and is now retired outright. And a fill carries its published label,
-never the other one: `green` + cream is 2.3:1, coral + cream 2.7:1. One button, no variants,
+never the other one: `yellow` + cream is 1.4:1, coral + cream 2.7:1. One button, no variants,
 both fields.
 
 `alert` / `alert-light` exist for safety and destruction only — not a highlight, not decoration,
 and never replaced by an app's accent. There is no amber, and no conventional semantic colour set
 beyond that one pair.
 
-**The gold rule** governs the icons and the shop: gold appears **exactly once per view**, on the
-thing the user came to do. In a header, that one gold is the wordmark's tile — so a header carrying a
-gold button is wrong. Gold is not a warning, a highlight or decoration. Where two golds meet, one
-becomes green-dark. Green-dark is the only ink allowed on top of gold.
-**Gold does not appear in product UI at all.**
+**Yellow is a light colour, and that is the whole palette in one line.** It is a *fill* in both
+fields, always with an `ink` label — cream on yellow is 1.4:1 and banned. It is a *tint* only on
+dark; on light it steps all the way down to `yellow-dark` `#8A5A00`, which looks like bronze. That
+is correct, not a mistake — yellow is the most gamut-limited hue in sRGB, so the ramp is found by
+dropping lightness, and no tint that still looks yellow on a light field exists. Do not try to
+lighten `yellow-dark` toward yellow; it fails AA at every step in between.
+
+**A yellow fill on the yellow field has a 1.4:1 edge.** The house field is the brand hue at ~6%
+strength, so a yellow button on a yellow page must be defined by its ink content or a hairline,
+never by the fill alone. On cream, white or ink it defines itself.
+
+**The ration rule** governs the house and the icons: the rationed element appears **exactly once per
+view**, on the thing the user came to do. On voller.uk and in the mark that element is `yellow` — in
+a header it is the wordmark's tile, so a header carrying a yellow button is wrong. Neither the field
+nor `yellow-wash` spends the ration. **Inside an app icon the ration is spent in that app's own
+accent, not in yellow.** Where two rationed elements meet, one steps down a rung.
+**Yellow does not appear in product UI at all.**
 
 **The accent rule** is the same idea inside an app: **one accent per role per view** — one primary
 action, one active tab, one "current" marker. Everything else is **neutral by default**: counts,
@@ -94,11 +112,14 @@ down to `accent-deep` on light, `accent-dark` on dark.
 ### Backgrounds
 Two house gradients exist, plus each app's own pair (§1.2), and no others may be invented:
 `--field-light`
-(`160deg, #FCFCF6 → #F1F0E4`) for pages and hero bands, `--field-dark` (`160deg, #302F2C → #1B1B19`)
-for previews and UI. Flat `#FCFCF6` is the everyday page. Dark sections are flat `#1B1B19` with
+(`160deg, #FFFDF5 → #FFF1CE`) for pages and hero bands, `--field-dark` (`160deg, #302F2C → #1B1B19`)
+for previews and UI. Flat `#FFFDF5` is the everyday page. The light field is pale yellow — the brand
+hue at about 6% strength, which is how a yellow brand stays yellow without shouting. Dark sections are flat `#1B1B19` with
 cream-dark text. No photographic backgrounds, no repeating patterns, no textures, no noise, no
 hand-drawn illustration. The one lighting effect in the system is the tile-level gloss overlay
-(`--gloss`), and it belongs to the *tile* — never to a drawn subject and never to a web surface.
+(`--gloss`), and it belongs to the *tile* — never to a drawn subject and never to a web surface. It
+sits above the field, and *under* the subject where the subject is ink: a gloss laid over an ink
+cut-out greys it out.
 
 ### Type
 **The platform system sans only** — SF Pro / Segoe UI / Roboto, a documented substitution ladder.
@@ -113,7 +134,7 @@ family. Scale 44 / 34 / 22 / 16 / 14 / 12. On iOS this becomes a Dynamic Type ma
 8px base; `--space-1…8` = 4 / 8 / 12 / 16 / 24 / 32 / 56 / 72. Section rhythm uses four steps:
 24 within a group, 32 between groups, 56 between blocks, 72 between sections. Container 1120px, 32px
 gutters. **Always flex/grid with `gap`** for any group of siblings — never margin-per-child. Nothing
-is fixed-position except the sticky header (68px, translucent `rgba(252,252,246,.86)` with a 12px
+is fixed-position except the sticky header (68px, translucent `rgba(255,253,245,.86)` with a 12px
 backdrop blur and a hairline bottom edge).
 
 ### Corners
@@ -122,19 +143,23 @@ only — the iOS squircle approximation. App icons are never shown circular.
 
 ### Borders, shadows and separation
 **There are no drop shadows in this system.** Hierarchy comes from a 1px hairline
-(`rgba(20,40,10,.10)`, `.18` for inputs, `rgba(246,241,227,.14)` on dark) or a background step
-between sections. The only `box-shadow` uses are `inset` — outline buttons and the glass ring.
+(`rgba(60,40,0,.12)`, `.20` for inputs, `rgba(246,241,227,.12)` on dark) or a background step
+between sections. The hairline is warm-cast: the old `rgba(20,40,10,.10)` was mixed to vanish into a
+green-cast field and reads grey-green on this one. The only `box-shadow` uses are `inset` — outline
+buttons, the yellow fill's edge, and the glass ring.
 
 ### Transparency and blur
 Rationed to two places: the sticky header's translucent blur, and the **glass ring** — a circle at
 `r + 7%` filled `rgba(255,255,255,.62)` with a `rgba(255,255,255,.9)` 1–2px stroke (`.10` / `.22` on
-dark). Every circular image, avatar or round crop on the web wears it; it is the single token that
-makes a page feel like it belongs to the icon family. No frosted cards, no glassmorphism panels.
+dark). Every circular image, avatar or round crop on the web wears it. **No icon uses it any
+more** — the five marks are containerless glyphs (§3, §4.1) — so it now ties the web to the system's
+geometry rather than to a shared icon container. No frosted cards, no glassmorphism panels.
 
 ### Imagery
 The only imagery in the system is **the app icons themselves** — flat vector, opaque, warm-neutral,
 never photographic, never grained, never in a device mockup with a shadow. Circular crops get the
-glass ring; square art keeps 23.5%. When real product screenshots are needed, crop them into the ring
+glass ring; square art keeps 23.5%. The icons themselves no longer wear the ring — they are
+containerless glyphs, each on a pale field of its own accent hue. When real product screenshots are needed, crop them into the ring
 or place them flat on a field gradient. Do not draw new illustration to fill space.
 
 ### Animation
@@ -143,26 +168,37 @@ easing `cubic-bezier(.2,.6,.2,1)`. Transitions are colour, border-colour and sma
 No bounces, no springs, no parallax, no scroll-triggered reveals, no looping ambient motion.
 
 ### States
-- **Hover** — primary buttons darken green → green-dark; quiet buttons pick up a 6% wash of their own
-  ink; text buttons lighten green-dark → green; interactive cards swap their hairline to green; links
-  go green-dark → green.
+House surfaces. Inside an app the same states run on that app's six — see `VOLLER.md` §9.
+
+- **Hover** — primary buttons darken yellow → yellow-deep, keeping their ink label; quiet buttons pick
+  up a 6% wash of their own ink; text buttons go yellow-dark → ink (**not** → yellow: yellow is
+  1.4:1 on the light field); interactive cards swap their hairline to yellow-dark; links go
+  yellow-dark → ink. On the dark field the tint is already yellow, so links hover to cream-dark.
 - **Press** — colour only. Nothing scales, nothing lifts.
-- **Focus** — a 2px `rgba(105,166,60,.45)` ring at 2px offset; inputs additionally take a green border.
-  Never a glow.
+- **Focus** — a 2px `rgba(138,90,0,.45)` ring at 2px offset; inputs additionally take a yellow-dark
+  border. Never a glow.
 - **Disabled** — 40% opacity plus `not-allowed`. No greyed-out repaint.
-- **Selected nav** — a 7% green-dark wash behind the item, green-dark label. No underline, no bar.
+- **Selected nav** — `yellow-wash` behind the item, yellow-dark label. No underline, no bar.
 
 ### Wordmark
-`Voller` in the system sans, 600, at `-0.02em`, followed by one gold app tile as a full stop — the hint at what
-the studio does. Tile = 0.33 × cap height, gap = 0.2 × cap height, tile radius 23.5%, baseline-aligned.
-22px header / 32px mid / 64px hero. **The circular icon is not part of the wordmark** and must not sit
-beside it in a header; the footer is the one permitted lockup, at ~34px icon / 18px word.
+`Voller` in the system sans, 600, at `-0.02em`, followed by one **yellow** app tile as a full stop —
+the hint at what the studio does. Tile = 0.33 × cap height, gap = 0.2 × cap height, tile radius
+23.5%, baseline-aligned. The 0.2 gap is set for the system stack; anything spaced for DM Sans is an
+old file. 22px header / 32px mid / 64px hero. **The mark is not part of the wordmark** and must not
+sit beside it in a header; the footer is the one permitted lockup, at ~34px mark / 18px word, plus a
+social card (§4's set clause).
+
+**The mark itself is now a glyph, not a disc** — one ink V on the pale yellow field with the yellow
+tile as the full stop, matching the four app icons. No container, no glass ring. Below 32px the
+favicon inverts to full-bleed yellow with an ink channel and no tile.
 
 ## ICONOGRAPHY
 
 **The brand's own sources contain no UI icon set** — no icon font, no sprite sheet, no SVG library.
 `Brand-Icons/` holds only the five app icons (three appearance variants each) and the Voller marks.
-Those real assets are in `assets/` and `assets/app-icons/` and are the only brand-owned imagery.
+The copies in `assets/` and `assets/app-icons/` are the **old green-and-gold family** and have not
+been re-exported. The current sets live at the repo root: `app-icons/<App>/` for the four apps and
+`Design system color flexibility/brand-yellow/` for the Voller house ladder.
 
 For interface glyphs the system adopts **Lucide** — closest match to the brand's flat, round-cap,
 even-weight drawing style. **This is a substitution, not something found in the sources.** Rules:
@@ -187,7 +223,7 @@ studio's needs (a marketing site and simple forms). Two are brand-specific rathe
 
 - **Wordmark** — encodes the tile/gap/radius geometry so it cannot drift.
 - **AppTile / GlassAvatar** — encode the 23.5% radius and the glass ring, the two rules most often
-  broken by hand.
+  broken by hand. `GlassAvatar` is now a **web-imagery** component only: no icon wears the ring.
 
 Deliberately **not** built, because nothing in the sources needs them: Dialog, Toast, Tooltip, Tabs,
 Table, Pagination, Breadcrumb. Add them when a real surface calls for one.

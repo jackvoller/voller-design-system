@@ -1,38 +1,56 @@
 :root {
-  /* --- The house palette: the twelve values of VOLLER.md §1. Draws the icons, the
+  /* --- The house palette: the twelve values of VOLLER.md §1. Draws the Voller mark, the
          wordmark, voller.uk and the App Store, plus every neutral, surface, hairline
          and alert inside a product. Do not introduce a thirteenth without adding it to
-         VOLLER.md first. Inside an app, action and state come from the six accent
-         tokens at the bottom of this file (VOLLER.md §1.2) — not from green and gold. --- */
-  --green: #82BA51;        /* the brand; primary fills. Tint on dark. Ink labels only */
-  --green-deep: #69A63C;   /* interior detail on green shapes; filled chips and pins */
-  --green-dark: #3F6B27;   /* tint on light: links, glyphs, pressed. Detail on top of gold */
-  --gold: #F0C21C;         /* the action colour — rationed, one per view */
-  --cream: #F6F1E3;        /* light panels, action bars, negative space */
+         VOLLER.md first.
+
+         The house went YELLOW on 1 Sep 2026. green / green-deep / green-dark and
+         gold are retired from the house — green survives only as Meal Planner's and
+         UnPickle's published accent, at the bottom of this file.
+
+         Inside an app, action and state come from the six accent tokens (VOLLER.md
+         §1.2), and so does that app's ICON (§4.1) — not from yellow. --- */
+  --yellow: #FFC400;       /* the brand and the action colour; rationed, one per view.
+                              INK LABELS ONLY — cream on yellow is 1.4:1 */
+  --yellow-deep: #E0A200;  /* hover and press on a yellow fill; interior detail. Still ink */
+  --yellow-dark: #8A5A00;  /* tint on light: links, glyphs, pressed, detail on top of yellow.
+                              Takes a cream label when it is a fill. Looks like bronze —
+                              that is correct, a yellow tint on a light field does not exist */
+  --yellow-wash: #FFF3CE;  /* quiet button, tab pill, selected row ground. LIGHT FIELD ONLY */
+  --cream: #F6F1E3;        /* light panels, action bars, negative space OUTSIDE a yellow shape */
   --cream-dark: #EFE9DA;   /* body text and surfaces on dark. Never pure white on dark */
-  --ink: #1B1B19;          /* body text on light; dark base; labels on green and gold */
+  --ink: #1B1B19;          /* body text on light; dark base; labels on yellow and yellow-deep;
+                              THE CUT-OUT INSIDE A YELLOW SHAPE — cream would be 1.4:1 */
   --ink-raised: #24231F;   /* cards and list rows on dark — warm, not iOS #1C1C1E */
-  --muted: #6E6E6B;        /* secondary text and eyebrows on light. 5.0:1 */
+  --muted: #6E6E6B;        /* secondary text and eyebrows on light. 4.6:1 at the worst
+                              point of the light field */
   --muted-dark: #A09892;   /* secondary text and eyebrows on dark. 4.7:1 at the worst point
                               of the dark field. #8A8A8A is retired — it was 3.9:1 there */
   --alert: #C4382C;        /* safety and destruction only, on light */
   --alert-light: #E8705F;  /* the alert substitute on dark */
 
   --white: #FFFFFF;
-  --off-white: #FCFCF6;    /* flat page background */
+  --off-white: #FFFDF5;    /* flat page background — the top stop of the light field */
 
-  /* --- Fields: the only two gradients in the system --- */
-  --field-light: linear-gradient(160deg, #FCFCF6 0%, #F1F0E4 100%);
+  /* --- Fields: the only two gradients in the system.
+         The light field is the brand hue at ~6% strength. It does NOT spend the
+         one-yellow-per-view ration — it is a surface, not the brand colour. --- */
+  --field-light: linear-gradient(160deg, #FFFDF5 0%, #FFF1CE 100%);
   --field-dark: linear-gradient(160deg, #302F2C 0%, #1B1B19 100%);
-  /* Tile gloss — belongs to the tile, never to the drawn subject, never to product UI */
+  /* Tile gloss — belongs to the tile, never to the drawn subject, never to product UI.
+     Above the field always; UNDER the subject where the subject is ink, because a
+     gloss laid over an ink cut-out greys it out. VOLLER.md §1. */
   --gloss: radial-gradient(120% 90% at 30% 0%, rgba(255,255,255,.7) 0%, rgba(255,255,255,0) 55%);
 
-  /* --- Lines --- */
-  --hairline: rgba(20, 40, 10, .10);
-  --hairline-strong: rgba(20, 40, 10, .18);
+  /* --- Lines. Warm cast: the old rgba(20,40,10,.10) was mixed to vanish into a
+         green-cast field and reads grey-green on this one. --- */
+  --hairline: rgba(60, 40, 0, .12);
+  --hairline-strong: rgba(60, 40, 0, .20);
   --hairline-dark: rgba(246, 241, 227, .12);
 
-  /* --- Glass ring: the token that ties the circular marks together --- */
+  /* --- Glass ring: NO LONGER USED BY ANY ICON (VOLLER.md §3, §4.1). The five marks are
+         containerless glyphs. Kept for circular IMAGERY on the web — avatars, photo
+         slots, round crops — so the web still echoes the geometry. --- */
   --glass-fill: rgba(255,255,255,.62);
   --glass-stroke: rgba(255,255,255,.9);
   --glass-fill-dark: rgba(255,255,255,.10);
@@ -51,25 +69,33 @@
   --text-heading: var(--ink);
   --text-on-dark: var(--cream-dark);
   --text-secondary-on-dark: var(--muted-dark);
-  /* green + cream is 2.3:1 and fails AA. A green fill carries an ink label in
-     both fields — one button, no variants. VOLLER.md §1.1 */
+  /* yellow + cream is 1.4:1 and is the rule the whole palette turns on. A yellow fill
+     carries an ink label in both fields — one button, no variants. VOLLER.md §1.1 */
+  --text-on-yellow: var(--ink);
+  /* Back-compat alias for pre-1 Sep code. --text-on-green named the ink label on a
+     green fill; the house has no green now, and the label is still ink. */
   --text-on-green: var(--ink);
   /* The tint flips between fields. VOLLER.md §1: this is the only token that does.
      --text-link and --text-link-hover below are built on it. */
-  --tint: var(--green-dark);
+  --tint: var(--yellow-dark);
   --text-link: var(--tint);
-  --text-link-hover: var(--green);
+  --text-link-hover: var(--ink);   /* NOT yellow — 1.4:1 on the light field */
+  --link-underline: rgba(138, 90, 0, .3);
 
-  --action-primary: var(--green);
-  --action-primary-hover: var(--green-dark);
-  --action-accent: var(--gold);              /* once per view */
-  --action-accent-detail: var(--ink);        /* gold + ink is 10.2:1 */
+  --action-primary: var(--yellow);
+  --action-primary-hover: var(--yellow-deep);   /* not yellow-dark: the label stays ink */
+  --action-primary-label: var(--ink);           /* yellow + ink is 10.8:1 */
+  /* A yellow fill on the yellow field has a 1.4:1 edge. It must be defined by its ink
+     content or by this hairline, never by the fill alone. VOLLER.md §1. */
+  --action-primary-edge: var(--hairline);
+  --action-quiet-bg: var(--yellow-wash);        /* light field only */
+  --action-quiet-label: var(--yellow-dark);
   --action-destructive: var(--alert);
   --action-destructive-on-dark: var(--alert-light);
 
   --border-subtle: var(--hairline);
   --border-input: var(--hairline-strong);
-  --focus-ring: rgba(105, 166, 60, .45);
+  --focus-ring: rgba(138, 90, 0, .45);
 }
 
 /* Dark field. VOLLER.md §1 gives dark a full specification — do not guess per repo. */
@@ -82,9 +108,13 @@
     --text-body: var(--cream-dark);
     --text-heading: var(--cream-dark);
     --text-secondary: var(--muted-dark);
-    --tint: var(--green);             /* the tint flips — green fails on light, not dark */
+    --tint: var(--yellow);            /* the tint flips — yellow fails on light, not dark */
     --text-link: var(--tint);
-    --text-link-hover: var(--green-deep);
+    --text-link-hover: var(--cream-dark);
+    --link-underline: rgba(255, 196, 0, .3);
+    /* yellow-wash is a light-field token. On dark the quiet button becomes an outline. */
+    --action-quiet-bg: transparent;
+    --action-quiet-label: var(--tint);
     --border-subtle: var(--hairline-dark);
     --border-input: var(--hairline-dark);
   }
@@ -94,8 +124,10 @@
    THE APP ACCENT — VOLLER.md §1.2
 
    Six tokens, published once per app. Everything else is inherited from the
-   house palette above. This block is for PRODUCT UI only; voller.uk, the App
-   Store and the icons stay on green and gold.
+   house palette above. This block carries PRODUCT UI, and the same six also draw
+   that app's ICON (VOLLER.md §4.1 — four containerless glyphs, each on a pale
+   field of its own hue). The Voller mark, the wordmark, voller.uk and the App
+   Store stay on yellow.
 
    Swap the six and the whole component set becomes another app. Nothing below
    this comment needs to change.
@@ -121,6 +153,14 @@
                           label: cream
                           PROPOSAL — muted on this field's bottom stop is 4.4:1
                           and fails AA. See VOLLER.md §1.2.1 before using it.
+                          Its icon is also drawn #1372E8, which is not one of the
+                          six. Unresolved — VOLLER.md §4.1.
+
+   ICON fields are a deeper cut of these, and are icon-only (VOLLER.md §4.1):
+       UnJumble  #FFF7F3 -> #FFE5DC
+       Meals/UP  #F6FCF7 -> #E5F6E9
+       Riverly   #F6FAFF -> #E3EEFB
+   Never paint these into product UI.
 
    The values below are UnJumble's. Replace the six for another app.
    ========================================================================= */

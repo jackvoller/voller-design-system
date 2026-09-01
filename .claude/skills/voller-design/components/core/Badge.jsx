@@ -1,12 +1,14 @@
 import React from 'react';
 
-export function Badge({ tone = 'green', style, children, ...rest }) {
+export function Badge({ tone = 'yellow', style, children, ...rest }) {
   const tones = {
-    green: { background: 'rgba(130,186,81,.16)', color: 'var(--green-dark)' },
-    gold: { background: 'rgba(240,194,28,.22)', color: 'var(--action-accent-detail)' },
+    yellow: { background: 'var(--yellow-wash)', color: 'var(--yellow-dark)' },
+    // Deprecated aliases: the house had a green and a gold before 1 Sep 2026.
+    green: { background: 'var(--yellow-wash)', color: 'var(--yellow-dark)' },
+    gold: { background: 'var(--yellow-wash)', color: 'var(--yellow-dark)' },
     neutral: { background: 'var(--surface-sunken)', color: 'var(--muted)' },
     dark: { background: 'rgba(246,241,227,.10)', color: 'var(--text-on-dark)' },
-    solid: { background: 'var(--action-primary)', color: 'var(--text-on-green)' },
+    solid: { background: 'var(--action-primary)', color: 'var(--action-primary-label)' },
   };
   return (
     <span

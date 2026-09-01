@@ -11,7 +11,8 @@ function AppDetailScreen({ app, go }) {
               <h1 style={{ fontSize: 'var(--fs-h1)', fontWeight: 600, letterSpacing: '-0.02em' }}>{app.name} — {app.tagline}</h1>
               <p style={{ fontSize: 17, lineHeight: 1.6 }}>{app.blurb}</p>
               <div style={{ display: 'flex', gap: 12, alignItems: 'center', marginTop: 4 }}>
-                {/* Green, not gold: the sticky header's wordmark tile is this view's single gold. */}
+                {/* The sticky header's wordmark tile already spends this view's one yellow, so this
+                    button is `quiet`, not a second yellow fill. VOLLER.md §4.1. */}
                 <Btn variant="primary" size="lg" iconLeft={<Icon name="download" size={18} />}>Get {app.name} — {app.price}</Btn>
                 <span style={{ fontSize: 13, color: 'var(--muted)' }}>Version {app.version}</span>
               </div>
@@ -27,7 +28,7 @@ function AppDetailScreen({ app, go }) {
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
               {app.features.map((t) => (
                 <div key={t} style={{ display: 'flex', alignItems: 'flex-start', gap: 12 }}>
-                  <span style={{ color: 'var(--green)', display: 'flex', marginTop: 3 }}><Icon name="check" size={18} /></span>
+                  <span style={{ color: 'var(--tint)', display: 'flex', marginTop: 3 }}><Icon name="check" size={18} /></span>
                   <span style={{ fontSize: 16 }}>{t}</span>
                 </div>
               ))}

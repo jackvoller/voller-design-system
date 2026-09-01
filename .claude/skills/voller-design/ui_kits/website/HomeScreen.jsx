@@ -7,7 +7,7 @@ function AppCard({ app, go }) {
         background: 'var(--white)', border: '1px solid var(--hairline)', borderRadius: 'var(--radius-card)',
         transition: 'border-color var(--dur-base) var(--ease)',
       }}
-      onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'var(--green)'; }}
+      onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'var(--yellow-dark)'; }}
       onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--hairline)'; }}
     >
       <img src={`../../assets/app-icons/${app.id}.png`} width="64" height="64" alt="" style={{ borderRadius: 'var(--radius-icon)', display: 'block' }} />
@@ -79,7 +79,7 @@ function HomeScreen({ go }) {
           <div style={{ flex: '1 1 300px', display: 'flex', flexDirection: 'column', gap: 12 }}>
             {['On-device by default', 'One-time purchase, universal', 'Updated for each OS release'].map((t) => (
               <div key={t} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '14px 18px', background: 'var(--surface-card-dark)', border: '1px solid var(--hairline-dark)', borderRadius: 'var(--radius-row)' }}>
-                <span style={{ color: 'var(--green)', display: 'flex' }}><Icon name="check" size={18} /></span>
+                <span style={{ color: 'var(--tint)', display: 'flex' }}><Icon name="check" size={18} /></span>
                 <span style={{ fontSize: 15, color: 'var(--cream-dark)' }}>{t}</span>
               </div>
             ))}
@@ -97,7 +97,7 @@ function HomeScreen({ go }) {
             <input
               type="email" placeholder="you@example.com"
               style={{ appearance: 'none', width: 260, padding: '11px 14px', font: '400 16px/1.4 var(--font-sans)', color: 'var(--ink)', background: 'var(--white)', border: '1px solid var(--hairline-strong)', borderRadius: 'var(--radius-control)', outline: 'none' }}
-              onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--green)'; }}
+              onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--yellow-dark)'; }}
               onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--hairline-strong)'; }}
             />
             <Btn variant="primary" iconLeft={<Icon name="mail" size={17} />}>Subscribe</Btn>

@@ -15,7 +15,7 @@ function Wordmark({ size = 22, onDark = false, onClick }) {
       }}
     >
       <span>Voller</span>
-      <i style={{ width: '.33em', height: '.33em', borderRadius: '23.5%', background: 'var(--gold)', flex: 'none' }} />
+      <i style={{ width: '.33em', height: '.33em', borderRadius: '23.5%', background: 'var(--yellow)', flex: 'none' }} />
     </div>
   );
 }
@@ -42,7 +42,7 @@ function Header({ route, go }) {
                   border: 0, background: active ? 'rgba(63,107,39,.07)' : 'transparent',
                   padding: '9px 14px', borderRadius: 'var(--radius-control)',
                   font: '500 15px/1 var(--font-sans)', letterSpacing: '-0.01em',
-                  color: active ? 'var(--green-dark)' : 'var(--ink)', cursor: 'pointer',
+                  color: active ? 'var(--yellow-dark)' : 'var(--ink)', cursor: 'pointer',
                 }}
               >
                 {n.label}
@@ -111,10 +111,13 @@ function Btn({ variant = 'primary', size = 'md', iconLeft, iconRight, onDark, on
   const pad = { sm: '8px 14px', md: '11px 18px', lg: '14px 24px' }[size];
   const fs = { sm: 14, md: 15, lg: 16 }[size];
   const v = {
-    primary: { background: 'var(--green)', color: 'var(--off-white)' },
-    accent: { background: 'var(--gold)', color: 'var(--green-dark)', fontWeight: 600 },
-    quiet: { background: 'transparent', color: onDark ? 'var(--cream-dark)' : 'var(--green-dark)', boxShadow: `inset 0 0 0 1px ${onDark ? 'var(--hairline-dark)' : 'var(--hairline-strong)'}` },
-    text: { background: 'transparent', color: onDark ? 'var(--cream-dark)' : 'var(--green-dark)', padding: 0 },
+    // Yellow takes an INK label in both fields — cream/off-white is 1.4:1. The inset
+    // hairline defines the fill's edge against the pale yellow field. VOLLER.md §1.
+    primary: { background: 'var(--yellow)', color: 'var(--ink)', boxShadow: 'inset 0 0 0 1px var(--hairline)' },
+    // Deprecated alias — gold retired 1 Sep 2026, yellow does both jobs.
+    accent: { background: 'var(--yellow)', color: 'var(--ink)', fontWeight: 600, boxShadow: 'inset 0 0 0 1px var(--hairline)' },
+    quiet: { background: onDark ? 'transparent' : 'var(--yellow-wash)', color: onDark ? 'var(--cream-dark)' : 'var(--yellow-dark)', boxShadow: `inset 0 0 0 1px ${onDark ? 'var(--hairline-dark)' : 'var(--hairline-strong)'}` },
+    text: { background: 'transparent', color: onDark ? 'var(--cream-dark)' : 'var(--yellow-dark)', padding: 0 },
   }[variant];
   return (
     <button
@@ -126,8 +129,8 @@ function Btn({ variant = 'primary', size = 'md', iconLeft, iconRight, onDark, on
         font: `500 ${fs}px/1 var(--font-sans)`, letterSpacing: '-0.01em', cursor: 'pointer',
         transition: 'background var(--dur-fast) var(--ease)', whiteSpace: 'nowrap', ...v,
       }}
-      onMouseEnter={(e) => { if (variant === 'primary') e.currentTarget.style.background = 'var(--green-dark)'; }}
-      onMouseLeave={(e) => { if (variant === 'primary') e.currentTarget.style.background = 'var(--green)'; }}
+      onMouseEnter={(e) => { if (variant === 'primary' || variant === 'accent') e.currentTarget.style.background = 'var(--yellow-deep)'; }}
+      onMouseLeave={(e) => { if (variant === 'primary' || variant === 'accent') e.currentTarget.style.background = 'var(--yellow)'; }}
     >
       {iconLeft}<span>{children}</span>{iconRight}
     </button>

@@ -20,18 +20,18 @@ export function Input({ label, hint, error, id, style, ...rest }) {
           lineHeight: 1.4,
           color: 'var(--text-body)',
           background: 'var(--surface-card)',
-          border: `1px solid ${error ? 'var(--green-dark)' : 'var(--border-input)'}`,
+          border: `1px solid ${error ? 'var(--alert)' : 'var(--border-input)'}`,
           borderRadius: 'var(--radius-control)',
           outline: 'none',
           transition: 'border-color var(--dur-fast) var(--ease)',
           ...style,
         }}
-        onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--green)'; }}
-        onBlur={(e) => { e.currentTarget.style.borderColor = error ? 'var(--green-dark)' : 'var(--border-input)'; }}
+        onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--yellow-dark)'; }}
+        onBlur={(e) => { e.currentTarget.style.borderColor = error ? 'var(--alert)' : 'var(--border-input)'; }}
         {...rest}
       />
       {(hint || error) && (
-        <span style={{ fontSize: 'var(--fs-caption)', color: error ? 'var(--green-dark)' : 'var(--muted)' }}>
+        <span style={{ fontSize: 'var(--fs-caption)', color: error ? 'var(--alert)' : 'var(--muted)' }}>
           {error || hint}
         </span>
       )}

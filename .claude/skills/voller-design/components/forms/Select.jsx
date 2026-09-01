@@ -27,7 +27,7 @@ export function Select({ label, hint, options = [], id, style, children, ...rest
             cursor: 'pointer',
             ...style,
           }}
-          onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--green)'; }}
+          onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--yellow-dark)'; }}
           onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border-input)'; }}
           {...rest}
         >

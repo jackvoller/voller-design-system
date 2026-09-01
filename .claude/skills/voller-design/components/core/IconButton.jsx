@@ -5,7 +5,7 @@ const BOX = { sm: 32, md: 40, lg: 44 };
 export function IconButton({ label, variant = 'quiet', size = 'md', onDark = false, style, children, ...rest }) {
   const box = BOX[size] || BOX.md;
   const variants = {
-    primary: { background: 'var(--action-primary)', color: 'var(--text-on-green)', boxShadow: 'none' },
+    primary: { background: 'var(--action-primary)', color: 'var(--text-on-yellow)', boxShadow: 'none' },
     quiet: {
       background: 'transparent',
       color: onDark ? 'var(--text-on-dark)' : 'var(--ink)',

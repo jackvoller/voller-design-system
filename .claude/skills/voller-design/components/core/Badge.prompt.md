@@ -5,4 +5,4 @@ Status and metadata pill — platform tags, "New", version numbers.
 <Badge tone="neutral">Free</Badge>
 ```
 
-Tones: `green` (default), `neutral`, `dark` (on dark sections), `solid`, and `gold` — which spends the view's single gold, so don't pair it with a gold button.
+Tones: `yellow` (default — a `yellow-wash` pill with a `yellow-dark` label), `neutral`, `dark` (on dark sections), and `solid` — a filled yellow, which **spends the view's one rationed element**, so don't pair it with a primary button. `green` and `gold` are deprecated aliases of `yellow`.

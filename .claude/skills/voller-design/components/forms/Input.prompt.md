@@ -5,4 +5,4 @@ Text entry — newsletter signup, support form, search.
 <Input label="Email" error="That address looks incomplete." />
 ```
 
-There is no red in the Voller palette, so error states use `--green-dark` plus the message. Focus is a green border, not a glow.
+Error states use `--alert` `#C4382C` plus the message (`--alert-light` `#E8705F` on dark) — the house pair, reserved for safety and destruction. Focus is a `--yellow-dark` border, not a glow.

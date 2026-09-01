@@ -27,7 +27,7 @@ export function Wordmark({ size = 22, onDark = false, as = 'a', style, ...rest }
       <span>Voller</span>
       <i
         aria-hidden="true"
-        style={{ width: '.33em', height: '.33em', borderRadius: '23.5%', background: 'var(--gold)', flex: 'none' }}
+        style={{ width: '.33em', height: '.33em', borderRadius: '23.5%', background: 'var(--yellow)', flex: 'none' }}
       />
     </Tag>
   );

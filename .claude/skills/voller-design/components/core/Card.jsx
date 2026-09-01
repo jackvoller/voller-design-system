@@ -17,7 +17,7 @@ export function Card({ tone = 'white', padding = 28, radius = 'card', interactiv
         ...(tones[tone] || tones.white),
         ...style,
       }}
-      onMouseEnter={(e) => { if (interactive) e.currentTarget.style.borderColor = 'var(--green)'; }}
+      onMouseEnter={(e) => { if (interactive) e.currentTarget.style.borderColor = 'var(--yellow-dark)'; }}
       onMouseLeave={(e) => { if (interactive) e.currentTarget.style.borderColor = ''; }}
       {...rest}
     >

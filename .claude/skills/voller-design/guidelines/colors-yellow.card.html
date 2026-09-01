@@ -1,0 +1,24 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Yellow — the brand and the action colour" subtitle="Ink labels only. A tint on dark, never on light — there it steps to yellow-dark." -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    body { background: var(--bg-page-flat); padding: 20px; }
+    .row { display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap; }
+    .sw { display: flex; flex-direction: column; gap: 6px; }
+    .chip { height: 56px; border-radius: 12px; border: 1px solid var(--hairline); }
+    .hex { font-family: var(--font-mono); font-size: 11px; letter-spacing: .04em; color: var(--muted); }
+    .tok { font-family: var(--font-mono); font-size: 11px; color: var(--ink); }
+  </style>
+</head>
+<body>
+<div class="row" style="gap:12px">
+  <div class="sw" style="flex:1"><div class="chip" style="background:var(--yellow)"></div><span class="tok">--yellow</span><span class="hex">#FFC400 · fills, the one per view</span></div>
+  <div class="sw" style="flex:1"><div class="chip" style="background:var(--yellow-deep)"></div><span class="tok">--yellow-deep</span><span class="hex">#E0A200 · hover, press, detail</span></div>
+  <div class="sw" style="flex:1"><div class="chip" style="background:var(--yellow-dark)"></div><span class="tok">--yellow-dark</span><span class="hex">#8A5A00 · tint on light, links</span></div>
+  <div class="sw" style="flex:1"><div class="chip" style="background:var(--yellow-wash)"></div><span class="tok">--yellow-wash</span><span class="hex">#FFF3CE · quiet button, pill</span></div>
+</div>
+</body>
+</html>

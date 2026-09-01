@@ -1,3 +1,12 @@
+> **Superseded — the assets in this folder are the old green-and-gold marks.**
+>
+> The house palette went yellow on 1 Sep 2026 (`VOLLER.md` §1) and the Voller mark was
+> redrawn as a containerless glyph (§7). Nothing in `Voller/` or `web/` has been
+> re-exported. The current ladder is `Design system color flexibility/brand-yellow/` at
+> the repo root — eighteen files, not yet promoted here. See `MIGRATION.md` §9.3.
+>
+> The install instructions below are still correct; only the artwork is stale.
+
 # Voller brand assets — drop-in
 
 Generated from `VOLLER-THEME.md` (in this folder — the full theme spec: colour tokens, type scale, wordmark rules, head markup). Two folders: one for Xcode, one for the website.

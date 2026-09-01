@@ -20,7 +20,7 @@ function AboutScreen() {
               {[['A', 'Ana Voller', 'Design, icons, the 35° axis'], ['T', 'Tom Reid', 'Everything that compiles']].map(([initial, name, role]) => (
                 <div key={name} style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
                   <span style={{ width: 76, height: 76, flex: 'none', display: 'grid', placeItems: 'center', padding: 5, borderRadius: '50%', background: 'var(--glass-fill)', boxShadow: 'inset 0 0 0 2px var(--glass-stroke)' }}>
-                    <span style={{ width: '100%', height: '100%', borderRadius: '50%', background: 'var(--green)', display: 'grid', placeItems: 'center', color: 'var(--off-white)', fontSize: 26, fontWeight: 600, letterSpacing: '-0.02em' }}>{initial}</span>
+                    <span style={{ width: '100%', height: '100%', borderRadius: '50%', background: 'var(--yellow)', display: 'grid', placeItems: 'center', color: 'var(--ink)', fontSize: 26, fontWeight: 600, letterSpacing: '-0.02em' }}>{initial}</span>
                   </span>
                   <div>
                     <div style={{ fontSize: 16, fontWeight: 600, letterSpacing: '-0.02em' }}>{name}</div>

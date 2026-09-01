@@ -1,6 +1,7 @@
 # Voller migration — per-repo checklist
 
-Spec: **`VOLLER.md`**. Live reference: **`voller-design-system-reference.html`**.
+Spec: **`VOLLER.md`** — the only current document. `voller-design-system-reference.html` is a live
+reference for type, spacing and geometry, but is **stale on colour and on icons** (§9.4).
 
 In every repo, land the **token file** and the **tint** first. Most call sites then correct
 themselves, and you can review the remainder against a working baseline.
@@ -9,7 +10,7 @@ Recommended order across the family: `voller_website` (smallest, becomes the ref
 `unjumble` (one asset unlocks eight call sites) → `mealplanner` (one file) → `riverly` (specced
 separately) → `studio` (largest).
 
-## State — 31 Aug 2026
+## State — 1 Sep 2026
 
 | Repo | State | Left |
 |---|---|---|
@@ -19,15 +20,34 @@ separately) → `studio` (largest).
 | `studio` | **done** bar the safelist | **Accent migration (§8)** as UnPickle, `--muted-dark`, then the safelist (§5) |
 | `riverly` | **not started** | Blocked twice: its icon spec is in `Riverly Brand Review.dc.html`, not in this repo; and its six are a proposal with an open AA failure (`VOLLER.md` §1.2.1) |
 
+Then, on top of all of the above:
+
+| Repo | Yellow pass (§9) | Icon family (§9.3) |
+|---|---|---|
+| `voller_website` | **not started** — the whole house half of the site | **not started** — the full `brand-yellow/` ladder replaces `brand/web/` |
+| `unjumble` | **not started** — house surfaces only; its accent work is unaffected | **not started** |
+| `mealplanner` | **not started** — house surfaces only | **not started** |
+| `studio` | **not started** — house surfaces only | **not started** |
+| `riverly` | **not started** | **not started**, and additionally blocked on the `#1372E8` hull (§9.4) |
+
 Each migrated repo built clean before commit (`xcodebuild` for the two iOS apps, `npm run build`
 for studio). The three original open items are all the same shape: a palette that looks like drift
 but is actually persisted user choice. None is a find/replace.
 
-**§8 is new and supersedes parts of §1–§5.** `VOLLER.md` split colour into a house palette and a
-per-app accent, so every repo that has already migrated to green-and-gold *product UI* now has a
-second pass to make. Read §8 before re-reading §1–§5: where they say a product button is `--green`,
-they are now describing the house half of a system the app no longer sits in. The icon, wordmark
-and marketing instructions in §1–§5 are unaffected.
+**§8 supersedes parts of §1–§5, and §9 supersedes the house half of all of them.** Read them in
+that order, newest last:
+
+- `VOLLER.md` split colour into a house palette and a per-app accent (§8 here). Every repo that had
+  already migrated to green-and-gold *product UI* has a second pass to make. Where §1–§5 say a
+  product button is `--green`, they are describing the house half of a system the app no longer
+  sits in.
+- **The house then went yellow, and the app icons were redrawn in their own accents (§9 here).**
+  That retires green and gold from the house entirely, so the icon, wordmark and marketing
+  instructions in §1–§5 — previously the part §8 left alone — are now the stale part. **§9 wins over
+  every green or gold value anywhere in this file.**
+
+The §8 accent work is untouched by the yellow change: an app's six are the same six they always
+were. If you have started §8 in a repo, finish it before starting §9.
 
 ---
 
@@ -67,7 +87,7 @@ extension Color {
     static let brandGreen     = Color(red: 0.510, green: 0.729, blue: 0.318) // #82BA51
     static let brandGreenDeep = Color(red: 0.412, green: 0.651, blue: 0.235) // #69A63C
     static let brandGreenDark = Color(red: 0.247, green: 0.420, blue: 0.153) // #3F6B27
-    static let brandGold      = Color(red: 0.941, green: 0.761, blue: 0.110) // #F0C21C
+    static let brandGold      = Color(red: 0.996, green: 0.792, blue: 0.000) // #FECA00
     static let brandCream     = Color(red: 0.965, green: 0.945, blue: 0.890) // #F6F1E3
     static let brandCreamDark = Color(red: 0.937, green: 0.914, blue: 0.855) // #EFE9DA
     static let brandInk       = Color(red: 0.106, green: 0.106, blue: 0.098) // #1B1B19
@@ -103,6 +123,9 @@ extension Color {
 ---
 
 ## 1. voller_website — ~6 edits
+
+> **Colour values below are superseded by §9.** The steps still apply; take every green or gold
+> value straight to its yellow equivalent instead.
 
 The reference implementation. Fix it first so the others have something correct to copy.
 
@@ -203,6 +226,10 @@ boat hull and the two-appearance tint are all unchanged.
 
 ## 5. studio — ~30 token values
 
+> **The house values in both tables below are superseded by §9**, and studio's product UI is
+> superseded again by §8 (it publishes UnPickle's six). Use these tables for *which* tokens to set
+> and for the shadcn naming; take the values from §8.1 and §9.1.
+
 Largest job, but it is almost entirely one file of shadcn HSL triplets, and the dark block already
 exists to be filled in.
 
@@ -271,6 +298,7 @@ Per repo, after the edits:
 - [ ] Dark mode renders on a warm base, not `#000` or `#1C1C1E`
 - [ ] No hex literal at a call site
 - [ ] `--muted-dark` is `#A09892` everywhere it is defined
+- [ ] `#F0C21C` has zero hits; `gold` is `#FECA00`, and the icon assets were copied, not re-rendered
 - [ ] **In-app only:** every screen has at most one accent fill per role
 - [ ] **In-app only:** no count, tag, date, duration, avatar or photo slot carries the accent
 - [ ] **In-app only:** no hue on the screen outside the app's published six plus the house neutrals
@@ -309,6 +337,12 @@ and is retired outright.
 | Swift `0.541, 0.541, 0.541` in `brandMuted` | `0.627, 0.596, 0.573` |
 
 Land this first — it is a true find/replace and it is independent of everything below.
+
+### 8.0.1 Everywhere: the gold correction — SUPERSEDED
+
+`gold` moved from `#F0C21C` to `#FECA00` on 31 Aug, and then gold was retired outright on 1 Sep.
+**Do not run this step.** If a repo still carries `#F0C21C` or `#FECA00`, take it straight to
+`#FFC400` under §9 rather than through the intermediate value.
 
 ### 8.1 The token block, per app
 
@@ -411,3 +445,109 @@ Its six are a proposal, and `muted` on the bottom stop of its published field is
 fails AA (`VOLLER.md` §1.2.1). Its `field-dark` was never published. Resolve both in `VOLLER.md`
 before writing any Riverly code — lighten the field's bottom stop to `#EAF3FD`, or put Riverly's
 captions on `ink`.
+
+---
+
+## 9. The house goes yellow — third pass
+
+`VOLLER.md` §1, §4.1, §6, §7, §11 and §12, all rewritten 1 Sep 2026. **This supersedes every green
+and gold value anywhere above.** The house palette is now one yellow ramp; green survives only as
+Meal Planner's and UnPickle's published `accent`, which this pass does not touch.
+
+Scope, in one line: **house surfaces change, product UI does not.** If a value is inside an app's own
+UI it is already governed by that app's six (§8) and this pass leaves it alone. If it is chrome, a
+marketing page, an App Store surface, the wordmark or an icon, it changes.
+
+### 9.1 The token block
+
+Replace the house half of every theme file. The app half (§8.1) is unchanged.
+
+```css
+:root {
+  --yellow: #FFC400;
+  --yellow-deep: #E0A200;
+  --yellow-dark: #8A5A00;
+  --yellow-wash: #FFF3CE;
+  --cream: #F6F1E3;
+  --cream-dark: #EFE9DA;
+  --ink: #1B1B19;
+  --ink-raised: #24231F;
+  --muted: #6E6E6B;
+  --muted-dark: #A09892;
+  --alert: #C4382C;
+  --alert-light: #E8705F;
+
+  --field-light: linear-gradient(160deg, #FFFDF5 0%, #FFF1CE 100%);
+  --field-dark:  linear-gradient(160deg, #302F2C 0%, #1B1B19 100%);
+  --hairline:      rgba(60, 40, 0, .12);
+  --hairline-dark: rgba(246, 241, 227, .12);
+
+  --tint: var(--yellow-dark);
+}
+@media (prefers-color-scheme: dark) {
+  :root { --tint: var(--yellow); }
+}
+```
+
+### 9.2 Find and replace
+
+Ordered so that no substitution collides with a later one.
+
+| Find | Replace | Note |
+|---|---|---|
+| `#FECA00` | `#FFC400` | The gold tile in every wordmark and mark |
+| `#F0C21C` | `#FFC400` | The older gold, if any repo still carries it |
+| `--gold` | `--yellow` | Token rename |
+| `#82BA51` / `--green` | `#FFC400` / `--yellow` in house surfaces; `#2BBF4E` / `--accent` in Meal Planner and UnPickle product UI | **Not mechanical.** Check each site: is it chrome (house) or a product control (accent)? |
+| `#69A63C` / `--green-deep` | `#E0A200` / `--yellow-deep` in house; `--accent` ramp in app | Same judgement |
+| `#3F6B27` / `--green-dark` | `#8A5A00` / `--yellow-dark` in house; `--accent-deep` in app | Same judgement |
+| `linear-gradient(160deg, #FCFCF6 0%, #F1F0E4 100%)` | `linear-gradient(160deg, #FFFDF5 0%, #FFF1CE 100%)` | House field only. App fields (§8.1) are untouched |
+| `rgba(20, 40, 10, .10)` | `rgba(60, 40, 0, .12)` | Hairline cast |
+| `#FCFCF6` as a flat page background | `#FFFDF5` | Flat-field alternative |
+| `#F6F1E3` inside a brand shape | `#1B1B19` | The cut-out flip. Cream panels elsewhere stay cream |
+| `rgba(63,107,39,.3)` on a link underline | `rgba(138,90,0,.3)` | Follows the tint |
+| `a:hover { color: var(--green) }` | `a:hover { color: var(--ink) }` on light | Yellow is 1.4:1 on the light field. On dark, hover goes to `cream-dark` |
+
+Swift equivalents: `brandGold` `0.996, 0.792, 0.000` → `1.000, 0.769, 0.000`; rename to
+`brandYellow`. `brandGreen` has no house form left — delete it from any file that is house-side, and
+leave it alone where it is the app's `accent`.
+
+`#F6F1E3`, `#EFE9DA`, `#1B1B19`, `#24231F`, `#6E6E6B`, `#A09892`, `#C4382C` and `#E8705F` are
+unchanged. So is every value in §8.1.
+
+### 9.3 Assets
+
+Two sets were re-exported and **neither has been promoted into place yet.**
+
+**The Voller house ladder** — `Design system color flexibility/brand-yellow/`, eighteen files:
+`voller-icon.svg`, `favicon.svg`, `favicon.ico`, `favicon-{16,32,192}.png`, `apple-touch-icon.png`,
+`icon-512.png`, `og-image.{svg,png}`, `voller-mark.svg`, `voller-logo{,-dark}.svg`, and the mark's
+three `source-*.svg` masters plus `AppIcon{,-Dark,-Tinted}-1024.png`. Destination:
+`voller_website/brand/web/`, and the mirrored copies inside the `voller-design` skill.
+
+**The four app icons** — `app-icons/<App>/`, three PNGs + three SVG masters + `Contents.json` each.
+Destination: the repo-root `<App>/` folders, and from there each app's
+`Assets.xcassets/AppIcon.appiconset/`.
+
+Do not promote the app icons until §9.4 is closed.
+
+### 9.4 Open items
+
+Nothing below is a find/replace. Each needs a decision.
+
+1. **UnPickle's zigzag crosses the safe margin.** The other three icons now keep the 96pt margin
+   (`VOLLER.md` §3, *no bleed*). Pull it inside, or end it at the jar.
+2. **Riverly's N and S are live text** in `app-icons/Riverly/source-*.svg`. Convert to outlines
+   before these go near Xcode, or the letterforms shift on any machine without the same system font.
+3. **Riverly's hull is `#1372E8`**, which is not in its published six (`accent` is `#0B5FD0`). Every
+   other icon uses only values from its own row. Publish `#1372E8` and re-derive the row, or redraw
+   the hull. See `VOLLER.md` §4.1.
+4. **Riverly's `field-dark` is still unpublished** and `muted` on its field bottom is 4.4:1 (§8.6).
+   Unchanged by this pass, still blocking.
+5. **`favicon.ico` was packed by hand** and is in `brand-yellow/`; the 32 and 16 PNGs are beside it
+   if it needs rebuilding. Most browsers take `favicon.svg` now.
+6. **`voller-design-system-reference.html` predates the yellow change** and is stale on colour and
+   on icons — its type, spacing and geometry still hold. It is a Claude Design bundle, not
+   hand-editable, so it must be rebuilt rather than patched.
+   (`voller-in-app-colour-reference.dc.html` is current: the yellow change does not reach in-app
+   colour, and its one house-colour panel was corrected in place.)

@@ -4,7 +4,7 @@ import * as React from 'react';
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   hint?: string;
-  /** Replaces the hint and darkens the border. Note: the palette has no red — errors read in green-dark. */
+  /** Replaces the hint and reddens the border. Errors use `--alert` (`--alert-light` on dark). */
   error?: string;
 }
 

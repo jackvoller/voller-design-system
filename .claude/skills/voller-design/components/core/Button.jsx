@@ -46,15 +46,28 @@ export function Button({
   };
 
   const variants = {
-    primary: { background: 'var(--action-primary)', color: 'var(--text-on-green)' },
-    // The gold variant is the one-per-view accent. Never two on a screen.
-    accent: { background: 'var(--action-accent)', color: 'var(--action-accent-detail)', fontWeight: 'var(--fw-semibold)' },
+    // Yellow IS the rationed colour, so primary is the one-per-view element.
+    // The inset hairline is required: a yellow fill on the yellow field is a 1.4:1
+    // edge and must be defined by its ink label or an edge. VOLLER.md §1.
+    primary: {
+      background: 'var(--action-primary)',
+      color: 'var(--action-primary-label)',
+      boxShadow: 'inset 0 0 0 1px var(--action-primary-edge)',
+    },
+    // Deprecated: `accent` was the separate gold variant. Gold retired 1 Sep 2026 and
+    // yellow now does both jobs, so this is an alias. Use `primary`.
+    accent: {
+      background: 'var(--action-primary)',
+      color: 'var(--action-primary-label)',
+      boxShadow: 'inset 0 0 0 1px var(--action-primary-edge)',
+      fontWeight: 'var(--fw-semibold)',
+    },
     quiet: {
-      background: 'transparent',
-      color: onDark ? 'var(--text-on-dark)' : 'var(--green-dark)',
+      background: onDark ? 'transparent' : 'var(--action-quiet-bg)',
+      color: onDark ? 'var(--text-on-dark)' : 'var(--action-quiet-label)',
       boxShadow: `inset 0 0 0 1px ${onDark ? 'var(--hairline-dark)' : 'var(--hairline-strong)'}`,
     },
-    text: { background: 'transparent', color: onDark ? 'var(--text-on-dark)' : 'var(--green-dark)', padding: 0 },
+    text: { background: 'transparent', color: onDark ? 'var(--text-on-dark)' : 'var(--tint)', padding: 0 },
   };
 
   const Tag = as;
@@ -64,15 +77,16 @@ export function Button({
       style={{ ...base, ...(variants[variant] || variants.primary), ...style }}
       onMouseEnter={(e) => {
         if (disabled) return;
-        if (variant === 'primary') e.currentTarget.style.background = 'var(--action-primary-hover)';
-        if (variant === 'quiet') e.currentTarget.style.background = onDark ? 'rgba(246,241,227,.06)' : 'rgba(63,107,39,.06)';
-        if (variant === 'text') e.currentTarget.style.color = 'var(--green)';
+        if (variant === 'primary' || variant === 'accent') e.currentTarget.style.background = 'var(--action-primary-hover)';
+        if (variant === 'quiet') e.currentTarget.style.background = onDark ? 'rgba(246,241,227,.06)' : 'rgba(138,90,0,.06)';
+        // NOT yellow: yellow on the light field is 1.4:1. Text buttons darken to ink.
+        if (variant === 'text') e.currentTarget.style.color = onDark ? 'var(--cream-dark)' : 'var(--ink)';
       }}
       onMouseLeave={(e) => {
         if (disabled) return;
-        if (variant === 'primary') e.currentTarget.style.background = 'var(--action-primary)';
-        if (variant === 'quiet') e.currentTarget.style.background = 'transparent';
-        if (variant === 'text') e.currentTarget.style.color = onDark ? 'var(--text-on-dark)' : 'var(--green-dark)';
+        if (variant === 'primary' || variant === 'accent') e.currentTarget.style.background = 'var(--action-primary)';
+        if (variant === 'quiet') e.currentTarget.style.background = onDark ? 'transparent' : 'var(--action-quiet-bg)';
+        if (variant === 'text') e.currentTarget.style.color = onDark ? 'var(--text-on-dark)' : 'var(--tint)';
       }}
       {...rest}
     >

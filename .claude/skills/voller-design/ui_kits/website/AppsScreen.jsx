@@ -18,14 +18,14 @@ function AppsScreen({ go }) {
               key={a.id}
               onClick={() => go('app', a.id)}
               style={{ display: 'flex', gap: 24, alignItems: 'center', padding: 24, background: 'var(--white)', border: '1px solid var(--hairline)', borderRadius: 'var(--radius-card)', cursor: 'pointer', transition: 'border-color var(--dur-base) var(--ease)' }}
-              onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'var(--green)'; }}
+              onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'var(--yellow-dark)'; }}
               onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--hairline)'; }}
             >
               <img src={`../../assets/app-icons/${a.id}.png`} width="88" height="88" alt="" style={{ borderRadius: 'var(--radius-icon)', display: 'block', flex: 'none' }} />
               <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 6, minWidth: 0 }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
                   <span style={{ fontSize: 22, fontWeight: 600, letterSpacing: '-0.02em' }}>{a.name}</span>
-                  <span style={{ display: 'inline-flex', padding: '4px 10px', borderRadius: 'var(--radius-pill)', background: 'rgba(130,186,81,.16)', color: 'var(--green-dark)', fontSize: 12, fontWeight: 500 }}>v{a.version}</span>
+                  <span style={{ display: 'inline-flex', padding: '4px 10px', borderRadius: 'var(--radius-pill)', background: 'var(--yellow-wash)', color: 'var(--yellow-dark)', fontSize: 12, fontWeight: 500 }}>v{a.version}</span>
                 </div>
                 <p style={{ fontSize: 15, color: 'var(--ink)', maxWidth: 620 }}>{a.blurb}</p>
                 <div style={{ fontSize: 13, color: 'var(--muted)' }}>{a.platform} · {a.price}</div>

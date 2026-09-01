@@ -6,4 +6,4 @@ The brand lockup. Use in headers, footers, hero type and signatures.
 <Wordmark size={22} onDark href="/" />
 ```
 
-All geometry derives from `size`, so it scales exactly. Never letterspace it positively, set it in 700, set it in caps, recolour the tile, add a second tile, or put the disc icon next to it in a header. The gold tile **is** the header's one gold element — a gold button alongside it is wrong.
+All geometry derives from `size`, so it scales exactly. Never letterspace it positively, set it in 700, set it in caps, recolour the tile, add a second tile, or put the mark next to it in a header. The yellow tile **is** the header's one rationed element — a yellow button alongside it is wrong. (The mark is no longer a disc: it is a containerless glyph, VOLLER.md §7.)

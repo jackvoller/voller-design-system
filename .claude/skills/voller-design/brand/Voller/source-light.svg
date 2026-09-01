@@ -10,7 +10,7 @@
   <circle cx="512" cy="512" r="376" fill="#82BA51"></circle>
   <g clip-path="url(#disc)">
   <path d="M 166 250 L 512 744 L 858 250" fill="none" stroke="#F6F1E3" stroke-width="170" stroke-linejoin="round" stroke-linecap="round"></path>
-  <rect x="430" y="546" width="164" height="164" rx="38.5" fill="#F0C21C"></rect>
+  <rect x="430" y="546" width="164" height="164" rx="38.5" fill="#FECA00"></rect>
   </g>
   <rect width="1024" height="1024" fill="url(#gloss)"></rect>
 </svg>

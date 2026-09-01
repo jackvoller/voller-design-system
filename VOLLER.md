@@ -237,10 +237,17 @@ value under an app name.
 
 #### Neutral by default
 
-Counts, tags, dates, durations, avatars, photo slots, speaker names and status labels are **ink,
-muted or white** — never the accent. The accent marks the action, the current thing, and the danger.
-This is the rule that keeps a screen minimal at speed, and it is the one that breaks first: a second
-hue creeps in for "types of thing". The type is carried by the label and the icon.
+Counts, tags, dates, durations, avatars, photo slots and speaker names are **ink, muted or white** —
+never the accent. The accent marks the action, the current thing, and the danger. This is the rule
+that keeps a screen minimal at speed, and it is the one that breaks first: a second hue creeps in
+for "types of thing". The type is carried by the label and the icon.
+
+**A status label divides.** One that only *names a kind* — "Podcast", "Family", "Transcribed" — is a
+tag, and is neutral. One that marks a state the person still has to resolve — "Draft", "Overdue",
+"Unsent" — is the accent, because it is the same job as the "current thing" a row down the table.
+The test is whether the label would ever be acted on. If clearing it is a task, it takes the accent;
+if it is only a description, it does not. Once per row, not once per view — a list of six drafts
+shows six, and that is the label doing its job.
 
 ```css
 /* UnJumble. Swap these six and the component set is another app. */
@@ -516,7 +523,8 @@ It may not hold two primary buttons.
 
 Everything else on the screen is `ink`, `muted` or white. Counts, tags, dates, durations, avatars,
 photo slots and speaker names are neutral (§1.2, *neutral by default*) — that is what keeps a screen
-minimal at speed.
+minimal at speed. A status label follows the split in §1.2: it names a kind and is neutral, or it
+marks something to resolve and takes the accent.
 
 **Yellow does not appear in product UI at all.** The old §4 sent gold in to mark "the journey"; the
 accent now does that job, per app, and does it better — it survives four apps where one house colour
@@ -528,6 +536,7 @@ is voller.uk's rules, not the app's.
 | Primary action | `accent` fill + published label | View |
 | Active tab / selected segment | `accent` fill, or `accent-wash` pill + `accent-tint` glyph | Tab bar |
 | Current / live state | `accent` — today's row, the recording dot, the running timer | View |
+| Unresolved state | `accent-wash` ground with an `accent-tint` label; on dark an `accent-dark` outline, since `accent-wash` is light-field only | **Row**, not view |
 | Selection | 2px `accent` edge plus one filled tick | Group |
 | Link, glyph, pressed | `accent-tint` (`accent-deep` light, `accent-dark` dark) | Unlimited |
 | Destruction | `alert` / `alert-light` — house, never the accent | View |
@@ -630,6 +639,12 @@ letterspace it positively; set it in 700 or in caps; recolour the tile; add a se
 is the one place mark and wordmark sit together, at ~34px mark / 18px word, where the mark reads as a
 stamp rather than a headline. A social card (1200 × 630) may also carry both — that is §4's set
 clause, not the header rule, which still forbids the pair.
+
+**Those don'ts govern the Voller wordmark.** An app's own screen title may take the same full stop —
+the geometry above, in **that app's `accent`** rather than yellow, which §4.2 requires since yellow
+has no product-side form. It is not a recolour of the wordmark; it is the same device applied to a
+different word, and it is what makes a screen title read as family. Shipped in Meal Planner and
+UnJumble, both parenting the tile to the large-title label so it inherits the collapse.
 
 ### The mark
 
@@ -747,6 +762,12 @@ tokens change. Yellow has no in-app form at all — see §4.2.
 ```
 
 - Separate surfaces with a 1px hairline or a background step. **No drop shadows for hierarchy.**
+- Where a floating control overlaps a surface it is not part of — a record button sitting over a
+  card, a FAB over a list — it is separated by a **ring in the field's own colour**, not a shadow.
+  The ring is a step of the app's `field`, roughly halfway to `accent-wash`, and is **derived, not
+  published**: it is the field lit slightly, so it does not count against the six (§1.2). UnJumble's
+  is `#FFF4F0` at 5pt, between its field top `#FFFCFA` and its wash `#FFE7E0`. On dark the ring is
+  the `field-dark` top stop, which is already lighter than the page.
 - On dark: cards and rows are `--ink-raised` with `--hairline-dark`; the quiet button becomes a
   `rgba(246,241,227,.20)` outline rather than a tinted wash, which disappears on near-black. This
   holds for `--accent-wash` too — it is a light-field token only.
@@ -761,6 +782,30 @@ tokens change. Yellow has no in-app form at all — see §4.2.
   survives here so that avatars and round photo crops still read as part of the system.
 - App icons on a page are shown at 23.5% radius, never circular, never with a shadow.
 - **Always define both `a` and `a:hover`.** Never leave links at browser default.
+
+### Liquid Glass (iOS 26+)
+
+The platform material, used where iOS uses it: **controls that float over content that scrolls
+beneath them** — a search field, a filter button, a row of filter chips, a toolbar pill, a playback
+bar. Nothing else. Cards and list rows are surfaces and take the surface treatment above; a glass
+card is the tell that glass is being used as decoration.
+
+**Glass is a material, not a colour.** It does not spend the ration (§4.2), and it does not replace
+a token: a control on glass still takes its `accent` fill, `accent-tint` glyph and neutral label
+from the same table as every other control.
+
+A **selected** state on a glass control is the third sanctioned form of §4.2's active segment: tint
+the glass with `accent` at low alpha — `.regular.tint(accent.opacity(0.28))` in SwiftUI — and give
+the label `accent-tint`. Do not fill it with `accent`, which turns a filter chip into a primary
+button, and do not use `accent-wash`, which cannot survive the dark field.
+
+- Group adjacent glass controls in one container (`GlassEffectContainer`) so they merge rather than
+  stacking edges. Glass over glass reads as a rendering fault.
+- The material carries no border. If a control needs an edge it is not a glass control.
+- Everything a glass control contains still meets §1.1 against **both** field stops, since the
+  material takes the colour of whatever passes under it.
+- **The web has no equivalent, and does not fake one.** No `backdrop-filter` stand-in: voller.uk
+  uses the flat surfaces above. This is the one place the two platforms deliberately diverge.
 
 ### Embedded platform surfaces are exempt
 
@@ -798,7 +843,8 @@ not the frame's contents. This is correct behaviour, not a bug: the whole promis
 - No glass ring in an icon. Web imagery only (§3).
 - No shape crossing the 96pt safe margin — the containerless family has no edge to crop against.
 - No hue outside your own six. If an app needs a distinction, it moves inside its accent ramp.
-- No accent on a count, a tag, a date, a duration, an avatar or a photo slot. Neutral by default.
+- No accent on a count, a tag, a date, a duration, an avatar or a photo slot, or on a status
+  label that only names a kind. Neutral by default — but a state awaiting action takes it (§1.2).
 - No second accent fill in the same role in one view.
 - No `accent` as text or a glyph — that is `accent-deep` on light, `accent-dark` on dark.
 - No dark variant of a filled control. The fill and its label do not change between fields.

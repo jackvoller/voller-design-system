@@ -15,7 +15,7 @@ separately) → `studio` (largest).
 | Repo | State | Left |
 |---|---|---|
 | `voller_website` | **done**, on `main` | `--muted-dark` → `#A09892` (§8) |
-| `unjumble` | **done** bar §2.3's gold row | **Accent migration (§8)**, then `--muted-dark`. The deferred gold/orange row is resolved by §8 — see below |
+| `unjumble` | **done**, §8 included | —. §2.3's gold row closed by §8.3: the record button and the draft flag are `accent`, and `.orange` has no call sites left |
 | `mealplanner` | **done** bar the tag cull | **Accent migration (§8)**, `--muted-dark`, then the tag cull (§3) |
 | `studio` | **done** bar the safelist | **Accent migration (§8)** as UnPickle, `--muted-dark`, then the safelist (§5) |
 | `riverly` | **not started** | Blocked twice: its icon spec is in `Riverly Brand Review.dc.html`, not in this repo; and its six are a proposal with an open AA failure (`VOLLER.md` §1.2.1) |
@@ -25,7 +25,7 @@ Then, on top of all of the above:
 | Repo | Yellow pass (§9) | Icon family (§9.3) |
 |---|---|---|
 | `voller_website` | **not started** — the whole house half of the site | **not started** — the full `brand-yellow/` ladder replaces `brand/web/` |
-| `unjumble` | **not started** — house surfaces only; its accent work is unaffected | **not started** |
+| `unjumble` | **done** — hairline, `--muted-dark`, flat field; `brandGreen` and `brandGold` deleted rather than renamed, as it has no house-side surface to paint | **done in the app, ahead of the gate** — see §9.3 |
 | `mealplanner` | **not started** — house surfaces only | **not started** |
 | `studio` | **not started** — house surfaces only | **not started** |
 | `riverly` | **not started** | **not started**, and additionally blocked on the `#1372E8` hull (§9.4) |
@@ -51,12 +51,17 @@ were. If you have started §8 in a repo, finish it before starting §9.
 
 ---
 
-## 0. Shared: the two-appearance accent
+## 0. Shared: the two-appearance accent — SUPERSEDED BY §8.1
+
+**The block below is green, and green is no longer a house colour.** The reasoning still holds —
+the tint must flip between fields, and a static `Color` cannot — but the *values* are per-app now:
+each app's `AccentColor` carries its own `accent-deep` on light and `accent-dark` on dark. Take
+them from §8.1, not from here. Left in place because §1–§5 refer back to it.
 
 Every iOS app needs the tint to flip between fields (`VOLLER.md` §1.1). A static `Color` cannot,
 so either set it in the asset catalog or use a dynamic `UIColor`.
 
-**`Assets.xcassets/AccentColor.colorset/Contents.json`** — drop-in for all three iOS apps:
+**`Assets.xcassets/AccentColor.colorset/Contents.json`** — ~~drop-in for all three iOS apps~~:
 
 ```json
 {
@@ -530,6 +535,13 @@ Destination: the repo-root `<App>/` folders, and from there each app's
 `Assets.xcassets/AppIcon.appiconset/`.
 
 Do not promote the app icons until §9.4 is closed.
+
+**One exception already taken.** `unjumble/UnJumble/Assets.xcassets/AppIcon.appiconset/` was
+updated straight from `app-icons/UnJumble/` and matches it byte for byte, `Contents.json` included.
+Its icon is unaffected by every open item in §9.4 — those are UnPickle's margin and Riverly's
+letterforms, hull and field. The repo-root `UnJumble/` folder is therefore **behind the app**, and
+still holds the pre-yellow green-and-gold mic. Do not delete it and do not copy *from* it; it is
+the promotion's destination, and it is filled when §9.4 closes for the family.
 
 ### 9.4 Open items
 

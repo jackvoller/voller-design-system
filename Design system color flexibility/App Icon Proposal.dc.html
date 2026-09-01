@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="stylesheet" href="_ds/voller-design-system-29513100-bc89-41ca-aa18-058035f516b4/tokens/colors.css">
+<link rel="stylesheet" href="_ds/voller-design-system-29513100-bc89-41ca-aa18-058035f516b4/tokens/typography.css">
+<link rel="stylesheet" href="_ds/voller-design-system-29513100-bc89-41ca-aa18-058035f516b4/tokens/radii.css">
+<link rel="stylesheet" href="_ds/voller-design-system-29513100-bc89-41ca-aa18-058035f516b4/tokens/effects.css">
+<link rel="stylesheet" href="_ds/voller-design-system-29513100-bc89-41ca-aa18-058035f516b4/tokens/semantic.css">
+<link rel="stylesheet" href="_ds/voller-design-system-29513100-bc89-41ca-aa18-058035f516b4/tokens/base.css">
+<link rel="stylesheet" href="_ds/voller-design-system-29513100-bc89-41ca-aa18-058035f516b4/styles.css">
+<script src="_ds/voller-design-system-29513100-bc89-41ca-aa18-058035f516b4/_ds_bundle.js"></script>
+<style>
+  body{margin:0;background:#E7E5DC;}
+  a{color:#3F6B27;text-decoration:none;}
+  a:hover{color:#1B1B19;}
+</style>
+</helmet>
+
+<div style="font-family:-apple-system,'SF Pro Text',system-ui,sans-serif;color:#1B1B19;background:#E7E5DC;padding:48px 56px 96px;display:flex;flex-direction:column;gap:56px;-webkit-font-smoothing:antialiased">
+
+<section style="display:flex;flex-direction:column;gap:28px">
+
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:820px">
+    <div style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Turn 15 · Meal Planner, no fork</div>
+    <div style="font-size:34px;font-weight:600;letter-spacing:-0.02em">Draw the job, not the cutlery.</div>
+    <div style="font-size:16px;line-height:1.6;color:#6E6E6B;text-wrap:pretty">The app is choose the week, buy the shopping, cook the meals. So: the bag you carry, the pot you cook in, or the plate you already own — each one solid green with cream cut into it, and a tick where the app's verb is. No cutlery, nothing bleeding, two values.</div>
+  </div>
+
+  <div style="display:flex;gap:20px;flex-wrap:nowrap;align-items:flex-start">
+    <div id="15a" style="display:flex;flex-direction:column;gap:12px;padding:20px 22px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:250px;flex:none">
+      <div style="display:flex;align-items:baseline;gap:8px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">15a</span>
+        <span style="font-size:16px;font-weight:600;letter-spacing:-0.02em">The bag, listed</span>
+      </div>
+      <div style="width:190px;height:190px;border-radius:45px;overflow:hidden">{{ mpBag }}</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ mpBag }}</div>
+        <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ mpBag }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ mpBag }}</div>
+      </div>
+      <div style="font-size:13px;line-height:1.5;color:#6E6E6B">A shopping bag with the list cut into it in cream, top line ticked. Covers two thirds of the app in one shape and has real mass at 29pt.</div>
+    </div>
+
+    <div id="15b" style="display:flex;flex-direction:column;gap:12px;padding:20px 22px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:250px;flex:none">
+      <div style="display:flex;align-items:baseline;gap:8px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">15b</span>
+        <span style="font-size:16px;font-weight:600;letter-spacing:-0.02em">The pot, ticked</span>
+      </div>
+      <div style="width:190px;height:190px;border-radius:45px;overflow:hidden">{{ mpPot }}</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ mpPot }}</div>
+        <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ mpPot }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ mpPot }}</div>
+      </div>
+      <div style="font-size:13px;line-height:1.5;color:#6E6E6B">Lid, knob, body, one cream tick struck through it. Heaviest silhouette of the three — closest in weight to the mic — and it says cooking without saying recipe app.</div>
+    </div>
+
+    <div id="15c" style="display:flex;flex-direction:column;gap:12px;padding:20px 22px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:250px;flex:none">
+      <div style="display:flex;align-items:baseline;gap:8px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">15c</span>
+        <span style="font-size:16px;font-weight:600;letter-spacing:-0.02em">Your plate, cleaned up</span>
+      </div>
+      <div style="width:190px;height:190px;border-radius:45px;overflow:hidden">{{ mpPlate }}</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ mpPlate }}</div>
+        <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ mpPlate }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ mpPlate }}</div>
+      </div>
+      <div style="font-size:13px;line-height:1.5;color:#6E6E6B">The icon you already ship, minus the cutlery and the gold: green rim, cream plate, the week ticked on it in green. Keeps five years of recognition and drops the bleed.</div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:12px;padding:20px 22px;background:#F1EFE7;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:fit-content">
+    <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Against the set, 60pt</div>
+    <div style="display:flex;gap:10px;align-items:flex-end">
+      <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ mpBag }}</div>
+      <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ mpPot }}</div>
+      <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ mpPlate }}</div>
+      <div style="width:1px;height:60px;background:rgba(20,40,10,.16)"></div>
+      <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ ujRef }}</div>
+      <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ upRef }}</div>
+      <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ rvFinal }}</div>
+    </div>
+    <div style="font-size:13px;line-height:1.5;color:#6E6E6B;max-width:620px;text-wrap:pretty">Bag, pot, plate against the mic, the jar and Riverly. My pick is the pot: it matches the set's mass, it is the only one of the three that could not be any other app, and the tick carries the planning. The plate is the safe answer if recognition matters more than a fresh start.</div>
+  </div>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:28px">
+
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:820px">
+    <div style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Turn 14 · the fork as the tick — <strong style="color:#1B1B19;font-weight:600">rejected</strong></div>
+    <div style="font-size:34px;font-weight:600;letter-spacing:-0.02em">The handle bends, and the fork becomes the tick.</div>
+    <div style="font-size:16px;line-height:1.6;color:#6E6E6B;text-wrap:pretty">One object doing both jobs with nothing added: the handle turns at the heel to make the tick's short arm, the long arm rises, and the tines splay off the end of it. Food and planned in a single silhouette, and it is the only Meal Planner option so far that needs no second element at all.</div>
+  </div>
+
+  <div style="display:flex;gap:20px;flex-wrap:nowrap;align-items:flex-start">
+    <div id="14a" style="display:flex;flex-direction:column;gap:12px;padding:20px 22px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:250px;flex:none">
+      <div style="display:flex;align-items:baseline;gap:8px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">14a</span>
+        <span style="font-size:16px;font-weight:600;letter-spacing:-0.02em">Bent fork, cream band</span>
+      </div>
+      <div style="width:190px;height:190px;border-radius:45px;overflow:hidden">{{ mpTickForkBand }}</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ mpTickForkBand }}</div>
+        <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ mpTickForkBand }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ mpTickForkBand }}</div>
+      </div>
+      <div style="font-size:13px;line-height:1.5;color:#6E6E6B">Keeps the mic's cream band across the handle, so it still declares itself part of the set. The band also breaks the long arm, which slightly weakens the tick.</div>
+    </div>
+
+    <div id="14b" style="display:flex;flex-direction:column;gap:12px;padding:20px 22px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:250px;flex:none">
+      <div style="display:flex;align-items:baseline;gap:8px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">14b</span>
+        <span style="font-size:16px;font-weight:600;letter-spacing:-0.02em">Bent fork, no band</span>
+      </div>
+      <div style="width:190px;height:190px;border-radius:45px;overflow:hidden">{{ mpTickForkPlain }}</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ mpTickForkPlain }}</div>
+        <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ mpTickForkPlain }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ mpTickForkPlain }}</div>
+      </div>
+      <div style="font-size:13px;line-height:1.5;color:#6E6E6B">Pure silhouette, one colour. Strongest tick of the two and cleanest at 29pt; the cost is that it is the only icon in the set with no cream in it.</div>
+    </div>
+
+  </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px;padding:20px 22px;background:#F1EFE7;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:fit-content">
+      <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Against the set, 60pt</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ mpTickForkBand }}</div>
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ mpTickForkPlain }}</div>
+        <div style="width:1px;height:60px;background:rgba(20,40,10,.16)"></div>
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ ujRef }}</div>
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ upRef }}</div>
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ rvFinal }}</div>
+      </div>
+      <div style="font-size:13px;line-height:1.5;color:#6E6E6B;max-width:620px">The diagonal is the odd one out in a row of upright objects — that is the real trade, and it may be worth it for how much the mark says.</div>
+    </div>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:28px">
+
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:820px">
+    <div style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Turn 13 · the fork, planning</div>
+    <div style="font-size:34px;font-weight:600;letter-spacing:-0.02em">Keep the fork. Make it say planned.</div>
+    <div style="font-size:16px;line-height:1.6;color:#6E6E6B;text-wrap:pretty">12b with the planning idea carried inside the object rather than added beside it — cream is still the only second value, and nothing sits outside the silhouette. 12b itself is first for comparison.</div>
+  </div>
+
+  <div style="display:flex;gap:18px;flex-wrap:nowrap;align-items:flex-start">
+    <div style="display:flex;flex-direction:column;gap:12px;padding:18px 20px;background:#F1EFE7;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:184px;flex:none">
+      <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">12b as-is</div>
+      <div style="width:136px;height:136px;border-radius:32px;overflow:hidden">{{ mpForkPlain }}</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ mpForkPlain }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ mpForkPlain }}</div>
+      </div>
+      <div style="font-size:13px;line-height:1.5;color:#6E6E6B">Food, no plan.</div>
+    </div>
+
+    <div id="13a" style="display:flex;flex-direction:column;gap:12px;padding:18px 20px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:184px;flex:none">
+      <div style="display:flex;align-items:baseline;gap:8px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">13a</span>
+        <span style="font-size:16px;font-weight:600;letter-spacing:-0.02em">Notched shank</span>
+      </div>
+      <div style="width:136px;height:136px;border-radius:32px;overflow:hidden">{{ mpNotch }}</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ mpNotch }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ mpNotch }}</div>
+      </div>
+      <div style="font-size:13px;line-height:1.5;color:#6E6E6B">The band bends into a tick. Subtlest change, best at 29pt — but it can read as a decorative notch rather than a tick.</div>
+    </div>
+
+    <div id="13b" style="display:flex;flex-direction:column;gap:12px;padding:18px 20px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:184px;flex:none">
+      <div style="display:flex;align-items:baseline;gap:8px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">13b</span>
+        <span style="font-size:16px;font-weight:600;letter-spacing:-0.02em">Ruled tines</span>
+      </div>
+      <div style="width:136px;height:136px;border-radius:32px;overflow:hidden">{{ mpRuled }}</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ mpRuled }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ mpRuled }}</div>
+      </div>
+      <div style="font-size:13px;line-height:1.5;color:#6E6E6B">Two cream rules across the tines turn the head into a ruled week while the shape stays a fork. Reads as a schedule at 160pt; the rules merge into the tines by 29pt.</div>
+    </div>
+
+    <div id="13c" style="display:flex;flex-direction:column;gap:12px;padding:18px 20px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:184px;flex:none">
+      <div style="display:flex;align-items:baseline;gap:8px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">13c</span>
+        <span style="font-size:16px;font-weight:600;letter-spacing:-0.02em">Ticked head</span>
+      </div>
+      <div style="width:136px;height:136px;border-radius:32px;overflow:hidden">{{ mpTicked }}</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ mpTicked }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ mpTicked }}</div>
+      </div>
+      <div style="font-size:13px;line-height:1.5;color:#6E6E6B">A full cream tick struck through the head, band kept on the shank. Unambiguously "meal, ticked off" — my pick, and the only one that says planning at 40pt.</div>
+    </div>
+  </div>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:28px">
+
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:820px">
+    <div style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Turn 12 · Meal Planner</div>
+    <div style="font-size:34px;font-weight:600;letter-spacing:-0.02em">The plate was an emblem. These are glyphs.</div>
+    <div style="font-size:16px;line-height:1.6;color:#6E6E6B;text-wrap:pretty">The shipping plate is a disc with cutlery bleeding off both edges — the last emblem in the set, and the one thing still breaking <a href="#4b">4b</a>. Three replacements, each one solid upright object in green with cream cut out of it, nothing outside the silhouette, no third colour. Family strip underneath: judge them next to the mic, the jar and Riverly at 60pt.</div>
+  </div>
+
+  <div style="display:flex;gap:20px;flex-wrap:nowrap;align-items:flex-start">
+    <div id="12a" style="display:flex;flex-direction:column;gap:14px;padding:22px 24px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:250px;flex:none">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">12a</span>
+        <span style="font-size:18px;font-weight:600;letter-spacing:-0.02em">The week, ticked</span>
+      </div>
+      <div style="width:160px;height:160px;border-radius:38px;overflow:hidden">{{ mpCard }}</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ mpCard }}</div>
+        <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ mpCard }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ mpCard }}</div>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:#6E6E6B">An upright card with three cream rules, the top one ticked and shortened. Says planning outright and holds to 29pt, but nothing in it says food.</div>
+    </div>
+
+    <div id="12b" style="display:flex;flex-direction:column;gap:14px;padding:22px 24px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:250px;flex:none">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">12b</span>
+        <span style="font-size:18px;font-weight:600;letter-spacing:-0.02em">The fork, mic-style</span>
+      </div>
+      <div style="width:160px;height:160px;border-radius:38px;overflow:hidden">{{ mpFork }}</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ mpFork }}</div>
+        <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ mpFork }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ mpFork }}</div>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:#6E6E6B">Structurally the mic: solid object, one cream band across the shank. Truest sibling in the set and instantly food — but it is a cutlery icon, which is what every recipe app uses.</div>
+    </div>
+
+    <div id="12c" style="display:flex;flex-direction:column;gap:14px;padding:22px 24px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:250px;flex:none">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">12c</span>
+        <span style="font-size:18px;font-weight:600;letter-spacing:-0.02em">Fork cut from the card</span>
+      </div>
+      <div style="width:160px;height:160px;border-radius:38px;overflow:hidden">{{ mpForkCard }}</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ mpForkCard }}</div>
+        <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ mpForkCard }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ mpForkCard }}</div>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:#6E6E6B">One object carrying both ideas: the card is the plan, the fork is cut out of it in cream, and a small tick sits in the corner. My pick — most specific to what the app is, and the silhouette is a card so it fills the tile.</div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:14px;padding:22px 24px;background:#F1EFE7;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:fit-content">
+    <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">The set at 60pt — 12a, 12b, 12c against the other three</div>
+    <div style="display:flex;gap:26px;align-items:flex-end">
+      <div style="display:flex;gap:10px">
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ mpCard }}</div>
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ mpFork }}</div>
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ mpForkCard }}</div>
+      </div>
+      <div style="width:1px;height:60px;background:rgba(20,40,10,.16)"></div>
+      <div style="display:flex;gap:10px">
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ ujRef }}</div>
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ upRef }}</div>
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ rvFinal }}</div>
+      </div>
+    </div>
+    <div style="font-size:14px;line-height:1.55;color:#6E6E6B;max-width:700px">UnJumble, UnPickle and Riverly (11b) on the right. The two card options match their mass; the fork is lighter than everything else in the row, which is worth knowing before you pick it.</div>
+  </div>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:28px">
+
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:820px">
+    <div style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Turn 11 · ticks or ring — <strong style="color:#1B1B19;font-weight:600">11b final</strong></div>
+    <div style="font-size:34px;font-weight:600;letter-spacing:-0.02em">Same boat, same letters. Ticks or arcs.</div>
+    <div style="font-size:16px;line-height:1.6;color:#6E6E6B;text-wrap:pretty">Identical hull, outboard and N/S pair in both — the only variable is what marks east and west: two short ticks, or 9c's pair of arcs. Shown at 220, 60, 40 and 29pt.</div>
+  </div>
+
+  <div style="display:flex;gap:20px;flex-wrap:nowrap;align-items:flex-start">
+    <div id="11a" style="display:flex;flex-direction:column;gap:14px;padding:22px 24px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:352px;flex:none">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">11a</span>
+        <span style="font-size:18px;font-weight:600;letter-spacing:-0.02em">Ticks — 10c as chosen</span>
+      </div>
+      <div style="width:220px;height:220px;border-radius:52px;overflow:hidden">{{ rvNorthSouth }}</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ rvNorthSouth }}</div>
+        <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ rvNorthSouth }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ rvNorthSouth }}</div>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:#6E6E6B">The boat is the only large shape in the tile; the compass is four small marks around it. Reads as a vessel on a bearing, and at 29pt it is a boat that happens to have specks around it — the mark degrades gracefully.</div>
+    </div>
+
+    <div id="11b" style="display:flex;flex-direction:column;gap:14px;padding:22px 24px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:352px;flex:none">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">11b</span>
+        <span style="font-size:18px;font-weight:600;letter-spacing:-0.02em">Arcs — 9c with the outboard and N/S</span>
+      </div>
+      <div style="width:220px;height:220px;border-radius:52px;overflow:hidden">{{ rvRingNS }}</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ rvRingNS }}</div>
+        <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ rvRingNS }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ rvRingNS }}</div>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:#6E6E6B">The arcs close the composition and make it read as an instrument dial with the boat as its needle — more premium at 220pt, and the letters now sit in the ring's own gaps rather than floating. Two costs: it implies a container, which is what <a href="#4b">4b</a> ruled out for the other three, and at 29pt the arcs thicken into a partial circle that competes with the hull.</div>
+    </div>
+  </div>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:28px">
+
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:820px">
+    <div style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Turn 10 · 9a, named and with an outboard — <strong style="color:#1B1B19;font-weight:600">10c chosen</strong></div>
+    <div style="font-size:34px;font-weight:600;letter-spacing:-0.02em">A stern outboard, and the bearing named.</div>
+    <div style="font-size:16px;line-height:1.6;color:#6E6E6B;text-wrap:pretty">The hull now has an outboard and skeg hanging off the stern in deep blue — that one shape is what makes it a boat rather than a pill, and it also tells you which end is the bow. Letters are the platform sans at 600, same family as everything else, in deep blue. Three amounts of compass, since letters are the first thing to fail at 29pt.</div>
+  </div>
+
+  <div style="display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start">
+    <div id="10a" style="display:flex;flex-direction:column;gap:14px;padding:22px 24px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:340px">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">10a</span>
+        <span style="font-size:18px;font-weight:600;letter-spacing:-0.02em">North named, the rest ticks</span>
+      </div>
+      <div style="width:180px;height:180px;border-radius:42px;overflow:hidden">{{ rvNorth }}</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ rvNorth }}</div>
+        <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ rvNorth }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ rvNorth }}</div>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:#6E6E6B">One letter is enough to make the other three marks read as a compass — the eye supplies E, S and W. My pick: it is the only one of the three where the boat is still the loudest thing in the tile at 60pt.</div>
+    </div>
+
+    <div id="10b" style="display:flex;flex-direction:column;gap:14px;padding:22px 24px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:340px">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">10b</span>
+        <span style="font-size:18px;font-weight:600;letter-spacing:-0.02em">All four named</span>
+      </div>
+      <div style="width:180px;height:180px;border-radius:42px;overflow:hidden">{{ rvFourCard }}</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ rvFourCard }}</div>
+        <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ rvFourCard }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ rvFourCard }}</div>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:#6E6E6B">Unmistakably a compass rose, and the closest to a marine instrument. Cost: four letters at the tile edge crowd the hull, and below 40pt they turn to grey mush — which is worse than having no compass at all.</div>
+    </div>
+
+    <div id="10c" style="display:flex;flex-direction:column;gap:14px;padding:22px 24px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:340px">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">10c</span>
+        <span style="font-size:18px;font-weight:600;letter-spacing:-0.02em">North and south named</span>
+      </div>
+      <div style="width:180px;height:180px;border-radius:42px;overflow:hidden">{{ rvNorthSouth }}</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ rvNorthSouth }}</div>
+        <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ rvNorthSouth }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ rvNorthSouth }}</div>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:#6E6E6B">The vertical axis named, the horizontal left as ticks: reads as a heading up the page — the middle option, and the one that survives 40pt best of the two lettered versions.</div>
+    </div>
+  </div>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:28px">
+
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:820px">
+    <div style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Turn 9 · Riverly, mic-style boat</div>
+    <div style="font-size:34px;font-weight:600;letter-spacing:-0.02em">One solid object, one cream band — plus a compass.</div>
+    <div style="font-size:16px;line-height:1.6;color:#6E6E6B;text-wrap:pretty">Built to UnJumble's rule exactly: a single upright object, centred, in the app's colour, with one cream band cut straight through it. The mic is shown first for reference. Then three ways to add the compass, in deep blue so no fourth value appears.</div>
+  </div>
+
+  <div style="display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start">
+    <div style="display:flex;flex-direction:column;gap:14px;padding:22px 24px;background:#F1EFE7;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:236px">
+      <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Reference</div>
+      <div style="width:180px;height:180px;border-radius:42px;overflow:hidden">{{ ujRef }}</div>
+      <div style="font-size:14px;line-height:1.55;color:#6E6E6B">UnJumble: solid body, one cream band, everything else the same colour.</div>
+    </div>
+
+    <div id="9a" style="display:flex;flex-direction:column;gap:14px;padding:22px 24px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:340px">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">9a</span>
+        <span style="font-size:18px;font-weight:600;letter-spacing:-0.02em">Compass ticks around the hull</span>
+      </div>
+      <div style="width:180px;height:180px;border-radius:42px;overflow:hidden">{{ rvTicks }}</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ rvTicks }}</div>
+        <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ rvTicks }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ rvTicks }}</div>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:#6E6E6B">Four cardinal marks, north longest and directly off the bow, so the boat is sighted on a bearing. Quietest of the three and the closest sibling to the mic — the ticks are the first thing to go at 29pt, which is fine because the hull still points.</div>
+    </div>
+
+    <div id="9b" style="display:flex;flex-direction:column;gap:14px;padding:22px 24px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:340px">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">9b</span>
+        <span style="font-size:18px;font-weight:600;letter-spacing:-0.02em">The foredeck is the needle</span>
+      </div>
+      <div style="width:180px;height:180px;border-radius:42px;overflow:hidden">{{ rvNeedle }}</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ rvNeedle }}</div>
+        <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ rvNeedle }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ rvNeedle }}</div>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:#6E6E6B">The split cream-and-deep needle sits inside the bow, so the boat contains its own compass rather than wearing one. My pick: nothing is added outside the silhouette, and it survives 29pt because the needle is inside the mass.</div>
+    </div>
+
+    <div id="9c" style="display:flex;flex-direction:column;gap:14px;padding:22px 24px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:340px">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">9c</span>
+        <span style="font-size:18px;font-weight:600;letter-spacing:-0.02em">Boat over a broken compass ring</span>
+      </div>
+      <div style="width:180px;height:180px;border-radius:42px;overflow:hidden">{{ rvRing }}</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ rvRing }}</div>
+        <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ rvRing }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ rvRing }}</div>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:#6E6E6B">Two arcs and a north triangle behind the hull. Says "instrument" loudest, but it reintroduces a container by implication — a ring is a disc with the middle taken out, which is the argument <a href="#4b">4b</a> just won.</div>
+    </div>
+  </div>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:28px">
+
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:820px">
+    <div style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Turn 8 · Riverly, your composition</div>
+    <div style="font-size:34px;font-weight:600;letter-spacing:-0.02em">The icon you ship, with the boat where the buoy was.</div>
+    <div style="font-size:16px;line-height:1.6;color:#6E6E6B;text-wrap:pretty">Your disc, your glass ring, your cream river and its branch, the two wake ripples — all at the original coordinates. The only change is that the buoy becomes the narrowboat seen from above, riding the bend, so the boat is the heading indicator. On <a href="#6a">6a</a>'s light wash.</div>
+  </div>
+
+  <div style="display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start">
+    <div id="8a" style="display:flex;flex-direction:column;gap:14px;padding:22px 24px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:400px">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">8a</span>
+        <span style="font-size:18px;font-weight:600;letter-spacing:-0.02em">Boat on your river disc</span>
+      </div>
+      <div style="width:220px;height:220px;border-radius:52px;overflow:hidden">{{ rvBoatDisc }}</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ rvBoatDisc }}</div>
+        <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ rvBoatDisc }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ rvBoatDisc }}</div>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:#6E6E6B">Blue hull on the cream river with a cream cabin and deep-blue hatches, angled 29° up the bend exactly where the buoy sat. Note the honest tension: this keeps Riverly an emblem while the other three are glyphs, which is the one thing <a href="#4b">4b</a> was meant to settle. Worth it if the river scene is Riverly's identity — it is the most recognisable of everything drawn so far.</div>
+    </div>
+
+    <div id="8b" style="display:flex;flex-direction:column;gap:14px;padding:22px 24px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:400px">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">8b</span>
+        <span style="font-size:18px;font-weight:600;letter-spacing:-0.02em">The same scene, no disc</span>
+      </div>
+      <div style="width:220px;height:220px;border-radius:52px;overflow:hidden">{{ rvBoatRiver }}</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ rvBoatRiver }}</div>
+        <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ rvBoatRiver }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ rvBoatRiver }}</div>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:#6E6E6B">Same idea inside 4b's rule: the river is the object, drawn straight on the washed field with no container, and the boat is cut out of it in cream. Consistent with UnJumble, Meal Planner and UnPickle; less of the chart-window character.</div>
+    </div>
+  </div>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:28px">
+
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:820px">
+    <div style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Turn 7 · Riverly, boat as pointer</div>
+    <div style="font-size:34px;font-weight:600;letter-spacing:-0.02em">A hull and a map pointer are the same shape.</div>
+    <div style="font-size:16px;line-height:1.6;color:#6E6E6B;text-wrap:pretty">The narrowboat seen from above — pointed bow, parallel sides, square stern — is already a heading indicator, so the boat can be the pointer without becoming an arrow. One hull, drawn once, rotated onto whatever bearing the mark needs. All three on <a href="#6a">6a</a>'s light wash.</div>
+  </div>
+
+  <div style="display:flex;gap:24px;flex-wrap:wrap">
+    <div id="7a" style="display:flex;flex-direction:column;gap:14px;padding:22px 24px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:340px">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">7a</span>
+        <span style="font-size:18px;font-weight:600;letter-spacing:-0.02em">Boat on the river</span>
+      </div>
+      <div style="width:180px;height:180px;border-radius:42px;overflow:hidden">{{ rvBoatRiver }}</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ rvBoatRiver }}</div>
+        <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ rvBoatRiver }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ rvBoatRiver }}</div>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:#6E6E6B">Cream hull cut out of the blue river, cabin in the river's own colour, bow deck in deep blue. The whole boat is there and it is unmistakably pointing up the bend. Strongest at 29pt because the ribbon fills the tile.</div>
+    </div>
+
+    <div id="7b" style="display:flex;flex-direction:column;gap:14px;padding:22px 24px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:340px">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">7b</span>
+        <span style="font-size:18px;font-weight:600;letter-spacing:-0.02em">Boat as the pointer</span>
+      </div>
+      <div style="width:180px;height:180px;border-radius:42px;overflow:hidden">{{ rvBoatPointer }}</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ rvBoatPointer }}</div>
+        <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ rvBoatPointer }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ rvBoatPointer }}</div>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:#6E6E6B">No river channel — a blue hull on the washed field with two waves beneath, reading as a heading marker on a chart. Biggest boat of the three and the closest silhouette match to UnJumble's mic, but it says "boat" louder than "river".</div>
+    </div>
+
+    <div id="7c" style="display:flex;flex-direction:column;gap:14px;padding:22px 24px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:340px">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">7c</span>
+        <span style="font-size:18px;font-weight:600;letter-spacing:-0.02em">Boat, with the route behind</span>
+      </div>
+      <div style="width:180px;height:180px;border-radius:42px;overflow:hidden">{{ rvBoatUpstream }}</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ rvBoatUpstream }}</div>
+        <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ rvBoatUpstream }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ rvBoatUpstream }}</div>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:#6E6E6B">The river drops back to a faint channel with a dashed centreline, and the boat sits over it bow-up. Most literally a navigation app; the faint ribbon is a third value, and it is the first thing lost at 29pt.</div>
+    </div>
+  </div>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:28px">
+
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:820px">
+    <div style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Turn 6 · tinted fields — <strong style="color:#1B1B19;font-weight:600">6a chosen</strong></div>
+    <div style="font-size:34px;font-weight:600;letter-spacing:-0.02em;line-height:1.15">The field takes the colour too.</div>
+    <div style="font-size:16px;line-height:1.6;color:#6E6E6B;text-wrap:pretty">Same 160° axis and the same baked gloss as the house field — only the two stops change, to a wash of the app's own colour. Three strengths, all four apps, with Riverly on <a href="#5b">5b</a>. Judge them as a set of four at 60pt, not one at a time: that is how they are actually seen.</div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <div id="6a" style="display:flex;flex-direction:column;gap:16px;padding:24px 26px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:fit-content">
+      <div style="display:flex;align-items:baseline;gap:12px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">6a</span>
+        <span style="font-size:20px;font-weight:600;letter-spacing:-0.02em">Light wash — the in-app field, exactly</span>
+      </div>
+      <div style="display:flex;gap:16px;align-items:flex-end">
+        <div style="width:132px;height:132px;border-radius:31px;overflow:hidden">{{ ujT1 }}</div>
+        <div style="width:132px;height:132px;border-radius:31px;overflow:hidden">{{ mpT1 }}</div>
+        <div style="width:132px;height:132px;border-radius:31px;overflow:hidden">{{ upT1 }}</div>
+        <div style="width:132px;height:132px;border-radius:31px;overflow:hidden">{{ rvT1 }}</div>
+        <div style="display:flex;gap:10px;padding-left:14px">
+          <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ ujT1 }}</div>
+          <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ mpT1 }}</div>
+          <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ upT1 }}</div>
+          <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ rvT1 }}</div>
+        </div>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:#6E6E6B;max-width:760px;text-wrap:pretty">The icon and the app's first screen are now literally the same background. Reads as warm daylight rather than as colour — you have to hold two side by side to see the tint at all, which is either restraint or a wasted move depending on your taste.</div>
+    </div>
+
+    <div id="6b" style="display:flex;flex-direction:column;gap:16px;padding:24px 26px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:fit-content">
+      <div style="display:flex;align-items:baseline;gap:12px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">6b</span>
+        <span style="font-size:20px;font-weight:600;letter-spacing:-0.02em">Mid wash — the accent-wash token</span>
+      </div>
+      <div style="display:flex;gap:16px;align-items:flex-end">
+        <div style="width:132px;height:132px;border-radius:31px;overflow:hidden">{{ ujT2 }}</div>
+        <div style="width:132px;height:132px;border-radius:31px;overflow:hidden">{{ mpT2 }}</div>
+        <div style="width:132px;height:132px;border-radius:31px;overflow:hidden">{{ upT2 }}</div>
+        <div style="width:132px;height:132px;border-radius:31px;overflow:hidden">{{ rvT2 }}</div>
+        <div style="display:flex;gap:10px;padding-left:14px">
+          <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ ujT2 }}</div>
+          <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ mpT2 }}</div>
+          <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ upT2 }}</div>
+          <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ rvT2 }}</div>
+        </div>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:#6E6E6B;max-width:760px;text-wrap:pretty">The field is the same value as the app's quiet button and active tab pill, so the tile is recognisably that app's colour at a glance while the subject still carries the saturation. My pick: it reads as a deliberate family of four at 60pt, and the two greens stay apart because the marks differ in weight.</div>
+    </div>
+
+    <div id="6c" style="display:flex;flex-direction:column;gap:16px;padding:24px 26px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:fit-content">
+      <div style="display:flex;align-items:baseline;gap:12px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">6c</span>
+        <span style="font-size:20px;font-weight:600;letter-spacing:-0.02em">Strong tint — a step past the token set</span>
+      </div>
+      <div style="display:flex;gap:16px;align-items:flex-end">
+        <div style="width:132px;height:132px;border-radius:31px;overflow:hidden">{{ ujT3 }}</div>
+        <div style="width:132px;height:132px;border-radius:31px;overflow:hidden">{{ mpT3 }}</div>
+        <div style="width:132px;height:132px;border-radius:31px;overflow:hidden">{{ upT3 }}</div>
+        <div style="width:132px;height:132px;border-radius:31px;overflow:hidden">{{ rvT3 }}</div>
+        <div style="display:flex;gap:10px;padding-left:14px">
+          <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ ujT3 }}</div>
+          <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ mpT3 }}</div>
+          <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ upT3 }}</div>
+          <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ rvT3 }}</div>
+        </div>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:#6E6E6B;max-width:760px;text-wrap:pretty">Loudest, and the honest cost is contrast: the subject and its own field are now close in value, so UnJumble's coral mic and Riverly's blue ribbon lose some of their edge at 29pt. It also needs a thirteenth and fourteenth value per app, since these two stops are outside the six tokens.</div>
+    </div>
+
+    <div style="max-width:1000px;padding:22px 24px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;display:flex;flex-direction:column;gap:10px">
+      <div style="font-size:17px;font-weight:600">What the tint costs elsewhere</div>
+      <div style="font-size:15px;line-height:1.6;color:#6E6E6B;text-wrap:pretty">Two knock-ons if we take 6b or 6c. The negative space inside a mark — UnJumble's band, UnPickle's ribs, Riverly's centreline — stays cream, so it now reads as a lighter cut-out against a coloured field rather than as the page showing through; that is a nicer effect but it means cream is doing a second job. And the App Store screenshots currently sit on a pale accent tile, which would want to become the same wash so the listing matches the icon. Neither is hard, both should be written down.</div>
+    </div>
+  </div>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:28px">
+
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:820px">
+    <div style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Turn 5 · Riverly as a glyph</div>
+    <div style="font-size:34px;font-weight:600;letter-spacing:-0.02em;line-height:1.15">Navigation, without the disc.</div>
+    <div style="font-size:16px;line-height:1.6;color:#6E6E6B;text-wrap:pretty">You're right that buoy-over-waves says "water", not "navigating water". Three ways to say the second thing inside 4b's rule — no container, one object, two colours plus cream, nothing bleeding off the canvas.</div>
+  </div>
+
+  <div style="display:flex;gap:24px;flex-wrap:wrap">
+    <div id="5a" style="display:flex;flex-direction:column;gap:14px;padding:22px 24px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:340px">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">5a</span>
+        <span style="font-size:18px;font-weight:600;letter-spacing:-0.02em">The route, with the buoy on it</span>
+      </div>
+      <div style="width:180px;height:180px;border-radius:42px;overflow:hidden">{{ rvRoute }}</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ rvRoute }}</div>
+        <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ rvRoute }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ rvRoute }}</div>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:#6E6E6B">The river becomes the object — a 150px ribbon corner to corner — and the buoy sits on it in deep blue. Closest to the icon you ship, and the strongest of the three small, because the ribbon fills the tile.</div>
+    </div>
+
+    <div id="5b" style="display:flex;flex-direction:column;gap:14px;padding:22px 24px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:340px">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">5b</span>
+        <span style="font-size:18px;font-weight:600;letter-spacing:-0.02em">The route, with a heading</span>
+      </div>
+      <div style="width:180px;height:180px;border-radius:42px;overflow:hidden">{{ rvHeading }}</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ rvHeading }}</div>
+        <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ rvHeading }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ rvHeading }}</div>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:#6E6E6B">A cream dashed centreline down the river and a cream arrowhead at the far end: this is the only one that says direction of travel outright. Most literally "navigation", least like the icon you have today.</div>
+    </div>
+
+    <div id="5c" style="display:flex;flex-direction:column;gap:14px;padding:22px 24px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:340px">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">5c</span>
+        <span style="font-size:18px;font-weight:600;letter-spacing:-0.02em">Buoy above the water</span>
+      </div>
+      <div style="width:180px;height:180px;border-radius:42px;overflow:hidden">{{ rvCompass }}</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ rvCompass }}</div>
+        <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ rvCompass }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ rvCompass }}</div>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:#6E6E6B">The mark from 4b, rebalanced: buoy bigger and higher, waves in deep blue and wider apart. Best silhouette match to UnJumble's mic, but it still reads as a marker rather than a passage.</div>
+    </div>
+  </div>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:32px">
+
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:820px">
+    <div style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Turn 4 · artwork style</div>
+    <div style="font-size:34px;font-weight:600;letter-spacing:-0.02em;line-height:1.15">No — right now there are two artwork languages.</div>
+    <div style="font-size:16px;line-height:1.6;color:#6E6E6B;text-wrap:pretty">Riverly and Meal Planner are <em>emblems</em>: a subject held inside a disc with the glass ring. UnJumble and UnPickle are <em>glyphs</em>: a solid object floating on the field with no container, and something bleeding off the canvas edge. While everything was green that read as variety. With four colours it reads as four studios. Stroke weights are also all over the place — 14, 24, 32, 36, 78, 86 and 186 across the four masters.</div>
+    <div style="font-size:16px;line-height:1.6;color:#6E6E6B;text-wrap:pretty">One of these two rules has to win. Both shown below at full size, nothing else changed.</div>
+  </div>
+
+  <div style="display:flex;gap:24px;flex-wrap:wrap">
+    <div id="4a" style="display:flex;flex-direction:column;gap:16px;padding:24px 26px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px">
+      <div style="display:flex;align-items:baseline;gap:12px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">4a</span>
+        <span style="font-size:20px;font-weight:600;letter-spacing:-0.02em">All emblems — Riverly's rule wins</span>
+      </div>
+      <div style="display:flex;gap:16px">
+        <div style="display:flex;flex-direction:column;gap:8px"><div style="width:150px;height:150px;border-radius:35px;overflow:hidden">{{ ujDisc }}</div><div style="font-size:12px;color:#6E6E6B">UnJumble</div></div>
+        <div style="display:flex;flex-direction:column;gap:8px"><div style="width:150px;height:150px;border-radius:35px;overflow:hidden">{{ mpDisc }}</div><div style="font-size:12px;color:#6E6E6B">Meal Planner</div></div>
+        <div style="display:flex;flex-direction:column;gap:8px"><div style="width:150px;height:150px;border-radius:35px;overflow:hidden">{{ upDisc }}</div><div style="font-size:12px;color:#6E6E6B">UnPickle</div></div>
+        <div style="display:flex;flex-direction:column;gap:8px"><div style="width:150px;height:150px;border-radius:35px;overflow:hidden">{{ rvDisc }}</div><div style="font-size:12px;color:#6E6E6B">Riverly</div></div>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:#6E6E6B;max-width:660px;text-wrap:pretty">Every subject sits inside the coloured disc, drawn in cream, wearing the glass ring. The colour becomes the field of the icon rather than the object, which is the most premium of the two and the strongest at 29pt — the disc survives when detail does not. Cost: the marks lose about a third of their drawing area, and UnPickle's zigzag gets clipped.</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ ujDisc }}</div>
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ mpDisc }}</div>
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ upDisc }}</div>
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ rvDisc }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ ujDisc }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ mpDisc }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ upDisc }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ rvDisc }}</div>
+      </div>
+    </div>
+
+    <div id="4b" style="display:flex;flex-direction:column;gap:16px;padding:24px 26px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px">
+      <div style="display:flex;align-items:baseline;gap:12px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">4b</span>
+        <span style="font-size:20px;font-weight:600;letter-spacing:-0.02em">All glyphs — UnJumble's rule wins</span>
+      </div>
+      <div style="display:flex;gap:16px">
+        <div style="display:flex;flex-direction:column;gap:8px"><div style="width:150px;height:150px;border-radius:35px;overflow:hidden">{{ ujGlyph }}</div><div style="font-size:12px;color:#6E6E6B">UnJumble</div></div>
+        <div style="display:flex;flex-direction:column;gap:8px"><div style="width:150px;height:150px;border-radius:35px;overflow:hidden">{{ mpGlyph }}</div><div style="font-size:12px;color:#6E6E6B">Meal Planner</div></div>
+        <div style="display:flex;flex-direction:column;gap:8px"><div style="width:150px;height:150px;border-radius:35px;overflow:hidden">{{ upGlyph }}</div><div style="font-size:12px;color:#6E6E6B">UnPickle</div></div>
+        <div style="display:flex;flex-direction:column;gap:8px"><div style="width:150px;height:150px;border-radius:35px;overflow:hidden">{{ rvGlyph }}</div><div style="font-size:12px;color:#6E6E6B">Riverly</div></div>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:#6E6E6B;max-width:660px;text-wrap:pretty">No containers, no glass ring: one solid object per icon on the cream field, in the app's colour. Riverly gives up its river scene and becomes the buoy over two waves — that is a real loss of character, and it is the honest cost of this route. Lighter and more app-like than 4a, weaker at 29pt because there is no filled shape holding the tile.</div>
+      <div style="display:flex;gap:10px;align-items:flex-end">
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ ujGlyph }}</div>
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ mpGlyph }}</div>
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ upGlyph }}</div>
+        <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ rvGlyph }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ ujGlyph }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ mpGlyph }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ upGlyph }}</div>
+        <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ rvGlyph }}</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:1000px;padding:22px 24px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;display:flex;flex-direction:column;gap:10px">
+    <div style="font-size:17px;font-weight:600">What else has to be written down, now that colour isn't doing the work</div>
+    <div style="font-size:15px;line-height:1.6;color:#6E6E6B;text-wrap:pretty">One container rule (4a or 4b, no mixing). One stroke ladder — I'd propose 36 for structure, 24 for detail, nothing below 20 at 1024. Nothing bleeds off the canvas edge: UnPickle's zigzag and Meal Planner's cutlery either come inside or go. Two colours per icon plus cream, never three. Glass ring only if 4a wins, and then on all four. My recommendation is <a href="#4a">4a</a>: it is the more premium of the two, it holds to 29pt, and it makes the disc — not the hue — the thing the four share.</div>
+  </div>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:36px">
+
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:780px">
+    <div style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Turn 3 · icons</div>
+    <div style="font-size:34px;font-weight:600;letter-spacing:-0.02em;line-height:1.15">Same marks. Same field. Each one in its own colour.</div>
+    <div style="font-size:16px;line-height:1.6;color:#6E6E6B;text-wrap:pretty">Nothing is redrawn — the microphone, the plate, the river and the jar are exactly the geometry you already ship. What changes is which colour fills the subject, so the icon on the home screen and the accent inside the app are the same colour. Gold is gone: the slot it held now takes a second value from the app's own ramp, or cream as negative space. What makes them a family is everything except colour.</div>
+  </div>
+
+  <div id="3a" style="display:flex;flex-direction:column;gap:16px;padding:26px 28px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;max-width:1000px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">3a</span>
+      <span style="font-size:22px;font-weight:600;letter-spacing:-0.02em">What holds the family together now</span>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px 28px">
+      <div style="display:flex;flex-direction:column;gap:5px"><div style="font-size:15px;font-weight:600">The field is the constant</div><div style="font-size:14px;line-height:1.55;color:#6E6E6B">Every light icon keeps the house field — 160° #FCFCF6 → #F1F0E4 — and the baked gloss. Four different subject colours on one identical cream plate still read as a set on a home screen.</div></div>
+      <div style="display:flex;flex-direction:column;gap:5px"><div style="font-size:15px;font-weight:600">Two values, both the app's own</div><div style="font-size:14px;line-height:1.55;color:#6E6E6B">Where gold used to sit — the mic's band, the plate's ticks, the buoy, the jar's label and zigzag — the mark now takes the app's second value, or cream. Two colours per icon, never three.</div></div>
+      <div style="display:flex;flex-direction:column;gap:5px"><div style="font-size:15px;font-weight:600">Uniformity is geometry, not hue</div><div style="font-size:14px;line-height:1.55;color:#6E6E6B">One subject weight, one optical scale, one squircle, one field, one negative-space cream, no shadow, no gradient on the subject. Four colours, one drawing hand.</div></div>
+      <div style="display:flex;flex-direction:column;gap:5px"><div style="font-size:15px;font-weight:600">Three variants, unchanged rules</div><div style="font-size:14px;line-height:1.55;color:#6E6E6B">Light opaque, dark transparent by design, tinted grayscale on black. 23.5% squircle, never circular, never a shadow — and the glass ring stays on the two circular marks.</div></div>
+    </div>
+  </div>
+
+  <div id="3b" style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">3b</span>
+      <span style="font-size:22px;font-weight:600;letter-spacing:-0.02em">Today, and proposed</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:18px;padding:24px 26px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:fit-content">
+      <div style="display:flex;gap:26px;align-items:flex-end">
+        <div style="width:74px;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Today</div>
+        <div style="width:140px;display:flex;flex-direction:column;gap:8px"><img src="uploads/UnJumble/UnJumble-AppIcon.png" width="140" height="140" style="border-radius:33px;display:block" alt="UnJumble icon today"><div style="font-size:13px;color:#6E6E6B">UnJumble</div></div>
+        <div style="width:140px;display:flex;flex-direction:column;gap:8px"><img src="uploads/MealPlanner/appstore.png" width="140" height="140" style="border-radius:33px;display:block" alt="Meal Planner icon today"><div style="font-size:13px;color:#6E6E6B">Meal Planner</div></div>
+        <div style="width:140px;display:flex;flex-direction:column;gap:8px"><img src="uploads/UnPickle/AppIcon-512@2x.png" width="140" height="140" style="border-radius:33px;display:block" alt="UnPickle icon today"><div style="font-size:13px;color:#6E6E6B">UnPickle</div></div>
+        <div style="width:140px;display:flex;flex-direction:column;gap:8px"><img src="uploads/Riverly/AppIcon-1024.png" width="140" height="140" style="border-radius:33px;display:block" alt="Riverly icon today"><div style="font-size:13px;color:#6E6E6B">Riverly</div></div>
+      </div>
+      <div style="height:1px;background:rgba(20,40,10,.10)"></div>
+      <div style="display:flex;gap:26px;align-items:flex-end">
+        <div style="width:74px;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Proposed</div>
+        <div style="width:140px;display:flex;flex-direction:column;gap:8px"><div style="width:140px;height:140px;border-radius:33px;overflow:hidden">{{ ujLight }}</div><div style="font-size:13px;color:#6E6E6B">Coral #FF5A3C</div></div>
+        <div style="width:140px;display:flex;flex-direction:column;gap:8px"><div style="width:140px;height:140px;border-radius:33px;overflow:hidden">{{ mpLight }}</div><div style="font-size:13px;color:#6E6E6B">Green #2BBF4E</div></div>
+        <div style="width:140px;display:flex;flex-direction:column;gap:8px"><div style="width:140px;height:140px;border-radius:33px;overflow:hidden">{{ upLight }}</div><div style="font-size:13px;color:#6E6E6B">Green, deep subject</div></div>
+        <div style="width:140px;display:flex;flex-direction:column;gap:8px"><div style="width:140px;height:140px;border-radius:33px;overflow:hidden">{{ rvLight }}</div><div style="font-size:13px;color:#6E6E6B">Blue #1372E8</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="3c" style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">3c</span>
+      <span style="font-size:22px;font-weight:600;letter-spacing:-0.02em">The three variants, per app</span>
+    </div>
+    <div style="display:flex;gap:24px;flex-wrap:wrap">
+
+      <div style="display:flex;flex-direction:column;gap:14px;padding:22px 24px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px">
+        <div style="display:flex;align-items:center;gap:10px"><div style="width:22px;height:22px;border-radius:6px;background:#FF5A3C"></div><div style="font-size:17px;font-weight:600">UnJumble</div></div>
+        <div style="display:flex;gap:16px">
+          <div style="display:flex;flex-direction:column;gap:8px"><div style="width:150px;height:150px;border-radius:35px;overflow:hidden">{{ ujLight }}</div><div style="font-size:12px;color:#6E6E6B">Light, opaque</div></div>
+          <div style="display:flex;flex-direction:column;gap:8px"><div style="width:150px;height:150px;border-radius:35px;overflow:hidden;background:#1B1B19">{{ ujDark }}</div><div style="font-size:12px;color:#6E6E6B">Dark, transparent</div></div>
+          <div style="display:flex;flex-direction:column;gap:8px"><div style="width:150px;height:150px;border-radius:35px;overflow:hidden;background:#000000">{{ ujTint }}</div><div style="font-size:12px;color:#6E6E6B">Tinted</div></div>
+        </div>
+        <div style="font-size:13px;line-height:1.5;color:#6E6E6B;max-width:490px">Body and stand coral, the three grille bars accent-deep #B92F14, and the band is now cream cut straight through the body — the same negative-space cream the other three use.</div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:14px;padding:22px 24px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px">
+        <div style="display:flex;align-items:center;gap:10px"><div style="width:22px;height:22px;border-radius:6px;background:#2BBF4E"></div><div style="font-size:17px;font-weight:600">Meal Planner</div></div>
+        <div style="display:flex;gap:16px">
+          <div style="display:flex;flex-direction:column;gap:8px"><div style="width:150px;height:150px;border-radius:35px;overflow:hidden">{{ mpLight }}</div><div style="font-size:12px;color:#6E6E6B">Light, opaque</div></div>
+          <div style="display:flex;flex-direction:column;gap:8px"><div style="width:150px;height:150px;border-radius:35px;overflow:hidden;background:#1B1B19">{{ mpDark }}</div><div style="font-size:12px;color:#6E6E6B">Dark, transparent</div></div>
+          <div style="display:flex;flex-direction:column;gap:8px"><div style="width:150px;height:150px;border-radius:35px;overflow:hidden;background:#000000">{{ mpTint }}</div><div style="font-size:12px;color:#6E6E6B">Tinted</div></div>
+        </div>
+        <div style="font-size:13px;line-height:1.5;color:#6E6E6B;max-width:490px">Plate ring and list lines in the bright #2BBF4E; the ticks take the deep #116B26, so the thing the app is for — the ticking off — is the strongest mark on the plate.</div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:14px;padding:22px 24px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px">
+        <div style="display:flex;align-items:center;gap:10px"><div style="width:22px;height:22px;border-radius:6px;background:#116B26"></div><div style="font-size:17px;font-weight:600">UnPickle</div></div>
+        <div style="display:flex;gap:16px">
+          <div style="display:flex;flex-direction:column;gap:8px"><div style="width:150px;height:150px;border-radius:35px;overflow:hidden">{{ upLight }}</div><div style="font-size:12px;color:#6E6E6B">Light, opaque</div></div>
+          <div style="display:flex;flex-direction:column;gap:8px"><div style="width:150px;height:150px;border-radius:35px;overflow:hidden;background:#1B1B19">{{ upDark }}</div><div style="font-size:12px;color:#6E6E6B">Dark, transparent</div></div>
+          <div style="display:flex;flex-direction:column;gap:8px"><div style="width:150px;height:150px;border-radius:35px;overflow:hidden;background:#000000">{{ upTint }}</div><div style="font-size:12px;color:#6E6E6B">Tinted</div></div>
+        </div>
+        <div style="font-size:13px;line-height:1.5;color:#6E6E6B;max-width:490px">Same six tokens as Meal Planner, spent the other way round: a deep #116B26 jar with cream ribs, and the label and zigzag in the bright #2BBF4E. Two greens on one home screen still separate, because one is a light disc and one is a dark upright.</div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:14px;padding:22px 24px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px">
+        <div style="display:flex;align-items:center;gap:10px"><div style="width:22px;height:22px;border-radius:6px;background:#1372E8"></div><div style="font-size:17px;font-weight:600">Riverly</div></div>
+        <div style="display:flex;gap:16px">
+          <div style="display:flex;flex-direction:column;gap:8px"><div style="width:150px;height:150px;border-radius:35px;overflow:hidden">{{ rvLight }}</div><div style="font-size:12px;color:#6E6E6B">Light, opaque</div></div>
+          <div style="display:flex;flex-direction:column;gap:8px"><div style="width:150px;height:150px;border-radius:35px;overflow:hidden;background:#1B1B19">{{ rvDark }}</div><div style="font-size:12px;color:#6E6E6B">Dark, transparent</div></div>
+          <div style="display:flex;flex-direction:column;gap:8px"><div style="width:150px;height:150px;border-radius:35px;overflow:hidden;background:#000000">{{ rvTint }}</div><div style="font-size:12px;color:#6E6E6B">Tinted</div></div>
+        </div>
+        <div style="font-size:13px;line-height:1.5;color:#6E6E6B;max-width:490px">The disc keeps the brighter #1372E8 you liked; the river stays cream and the buoy takes the deep #0B4E9E with cream bands. In-app the blue steps down to #0B5FD0 with a cream label, because that is where text sits on it.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="3d" style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">3d</span>
+      <span style="font-size:22px;font-weight:600;letter-spacing:-0.02em">Down to the 29pt floor</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px;padding:24px 26px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;width:fit-content">
+      <div style="display:flex;gap:34px">
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">60 pt</div>
+          <div style="display:flex;gap:12px">
+            <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ ujLight }}</div>
+            <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ mpLight }}</div>
+            <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ upLight }}</div>
+            <div style="width:60px;height:60px;border-radius:14px;overflow:hidden">{{ rvLight }}</div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">40 pt</div>
+          <div style="display:flex;gap:10px">
+            <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ ujLight }}</div>
+            <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ mpLight }}</div>
+            <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ upLight }}</div>
+            <div style="width:40px;height:40px;border-radius:9px;overflow:hidden">{{ rvLight }}</div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">29 pt</div>
+          <div style="display:flex;gap:8px">
+            <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ ujLight }}</div>
+            <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ mpLight }}</div>
+            <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ upLight }}</div>
+            <div style="width:29px;height:29px;border-radius:7px;overflow:hidden">{{ rvLight }}</div>
+          </div>
+        </div>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:#6E6E6B;max-width:720px;text-wrap:pretty">At 29pt the gold detail is the first thing to go — that is expected, and it is why the existing favicon rule (full-bleed subject, one channel, wider stroke) should now be written per app rather than once for the house. Say the word and I'll draw the four sub-32px simplifications.</div>
+    </div>
+  </div>
+
+  <div style="max-width:900px;padding:22px 24px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;display:flex;flex-direction:column;gap:10px">
+    <div style="font-size:17px;font-weight:600">Two open calls</div>
+    <div style="font-size:15px;line-height:1.6;color:#6E6E6B;text-wrap:pretty">First: whether the house green #82BA51 disappears from the icons entirely, or Riverly and UnJumble keep a green-dark hairline somewhere as a nod. My recommendation is that it goes — gold already does that job, and two greens plus a coral plus a blue is a crowd. Second: whether UnPickle inverts as shown, or takes the plate treatment and Meal Planner takes the upright. Both hold at 29pt; the inversion is the safer of the two.</div>
+  </div>
+
+</section>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const FIELD = (id) => `<defs><linearGradient id="f${id}" gradientUnits="userSpaceOnUse" x1="287.4" y1="-104.9" x2="736.6" y2="1128.9"><stop offset="0" stop-color="#FCFCF6"/><stop offset="1" stop-color="#F1F0E4"/></linearGradient><radialGradient id="g${id}" gradientUnits="userSpaceOnUse" cx="307.2" cy="0" r="1228.8" gradientTransform="matrix(1 0 0 0.75 0 0)"><stop offset="0" stop-color="#fff" stop-opacity="0.7"/><stop offset="0.55" stop-color="#fff" stop-opacity="0"/></radialGradient></defs><rect width="1024" height="1024" fill="url(#f${id})"/>`;
+const GLOSS = (id) => `<rect width="1024" height="1024" fill="url(#g${id})"/>`;
+
+/* The field, washed with the app's own colour. Same 160° axis as the house field. */
+/* Plan-view narrowboat = navigation pointer. Bow up, centred on 512,512. */
+const HULL = (fill, cabin, deck) => `<path d="M512 252 C 570 306 590 382 590 452 L590 728 Q590 766 552 766 L472 766 Q434 766 434 728 L434 452 C434 382 454 306 512 252 Z" fill="${fill}"/><rect x="470" y="470" width="84" height="212" rx="18" fill="${cabin}"/><g fill="none" stroke="${deck}" stroke-width="16" stroke-linecap="round"><path d="M470 512 L554 512"/><path d="M470 576 L554 576"/><path d="M470 640 L554 640"/></g><path d="M512 322 L556 412 L468 412 Z" fill="${deck}"/><rect x="478" y="712" width="68" height="30" rx="12" fill="${cabin}"/>`;
+
+/* Fork parts, shared so the cream can be clipped to the metal. */
+const FORK_TINES = `<rect x="392" y="188" width="48" height="230" rx="24"/><rect x="488" y="188" width="48" height="230" rx="24"/><rect x="584" y="188" width="48" height="230" rx="24"/>`;
+const FORK_BODY = `<path d="M392 368 L632 368 L632 462 Q632 540 556 556 L556 782 Q556 840 512 840 Q468 840 468 782 L468 556 Q392 540 392 462 Z"/>`;
+const FORK = (fill) => `<g fill="${fill}">${FORK_TINES}${FORK_BODY}</g>`;
+const FORK_CLIP = (id) => `<defs><clipPath id="fk${id}">${FORK_TINES}${FORK_BODY}</clipPath></defs>`;
+const TINE_CLIP = (id) => `<defs><clipPath id="tn${id}">${FORK_TINES}</clipPath></defs>`;
+
+/* Mic-style hull with an outboard on the stern, so it reads as a boat. */
+const HULL_BOAT = (fill, band, motor) => `<path d="M512 214 C 594 296 640 392 640 466 L640 730 Q640 778 592 778 L432 778 Q384 778 384 730 L384 466 C384 392 430 296 512 214 Z" fill="${fill}"/><rect x="384" y="536" width="256" height="58" fill="${band}"/><rect x="458" y="752" width="108" height="96" rx="28" fill="${motor}"/><rect x="492" y="832" width="40" height="52" rx="18" fill="${motor}"/>`;
+const CARD = (p, letters) => letters.map(l => `<text x="${l[1]}" y="${l[2]}" text-anchor="middle" font-family="-apple-system, system-ui, sans-serif" font-size="${l[3] || 86}" font-weight="600" fill="${p.gold}">${l[0]}</text>`).join('');
+
+/* Mic-style: one solid object, one cream band. */
+const HULL_SOLID = (fill, band) => `<path d="M512 224 C 594 306 640 402 640 476 L640 744 Q640 792 592 792 L432 792 Q384 792 384 744 L384 476 C384 402 430 306 512 224 Z" fill="${fill}"/><rect x="384" y="548" width="256" height="58" fill="${band}"/>`;
+
+const TINT_FIELD = (id, stops) => `<defs><linearGradient id="f${id}" gradientUnits="userSpaceOnUse" x1="287.4" y1="-104.9" x2="736.6" y2="1128.9"><stop offset="0" stop-color="${stops[0]}"/><stop offset="1" stop-color="${stops[1]}"/></linearGradient><radialGradient id="g${id}" gradientUnits="userSpaceOnUse" cx="307.2" cy="0" r="1228.8" gradientTransform="matrix(1 0 0 0.75 0 0)"><stop offset="0" stop-color="#fff" stop-opacity="0.7"/><stop offset="0.55" stop-color="#fff" stop-opacity="0"/></radialGradient></defs><rect width="1024" height="1024" fill="url(#f${id})"/>`;
+
+const TINTS = {
+  unjumble: { light: ['#FFF7F3', '#FFE5DC'], mid: ['#FFEAE2', '#FFD3C6'], strong: ['#FFD5C7', '#FFB6A1'] },
+  mealplanner: { light: ['#F6FCF7', '#E5F6E9'], mid: ['#E7F8EB', '#D0EFD7'], strong: ['#D0EFD7', '#B0E3BC'] },
+  unpickle: { light: ['#F6FCF7', '#E5F6E9'], mid: ['#E7F8EB', '#D0EFD7'], strong: ['#D0EFD7', '#B0E3BC'] },
+  riverly: { light: ['#F6FAFF', '#E3EEFB'], mid: ['#E5EFFC', '#CCE0F8'], strong: ['#CCE0F8', '#AAC9F2'] },
+};
+
+const MARKS = {
+  unjumble: (p) => `<g transform="translate(0 21) translate(512 512) scale(1.1646) translate(-512 -512)"><rect x="372" y="180" width="280" height="460" rx="140" fill="${p.subject}"/><g fill="${p.detail}"><rect x="442" y="474" width="140" height="26" rx="13"/><rect x="442" y="530" width="140" height="26" rx="13"/><rect x="442" y="586" width="140" height="26" rx="13"/></g><rect x="372" y="398" width="280" height="44" fill="${p.gold}"/><path d="M318 440 V596 C318 654 405 700 512 700 C619 700 706 654 706 596 V440" fill="none" stroke="${p.subject}" stroke-width="36" stroke-linecap="round"/><rect x="486" y="694" width="52" height="62" rx="12" fill="${p.subject}"/><rect x="392" y="752" width="240" height="46" rx="23" fill="${p.subject}"/></g>`,
+
+  mealplanner: (p) => `<circle cx="512" cy="512" r="318" fill="${p.ringFill}" stroke="${p.ringStroke}" stroke-width="6"/><circle cx="512" cy="512" r="256" fill="${p.subject}"/><circle cx="512" cy="512" r="202" fill="${p.plate}"/><g fill="none" stroke="${p.gold}" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"><path d="M372 415 L 399 442 L 445 383"/><path d="M372 512 L 399 539 L 445 480"/><path d="M372 609 L 399 636 L 445 577"/></g><g fill="${p.detail}"><rect x="496" y="399" width="162" height="32" rx="16"/><rect x="496" y="496" width="162" height="32" rx="16"/><rect x="496" y="593" width="162" height="32" rx="16"/></g><g fill="${p.subject}"><rect x="99" y="281" width="26" height="141" rx="13"/><rect x="127" y="281" width="26" height="141" rx="13"/><rect x="155" y="281" width="26" height="141" rx="13"/><rect x="117" y="375" width="46" height="368" rx="23"/><rect x="858" y="281" width="53" height="243" rx="27"/><rect x="864" y="487" width="41" height="256" rx="20"/></g>`,
+
+  riverly: (p, id) => `<defs><clipPath id="c${id}"><circle cx="512" cy="512" r="376"/></clipPath></defs><circle cx="512" cy="512" r="404" fill="${p.ringFill}" stroke="${p.ringStroke}" stroke-width="5"/><circle cx="512" cy="512" r="376" fill="${p.subject}"/><g clip-path="url(#c${id})"><g transform="translate(512 512) scale(1.0562) translate(-512 -512)"><g transform="rotate(-30 512 512)"><path d="M100 930 C 320 830 200 700 512 512 C 824 324 700 190 930 100" fill="none" stroke="${p.plate}" stroke-width="186" stroke-linejoin="round"/></g><path d="M592 366 C 700 348 782 302 852 240 C 892 204 922 174 952 144" fill="none" stroke="${p.plate}" stroke-width="86" stroke-linejoin="round" stroke-linecap="round"/><g transform="rotate(29 512 512)"><g transform="rotate(-20 512 684)" fill="none" stroke="${p.subject}" stroke-width="14" stroke-linecap="round" opacity=".55"><path d="M468 726 C 490 750 534 750 556 726"/><path d="M480 772 C 498 792 526 792 544 772"/></g><path d="M512 340 C 556 408 582 472 582 558 L 582 632 Q 582 684 524 684 L 500 684 Q 442 684 442 632 L 442 558 C 442 472 468 408 512 340 Z" fill="${p.gold}"/><rect x="464" y="474" width="96" height="24" rx="12" fill="${p.detail}"/><rect x="448" y="576" width="128" height="24" rx="12" fill="${p.detail}"/></g></g></g>`,
+
+  /* Riverly with the disc removed — the buoy and two waves as a floating glyph,
+     so it obeys UnJumble's and UnPickle's rule instead of its own. */
+  riverlyGlyph: (p) => `<g transform="translate(0 -84) translate(512 512) scale(1.34) translate(-512 -512)"><path d="M512 340 C 556 408 582 472 582 558 L 582 632 Q 582 684 524 684 L 500 684 Q 442 684 442 632 L 442 558 C 442 472 468 408 512 340 Z" fill="${p.subject}"/><rect x="464" y="474" width="96" height="24" rx="12" fill="${p.plate}"/><rect x="448" y="576" width="128" height="24" rx="12" fill="${p.plate}"/></g><g fill="none" stroke="${p.gold}" stroke-width="34" stroke-linecap="round"><path d="M330 726 C 390 782 466 782 512 726 C 558 670 634 670 694 726"/><path d="M330 838 C 390 894 466 894 512 838 C 558 782 634 782 694 838"/></g>`,
+
+  /* Riverly glyph candidates — navigation put back in, still no container. */
+  rvRoute: (p) => `<path d="M170 856 C 386 762 306 606 512 498 C 700 398 646 262 838 206" fill="none" stroke="${p.subject}" stroke-width="150" stroke-linecap="round"/><g transform="translate(0 -30) translate(512 512) scale(1.02) translate(-512 -512)"><path d="M512 340 C 556 408 582 472 582 558 L 582 632 Q 582 684 524 684 L 500 684 Q 442 684 442 632 L 442 558 C 442 472 468 408 512 340 Z" fill="${p.gold}"/><rect x="464" y="474" width="96" height="24" rx="12" fill="${p.plate}"/><rect x="448" y="576" width="128" height="24" rx="12" fill="${p.plate}"/></g>`,
+
+  rvHeading: (p) => `<path d="M180 850 C 396 756 316 600 522 492 C 686 406 656 288 800 232" fill="none" stroke="${p.subject}" stroke-width="132" stroke-linecap="round"/><path d="M180 850 C 396 756 316 600 522 492 C 686 406 656 288 800 232" fill="none" stroke="${p.plate}" stroke-width="16" stroke-linecap="round" stroke-dasharray="44 58"/><g transform="rotate(64 800 232)"><path d="M800 178 L 848 262 L 752 262 Z" fill="${p.plate}"/></g>`,
+
+  /* 12a — the plan itself: an upright card, cream rules, the top one ticked. */
+  mpCard: (p) => `<rect x="300" y="212" width="424" height="600" rx="72" fill="${p.subject}"/><g fill="none" stroke="${p.plate}" stroke-width="42" stroke-linecap="round" stroke-linejoin="round"><path d="M370 356 L 404 390 L 468 322"/><path d="M520 358 L 654 358"/><path d="M370 528 L 654 528"/><path d="M370 668 L 560 668"/></g>`,
+
+  /* 12b — the fork, mic-style: one solid object, one cream band. */
+  mpFork: (p) => `<g fill="${p.subject}"><rect x="392" y="188" width="48" height="230" rx="24"/><rect x="488" y="188" width="48" height="230" rx="24"/><rect x="584" y="188" width="48" height="230" rx="24"/><path d="M392 368 L632 368 L632 462 Q632 540 556 556 L556 782 Q556 840 512 840 Q468 840 468 782 L468 556 Q392 540 392 462 Z" /></g><rect x="468" y="628" width="88" height="54" fill="${p.plate}"/>`,
+
+  /* 15a — the shopping bag: the list you carry. */
+  mpBag: (p, id) => `<defs><clipPath id="bg${id}"><path d="M292 384 L732 384 L694 852 Q690 886 656 886 L368 886 Q334 886 330 852 Z"/></clipPath></defs>`
+    + `<path d="M404 400 L404 300 Q404 208 512 208 Q620 208 620 300 L620 400" fill="none" stroke="${p.subject}" stroke-width="52" stroke-linecap="round"/>`
+    + `<path d="M292 384 L732 384 L694 852 Q690 886 656 886 L368 886 Q334 886 330 852 Z" fill="${p.subject}"/>`
+    + `<g clip-path="url(#bg${id})" fill="none" stroke="${p.plate}" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"><path d="M396 556 L430 590 L494 522"/><path d="M540 560 L644 560"/><path d="M396 700 L644 700"/><path d="M396 800 L556 800"/></g>`,
+
+  /* 15b — the pot: the cooking. */
+  mpPot: (p, id) => `<defs><clipPath id="pt${id}"><path d="M300 486 L724 486 L706 762 Q702 806 658 806 L366 806 Q322 806 318 762 Z"/></clipPath></defs>`
+    + `<rect x="472" y="352" width="80" height="56" rx="28" fill="${p.subject}"/><rect x="256" y="414" width="512" height="60" rx="30" fill="${p.subject}"/>`
+    + `<rect x="206" y="518" width="112" height="64" rx="32" fill="${p.subject}"/><rect x="706" y="518" width="112" height="64" rx="32" fill="${p.subject}"/>`
+    + `<path d="M300 486 L724 486 L706 762 Q702 806 658 806 L366 806 Q322 806 318 762 Z" fill="${p.subject}"/>`
+    + `<g clip-path="url(#pt${id})" fill="none" stroke="${p.plate}" stroke-width="38" stroke-linecap="round" stroke-linejoin="round"><path d="M396 640 L446 690 L588 548"/></g>`,
+
+  /* 15c — the plate, kept, with the week on it and no cutlery bleeding. */
+  mpPlate: (p) => `<circle cx="512" cy="512" r="330" fill="${p.subject}"/><circle cx="512" cy="512" r="228" fill="${p.plate}"/><g fill="none" stroke="${p.subject}" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"><path d="M368 470 L 404 506 L 470 438"/><path d="M520 472 L656 472"/><path d="M368 596 L656 596"/></g>`,
+
+  /* 14 — the fork IS the tick: handle bent at the heel, tines splaying off the long arm. */
+  mpTickFork: (p, id, band) => `<g fill="none" stroke="${p.subject}" stroke-width="94" stroke-linecap="round" stroke-linejoin="round"><path d="M248 544 L404 706 L714 292"/></g><g transform="translate(714 292) rotate(37)" fill="${p.subject}"><rect x="-64" y="-196" width="40" height="170" rx="20"/><rect x="-20" y="-196" width="40" height="170" rx="20"/><rect x="24" y="-196" width="40" height="170" rx="20"/><rect x="-64" y="-58" width="128" height="74" rx="26"/></g>`
+    + (band ? `<g transform="translate(556 462) rotate(37)"><rect x="-42" y="-24" width="84" height="48" fill="${p.plate}"/></g>` : ''),
+
+  /* 13a — the band becomes a notch, so the shank carries a tick. */
+  mpForkNotch: (p, id) => FORK_CLIP(id) + FORK(p.subject) + `<g clip-path="url(#fk${id})"><path d="M478 624 L512 660 L546 624" fill="none" stroke="${p.plate}" stroke-width="32" stroke-linecap="butt" stroke-linejoin="miter"/></g>`,
+
+  /* 13b — the tines are ruled: a week read through the fork. */
+  mpForkRuled: (p, id) => TINE_CLIP(id) + FORK(p.subject) + `<g clip-path="url(#tn${id})" fill="${p.plate}"><rect x="384" y="238" width="256" height="26"/><rect x="384" y="312" width="256" height="26"/></g><rect x="468" y="628" width="88" height="54" fill="${p.plate}"/>`,
+
+  /* 13c — the tick sits in the head of the fork. */
+  mpForkTicked: (p, id) => FORK_CLIP(id) + FORK(p.subject) + `<g clip-path="url(#fk${id})"><path d="M428 452 L478 502 L596 384" fill="none" stroke="${p.plate}" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/></g><rect x="468" y="648" width="88" height="50" fill="${p.plate}"/>`,
+
+  /* 12c — the fork cut out of the card. */
+  mpForkCard: (p) => `<rect x="300" y="212" width="424" height="600" rx="72" fill="${p.subject}"/><g fill="${p.plate}"><rect x="416" y="300" width="34" height="150" rx="17"/><rect x="495" y="300" width="34" height="150" rx="17"/><rect x="574" y="300" width="34" height="150" rx="17"/><path d="M416 420 L608 420 L608 476 Q608 532 546 544 L546 704 Q546 744 512 744 Q478 744 478 704 L478 544 Q416 532 416 476 Z"/></g><g fill="none" stroke="${p.plate}" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"><path d="M360 700 L 392 732 L 452 668"/></g>`,
+
+  /* 11 — 9c's broken ring, with the outboard hull and the N/S pair. */
+  rvRingNS: (p) => `<g fill="none" stroke="${p.gold}" stroke-width="26" stroke-linecap="round"><path d="M394 189 A 344 344 0 0 0 394 835"/><path d="M630 189 A 344 344 0 0 1 630 835"/></g><g transform="translate(0 -34)">${HULL_BOAT(p.subject, p.plate, p.gold)}</g>` + CARD(p, [['N', 512, 166, 82], ['S', 512, 958, 82]]),
+
+  /* 10a — ticks kept, north named, outboard on the stern. */
+  rvNorth: (p) => `<g transform="translate(0 -34)">${HULL_BOAT(p.subject, p.plate, p.gold)}</g>` + CARD(p, [['N', 512, 168]]) + `<g fill="${p.gold}"><rect x="856" y="466" width="62" height="28" rx="14"/><rect x="106" y="466" width="62" height="28" rx="14"/></g>`,
+
+  /* 10b — all four named, no ticks. */
+  rvFourCard: (p) => `<g transform="translate(0 -34)">${HULL_BOAT(p.subject, p.plate, p.gold)}</g>` + CARD(p, [['N', 512, 164, 80], ['S', 512, 962, 80], ['W', 96, 528, 80], ['E', 928, 528, 80]]),
+
+  /* 10c — north and south named, east and west as ticks. */
+  rvNorthSouth: (p) => `<g transform="translate(0 -34)">${HULL_BOAT(p.subject, p.plate, p.gold)}</g>` + CARD(p, [['N', 512, 166, 82], ['S', 512, 958, 82]]) + `<g fill="${p.gold}"><rect x="860" y="466" width="58" height="26" rx="13"/><rect x="106" y="466" width="58" height="26" rx="13"/></g>`,
+
+  /* 9a — mic-style boat, compass ticks around it. */
+  rvGlyphTicks: (p) => `<g transform="translate(0 -14)">${HULL_SOLID(p.subject, p.plate)}</g><g fill="${p.gold}"><rect x="494" y="86" width="36" height="80" rx="18"/><rect x="856" y="482" width="66" height="30" rx="15"/><rect x="102" y="482" width="66" height="30" rx="15"/><rect x="494" y="854" width="36" height="60" rx="18"/></g>`,
+
+  /* 9b — the foredeck is the compass needle. */
+  rvGlyphNeedle: (p) => `<g transform="translate(0 -14)">${HULL_SOLID(p.subject, p.plate)}</g><path d="M512 296 L 566 448 L 512 414 Z" fill="${p.plate}"/><path d="M512 296 L 458 448 L 512 414 Z" fill="${p.gold}"/>`,
+
+  /* 9c — the boat over a broken compass ring. */
+  rvGlyphRing: (p) => `<g fill="none" stroke="${p.gold}" stroke-width="30" stroke-linecap="round"><path d="M252 288 A 344 344 0 0 0 252 736"/><path d="M772 288 A 344 344 0 0 1 772 736"/></g><g transform="translate(0 -14)">${HULL_SOLID(p.subject, p.plate)}</g><path d="M512 104 L 552 176 L 472 176 Z" fill="${p.gold}"/>`,
+
+  /* 8a — the icon you shipped, with the narrowboat in place of the buoy:
+     blue disc, glass ring, cream river across it, boat riding the bend. */
+  rvBoatDisc: (p, id) => `<defs><clipPath id="b${id}"><circle cx="512" cy="512" r="376"/></clipPath></defs><circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.62)" stroke="rgba(255,255,255,.9)" stroke-width="5"/><circle cx="512" cy="512" r="376" fill="${p.subject}"/><g clip-path="url(#b${id})"><g transform="translate(512 512) scale(1.0562) translate(-512 -512)"><g transform="rotate(-30 512 512)"><path d="M100 930 C 320 830 200 700 512 512 C 824 324 700 190 930 100" fill="none" stroke="${p.plate}" stroke-width="186" stroke-linejoin="round"/></g><path d="M592 366 C 700 348 782 302 852 240 C 892 204 922 174 952 144" fill="none" stroke="${p.plate}" stroke-width="86" stroke-linejoin="round" stroke-linecap="round"/><g transform="rotate(29 512 512)"><g transform="rotate(-20 512 700)" fill="none" stroke="${p.subject}" stroke-width="14" stroke-linecap="round" opacity=".55"><path d="M468 742 C 490 766 534 766 556 742"/><path d="M480 788 C 498 808 526 808 544 788"/></g><g transform="translate(0 -34) translate(512 512) scale(0.78) translate(-512 -512)">${HULL(p.subject, p.gold, p.plate)}</g></g></g></g>`,
+
+  /* 7a — the boat riding the river, bow pointing up the bend. */
+  rvBoatRiver: (p) => `<path d="M150 866 C 380 776 302 610 512 500 C 704 400 650 268 846 200" fill="none" stroke="${p.subject}" stroke-width="188" stroke-linecap="round"/><g transform="rotate(46 512 512) translate(512 512) scale(0.98) translate(-512 -512)">${HULL(p.plate, p.subject, p.gold)}</g>`,
+
+  /* 7b — the boat alone as the pointer, two short waves under it. */
+  rvBoatPointer: (p) => `<g transform="rotate(38 512 512) translate(0 -26) translate(512 512) scale(1.24) translate(-512 -512)">${HULL(p.subject, p.plate, p.plate)}</g><g fill="none" stroke="${p.gold}" stroke-width="34" stroke-linecap="round" opacity=".9"><path d="M228 856 C 286 906 358 906 416 856"/><path d="M470 900 C 528 950 600 950 658 900"/></g>`,
+
+  /* 7c — bow up, river bending away behind: heading, not just position. */
+  rvBoatUpstream: (p) => `<path d="M212 894 C 300 700 268 560 442 452 C 566 374 606 268 632 154" fill="none" stroke="${p.subject}" stroke-width="150" stroke-linecap="round" opacity=".35"/><path d="M212 894 C 300 700 268 560 442 452 C 566 374 606 268 632 154" fill="none" stroke="${p.plate}" stroke-width="16" stroke-linecap="round" stroke-dasharray="42 60"/><g transform="translate(30 30) translate(512 512) scale(1.06) translate(-512 -512)">${HULL(p.subject, p.plate, p.plate)}</g>`,
+
+  rvCompass: (p) => `<g transform="translate(0 -46) translate(512 512) scale(1.24) translate(-512 -512)"><path d="M512 340 C 556 408 582 472 582 558 L 582 632 Q 582 684 524 684 L 500 684 Q 442 684 442 632 L 442 558 C 442 472 468 408 512 340 Z" fill="${p.subject}"/><rect x="464" y="474" width="96" height="24" rx="12" fill="${p.plate}"/><rect x="448" y="576" width="128" height="24" rx="12" fill="${p.plate}"/></g><g fill="none" stroke="${p.gold}" stroke-width="38" stroke-linecap="round"><path d="M258 772 C 330 838 442 838 512 772 C 582 706 694 706 766 772"/><path d="M258 892 C 330 958 442 958 512 892 C 582 826 694 826 766 892"/></g>`,
+
+  /* The narrowboat seen from above: pointed bow, parallel sides, square stern —
+     a hull and a map pointer are the same shape. HULL is drawn bow-up around
+     512,512 so it can be rotated onto any river bearing. */
+  unpickle: (p) => `<g transform="translate(-18 0) translate(512 512) scale(1.0731) translate(-512 -512)"><g transform="rotate(35 512 512)" fill="${p.subject}"><rect x="362" y="202" width="300" height="620" rx="150"/><rect x="484" y="148" width="56" height="84" rx="26"/></g><g transform="rotate(35 512 512)" fill="${p.detail}"><rect x="463" y="262" width="14" height="86" rx="7"/><rect x="547" y="262" width="14" height="86" rx="7"/><rect x="463" y="620" width="14" height="100" rx="7"/><rect x="547" y="620" width="14" height="100" rx="7"/><rect x="463" y="742" width="14" height="64" rx="7"/><rect x="547" y="742" width="14" height="64" rx="7"/></g><g transform="rotate(35 512 512)" fill="${p.gold}"><rect x="362" y="400" width="300" height="78"/></g><path d="M367 458 L 612 630 L 700 568 L 788 630 L 850 587" fill="none" stroke="${p.gold}" stroke-width="78" stroke-linejoin="miter"/></g>`,
+};
+
+/* No gold. The slot that used to be gold now takes a value from the app's own
+   ramp, or cream as negative space. `gold` is kept as the slot name so the
+   geometry strings stay identical to the masters. */
+const PALETTES = {
+  unjumble: { subject: '#FF5A3C', detail: '#B92F14', gold: '#F6F1E3', plate: '#F6F1E3' },
+  mealplanner: { subject: '#2BBF4E', detail: '#2BBF4E', gold: '#116B26', plate: '#F6F1E3' },
+  unpickle: { subject: '#116B26', detail: '#F6F1E3', gold: '#2BBF4E', plate: '#F6F1E3' },
+  riverly: { subject: '#1372E8', detail: '#F6F1E3', gold: '#0B4E9E', plate: '#F6F1E3' },
+};
+
+/* Tinted is grayscale, so it is unaffected by the recolour — these are the
+   values the shipping source-tinted.svg masters use, verbatim. */
+const TINTED = { subject: '#8E8E8E', detail: '#767676', gold: '#FFFFFF', plate: '#D2D2D2' };
+
+class Component extends DCLogic {
+  /* mode 'disc': every mark sits inside the r376 disc, drawn in cream —
+     Riverly's rule applied to all four. */
+  discIcon(app, seq) {
+    const src = PALETTES[app];
+    if (app === 'riverly') return this.icon(app, 'light', seq);
+    if (app === 'mealplanner') {
+      /* Plate scaled up to the shared r376 disc, cutlery dropped so nothing bleeds. */
+      const inner = `<circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.62)" stroke="rgba(255,255,255,.9)" stroke-width="5"/>`
+        + `<circle cx="512" cy="512" r="376" fill="${src.subject}"/>`
+        + `<circle cx="512" cy="512" r="296" fill="#F6F1E3"/>`
+        + `<g transform="translate(512 512) scale(1.4) translate(-512 -512)">`
+        + `<g fill="none" stroke="${src.gold}" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"><path d="M400 415 L 427 442 L 473 383"/><path d="M400 512 L 427 539 L 473 480"/><path d="M400 609 L 427 636 L 473 577"/></g>`
+        + `<g fill="${src.detail}"><rect x="516" y="401" width="130" height="28" rx="14"/><rect x="516" y="498" width="130" height="28" rx="14"/><rect x="516" y="595" width="130" height="28" rx="14"/></g></g>`;
+      return this.wrap(FIELD(seq) + inner + GLOSS(seq));
+    }
+    const p = {
+      subject: '#F6F1E3', detail: src.detail, gold: src.subject, plate: '#F6F1E3',
+      ringFill: 'rgba(255,255,255,.62)', ringStroke: 'rgba(255,255,255,.9)',
+    };
+    const inner = `<defs><clipPath id="d${seq}"><circle cx="512" cy="512" r="376"/></clipPath></defs>`
+      + `<circle cx="512" cy="512" r="404" fill="rgba(255,255,255,.62)" stroke="rgba(255,255,255,.9)" stroke-width="5"/>`
+      + `<circle cx="512" cy="512" r="376" fill="${src.subject}"/>`
+      + `<g clip-path="url(#d${seq})"><g transform="translate(512 512) scale(0.66) translate(-512 -512)">${MARKS[app](p, seq)}</g></g>`;
+    return this.wrap(FIELD(seq) + inner + GLOSS(seq));
+  }
+  /* mode 'glyph': no containing disc anywhere — UnJumble's rule applied to all four.
+     `tint` swaps the cream field for a wash of the app's own colour. */
+  glyphIcon(app, seq, tint, override) {
+    const p = Object.assign({}, PALETTES[app], { ringFill: 'transparent', ringStroke: 'transparent' });
+    const name = override || (app === 'riverly' ? 'riverlyGlyph' : app);
+    const mark = MARKS[name](p, seq);
+    const field = tint ? TINT_FIELD(seq, TINTS[app][tint]) : FIELD(seq);
+    return this.wrap(field + mark + GLOSS(seq));
+  }
+  tickFork(seq, band) {
+    const p = PALETTES.mealplanner;
+    return this.wrap(TINT_FIELD(seq, TINTS.mealplanner.light) + MARKS.mpTickFork(p, seq, band) + GLOSS(seq));
+  }
+  rvCandidate(markName, seq) {
+    const p = Object.assign({}, PALETTES.riverly, { ringFill: 'transparent', ringStroke: 'transparent' });
+    return this.wrap(FIELD(seq) + MARKS[markName](p, seq) + GLOSS(seq));
+  }
+  wrap(body) {
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="100%" height="100%" style="display:block">${body}</svg>`;
+    return React.createElement('div', { style: { width: '100%', height: '100%' }, dangerouslySetInnerHTML: { __html: svg } });
+  }
+  icon(app, variant, seq) {
+    const base = variant === 'tinted' ? TINTED : PALETTES[app];
+    const ring = variant === 'light'
+      ? { ringFill: 'rgba(255,255,255,.62)', ringStroke: 'rgba(255,255,255,.9)' }
+      : variant === 'dark'
+        ? { ringFill: 'rgba(255,255,255,.10)', ringStroke: 'rgba(255,255,255,.22)' }
+        : { ringFill: 'rgba(255,255,255,.13)', ringStroke: 'rgba(255,255,255,.26)' };
+    /* Cream-dark, never pure cream, on a warm dark field. */
+    let p = Object.assign({}, base, ring);
+    if (variant === 'dark') {
+      p = Object.keys(p).reduce((out, k) => {
+        out[k] = p[k] === '#F6F1E3' ? '#EFE9DA' : p[k];
+        return out;
+      }, {});
+    }
+    const inner = MARKS[app](p, seq);
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="100%" height="100%" style="display:block">`
+      + (variant === 'light' ? FIELD(seq) : '')
+      + inner
+      + (variant === 'light' ? GLOSS(seq) : '')
+      + `</svg>`;
+    return React.createElement('div', {
+      style: { width: '100%', height: '100%' },
+      dangerouslySetInnerHTML: { __html: svg },
+    });
+  }
+  renderVals() {
+    let n = 0;
+    const make = (app, variant) => this.icon(app, variant, ++n);
+    return {
+      ujLight: make('unjumble', 'light'), ujDark: make('unjumble', 'dark'), ujTint: make('unjumble', 'tinted'),
+      mpLight: make('mealplanner', 'light'), mpDark: make('mealplanner', 'dark'), mpTint: make('mealplanner', 'tinted'),
+      upLight: make('unpickle', 'light'), upDark: make('unpickle', 'dark'), upTint: make('unpickle', 'tinted'),
+      rvLight: make('riverly', 'light'), rvDark: make('riverly', 'dark'), rvTint: make('riverly', 'tinted'),
+      ujDisc: this.discIcon('unjumble', ++n), mpDisc: this.discIcon('mealplanner', ++n),
+      upDisc: this.discIcon('unpickle', ++n), rvDisc: this.discIcon('riverly', ++n),
+      rvRoute: this.rvCandidate('rvRoute', ++n), rvHeading: this.rvCandidate('rvHeading', ++n),
+      rvCompass: this.rvCandidate('rvCompass', ++n),
+      ujGlyph: this.glyphIcon('unjumble', ++n), mpGlyph: this.glyphIcon('mealplanner', ++n),
+      upGlyph: this.glyphIcon('unpickle', ++n), rvGlyph: this.glyphIcon('riverly', ++n),
+      ujT1: this.glyphIcon('unjumble', ++n, 'light'), mpT1: this.glyphIcon('mealplanner', ++n, 'light'),
+      upT1: this.glyphIcon('unpickle', ++n, 'light'), rvT1: this.glyphIcon('riverly', ++n, 'light', 'rvHeading'),
+      ujT2: this.glyphIcon('unjumble', ++n, 'mid'), mpT2: this.glyphIcon('mealplanner', ++n, 'mid'),
+      upT2: this.glyphIcon('unpickle', ++n, 'mid'), rvT2: this.glyphIcon('riverly', ++n, 'mid', 'rvHeading'),
+      ujT3: this.glyphIcon('unjumble', ++n, 'strong'), mpT3: this.glyphIcon('mealplanner', ++n, 'strong'),
+      upT3: this.glyphIcon('unpickle', ++n, 'strong'), rvT3: this.glyphIcon('riverly', ++n, 'strong', 'rvHeading'),
+      mpBag: this.glyphIcon('mealplanner', ++n, 'light', 'mpBag'),
+      mpPot: this.glyphIcon('mealplanner', ++n, 'light', 'mpPot'),
+      mpPlate: this.glyphIcon('mealplanner', ++n, 'light', 'mpPlate'),
+      mpTickForkBand: this.tickFork(++n, true),
+      mpTickForkPlain: this.tickFork(++n, false),
+      mpNotch: this.glyphIcon('mealplanner', ++n, 'light', 'mpForkNotch'),
+      mpRuled: this.glyphIcon('mealplanner', ++n, 'light', 'mpForkRuled'),
+      mpTicked: this.glyphIcon('mealplanner', ++n, 'light', 'mpForkTicked'),
+      mpForkPlain: this.glyphIcon('mealplanner', ++n, 'light', 'mpFork'),
+      mpCard: this.glyphIcon('mealplanner', ++n, 'light', 'mpCard'),
+      mpFork: this.glyphIcon('mealplanner', ++n, 'light', 'mpFork'),
+      mpForkCard: this.glyphIcon('mealplanner', ++n, 'light', 'mpForkCard'),
+      rvFinal: this.glyphIcon('riverly', ++n, 'light', 'rvRingNS'),
+      upRef: this.glyphIcon('unpickle', ++n, 'light'),
+      rvRingNS: this.glyphIcon('riverly', ++n, 'light', 'rvRingNS'),
+      rvNorth: this.glyphIcon('riverly', ++n, 'light', 'rvNorth'),
+      rvFourCard: this.glyphIcon('riverly', ++n, 'light', 'rvFourCard'),
+      rvNorthSouth: this.glyphIcon('riverly', ++n, 'light', 'rvNorthSouth'),
+      rvTicks: this.glyphIcon('riverly', ++n, 'light', 'rvGlyphTicks'),
+      rvNeedle: this.glyphIcon('riverly', ++n, 'light', 'rvGlyphNeedle'),
+      rvRing: this.glyphIcon('riverly', ++n, 'light', 'rvGlyphRing'),
+      ujRef: this.glyphIcon('unjumble', ++n, 'light'),
+      rvBoatDisc: this.glyphIcon('riverly', ++n, 'light', 'rvBoatDisc'),
+      rvBoatRiver: this.glyphIcon('riverly', ++n, 'light', 'rvBoatRiver'),
+      rvBoatPointer: this.glyphIcon('riverly', ++n, 'light', 'rvBoatPointer'),
+      rvBoatUpstream: this.glyphIcon('riverly', ++n, 'light', 'rvBoatUpstream'),
+    };
+  }
+}
+
+</script>
+</body>
+</html>

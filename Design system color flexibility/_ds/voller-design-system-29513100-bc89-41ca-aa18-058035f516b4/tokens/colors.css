@@ -1,0 +1,31 @@
+/* Twelve values. Do not introduce a thirteenth without adding it to VOLLER.md first.
+   Identical in both fields — brand tokens never flip. The one exception is --tint,
+   declared in semantic.css. */
+:root{
+  --green:#82BA51;        /* the brand. Flat fills only, never a gradient. Carries ink labels only. */
+  --green-deep:#69A63C;   /* interior detail on green shapes; filled chips and pins; primary hover */
+  --green-dark:#3F6B27;   /* tint on light: links, glyphs, pressed states */
+  --gold:#F0C21C;         /* the action colour. Exactly once per view. Identical in both fields. */
+  --cream:#F6F1E3;        /* light panels, action bars, negative space inside a shape */
+  --cream-dark:#EFE9DA;   /* body text and surfaces on dark. Never pure white on a warm dark field. */
+  --ink:#1B1B19;          /* body text on light; dark base; labels on green and gold */
+  --ink-raised:#24231F;   /* cards and list rows on dark. Warm — #1C1C1E is the tell it isn't ours. */
+  --muted:#6E6E6B;        /* secondary text and eyebrows on light. 5.0:1 */
+  --muted-dark:#8A8A8A;   /* secondary text and eyebrows on dark. 5.0:1 */
+  --alert:#C4382C;        /* safety and destruction only, on light */
+  --alert-light:#E8705F;  /* the alert substitute on dark */
+
+  /* The only two gradients in the system. No third may be invented. */
+  --field-light:linear-gradient(160deg,#FCFCF6 0%,#F1F0E4 100%); /* @kind color */
+  --field-dark:linear-gradient(160deg,#302F2C 0%,#1B1B19 100%); /* @kind color */
+
+  /* Hierarchy comes from these, never from a drop shadow. */
+  --hairline:rgba(20,40,10,.10);
+  --hairline-dark:rgba(246,241,227,.12);
+  --hairline-strong:rgba(20,40,10,.18);
+  --hairline-strong-dark:rgba(246,241,227,.22);
+
+  /* Flat page bases, used where a gradient field would be wrong. */
+  --page-light:#FCFCF6;
+  --page-dark:#1B1B19;
+}

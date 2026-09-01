@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="stylesheet" href="_ds/voller-design-system-29513100-bc89-41ca-aa18-058035f516b4/tokens/colors.css">
+<link rel="stylesheet" href="_ds/voller-design-system-29513100-bc89-41ca-aa18-058035f516b4/tokens/typography.css">
+<link rel="stylesheet" href="_ds/voller-design-system-29513100-bc89-41ca-aa18-058035f516b4/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/voller-design-system-29513100-bc89-41ca-aa18-058035f516b4/tokens/radii.css">
+<link rel="stylesheet" href="_ds/voller-design-system-29513100-bc89-41ca-aa18-058035f516b4/tokens/effects.css">
+<link rel="stylesheet" href="_ds/voller-design-system-29513100-bc89-41ca-aa18-058035f516b4/tokens/motion.css">
+<link rel="stylesheet" href="_ds/voller-design-system-29513100-bc89-41ca-aa18-058035f516b4/tokens/semantic.css">
+<link rel="stylesheet" href="_ds/voller-design-system-29513100-bc89-41ca-aa18-058035f516b4/tokens/base.css">
+<link rel="stylesheet" href="_ds/voller-design-system-29513100-bc89-41ca-aa18-058035f516b4/css/components.css">
+<link rel="stylesheet" href="_ds/voller-design-system-29513100-bc89-41ca-aa18-058035f516b4/styles.css">
+<script src="_ds/voller-design-system-29513100-bc89-41ca-aa18-058035f516b4/_ds_bundle.js"></script>
+<script src="https://unpkg.com/lucide@0.462.0/dist/umd/lucide.js"></script>
+<style>
+  body{margin:0;background:#E7E5DC;}
+  a{color:#3F6B27;text-decoration:none;}
+  a:hover{color:#1B1B19;}
+</style>
+</helmet>
+
+<div style="font-family:-apple-system,'SF Pro Text',system-ui,sans-serif;color:#1B1B19;background:#E7E5DC;padding:48px 56px 96px;display:flex;flex-direction:column;gap:56px;-webkit-font-smoothing:antialiased">
+
+<section style="display:flex;flex-direction:column;gap:28px">
+  <div style="display:flex;flex-direction:column;gap:10px;max-width:720px">
+    <div style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Turn 1 · in-app colour</div>
+    <div style="font-size:34px;font-weight:600;letter-spacing:-0.02em;line-height:1.15">Same system, different colour per app.</div>
+    <div style="font-size:16px;line-height:1.6;color:#6E6E6B;text-wrap:pretty">Type, geometry, spacing, structure, copy and motion are identical in both directions — only the palette is delegated to the app. Two options for how far the colour goes.</div>
+  </div>
+
+  <div style="display:flex;gap:64px;align-items:flex-start;flex-wrap:wrap">
+
+    <!-- ══════════════════ OPTION 1A ══════════════════ -->
+    <div id="1a" style="display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;align-items:baseline;gap:12px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">1a</span>
+        <span style="font-size:22px;font-weight:600;letter-spacing:-0.02em">Accent duo, calm field</span>
+      </div>
+      <div style="font-size:15px;line-height:1.55;color:#6E6E6B;max-width:760px;text-wrap:pretty">The page stays the house off-white. Each app owns a primary and one bright partner, spent on controls, checks, tags and the active tab. Vibrancy arrives as saturation, not as area.</div>
+
+      <div style="display:flex;gap:28px;flex-wrap:wrap">
+        <div style="display:flex;flex-direction:column;gap:10px;padding:16px 18px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;min-width:330px">
+          <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">UnJumble</div>
+          <div style="display:flex;gap:8px">
+            <div style="flex:1;height:34px;border-radius:10px;background:#5A4BE0"></div>
+            <div style="flex:1;height:34px;border-radius:10px;background:#3F32B8"></div>
+            <div style="flex:1;height:34px;border-radius:10px;background:#EFEDFF"></div>
+            <div style="flex:1;height:34px;border-radius:10px;background:#0E9C86"></div>
+            <div style="flex:1;height:34px;border-radius:10px;background:#E0453A"></div>
+          </div>
+          <div style="font-size:13px;color:#6E6E6B">Ink violet · deep · wash · teal tag · record red</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;padding:16px 18px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;min-width:330px">
+          <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Meal Planner</div>
+          <div style="display:flex;gap:8px">
+            <div style="flex:1;height:34px;border-radius:10px;background:#E8562B"></div>
+            <div style="flex:1;height:34px;border-radius:10px;background:#C0421C"></div>
+            <div style="flex:1;height:34px;border-radius:10px;background:#FFEFE6"></div>
+            <div style="flex:1;height:34px;border-radius:10px;background:#12A08D"></div>
+            <div style="flex:1;height:34px;border-radius:10px;background:#FFD84D"></div>
+          </div>
+          <div style="font-size:13px;color:#6E6E6B">Tangerine · deep · wash · trolley teal · today gold</div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(2,auto);gap:32px 28px;justify-content:start">
+
+        <!-- 1A · UnJumble list -->
+        <div style="display:flex;flex-direction:column;gap:10px" data-screen-label="1a UnJumble list">
+          <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="402px,874px">
+            <div style="height:100%;background:#FCFCF6;display:flex;flex-direction:column;padding-top:54px;position:relative;overflow:hidden">
+              <div style="display:flex;justify-content:flex-end;gap:8px;padding:0 16px 4px">
+                <div style="width:40px;height:40px;border-radius:999px;background:#FFFFFF;border:1px solid rgba(20,40,10,.10);display:flex;align-items:center;justify-content:center;color:#3F32B8"><i data-lucide="history" width="19" height="19" stroke-width="1.75"></i></div>
+                <div style="width:40px;height:40px;border-radius:999px;background:#FFFFFF;border:1px solid rgba(20,40,10,.10);display:flex;align-items:center;justify-content:center;color:#3F32B8"><i data-lucide="settings" width="19" height="19" stroke-width="1.75"></i></div>
+              </div>
+              <div style="padding:8px 16px 14px;font-size:34px;font-weight:600;letter-spacing:-0.02em">UnJumble</div>
+              <div style="display:flex;flex-direction:column;gap:10px;padding:0 12px">
+
+                <div style="background:#FFFFFF;border:1px solid rgba(20,40,10,.10);border-radius:18px;padding:14px 16px;display:flex;flex-direction:column;gap:7px">
+                  <div style="display:flex;align-items:center;gap:10px">
+                    <div style="flex:1;font-size:16px;font-weight:600;letter-spacing:-0.01em">App theme consistency</div>
+                    <div style="color:#9C9A93;display:flex"><i data-lucide="chevron-right" width="18" height="18" stroke-width="1.75"></i></div>
+                  </div>
+                  <div style="font-size:14px;line-height:1.45;color:#6E6E6B">Applying one green and gold theme across four apps, and where it stops working.</div>
+                  <div style="display:flex;align-items:center;gap:8px;padding-top:2px">
+                    <div style="font-size:12px;color:#6E6E6B">30 Aug at 12:54</div>
+                    <div style="width:3px;height:3px;border-radius:999px;background:#C9C7BF"></div>
+                    <div style="font-size:12px;font-weight:500;color:#5A4BE0">3:49</div>
+                  </div>
+                </div>
+
+                <div style="background:#FFFFFF;border:1px solid rgba(20,40,10,.10);border-radius:18px;padding:14px 16px;display:flex;flex-direction:column;gap:7px">
+                  <div style="display:flex;align-items:center;gap:10px">
+                    <div style="flex:1;font-size:16px;font-weight:600;letter-spacing:-0.01em">Group call on the Pappy build</div>
+                    <div style="color:#9C9A93;display:flex"><i data-lucide="chevron-right" width="18" height="18" stroke-width="1.75"></i></div>
+                  </div>
+                  <div style="font-size:14px;line-height:1.45;color:#6E6E6B">A conversation between non-technical builders covers scope and the next release.</div>
+                  <div style="display:flex;align-items:center;gap:8px;padding-top:2px">
+                    <div style="font-size:12px;color:#6E6E6B">28 Aug at 17:34</div>
+                    <div style="width:3px;height:3px;border-radius:999px;background:#C9C7BF"></div>
+                    <div style="font-size:12px;font-weight:500;color:#5A4BE0">59:01</div>
+                  </div>
+                  <div style="display:flex;gap:6px;padding-top:4px">
+                    <div style="padding:4px 10px;border-radius:999px;background:#EFEDFF;color:#3F32B8;font-size:11px;font-weight:500">App development</div>
+                    <div style="padding:4px 10px;border-radius:999px;background:#E4F5F1;color:#0B7D6C;font-size:11px;font-weight:500">Silverfin</div>
+                  </div>
+                </div>
+
+                <div style="background:#FFFFFF;border:1px solid rgba(20,40,10,.10);border-radius:18px;padding:14px 16px;display:flex;flex-direction:column;gap:7px">
+                  <div style="display:flex;align-items:center;gap:10px">
+                    <div style="flex:1;font-size:16px;font-weight:600;letter-spacing:-0.01em">Account tax analysis feedback</div>
+                    <div style="color:#9C9A93;display:flex"><i data-lucide="chevron-right" width="18" height="18" stroke-width="1.75"></i></div>
+                  </div>
+                  <div style="font-size:14px;line-height:1.45;color:#6E6E6B">Justin and Finley approved the template approach for grouping disclosures.</div>
+                  <div style="display:flex;align-items:center;gap:8px;padding-top:2px">
+                    <div style="font-size:12px;color:#6E6E6B">28 Aug at 16:22</div>
+                    <div style="width:3px;height:3px;border-radius:999px;background:#C9C7BF"></div>
+                    <div style="font-size:12px;font-weight:500;color:#5A4BE0">5:37</div>
+                  </div>
+                  <div style="display:flex;gap:6px;padding-top:4px">
+                    <div style="padding:4px 10px;border-radius:999px;background:#E4F5F1;color:#0B7D6C;font-size:11px;font-weight:500">Silverfin</div>
+                  </div>
+                </div>
+
+                <div style="background:#FFFFFF;border:1px solid rgba(20,40,10,.10);border-radius:18px;padding:14px 16px;display:flex;flex-direction:column;gap:7px">
+                  <div style="display:flex;align-items:center;gap:10px">
+                    <div style="flex:1;font-size:16px;font-weight:600;letter-spacing:-0.01em">Rear extension options</div>
+                    <div style="padding:3px 8px;border-radius:6px;background:#FFF1D0;color:#8A6300;font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.1em">DRAFT</div>
+                  </div>
+                  <div style="font-size:14px;line-height:1.45;color:#6E6E6B">Three routes for a four-bedroom house, including a 3 m rear return.</div>
+                  <div style="display:flex;align-items:center;gap:8px;padding-top:2px">
+                    <div style="font-size:12px;color:#6E6E6B">28 Aug at 14:59</div>
+                    <div style="width:3px;height:3px;border-radius:999px;background:#C9C7BF"></div>
+                    <div style="font-size:12px;font-weight:500;color:#5A4BE0">6:10</div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div style="margin-top:auto;position:relative;padding:0 12px 26px">
+                <div style="position:absolute;left:50%;bottom:80px;transform:translateX(-50%);width:64px;height:64px;border-radius:999px;background:#5A4BE0;display:flex;align-items:center;justify-content:center;color:#F6F1E3;border:4px solid #FCFCF6"><i data-lucide="mic" width="26" height="26" stroke-width="1.75"></i></div>
+                <div style="display:flex;gap:8px;align-items:center">
+                  <div style="flex:1;height:46px;border-radius:999px;background:#FFFFFF;border:1px solid rgba(20,40,10,.10);display:flex;align-items:center;gap:10px;padding:0 16px;color:#9C9A93"><i data-lucide="search" width="18" height="18" stroke-width="1.75"></i><span style="font-size:15px;color:#6E6E6B">Search name or content</span></div>
+                  <div style="width:46px;height:46px;border-radius:999px;background:#FFFFFF;border:1px solid rgba(20,40,10,.10);display:flex;align-items:center;justify-content:center;color:#3F32B8"><i data-lucide="sliders-horizontal" width="18" height="18" stroke-width="1.75"></i></div>
+                </div>
+              </div>
+            </div>
+          </x-import>
+          <div style="font-size:13px;color:#6E6E6B">UnJumble · recordings</div>
+        </div>
+
+        <!-- 1A · UnJumble record -->
+        <div style="display:flex;flex-direction:column;gap:10px" data-screen-label="1a UnJumble recording">
+          <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="402px,874px">
+            <div style="height:100%;background:#FCFCF6;display:flex;flex-direction:column;padding-top:54px;overflow:hidden">
+              <div style="display:flex;align-items:center;gap:8px;padding:6px 16px 0">
+                <div style="width:8px;height:8px;border-radius:999px;background:#E0453A"></div>
+                <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Recording · on device</div>
+              </div>
+              <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px;padding-bottom:40px">
+                <div style="font-size:68px;font-weight:500;letter-spacing:-0.03em;color:#3F32B8;font-variant-numeric:tabular-nums">00:23</div>
+                <div style="display:flex;align-items:center;gap:3px;height:64px;padding:0 24px">
+                  <sc-for list="{{ barsA }}" as="bar" hint-placeholder-count="40">
+                    <div style="width:4px;border-radius:2px;height:{{ bar.h }}px;background:{{ bar.bg }}"></div>
+                  </sc-for>
+                </div>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:22px;padding-bottom:48px">
+                <div style="display:flex;gap:36px">
+                  <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+                    <div style="width:68px;height:68px;border-radius:999px;border:2px solid #5A4BE0;display:flex;align-items:center;justify-content:center;color:#5A4BE0"><i data-lucide="pause" width="26" height="26" stroke-width="2"></i></div>
+                    <div style="font-size:12px;color:#6E6E6B">Pause</div>
+                  </div>
+                  <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+                    <div style="width:68px;height:68px;border-radius:999px;background:#E0453A;display:flex;align-items:center;justify-content:center;color:#F6F1E3"><i data-lucide="square" width="24" height="24" stroke-width="2"></i></div>
+                    <div style="font-size:12px;color:#6E6E6B">Finish</div>
+                  </div>
+                </div>
+                <div style="display:flex;align-items:center;gap:18px">
+                  <div style="display:flex;align-items:center;gap:7px;padding:9px 16px;border-radius:999px;background:#EFEDFF;color:#3F32B8;font-size:14px;font-weight:500"><i data-lucide="lock" width="14" height="14" stroke-width="1.75"></i>Save as draft</div>
+                  <div style="font-size:14px;color:#6E6E6B">Cancel</div>
+                </div>
+              </div>
+            </div>
+          </x-import>
+          <div style="font-size:13px;color:#6E6E6B">UnJumble · recording</div>
+        </div>
+
+        <!-- 1A · Meal Planner plan -->
+        <div style="display:flex;flex-direction:column;gap:10px" data-screen-label="1a Meal Planner plan">
+          <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="402px,874px">
+            <div style="height:100%;background:#FCFCF6;display:flex;flex-direction:column;padding-top:54px;overflow:hidden">
+              <div style="display:flex;justify-content:flex-end;gap:8px;padding:0 16px 4px">
+                <div style="width:40px;height:40px;border-radius:999px;background:#FFFFFF;border:1px solid rgba(20,40,10,.10);display:flex;align-items:center;justify-content:center;color:#C0421C"><i data-lucide="share" width="18" height="18" stroke-width="1.75"></i></div>
+                <div style="width:40px;height:40px;border-radius:999px;background:#FFFFFF;border:1px solid rgba(20,40,10,.10);display:flex;align-items:center;justify-content:center;color:#C0421C"><i data-lucide="rotate-ccw" width="18" height="18" stroke-width="1.75"></i></div>
+              </div>
+              <div style="padding:8px 16px 14px;font-size:34px;font-weight:600;letter-spacing:-0.02em">Plan</div>
+              <div style="display:flex;flex-direction:column;gap:12px;padding:0 12px">
+                <div style="background:#FFFFFF;border:1px solid rgba(20,40,10,.10);border-radius:18px;padding:12px 14px;display:flex;align-items:center;gap:12px">
+                  <div style="width:36px;height:36px;border-radius:10px;background:#FFEFE6;display:flex;align-items:center;justify-content:center;color:#C0421C"><i data-lucide="calendar" width="18" height="18" stroke-width="1.75"></i></div>
+                  <div style="flex:1;display:flex;flex-direction:column;gap:1px">
+                    <div style="font-size:12px;color:#6E6E6B">Week starting</div>
+                    <div style="font-size:16px;font-weight:600">Sunday 30 Aug</div>
+                  </div>
+                  <div style="color:#9C9A93;display:flex"><i data-lucide="chevron-right" width="18" height="18" stroke-width="1.75"></i></div>
+                </div>
+
+                <div style="display:flex;align-items:center;gap:6px;padding:0 4px;color:#C0421C;font-size:14px;font-weight:500"><i data-lucide="chevron-down" width="16" height="16" stroke-width="2"></i>Show 1 previous day</div>
+
+                <div style="background:#FFFFFF;border:2px solid #E8562B;border-radius:20px;padding:14px;display:flex;flex-direction:column;gap:12px">
+                  <div style="display:flex;align-items:center;gap:8px">
+                    <div style="font-size:17px;font-weight:600">Monday</div>
+                    <div style="padding:3px 8px;border-radius:6px;background:#FFD84D;color:#1B1B19;font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.1em">TODAY</div>
+                    <div style="flex:1"></div>
+                    <div style="display:flex;padding:2px;border-radius:999px;background:rgba(20,40,10,.07)">
+                      <div style="display:flex;align-items:center;gap:5px;padding:5px 10px;border-radius:999px;background:#FFFFFF;color:#1B1B19;font-size:12px;font-weight:500"><i data-lucide="house" width="13" height="13" stroke-width="1.75"></i>Home</div>
+                      <div style="display:flex;align-items:center;gap:5px;padding:5px 10px;border-radius:999px;color:#6E6E6B;font-size:12px;font-weight:500"><i data-lucide="plane" width="13" height="13" stroke-width="1.75"></i>Away</div>
+                    </div>
+                  </div>
+                  <div style="background:#FAF7F0;border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:10px">
+                    <div style="display:flex;align-items:center;gap:7px;color:#6E6E6B"><i data-lucide="moon" width="13" height="13" stroke-width="1.75"></i><span style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase">Dinner</span></div>
+                    <div style="font-size:18px;font-weight:600;letter-spacing:-0.01em;line-height:1.25">Easy prawn green curry rice bowl</div>
+                    <div style="display:flex;align-items:center">
+                      <div style="width:24px;height:24px;border-radius:999px;background:#E8562B"></div>
+                      <div style="width:24px;height:24px;border-radius:999px;background:#12A08D;margin-left:-7px;border:2px solid #FAF7F0"></div>
+                      <div style="width:24px;height:24px;border-radius:999px;background:#FFD84D;margin-left:-7px;border:2px solid #FAF7F0;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#1B1B19">L</div>
+                    </div>
+                    <div style="display:flex;gap:8px">
+                      <div style="flex:1;height:38px;border-radius:10px;border:1px solid rgba(20,40,10,.18);display:flex;align-items:center;justify-content:center;gap:7px;font-size:14px;font-weight:500"><i data-lucide="book-open" width="15" height="15" stroke-width="1.75"></i>View</div>
+                      <div style="flex:1;height:38px;border-radius:10px;background:#E8562B;color:#FFF6F1;display:flex;align-items:center;justify-content:center;gap:7px;font-size:14px;font-weight:600"><i data-lucide="flame" width="15" height="15" stroke-width="1.75"></i>Cook</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div style="background:#FFFFFF;border:1px solid rgba(20,40,10,.10);border-radius:20px;padding:14px;display:flex;flex-direction:column;gap:12px">
+                  <div style="display:flex;align-items:center;gap:8px">
+                    <div style="font-size:17px;font-weight:600">Tuesday</div>
+                    <div style="flex:1"></div>
+                    <div style="display:flex;padding:2px;border-radius:999px;background:rgba(20,40,10,.07)">
+                      <div style="display:flex;align-items:center;gap:5px;padding:5px 10px;border-radius:999px;background:#FFFFFF;color:#1B1B19;font-size:12px;font-weight:500"><i data-lucide="house" width="13" height="13" stroke-width="1.75"></i>Home</div>
+                      <div style="display:flex;align-items:center;gap:5px;padding:5px 10px;border-radius:999px;color:#6E6E6B;font-size:12px;font-weight:500"><i data-lucide="plane" width="13" height="13" stroke-width="1.75"></i>Away</div>
+                    </div>
+                  </div>
+                  <div style="background:#FAF7F0;border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:10px">
+                    <div style="display:flex;align-items:center;gap:7px;color:#6E6E6B"><i data-lucide="moon" width="13" height="13" stroke-width="1.75"></i><span style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase">Dinner</span></div>
+                    <div style="font-size:18px;font-weight:600;letter-spacing:-0.01em;line-height:1.25">Breaded cod, chips and salad</div>
+                    <div style="height:38px;border-radius:10px;border:1px solid rgba(20,40,10,.18);display:flex;align-items:center;justify-content:center;gap:7px;font-size:14px;font-weight:500"><i data-lucide="book-open" width="15" height="15" stroke-width="1.75"></i>View</div>
+                  </div>
+                </div>
+
+                <div style="background:#FFFFFF;border:1px solid rgba(20,40,10,.10);border-radius:20px;padding:14px 14px 24px;display:flex;flex-direction:column;gap:12px">
+                  <div style="font-size:17px;font-weight:600">Wednesday</div>
+                </div>
+              </div>
+
+              <div style="margin-top:auto;background:rgba(252,252,246,.94);border-top:1px solid rgba(20,40,10,.10);display:flex;padding:8px 12px 26px">
+                <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;color:#E8562B"><i data-lucide="calendar-days" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:600">Plan</span></div>
+                <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;color:#6E6E6B"><i data-lucide="shopping-cart" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Shop</span></div>
+                <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;color:#6E6E6B"><i data-lucide="book" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Meals</span></div>
+                <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;color:#6E6E6B"><i data-lucide="settings" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Settings</span></div>
+              </div>
+            </div>
+          </x-import>
+          <div style="font-size:13px;color:#6E6E6B">Meal Planner · plan</div>
+        </div>
+
+        <!-- 1A · Meal Planner shop -->
+        <div style="display:flex;flex-direction:column;gap:10px" data-screen-label="1a Meal Planner shop">
+          <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="402px,874px">
+            <div style="height:100%;background:#FCFCF6;display:flex;flex-direction:column;padding-top:54px;overflow:hidden;position:relative">
+              <div style="display:flex;justify-content:flex-end;gap:8px;padding:0 16px 4px">
+                <div style="width:40px;height:40px;border-radius:999px;background:#FFFFFF;border:1px solid rgba(20,40,10,.10);display:flex;align-items:center;justify-content:center;color:#C0421C"><i data-lucide="eye-off" width="18" height="18" stroke-width="1.75"></i></div>
+                <div style="width:40px;height:40px;border-radius:999px;background:#FFFFFF;border:1px solid rgba(20,40,10,.10);display:flex;align-items:center;justify-content:center;color:#0B7D6C"><i data-lucide="check-check" width="18" height="18" stroke-width="1.75"></i></div>
+                <div style="width:40px;height:40px;border-radius:999px;background:#FFFFFF;border:1px solid rgba(20,40,10,.10);display:flex;align-items:center;justify-content:center;color:#C4382C"><i data-lucide="trash-2" width="18" height="18" stroke-width="1.75"></i></div>
+              </div>
+              <div style="padding:8px 16px 14px;font-size:34px;font-weight:600;letter-spacing:-0.02em">Shop</div>
+              <div style="display:flex;flex-direction:column;gap:12px;padding:0 12px">
+                <div style="background:#FFFFFF;border:1px solid rgba(20,40,10,.10);border-radius:18px;padding:14px;display:flex;flex-direction:column;gap:10px">
+                  <div style="display:flex;align-items:center;gap:9px">
+                    <div style="color:#12A08D;display:flex"><i data-lucide="circle-check" width="18" height="18" stroke-width="1.75"></i></div>
+                    <div style="flex:1;font-size:15px;font-weight:500">44 of 44 in the trolley</div>
+                    <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.08em;color:#0B7D6C">DONE</div>
+                  </div>
+                  <div style="height:6px;border-radius:999px;background:rgba(20,40,10,.08);overflow:hidden"><div style="width:100%;height:100%;background:#12A08D"></div></div>
+                </div>
+
+                <div style="background:#FFFFFF;border:1px solid rgba(20,40,10,.10);border-radius:18px;padding:14px;display:flex;align-items:center;gap:11px">
+                  <div style="color:#C0421C;display:flex"><i data-lucide="repeat" width="18" height="18" stroke-width="1.75"></i></div>
+                  <div style="flex:1;font-size:15px;font-weight:500">You usually buy 8 other things</div>
+                  <div style="color:#9C9A93;display:flex"><i data-lucide="chevron-right" width="18" height="18" stroke-width="1.75"></i></div>
+                </div>
+
+                <div style="display:flex;align-items:center;padding:6px 6px 0">
+                  <div style="flex:1;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Green grocery</div>
+                  <div style="font-size:12px;font-weight:600;color:#0B7D6C">21/21</div>
+                </div>
+
+                <div style="background:#FFFFFF;border:1px solid rgba(20,40,10,.10);border-radius:18px;overflow:hidden;display:flex;flex-direction:column">
+                  <sc-for list="{{ shopItems }}" as="item" hint-placeholder-count="8">
+                    <div style="display:flex;align-items:center;gap:11px;padding:13px 15px;border-top:1px solid rgba(20,40,10,.07)">
+                      <div style="width:22px;height:22px;border-radius:999px;background:#12A08D;display:flex;align-items:center;justify-content:center;color:#FFFFFF"><i data-lucide="check" width="13" height="13" stroke-width="2.5"></i></div>
+                      <div style="flex:1;font-size:15px;color:#6E6E6B;text-decoration:line-through">{{ item }}</div>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+
+              <div style="position:absolute;left:50%;bottom:104px;transform:translateX(-50%);display:flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;background:#E8562B;color:#FFF6F1;font-size:15px;font-weight:600"><i data-lucide="plus" width="17" height="17" stroke-width="2.25"></i>Add to list</div>
+
+              <div style="margin-top:auto;background:rgba(252,252,246,.94);border-top:1px solid rgba(20,40,10,.10);display:flex;padding:8px 12px 26px">
+                <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;color:#6E6E6B"><i data-lucide="calendar-days" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Plan</span></div>
+                <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;color:#E8562B"><i data-lucide="shopping-cart" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:600">Shop</span></div>
+                <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;color:#6E6E6B"><i data-lucide="book" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Meals</span></div>
+                <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;color:#6E6E6B"><i data-lucide="settings" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Settings</span></div>
+              </div>
+            </div>
+          </x-import>
+          <div style="font-size:13px;color:#6E6E6B">Meal Planner · shop</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ══════════════════ OPTION 1B ══════════════════ -->
+    <div id="1b" style="display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;align-items:baseline;gap:12px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em">1b</span>
+        <span style="font-size:22px;font-weight:600;letter-spacing:-0.02em">Tinted field, colour as furniture</span>
+      </div>
+      <div style="font-size:15px;line-height:1.55;color:#6E6E6B;max-width:760px;text-wrap:pretty">The page itself carries the app's hue, and colour becomes structure: a filled header on today's card, saturated tag pills, a filled tab pill, the wordmark's full-stop tile recoloured per app. Louder, and further from the house field.</div>
+
+      <div style="display:flex;gap:28px;flex-wrap:wrap">
+        <div style="display:flex;flex-direction:column;gap:10px;padding:16px 18px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;min-width:330px">
+          <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">UnJumble</div>
+          <div style="display:flex;gap:8px">
+            <div style="flex:1;height:34px;border-radius:10px;background:#6C3CE9"></div>
+            <div style="flex:1;height:34px;border-radius:10px;background:#FF4F3D"></div>
+            <div style="flex:1;height:34px;border-radius:10px;background:#0E9C86"></div>
+            <div style="flex:1;height:34px;border-radius:10px;background:#EFE9FF"></div>
+            <div style="flex:1;height:34px;border-radius:10px;background:#F5F2FF"></div>
+          </div>
+          <div style="font-size:13px;color:#6E6E6B">Violet · coral · teal · wash · field</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;padding:16px 18px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;min-width:330px">
+          <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Meal Planner</div>
+          <div style="display:flex;gap:8px">
+            <div style="flex:1;height:34px;border-radius:10px;background:#F2542D"></div>
+            <div style="flex:1;height:34px;border-radius:10px;background:#0FA396"></div>
+            <div style="flex:1;height:34px;border-radius:10px;background:#FFC53D"></div>
+            <div style="flex:1;height:34px;border-radius:10px;background:#FFE9DC"></div>
+            <div style="flex:1;height:34px;border-radius:10px;background:#FFF7EF"></div>
+          </div>
+          <div style="font-size:13px;color:#6E6E6B">Tangerine · teal · sunshine · wash · field</div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(2,auto);gap:32px 28px;justify-content:start">
+
+        <!-- 1B · UnJumble list -->
+        <div style="display:flex;flex-direction:column;gap:10px" data-screen-label="1b UnJumble list">
+          <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="402px,874px">
+            <div style="height:100%;background:linear-gradient(160deg,#F7F4FF 0%,#EDE7FF 100%);display:flex;flex-direction:column;padding-top:54px;position:relative;overflow:hidden">
+              <div style="display:flex;justify-content:flex-end;gap:8px;padding:0 16px 4px">
+                <div style="width:40px;height:40px;border-radius:999px;background:rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;color:#4A22C4"><i data-lucide="history" width="19" height="19" stroke-width="1.75"></i></div>
+                <div style="width:40px;height:40px;border-radius:999px;background:rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;color:#4A22C4"><i data-lucide="settings" width="19" height="19" stroke-width="1.75"></i></div>
+              </div>
+              <div style="padding:8px 16px 14px;display:flex;align-items:flex-end;gap:6px">
+                <div style="font-size:34px;font-weight:600;letter-spacing:-0.02em;line-height:1">UnJumble</div>
+                <div style="width:11px;height:11px;border-radius:3px;background:#6C3CE9;margin-bottom:3px"></div>
+              </div>
+              <div style="display:flex;gap:7px;padding:0 16px 14px">
+                <div style="padding:6px 13px;border-radius:999px;background:#6C3CE9;color:#F6F1E3;font-size:13px;font-weight:600">All</div>
+                <div style="padding:6px 13px;border-radius:999px;background:rgba(255,255,255,.7);color:#4A4A55;font-size:13px;font-weight:500">Drafts</div>
+                <div style="padding:6px 13px;border-radius:999px;background:rgba(255,255,255,.7);color:#4A4A55;font-size:13px;font-weight:500">Tagged</div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:10px;padding:0 12px">
+
+                <div style="background:#FFFFFF;border-radius:22px;padding:15px 16px;display:flex;flex-direction:column;gap:8px">
+                  <div style="display:flex;align-items:center;gap:10px">
+                    <div style="flex:1;font-size:16px;font-weight:600;letter-spacing:-0.01em">App theme consistency</div>
+                    <div style="color:#B4AEC6;display:flex"><i data-lucide="chevron-right" width="18" height="18" stroke-width="1.75"></i></div>
+                  </div>
+                  <div style="font-size:14px;line-height:1.45;color:#63606E">Applying one green and gold theme across four apps, and where it stops working.</div>
+                  <div style="display:flex;align-items:center;gap:8px;padding-top:2px">
+                    <div style="padding:3px 9px;border-radius:999px;background:#EFE9FF;color:#4A22C4;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.06em">3:49</div>
+                    <div style="font-size:12px;color:#7A7686">30 Aug at 12:54</div>
+                  </div>
+                </div>
+
+                <div style="background:#FFFFFF;border-radius:22px;padding:15px 16px;display:flex;flex-direction:column;gap:8px">
+                  <div style="display:flex;align-items:center;gap:10px">
+                    <div style="flex:1;font-size:16px;font-weight:600;letter-spacing:-0.01em">Group call on the Pappy build</div>
+                    <div style="color:#B4AEC6;display:flex"><i data-lucide="chevron-right" width="18" height="18" stroke-width="1.75"></i></div>
+                  </div>
+                  <div style="font-size:14px;line-height:1.45;color:#63606E">A conversation between non-technical builders covers scope and the next release.</div>
+                  <div style="display:flex;align-items:center;gap:8px;padding-top:2px">
+                    <div style="padding:3px 9px;border-radius:999px;background:#EFE9FF;color:#4A22C4;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.06em">59:01</div>
+                    <div style="font-size:12px;color:#7A7686">28 Aug at 17:34</div>
+                  </div>
+                  <div style="display:flex;gap:6px;padding-top:4px">
+                    <div style="padding:5px 11px;border-radius:999px;background:#6C3CE9;color:#F6F1E3;font-size:11px;font-weight:600">App development</div>
+                    <div style="padding:5px 11px;border-radius:999px;background:#0E9C86;color:#F6F1E3;font-size:11px;font-weight:600">Silverfin</div>
+                  </div>
+                </div>
+
+                <div style="background:#FFFFFF;border-radius:22px;padding:15px 16px;display:flex;flex-direction:column;gap:8px">
+                  <div style="display:flex;align-items:center;gap:10px">
+                    <div style="flex:1;font-size:16px;font-weight:600;letter-spacing:-0.01em">Account tax analysis feedback</div>
+                    <div style="color:#B4AEC6;display:flex"><i data-lucide="chevron-right" width="18" height="18" stroke-width="1.75"></i></div>
+                  </div>
+                  <div style="font-size:14px;line-height:1.45;color:#63606E">Justin and Finley approved the template approach for grouping disclosures.</div>
+                  <div style="display:flex;align-items:center;gap:8px;padding-top:2px">
+                    <div style="padding:3px 9px;border-radius:999px;background:#EFE9FF;color:#4A22C4;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.06em">5:37</div>
+                    <div style="font-size:12px;color:#7A7686">28 Aug at 16:22</div>
+                  </div>
+                  <div style="display:flex;gap:6px;padding-top:4px">
+                    <div style="padding:5px 11px;border-radius:999px;background:#0E9C86;color:#F6F1E3;font-size:11px;font-weight:600">Silverfin</div>
+                  </div>
+                </div>
+
+                <div style="background:#FFFFFF;border-radius:22px;padding:15px 16px;display:flex;flex-direction:column;gap:8px">
+                  <div style="display:flex;align-items:center;gap:10px">
+                    <div style="flex:1;font-size:16px;font-weight:600;letter-spacing:-0.01em">Rear extension options</div>
+                    <div style="padding:4px 9px;border-radius:999px;background:#FFC53D;color:#1B1B19;font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.1em">DRAFT</div>
+                  </div>
+                  <div style="font-size:14px;line-height:1.45;color:#63606E">Three routes for a four-bedroom house, including a 3 m rear return.</div>
+                  <div style="display:flex;align-items:center;gap:8px;padding-top:2px">
+                    <div style="padding:3px 9px;border-radius:999px;background:#EFE9FF;color:#4A22C4;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.06em">6:10</div>
+                    <div style="font-size:12px;color:#7A7686">28 Aug at 14:59</div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div style="margin-top:auto;position:relative;padding:0 12px 26px">
+                <div style="position:absolute;left:50%;bottom:78px;transform:translateX(-50%);width:70px;height:70px;border-radius:999px;background:#FF4F3D;display:flex;align-items:center;justify-content:center;color:#FFF3F1;border:5px solid #F4F0FF"><i data-lucide="mic" width="28" height="28" stroke-width="1.75"></i></div>
+                <div style="display:flex;gap:8px;align-items:center">
+                  <div style="flex:1;height:48px;border-radius:999px;background:#FFFFFF;display:flex;align-items:center;gap:10px;padding:0 16px;color:#B4AEC6"><i data-lucide="search" width="18" height="18" stroke-width="1.75"></i><span style="font-size:15px;color:#7A7686">Search name or content</span></div>
+                  <div style="width:48px;height:48px;border-radius:999px;background:#6C3CE9;display:flex;align-items:center;justify-content:center;color:#F6F1E3"><i data-lucide="sliders-horizontal" width="18" height="18" stroke-width="1.75"></i></div>
+                </div>
+              </div>
+            </div>
+          </x-import>
+          <div style="font-size:13px;color:#6E6E6B">UnJumble · recordings</div>
+        </div>
+
+        <!-- 1B · UnJumble record -->
+        <div style="display:flex;flex-direction:column;gap:10px" data-screen-label="1b UnJumble recording">
+          <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="402px,874px">
+            <div style="height:100%;background:linear-gradient(160deg,#F7F4FF 0%,#EDE7FF 100%);display:flex;flex-direction:column;padding-top:54px;overflow:hidden">
+              <div style="display:flex;justify-content:center;padding:8px 16px 0">
+                <div style="display:flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:#FFFFFF">
+                  <div style="width:8px;height:8px;border-radius:999px;background:#FF4F3D"></div>
+                  <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#4A4A55">Recording · on device</div>
+                </div>
+              </div>
+              <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;padding-bottom:40px">
+                <div style="font-size:76px;font-weight:600;letter-spacing:-0.04em;color:#6C3CE9;font-variant-numeric:tabular-nums;line-height:1">00:23</div>
+                <div style="display:flex;align-items:center;gap:3px;height:70px;padding:0 22px">
+                  <sc-for list="{{ barsB }}" as="bar" hint-placeholder-count="40">
+                    <div style="width:5px;border-radius:3px;height:{{ bar.h }}px;background:{{ bar.bg }}"></div>
+                  </sc-for>
+                </div>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:22px;padding-bottom:48px">
+                <div style="display:flex;gap:34px;align-items:center">
+                  <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+                    <div style="width:64px;height:64px;border-radius:999px;background:#FFFFFF;display:flex;align-items:center;justify-content:center;color:#6C3CE9"><i data-lucide="pause" width="26" height="26" stroke-width="2"></i></div>
+                    <div style="font-size:12px;color:#63606E">Pause</div>
+                  </div>
+                  <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+                    <div style="width:78px;height:78px;border-radius:999px;background:#FF4F3D;display:flex;align-items:center;justify-content:center;color:#FFF3F1"><i data-lucide="square" width="28" height="28" stroke-width="2"></i></div>
+                    <div style="font-size:12px;color:#63606E">Finish</div>
+                  </div>
+                </div>
+                <div style="display:flex;align-items:center;gap:18px">
+                  <div style="display:flex;align-items:center;gap:7px;padding:10px 18px;border-radius:999px;background:#6C3CE9;color:#F6F1E3;font-size:14px;font-weight:600"><i data-lucide="lock" width="14" height="14" stroke-width="1.75"></i>Save as draft</div>
+                  <div style="font-size:14px;color:#63606E">Cancel</div>
+                </div>
+              </div>
+            </div>
+          </x-import>
+          <div style="font-size:13px;color:#6E6E6B">UnJumble · recording</div>
+        </div>
+
+        <!-- 1B · Meal Planner plan -->
+        <div style="display:flex;flex-direction:column;gap:10px" data-screen-label="1b Meal Planner plan">
+          <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="402px,874px">
+            <div style="height:100%;background:linear-gradient(160deg,#FFFAF4 0%,#FFEBDC 100%);display:flex;flex-direction:column;padding-top:54px;overflow:hidden">
+              <div style="display:flex;justify-content:flex-end;gap:8px;padding:0 16px 4px">
+                <div style="width:40px;height:40px;border-radius:999px;background:rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;color:#C43F17"><i data-lucide="share" width="18" height="18" stroke-width="1.75"></i></div>
+                <div style="width:40px;height:40px;border-radius:999px;background:rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;color:#C43F17"><i data-lucide="rotate-ccw" width="18" height="18" stroke-width="1.75"></i></div>
+              </div>
+              <div style="padding:8px 16px 14px;display:flex;align-items:flex-end;gap:6px">
+                <div style="font-size:34px;font-weight:600;letter-spacing:-0.02em;line-height:1">Plan</div>
+                <div style="width:11px;height:11px;border-radius:3px;background:#F2542D;margin-bottom:3px"></div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:12px;padding:0 12px">
+                <div style="background:#FFFFFF;border-radius:20px;padding:12px 14px;display:flex;align-items:center;gap:12px">
+                  <div style="width:38px;height:38px;border-radius:12px;background:#F2542D;display:flex;align-items:center;justify-content:center;color:#FFF6F1"><i data-lucide="calendar" width="19" height="19" stroke-width="1.75"></i></div>
+                  <div style="flex:1;display:flex;flex-direction:column;gap:1px">
+                    <div style="font-size:12px;color:#7A7168">Week starting</div>
+                    <div style="font-size:16px;font-weight:600">Sunday 30 Aug</div>
+                  </div>
+                  <div style="color:#C4B8AC;display:flex"><i data-lucide="chevron-right" width="18" height="18" stroke-width="1.75"></i></div>
+                </div>
+
+                <div style="display:flex;align-items:center;gap:6px;padding:0 4px;color:#C43F17;font-size:14px;font-weight:600"><i data-lucide="chevron-down" width="16" height="16" stroke-width="2"></i>Show 1 previous day</div>
+
+                <div style="background:#FFFFFF;border-radius:22px;overflow:hidden;display:flex;flex-direction:column">
+                  <div style="background:#F2542D;padding:12px 14px;display:flex;align-items:center;gap:8px">
+                    <div style="font-size:17px;font-weight:600;color:#FFF6F1">Monday</div>
+                    <div style="padding:3px 8px;border-radius:6px;background:#FFC53D;color:#1B1B19;font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.1em">TODAY</div>
+                    <div style="flex:1"></div>
+                    <div style="display:flex;padding:2px;border-radius:999px;background:rgba(27,27,25,.18)">
+                      <div style="display:flex;align-items:center;gap:5px;padding:5px 10px;border-radius:999px;background:#FFF6F1;color:#1B1B19;font-size:12px;font-weight:600"><i data-lucide="house" width="13" height="13" stroke-width="1.75"></i>Home</div>
+                      <div style="display:flex;align-items:center;gap:5px;padding:5px 10px;border-radius:999px;color:#FFE0D2;font-size:12px;font-weight:500"><i data-lucide="plane" width="13" height="13" stroke-width="1.75"></i>Away</div>
+                    </div>
+                  </div>
+                  <div style="padding:14px;display:flex;flex-direction:column;gap:10px">
+                    <div style="display:flex;align-items:center;gap:7px;color:#7A7168"><i data-lucide="moon" width="13" height="13" stroke-width="1.75"></i><span style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase">Dinner</span></div>
+                    <div style="font-size:19px;font-weight:600;letter-spacing:-0.01em;line-height:1.25">Easy prawn green curry rice bowl</div>
+                    <div style="display:flex;align-items:center">
+                      <div style="width:24px;height:24px;border-radius:999px;background:#F2542D"></div>
+                      <div style="width:24px;height:24px;border-radius:999px;background:#0FA396;margin-left:-7px;border:2px solid #FFFFFF"></div>
+                      <div style="width:24px;height:24px;border-radius:999px;background:#FFC53D;margin-left:-7px;border:2px solid #FFFFFF;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#1B1B19">L</div>
+                    </div>
+                    <div style="display:flex;gap:8px">
+                      <div style="flex:1;height:40px;border-radius:12px;background:#FFE9DC;color:#C43F17;display:flex;align-items:center;justify-content:center;gap:7px;font-size:14px;font-weight:600"><i data-lucide="book-open" width="15" height="15" stroke-width="1.75"></i>View</div>
+                      <div style="flex:1;height:40px;border-radius:12px;background:#F2542D;color:#FFF6F1;display:flex;align-items:center;justify-content:center;gap:7px;font-size:14px;font-weight:600"><i data-lucide="flame" width="15" height="15" stroke-width="1.75"></i>Cook</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div style="background:#FFFFFF;border-radius:22px;padding:14px;display:flex;flex-direction:column;gap:12px">
+                  <div style="display:flex;align-items:center;gap:8px">
+                    <div style="font-size:17px;font-weight:600">Tuesday</div>
+                    <div style="flex:1"></div>
+                    <div style="display:flex;padding:2px;border-radius:999px;background:#F4EFE9">
+                      <div style="display:flex;align-items:center;gap:5px;padding:5px 10px;border-radius:999px;background:#FFFFFF;color:#1B1B19;font-size:12px;font-weight:600"><i data-lucide="house" width="13" height="13" stroke-width="1.75"></i>Home</div>
+                      <div style="display:flex;align-items:center;gap:5px;padding:5px 10px;border-radius:999px;color:#7A7168;font-size:12px;font-weight:500"><i data-lucide="plane" width="13" height="13" stroke-width="1.75"></i>Away</div>
+                    </div>
+                  </div>
+                  <div style="display:flex;flex-direction:column;gap:10px">
+                    <div style="display:flex;align-items:center;gap:7px;color:#7A7168"><i data-lucide="moon" width="13" height="13" stroke-width="1.75"></i><span style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase">Dinner</span></div>
+                    <div style="font-size:19px;font-weight:600;letter-spacing:-0.01em;line-height:1.25">Breaded cod, chips and salad</div>
+                    <div style="height:40px;border-radius:12px;background:#FFE9DC;color:#C43F17;display:flex;align-items:center;justify-content:center;gap:7px;font-size:14px;font-weight:600"><i data-lucide="book-open" width="15" height="15" stroke-width="1.75"></i>View</div>
+                  </div>
+                </div>
+
+                <div style="background:#FFFFFF;border-radius:22px;padding:14px 14px 26px;display:flex;flex-direction:column;gap:12px">
+                  <div style="font-size:17px;font-weight:600">Wednesday</div>
+                </div>
+              </div>
+
+              <div style="margin-top:auto;background:rgba(255,250,244,.94);display:flex;align-items:center;padding:8px 12px 26px;gap:4px">
+                <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;border-radius:16px;background:#FFE1D1;color:#C43F17"><i data-lucide="calendar-days" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:600">Plan</span></div>
+                <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;color:#8A8177"><i data-lucide="shopping-cart" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Shop</span></div>
+                <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;color:#8A8177"><i data-lucide="book" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Meals</span></div>
+                <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;color:#8A8177"><i data-lucide="settings" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Settings</span></div>
+              </div>
+            </div>
+          </x-import>
+          <div style="font-size:13px;color:#6E6E6B">Meal Planner · plan</div>
+        </div>
+
+        <!-- 1B · Meal Planner shop -->
+        <div style="display:flex;flex-direction:column;gap:10px" data-screen-label="1b Meal Planner shop">
+          <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="402px,874px">
+            <div style="height:100%;background:linear-gradient(160deg,#FFFAF4 0%,#FFEBDC 100%);display:flex;flex-direction:column;padding-top:54px;overflow:hidden;position:relative">
+              <div style="display:flex;justify-content:flex-end;gap:8px;padding:0 16px 4px">
+                <div style="width:40px;height:40px;border-radius:999px;background:rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;color:#C43F17"><i data-lucide="eye-off" width="18" height="18" stroke-width="1.75"></i></div>
+                <div style="width:40px;height:40px;border-radius:999px;background:rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;color:#0B7D6C"><i data-lucide="check-check" width="18" height="18" stroke-width="1.75"></i></div>
+                <div style="width:40px;height:40px;border-radius:999px;background:rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;color:#C4382C"><i data-lucide="trash-2" width="18" height="18" stroke-width="1.75"></i></div>
+              </div>
+              <div style="padding:8px 16px 14px;display:flex;align-items:flex-end;gap:6px">
+                <div style="font-size:34px;font-weight:600;letter-spacing:-0.02em;line-height:1">Shop</div>
+                <div style="width:11px;height:11px;border-radius:3px;background:#F2542D;margin-bottom:3px"></div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:12px;padding:0 12px">
+                <div style="background:#0FA396;border-radius:20px;padding:14px;display:flex;flex-direction:column;gap:10px">
+                  <div style="display:flex;align-items:center;gap:9px">
+                    <div style="color:#EAFBF8;display:flex"><i data-lucide="circle-check" width="19" height="19" stroke-width="2"></i></div>
+                    <div style="flex:1;font-size:16px;font-weight:600;color:#F3FCFA">44 of 44 in the trolley</div>
+                  </div>
+                  <div style="height:6px;border-radius:999px;background:rgba(255,255,255,.28);overflow:hidden"><div style="width:100%;height:100%;background:#FFC53D"></div></div>
+                </div>
+
+                <div style="background:#FFFFFF;border-radius:20px;padding:14px;display:flex;align-items:center;gap:11px">
+                  <div style="color:#C43F17;display:flex"><i data-lucide="repeat" width="18" height="18" stroke-width="1.75"></i></div>
+                  <div style="flex:1;font-size:15px;font-weight:500">You usually buy 8 other things</div>
+                  <div style="color:#C4B8AC;display:flex"><i data-lucide="chevron-right" width="18" height="18" stroke-width="1.75"></i></div>
+                </div>
+
+                <div style="display:flex;align-items:center;gap:8px;padding:6px 6px 0">
+                  <div style="padding:4px 11px;border-radius:999px;background:#FFE9DC;color:#C43F17;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase">Green grocery</div>
+                  <div style="flex:1"></div>
+                  <div style="font-size:12px;font-weight:600;color:#0B7D6C">21/21</div>
+                </div>
+
+                <div style="background:#FFFFFF;border-radius:20px;overflow:hidden;display:flex;flex-direction:column">
+                  <sc-for list="{{ shopItems }}" as="item" hint-placeholder-count="8">
+                    <div style="display:flex;align-items:center;gap:11px;padding:13px 15px;border-top:1px solid #F4EFE9">
+                      <div style="width:23px;height:23px;border-radius:999px;background:#FFC53D;display:flex;align-items:center;justify-content:center;color:#1B1B19"><i data-lucide="check" width="13" height="13" stroke-width="3"></i></div>
+                      <div style="flex:1;font-size:15px;color:#8A8177;text-decoration:line-through">{{ item }}</div>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+
+              <div style="position:absolute;left:50%;bottom:104px;transform:translateX(-50%);display:flex;align-items:center;gap:8px;padding:13px 24px;border-radius:999px;background:#F2542D;color:#FFF6F1;font-size:15px;font-weight:600"><i data-lucide="plus" width="17" height="17" stroke-width="2.25"></i>Add to list</div>
+
+              <div style="margin-top:auto;background:rgba(255,250,244,.94);display:flex;align-items:center;padding:8px 12px 26px;gap:4px">
+                <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;color:#8A8177"><i data-lucide="calendar-days" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Plan</span></div>
+                <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;border-radius:16px;background:#FFE1D1;color:#C43F17"><i data-lucide="shopping-cart" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:600">Shop</span></div>
+                <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;color:#8A8177"><i data-lucide="book" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Meals</span></div>
+                <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;color:#8A8177"><i data-lucide="settings" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Settings</span></div>
+              </div>
+            </div>
+          </x-import>
+          <div style="font-size:13px;color:#6E6E6B">Meal Planner · shop</div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div style="max-width:900px;padding:22px 24px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;display:flex;flex-direction:column;gap:12px">
+    <div style="font-size:17px;font-weight:600">What stays fixed in both</div>
+    <div style="font-size:15px;line-height:1.6;color:#6E6E6B;text-wrap:pretty">One platform-sans type ladder (34 title, 19/17 row heading, 15/14 body, 12 meta, 11 mono eyebrow); card 20–22, row 16, control 10–12, pill 999; 8px spacing with 12px gaps between cards; hierarchy from surface steps and hairlines, never a shadow; sentence-case British copy that names the verb and the absence ("on device", "44 of 44 in the trolley"); Lucide at 1.75px; 120/180ms colour and movement. Green and gold keep the icons, the website and the App Store — the apps inherit the rules, not the hues.</div>
+  </div>
+</section>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  makeBars(onColor, offColor, tall) {
+    const heights = [12,20,34,46,30,52,40,26,58,44,36,50,22,38,60,48,28,42,54,32,46,24,56,40,30,50,18,34,44,26,52,38,22,46,30,58,24,42,36,20];
+    return heights.map((h, i) => ({
+      h: tall ? Math.round(h * 1.12) : h,
+      bg: i < 26 ? onColor : offColor,
+    }));
+  }
+  icons() {
+    if (window.lucide) window.lucide.createIcons();
+  }
+  componentDidMount() {
+    this.icons();
+    [120, 400, 1200, 2500].forEach(t => setTimeout(() => this.icons(), t));
+  }
+  componentDidUpdate() { this.icons(); }
+  renderVals() {
+    return {
+      barsA: this.makeBars('#5A4BE0', '#E4E2DA', false),
+      barsB: this.makeBars('#6C3CE9', '#DFD7F5', true),
+      shopItems: ['1 cucumber','1 onion','1 orange','1 red pepper','1 romaine lettuce','1 stick of lemongrass','1 yellow pepper, chopped','½ a bunch of coriander'],
+    };
+  }
+}
+
+</script>
+</body>
+</html>

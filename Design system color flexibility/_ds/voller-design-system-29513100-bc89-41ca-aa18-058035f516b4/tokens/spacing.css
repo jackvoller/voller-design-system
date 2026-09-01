@@ -1,0 +1,27 @@
+/* 8px base. Section rhythm 24 / 32 / 56 / 72. Flex or grid with gap for any
+   group of siblings — never margin-per-child. */
+:root{
+  --space-1:4px;
+  --space-2:8px;
+  --space-3:12px;
+  --space-4:16px;
+  --space-5:24px;
+  --space-6:32px;
+  --space-7:56px;
+  --space-8:72px;
+
+  --rhythm-tight:24px;
+  --rhythm:32px;
+  --rhythm-section:56px;
+  --rhythm-page:72px;
+
+  --pad-card:28px;
+  --pad-card-tight:24px;
+  --pad-control:11px 18px; /* @kind spacing */
+  --pad-row:0 16px; /* @kind spacing */
+  --row-height:46px;
+
+  --measure:660px;        /* prose measure, 640–720 */
+  --container:1120px;     /* site container: min(1120px, 100% - 40px) */
+  --hit-min:44px;         /* iOS hit target floor, in pt */
+}

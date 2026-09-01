@@ -1,0 +1,12 @@
+/* Voller design system — global entry point.
+   Consumers link this one file. Imports only; never a rule here.
+   Source of truth: jackvoller/voller-design-system VOLLER.md */
+@import "tokens/colors.css";
+@import "tokens/typography.css";
+@import "tokens/spacing.css";
+@import "tokens/radii.css";
+@import "tokens/effects.css";
+@import "tokens/motion.css";
+@import "tokens/semantic.css";
+@import "tokens/base.css";
+@import "css/components.css";

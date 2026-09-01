@@ -1,0 +1,46 @@
+/* The semantic layer. Every component is written against these, so the dark
+   block below is the only place anything flips. */
+:root{
+  --page:var(--page-light);
+  --field:var(--field-light);
+  --surface:#FFFFFF;
+  --surface-sunken:var(--cream);
+  --surface-hover:var(--cream);
+  --header-bg:rgb(252 252 246 / .92);
+  --text:var(--ink);
+  --text-muted:var(--muted);
+  --rule:var(--hairline);
+  --rule-strong:var(--hairline-strong);
+  --link-rule:rgba(63,107,39,.3);
+  --danger:var(--alert);
+  --on-fill:var(--ink);              /* the label on green and on gold. Never light. */
+  --track:rgba(20,40,10,.07);        /* segmented track */
+  --track-rail:rgba(20,40,10,.12);   /* slider rail */
+  --knob:#FFFFFF;
+  --outline-control:var(--outline-quiet);
+  --tint:var(--green-dark);          /* the one brand token that flips */
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --page:var(--page-dark);
+    --field:var(--field-dark);
+    --surface:var(--ink-raised);
+    --surface-sunken:#2C2B26;
+    --surface-hover:#2C2B26;
+    --header-bg:rgb(27 27 25 / .82);
+    --text:var(--cream-dark);
+    --text-muted:var(--muted-dark);
+    --rule:var(--hairline-dark);
+    --rule-strong:var(--hairline-strong-dark);
+    --link-rule:rgba(130,186,81,.35);
+    --danger:var(--alert-light);
+    --track:rgba(246,241,227,.08);
+    --track-rail:rgba(246,241,227,.16);
+    --knob:var(--cream-dark);
+    --outline-control:var(--outline-quiet-dark);
+    --tint:var(--green);
+  }
+}
+/* Force a field regardless of system preference. */
+[data-field="light"]{color-scheme:light;--page:var(--page-light);--field:var(--field-light);--surface:#FFFFFF;--surface-sunken:var(--cream);--surface-hover:var(--cream);--header-bg:rgb(252 252 246 / .92);--text:var(--ink);--text-muted:var(--muted);--rule:var(--hairline);--rule-strong:var(--hairline-strong);--link-rule:rgba(63,107,39,.3);--danger:var(--alert);--track:rgba(20,40,10,.07);--track-rail:rgba(20,40,10,.12);--knob:#FFFFFF;--outline-control:var(--outline-quiet);--tint:var(--green-dark)}
+[data-field="dark"]{color-scheme:dark;--page:var(--page-dark);--field:var(--field-dark);--surface:var(--ink-raised);--surface-sunken:#2C2B26;--surface-hover:#2C2B26;--header-bg:rgb(27 27 25 / .82);--text:var(--cream-dark);--text-muted:var(--muted-dark);--rule:var(--hairline-dark);--rule-strong:var(--hairline-strong-dark);--link-rule:rgba(130,186,81,.35);--danger:var(--alert-light);--track:rgba(246,241,227,.08);--track-rail:rgba(246,241,227,.16);--knob:var(--cream-dark);--outline-control:var(--outline-quiet-dark);--tint:var(--green)}

@@ -1,0 +1,19 @@
+/* No drop shadows anywhere. The only box-shadows in the system are inset:
+   the 1px control outline and the tile gloss. */
+:root{
+  --outline-quiet:inset 0 0 0 1px var(--hairline);
+  --outline-quiet-dark:inset 0 0 0 1px rgba(246,241,227,.20); /* @kind shadow */
+
+  /* Glass ring — the token that ties the web back to the app icons.
+     A circle at r+7% behind any circular subject. */
+  --glass-ring-fill:rgba(255,255,255,.62); /* @kind color */
+  --glass-ring-stroke:rgba(255,255,255,.9); /* @kind color */
+  --glass-ring-fill-dark:rgba(255,255,255,.10); /* @kind color */
+  --glass-ring-stroke-dark:rgba(255,255,255,.22); /* @kind color */
+  --glass-ring-grow:1.14; /* @kind other */      /* r+7% on each side */
+
+  /* Tile gloss — belongs to a light icon tile, above the art, baked into the
+     exported PNG. Never in product UI. */
+  --tile-gloss:radial-gradient(120% 90% at 30% 0%,rgba(255,255,255,.7) 0%,rgba(255,255,255,0) 55%); /* @kind color */
+  --tile-gloss-edge:inset 0 1px 0 rgba(255,255,255,.9); /* @kind shadow */
+}

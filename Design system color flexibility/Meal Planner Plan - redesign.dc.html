@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="stylesheet" href="_ds/voller-design-system-29513100-bc89-41ca-aa18-058035f516b4/tokens/colors.css">
+<link rel="stylesheet" href="_ds/voller-design-system-29513100-bc89-41ca-aa18-058035f516b4/tokens/typography.css">
+<link rel="stylesheet" href="_ds/voller-design-system-29513100-bc89-41ca-aa18-058035f516b4/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/voller-design-system-29513100-bc89-41ca-aa18-058035f516b4/tokens/radii.css">
+<link rel="stylesheet" href="_ds/voller-design-system-29513100-bc89-41ca-aa18-058035f516b4/tokens/effects.css">
+<link rel="stylesheet" href="_ds/voller-design-system-29513100-bc89-41ca-aa18-058035f516b4/tokens/motion.css">
+<link rel="stylesheet" href="_ds/voller-design-system-29513100-bc89-41ca-aa18-058035f516b4/tokens/semantic.css">
+<link rel="stylesheet" href="_ds/voller-design-system-29513100-bc89-41ca-aa18-058035f516b4/tokens/base.css">
+<link rel="stylesheet" href="_ds/voller-design-system-29513100-bc89-41ca-aa18-058035f516b4/css/components.css">
+<link rel="stylesheet" href="_ds/voller-design-system-29513100-bc89-41ca-aa18-058035f516b4/styles.css">
+<script src="_ds/voller-design-system-29513100-bc89-41ca-aa18-058035f516b4/_ds_bundle.js"></script>
+<script src="https://unpkg.com/lucide@0.462.0/dist/umd/lucide.js"></script>
+<style>
+  body{margin:0;background:#E7E5DC;}
+  a{color:#3F6B27;text-decoration:none;}
+  a:hover{color:#1B1B19;}
+  @keyframes mp-sheet-up{from{transform:translateY(100%)}to{transform:translateY(0)}}
+  @keyframes mp-fade{from{opacity:0}to{opacity:1}}
+  @keyframes mp-slide-in{from{transform:translateX(14px);opacity:0}to{transform:translateX(0);opacity:1}}
+  .mp-scroll::-webkit-scrollbar{display:none}
+  .mp-rows > div:first-child{border-top:0 !important}
+</style>
+</helmet>
+
+<section style="font-family:-apple-system,'SF Pro Text',system-ui,sans-serif;color:#1B1B19;background:#E7E5DC;padding:48px 56px 64px;display:flex;flex-direction:column;gap:40px;-webkit-font-smoothing:antialiased">
+
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:820px">
+    <div style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Turn 4 · recipe, cooking and timers</div>
+    <div style="font-size:34px;font-weight:600;letter-spacing:-0.02em;line-height:1.15">The recipe is a sheet. Cooking is a screen. Timers come back as glass.</div>
+    <div style="font-size:16px;line-height:1.6;color:#6E6E6B;text-wrap:pretty">Same five screens, same functions, retimed to the theme: the recipe sheet takes the plan sheet's material and capsule controls, grey 22px section titles become mono eyebrows, tag pills lose their green tint so the serves selector can keep it, and the two timer sheets stop being iOS grey and become the house glass. Nothing new was added.</div>
+  </div>
+
+  <div style="display:flex;gap:36px;flex-wrap:wrap;align-items:flex-start">
+
+    <div id="4a" style="display:flex;flex-direction:column;gap:12px" data-screen-label="4a Recipe details">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.08em">4a</span>
+        <span style="font-size:17px;font-weight:600;letter-spacing:-0.01em">Recipe details</span>
+      </div>
+      <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="402px,874px">
+        <div style="height:100%;background:linear-gradient(160deg,#FBFEFB 0%,#E9F8EC 100%);display:flex;flex-direction:column;padding-top:54px;overflow:hidden;position:relative">
+          <div style="position:absolute;inset:54px 0 0;background:rgba(24,32,26,.20)"></div>
+          <div style="position:absolute;left:0;right:0;bottom:0;top:64px;border-radius:40px 40px 0 0;background:rgba(250,253,249,.74);backdrop-filter:blur(38px) saturate(190%);-webkit-backdrop-filter:blur(38px) saturate(190%);border-top:1px solid rgba(255,255,255,.85);box-shadow:inset 0 1px 0 rgba(255,255,255,.6);display:flex;flex-direction:column;overflow:hidden">
+
+            <div style="display:flex;justify-content:center;padding:8px 0 2px"><div style="width:38px;height:5px;border-radius:999px;background:rgba(27,27,25,.20)"></div></div>
+
+            <div style="display:flex;align-items:center;gap:10px;padding:8px 14px 12px">
+              <div style="display:flex;align-items:center;height:38px;padding:0 16px;border-radius:999px;background:rgba(255,255,255,.66);border:1px solid rgba(255,255,255,.8);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:#116B26;font-size:15px;font-weight:600">Done</div>
+              <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:1px">
+                <div style="font-size:16px;font-weight:600;letter-spacing:-0.01em">Recipe</div>
+                <div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Tue 1 Sept</div>
+              </div>
+              <div style="display:flex;align-items:center;gap:7px;height:38px;padding:0 16px;border-radius:999px;background:#2BBF4E;box-shadow:inset 0 1px 0 rgba(255,255,255,.45);color:#1B1B19;font-size:15px;font-weight:600"><i data-lucide="flame" width="16" height="16" stroke-width="1.75"></i>Cook</div>
+            </div>
+
+            <div class="mp-scroll" style="flex:1;overflow-y:auto;padding:0 12px 24px;display:flex;flex-direction:column;gap:14px;scrollbar-width:none">
+
+              <div style="flex:none;border-radius:22px;overflow:hidden;position:relative;background:#EDEBE4;aspect-ratio:16/11;display:flex;align-items:center;justify-content:center;color:#B7B3A9">
+                <i data-lucide="image" width="26" height="26" stroke-width="1.5"></i>
+                <div style="position:absolute;left:0;right:0;bottom:12px;display:flex;justify-content:center;gap:6px">
+                  <div style="width:7px;height:7px;border-radius:999px;background:#FFFFFF"></div>
+                  <div style="width:7px;height:7px;border-radius:999px;background:rgba(255,255,255,.5)"></div>
+                </div>
+              </div>
+
+              <div style="background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.7);border-radius:22px;padding:16px;display:flex;flex-direction:column;gap:12px">
+                <div style="font-size:26px;font-weight:600;letter-spacing:-0.02em;line-height:1.2;text-wrap:balance">Easy prawn green curry rice bowl</div>
+                <div style="display:flex;align-items:center;gap:14px;color:#6E6E6B">
+                  <div style="display:flex;align-items:center;gap:6px"><i data-lucide="star" width="15" height="15" stroke-width="1.75"></i><span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.04em">8/10</span></div>
+                  <div style="display:flex;align-items:center;gap:6px"><i data-lucide="clock" width="15" height="15" stroke-width="1.75"></i><span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.04em">15 MINS</span></div>
+                  <div style="display:flex;align-items:center;gap:6px"><i data-lucide="users" width="15" height="15" stroke-width="1.75"></i><span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.04em">SERVES 2</span></div>
+                </div>
+                <div style="display:flex;gap:6px;flex-wrap:wrap">
+                  <div style="height:28px;padding:0 11px;border-radius:999px;background:#F3F1EC;color:#1B1B19;display:flex;align-items:center;font-size:13px;font-weight:500">Fish</div>
+                  <div style="height:28px;padding:0 11px;border-radius:999px;background:#F3F1EC;color:#1B1B19;display:flex;align-items:center;font-size:13px;font-weight:500">Under 30 min</div>
+                  <div style="height:28px;padding:0 11px;border-radius:999px;background:#F3F1EC;color:#1B1B19;display:flex;align-items:center;font-size:13px;font-weight:500">Asian</div>
+                </div>
+                <div style="display:flex;align-items:center;gap:9px;padding-top:2px;color:#116B26;font-size:15px;font-weight:600;cursor:pointer"><i data-lucide="compass" width="16" height="16" stroke-width="1.75"></i>View original recipe<div style="flex:1"></div><i data-lucide="chevron-right" width="16" height="16" stroke-width="1.75"></i></div>
+              </div>
+
+              <div style="display:flex;flex-direction:column;gap:8px">
+                <div style="padding:4px 8px 0;display:flex;align-items:center">
+                  <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Ingredients</div>
+                  <div style="flex:1"></div>
+                  <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.06em;color:#6E6E6B">7 ITEMS</div>
+                </div>
+                <div style="background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.7);border-radius:22px;overflow:hidden;display:flex;flex-direction:column">
+                  <div style="padding:14px 14px 12px;display:flex;flex-direction:column;gap:9px">
+                    <div style="font-size:13px;color:#6E6E6B">Serves</div>
+                    <div style="display:flex;gap:6px">
+                      <div style="width:36px;height:36px;border-radius:999px;background:#F3F1EC;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:500">1</div>
+                      <div style="width:36px;height:36px;border-radius:999px;background:#2BBF4E;box-shadow:inset 0 1px 0 rgba(255,255,255,.45);color:#1B1B19;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:600">2</div>
+                      <div style="width:36px;height:36px;border-radius:999px;background:#F3F1EC;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:500">3</div>
+                      <div style="width:36px;height:36px;border-radius:999px;background:#F3F1EC;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:500">4</div>
+                      <div style="width:36px;height:36px;border-radius:999px;background:#F3F1EC;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:500">5</div>
+                      <div style="width:36px;height:36px;border-radius:999px;background:#F3F1EC;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:500">6</div>
+                      <div style="width:36px;height:36px;border-radius:999px;background:#F3F1EC;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:500;opacity:.55">7</div>
+                    </div>
+                  </div>
+                  <div style="display:flex;align-items:baseline;gap:11px;padding:12px 14px;border-top:1px solid rgba(20,40,10,.10)"><div style="width:4px;height:4px;border-radius:999px;background:#116B26;flex:none;transform:translateY(-3px)"></div><div style="flex:1;font-size:16px;line-height:1.4">1 tbsp vegetable oil</div></div>
+                  <div style="display:flex;align-items:baseline;gap:11px;padding:12px 14px;border-top:1px solid rgba(20,40,10,.10)"><div style="width:4px;height:4px;border-radius:999px;background:#116B26;flex:none;transform:translateY(-3px)"></div><div style="flex:1;font-size:16px;line-height:1.4">½ 170g jar (about 4 tbsp) Thai green curry paste</div></div>
+                  <div style="display:flex;align-items:baseline;gap:11px;padding:12px 14px;border-top:1px solid rgba(20,40,10,.10)"><div style="width:4px;height:4px;border-radius:999px;background:#116B26;flex:none;transform:translateY(-3px)"></div><div style="flex:1;font-size:16px;line-height:1.4">1 yellow pepper, chopped</div></div>
+                  <div style="display:flex;align-items:baseline;gap:11px;padding:12px 14px;border-top:1px solid rgba(20,40,10,.10)"><div style="width:4px;height:4px;border-radius:999px;background:#116B26;flex:none;transform:translateY(-3px)"></div><div style="flex:1;font-size:16px;line-height:1.4">160g green beans, trimmed and chopped into short lengths</div></div>
+                  <div style="display:flex;align-items:baseline;gap:11px;padding:12px 14px;border-top:1px solid rgba(20,40,10,.10)"><div style="width:4px;height:4px;border-radius:999px;background:#116B26;flex:none;transform:translateY(-3px)"></div><div style="flex:1;font-size:16px;line-height:1.4">200ml coconut milk</div></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </x-import>
+      <div style="font-size:13px;line-height:1.5;color:#6E6E6B;max-width:402px">The floating "Cook / Done" island splits into the sheet's own two capsules — close on the left, the green action on the right — so the recipe title is no longer covered by a pill. Rating, time and serves become one mono meta line.</div>
+    </div>
+
+    <div id="4b" style="display:flex;flex-direction:column;gap:12px" data-screen-label="4b Method and notes">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.08em">4b</span>
+        <span style="font-size:17px;font-weight:600;letter-spacing:-0.01em">Method and notes</span>
+      </div>
+      <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="402px,874px">
+        <div style="height:100%;background:linear-gradient(160deg,#FBFEFB 0%,#E9F8EC 100%);display:flex;flex-direction:column;padding-top:54px;overflow:hidden;position:relative">
+          <div style="position:absolute;inset:54px 0 0;background:rgba(24,32,26,.20)"></div>
+          <div style="position:absolute;left:0;right:0;bottom:0;top:64px;border-radius:40px 40px 0 0;background:rgba(250,253,249,.74);backdrop-filter:blur(38px) saturate(190%);-webkit-backdrop-filter:blur(38px) saturate(190%);border-top:1px solid rgba(255,255,255,.85);box-shadow:inset 0 1px 0 rgba(255,255,255,.6);display:flex;flex-direction:column;overflow:hidden">
+
+            <div style="display:flex;justify-content:center;padding:8px 0 2px"><div style="width:38px;height:5px;border-radius:999px;background:rgba(27,27,25,.20)"></div></div>
+
+            <div style="display:flex;align-items:center;gap:10px;padding:8px 14px 12px">
+              <div style="display:flex;align-items:center;height:38px;padding:0 16px;border-radius:999px;background:rgba(255,255,255,.66);border:1px solid rgba(255,255,255,.8);color:#116B26;font-size:15px;font-weight:600">Done</div>
+              <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:1px">
+                <div style="font-size:16px;font-weight:600;letter-spacing:-0.01em">Easy prawn green curry</div>
+                <div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Method</div>
+              </div>
+              <div style="display:flex;align-items:center;gap:7px;height:38px;padding:0 16px;border-radius:999px;background:#2BBF4E;box-shadow:inset 0 1px 0 rgba(255,255,255,.45);color:#1B1B19;font-size:15px;font-weight:600"><i data-lucide="flame" width="16" height="16" stroke-width="1.75"></i>Cook</div>
+            </div>
+
+            <div class="mp-scroll" style="flex:1;overflow-y:auto;padding:0 12px 24px;display:flex;flex-direction:column;gap:14px;scrollbar-width:none">
+
+              <div style="display:flex;flex-direction:column;gap:8px">
+                <div style="padding:4px 8px 0;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Ingredients · continued</div>
+                <div style="background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.7);border-radius:22px;overflow:hidden;display:flex;flex-direction:column">
+                  <div style="display:flex;align-items:baseline;gap:11px;padding:12px 14px"><div style="width:4px;height:4px;border-radius:999px;background:#116B26;flex:none;transform:translateY(-3px)"></div><div style="flex:1;font-size:16px;line-height:1.4">150g peeled raw prawns</div></div>
+                  <div style="display:flex;align-items:baseline;gap:11px;padding:12px 14px;border-top:1px solid rgba(20,40,10,.10)"><div style="width:4px;height:4px;border-radius:999px;background:#116B26;flex:none;transform:translateY(-3px)"></div><div style="flex:1;font-size:16px;line-height:1.4">260g microwave sticky rice, or other cooked rice</div></div>
+                </div>
+              </div>
+
+              <div style="display:flex;flex-direction:column;gap:8px">
+                <div style="padding:4px 8px 0;display:flex;align-items:center">
+                  <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Method</div>
+                  <div style="flex:1"></div>
+                  <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.06em;color:#6E6E6B">3 STEPS</div>
+                </div>
+                <div style="background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.7);border-radius:22px;overflow:hidden;display:flex;flex-direction:column">
+                  <div style="display:flex;gap:12px;padding:14px">
+                    <div style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em;color:#6E6E6B;padding-top:3px;flex:none">01</div>
+                    <div style="flex:1;font-size:16px;line-height:1.55;text-wrap:pretty">Heat the vegetable oil in a medium, deep frying pan over a medium heat and add the Thai green curry paste. Cook for 1 min until fragrant, then add the yellow pepper and green beans and briefly fry.</div>
+                  </div>
+                  <div style="display:flex;gap:12px;padding:14px;border-top:1px solid rgba(20,40,10,.10)">
+                    <div style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em;color:#6E6E6B;padding-top:3px;flex:none">02</div>
+                    <div style="flex:1;font-size:16px;line-height:1.55;text-wrap:pretty">Add the coconut milk and bring to the boil. Reduce the heat, cover, and simmer for 8 mins, then add the prawns, cover and cook until they are just pink and curled, about 3 mins.</div>
+                  </div>
+                  <div style="display:flex;gap:12px;padding:14px;border-top:1px solid rgba(20,40,10,.10)">
+                    <div style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em;color:#6E6E6B;padding-top:3px;flex:none">03</div>
+                    <div style="flex:1;font-size:16px;line-height:1.55;text-wrap:pretty">Prepare the microwave rice and divide it between two bowls. Divide the curry between the bowls.</div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="display:flex;flex-direction:column;gap:8px">
+                <div style="padding:4px 8px 0;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Notes</div>
+                <div style="background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.7);border-radius:22px;padding:14px;font-size:16px;line-height:1.55;color:#6E6E6B;text-wrap:pretty">Prawns are in the freezer — out by lunchtime. Half a jar of paste is plenty for two.</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </x-import>
+      <div style="font-size:13px;line-height:1.5;color:#6E6E6B;max-width:402px">Steps keep their numerals but move to mono, at muted weight, so the instruction is the loudest thing in the row. Grey "Method" and "Notes" titles become eyebrows with a count on the right, matching Shop's group headers.</div>
+    </div>
+
+    <div id="4c" style="display:flex;flex-direction:column;gap:12px" data-screen-label="4c Cooking">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.08em">4c</span>
+        <span style="font-size:17px;font-weight:600;letter-spacing:-0.01em">Cooking</span>
+      </div>
+      <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="402px,874px">
+        <div style="height:100%;background:linear-gradient(160deg,#FBFEFB 0%,#E9F8EC 100%);display:flex;flex-direction:column;padding-top:54px;overflow:hidden;position:relative">
+
+          <div style="padding:6px 12px 12px;display:flex;align-items:center;gap:10px">
+            <div style="display:flex;align-items:center;gap:7px;height:38px;padding:0 14px;border-radius:999px;background:rgba(255,255,255,.8);color:#116B26"><i data-lucide="timer" width="17" height="17" stroke-width="1.75"></i><span style="font-family:ui-monospace,Menlo,monospace;font-size:14px;font-weight:600;letter-spacing:.04em">05:07</span></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:1px">
+              <div style="font-size:16px;font-weight:600;letter-spacing:-0.01em">Cooking</div>
+              <div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Step 1 of 3</div>
+            </div>
+            <div style="display:flex;align-items:center;height:38px;padding:0 15px;border-radius:999px;background:#2BBF4E;box-shadow:inset 0 1px 0 rgba(255,255,255,.45);color:#1B1B19;font-size:15px;font-weight:600">Finish</div>
+          </div>
+
+          <div class="mp-scroll" style="flex:1;overflow-y:auto;padding-bottom:20px;scrollbar-width:none">
+
+            <div style="margin:0 12px 16px;background:#FFFFFF;border-radius:22px;padding:16px;display:flex;flex-direction:column;gap:10px">
+              <div style="font-size:24px;font-weight:600;letter-spacing:-0.02em;line-height:1.2;text-wrap:balance">Easy prawn green curry rice bowl</div>
+              <div style="display:flex;align-items:center;gap:14px;color:#6E6E6B">
+                <div style="display:flex;align-items:center;gap:6px"><i data-lucide="clock" width="15" height="15" stroke-width="1.75"></i><span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.04em">15 MINS</span></div>
+                <div style="display:flex;align-items:center;gap:6px"><i data-lucide="users" width="15" height="15" stroke-width="1.75"></i><span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.04em">SERVES 2</span></div>
+              </div>
+            </div>
+
+            <div style="padding:0 20px 8px;display:flex;align-items:center">
+              <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Ingredients</div>
+              <div style="flex:1"></div>
+              <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.06em;color:#6E6E6B">2/7</div>
+            </div>
+            <div class="mp-rows" style="margin:0 12px 16px;background:#FFFFFF;border-radius:22px;overflow:hidden;display:flex;flex-direction:column">
+              <div style="display:flex;align-items:center;gap:12px;padding:13px 14px;border-top:1px solid rgba(20,40,10,.10)"><div style="width:24px;height:24px;border-radius:999px;background:#2BBF4E;display:flex;align-items:center;justify-content:center;color:#1B1B19;flex:none"><i data-lucide="check" width="14" height="14" stroke-width="2.5"></i></div><div style="flex:1;font-size:16px;line-height:1.35;color:#8A8A85;text-decoration:line-through">1 tbsp vegetable oil</div></div>
+              <div style="display:flex;align-items:center;gap:12px;padding:13px 14px;border-top:1px solid rgba(20,40,10,.10)"><div style="width:24px;height:24px;border-radius:999px;background:#2BBF4E;display:flex;align-items:center;justify-content:center;color:#1B1B19;flex:none"><i data-lucide="check" width="14" height="14" stroke-width="2.5"></i></div><div style="flex:1;font-size:16px;line-height:1.35;color:#8A8A85;text-decoration:line-through">½ 170g jar (about 4 tbsp) Thai green curry paste</div></div>
+              <div style="display:flex;align-items:center;gap:12px;padding:13px 14px;border-top:1px solid rgba(20,40,10,.10)"><div style="width:24px;height:24px;border-radius:999px;border:1.75px solid rgba(27,27,25,.28);flex:none"></div><div style="flex:1;font-size:16px;line-height:1.35">1 yellow pepper, chopped</div></div>
+              <div style="display:flex;align-items:center;gap:12px;padding:13px 14px;border-top:1px solid rgba(20,40,10,.10)"><div style="width:24px;height:24px;border-radius:999px;border:1.75px solid rgba(27,27,25,.28);flex:none"></div><div style="flex:1;font-size:16px;line-height:1.35">160g green beans, trimmed and chopped</div></div>
+              <div style="display:flex;align-items:center;gap:12px;padding:13px 14px;border-top:1px solid rgba(20,40,10,.10)"><div style="width:24px;height:24px;border-radius:999px;border:1.75px solid rgba(27,27,25,.28);flex:none"></div><div style="flex:1;font-size:16px;line-height:1.35">200ml coconut milk</div></div>
+              <div style="display:flex;align-items:center;gap:12px;padding:13px 14px;border-top:1px solid rgba(20,40,10,.10)"><div style="width:24px;height:24px;border-radius:999px;border:1.75px solid rgba(27,27,25,.28);flex:none"></div><div style="flex:1;font-size:16px;line-height:1.35">150g peeled raw prawns</div></div>
+              <div style="display:flex;align-items:center;gap:12px;padding:13px 14px;border-top:1px solid rgba(20,40,10,.10)"><div style="width:24px;height:24px;border-radius:999px;border:1.75px solid rgba(27,27,25,.28);flex:none"></div><div style="flex:1;font-size:16px;line-height:1.35">260g microwave sticky rice</div></div>
+            </div>
+
+            <div style="padding:0 20px 8px;display:flex;align-items:center">
+              <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Method</div>
+              <div style="flex:1"></div>
+              <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.06em;color:#6E6E6B">1/3</div>
+            </div>
+            <div class="mp-rows" style="margin:0 12px;background:#FFFFFF;border-radius:22px;overflow:hidden;display:flex;flex-direction:column">
+              <div style="display:flex;gap:12px;padding:14px;border-top:1px solid rgba(20,40,10,.10)">
+                <div style="width:24px;height:24px;border-radius:999px;background:#2BBF4E;display:flex;align-items:center;justify-content:center;color:#1B1B19;flex:none"><i data-lucide="check" width="14" height="14" stroke-width="2.5"></i></div>
+                <div style="flex:1;font-size:16px;line-height:1.55;color:#8A8A85;text-decoration:line-through;text-wrap:pretty">Heat the vegetable oil in a medium, deep frying pan over a medium heat and add the Thai green curry paste. Cook for 1 min until fragrant, then add the yellow pepper and green beans.</div>
+              </div>
+              <div style="display:flex;gap:12px;padding:14px;border-top:1px solid rgba(20,40,10,.10)">
+                <div style="width:24px;height:24px;border-radius:999px;border:1.75px solid rgba(27,27,25,.28);flex:none"></div>
+                <div style="flex:1;font-size:16px;line-height:1.55;text-wrap:pretty">Add the coconut milk and bring to the boil. Reduce the heat, cover, and simmer for 8 mins, then add the prawns and cook until just pink and curled.</div>
+              </div>
+              <div style="display:flex;gap:12px;padding:14px;border-top:1px solid rgba(20,40,10,.10)">
+                <div style="width:24px;height:24px;border-radius:999px;border:1.75px solid rgba(27,27,25,.28);flex:none"></div>
+                <div style="flex:1;font-size:16px;line-height:1.55;text-wrap:pretty">Prepare the microwave rice and divide it between two bowls. Divide the curry between the bowls.</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </x-import>
+      <div style="font-size:13px;line-height:1.5;color:#6E6E6B;max-width:402px">Cooking keeps its two counters but reads them as mono eyebrows, and the running timer sits in the header capsule where the plain stopwatch circle was. Ticked steps go muted rather than crossed-out black.</div>
+    </div>
+
+    <div id="4d" style="display:flex;flex-direction:column;gap:12px" data-screen-label="4d Say a timer">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.08em">4d</span>
+        <span style="font-size:17px;font-weight:600;letter-spacing:-0.01em">Say a timer</span>
+      </div>
+      <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="402px,874px">
+        <div style="height:100%;background:linear-gradient(160deg,#FBFEFB 0%,#E9F8EC 100%);display:flex;flex-direction:column;padding-top:54px;overflow:hidden;position:relative">
+
+          <div style="padding:6px 12px 12px;display:flex;align-items:center;gap:10px;opacity:.5">
+            <div style="display:flex;align-items:center;gap:7px;height:38px;padding:0 14px;border-radius:999px;background:rgba(255,255,255,.8);color:#116B26"><i data-lucide="timer" width="17" height="17" stroke-width="1.75"></i><span style="font-family:ui-monospace,Menlo,monospace;font-size:14px;font-weight:600;letter-spacing:.04em">05:07</span></div>
+            <div style="flex:1;display:flex;justify-content:center;font-size:16px;font-weight:600">Cooking</div>
+            <div style="display:flex;align-items:center;height:38px;padding:0 15px;border-radius:999px;background:#2BBF4E;color:#1B1B19;font-size:15px;font-weight:600">Finish</div>
+          </div>
+
+          <div style="opacity:.45;filter:blur(1px);padding:0 12px;display:flex;flex-direction:column;gap:14px">
+            <div style="background:#FFFFFF;border-radius:22px;padding:16px;display:flex;flex-direction:column;gap:8px"><div style="font-size:24px;font-weight:600;letter-spacing:-0.02em;line-height:1.2">Easy prawn green curry rice bowl</div><div style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#6E6E6B">15 MINS · SERVES 2</div></div>
+            <div style="background:#FFFFFF;border-radius:22px;padding:14px;display:flex;flex-direction:column;gap:14px"><div style="font-size:16px;color:#8A8A85;text-decoration:line-through">1 tbsp vegetable oil</div><div style="font-size:16px;color:#8A8A85;text-decoration:line-through">½ 170g jar Thai green curry paste</div><div style="font-size:16px">1 yellow pepper, chopped</div></div>
+          </div>
+
+          <div style="position:absolute;inset:54px 0 0;background:rgba(24,32,26,.22)"></div>
+
+          <div style="position:absolute;left:0;right:0;bottom:0;border-radius:36px 36px 0 0;background:rgba(250,253,249,.76);backdrop-filter:blur(38px) saturate(190%);-webkit-backdrop-filter:blur(38px) saturate(190%);border-top:1px solid rgba(255,255,255,.85);box-shadow:inset 0 1px 0 rgba(255,255,255,.6);display:flex;flex-direction:column;padding-bottom:30px">
+            <div style="display:flex;justify-content:center;padding:8px 0 2px"><div style="width:38px;height:5px;border-radius:999px;background:rgba(27,27,25,.20)"></div></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:8px 14px 4px">
+              <div style="display:flex;align-items:center;height:38px;padding:0 16px;border-radius:999px;background:rgba(255,255,255,.66);border:1px solid rgba(255,255,255,.8);color:#116B26;font-size:15px;font-weight:600">Cancel</div>
+              <div style="flex:1;display:flex;justify-content:center;font-size:16px;font-weight:600;letter-spacing:-0.01em">Say a timer</div>
+              <div style="width:82px"></div>
+            </div>
+            <div style="padding:40px 24px 32px;display:flex;flex-direction:column;align-items:center;gap:20px">
+              <div style="display:flex;align-items:center;gap:7px">
+                <div style="width:9px;height:9px;border-radius:999px;background:#2BBF4E"></div>
+                <div style="width:9px;height:16px;border-radius:999px;background:#2BBF4E"></div>
+                <div style="width:9px;height:24px;border-radius:999px;background:#2BBF4E"></div>
+                <div style="width:9px;height:32px;border-radius:999px;background:#2BBF4E"></div>
+                <div style="width:9px;height:24px;border-radius:999px;background:#2BBF4E"></div>
+                <div style="width:9px;height:16px;border-radius:999px;background:#2BBF4E"></div>
+                <div style="width:9px;height:9px;border-radius:999px;background:#2BBF4E"></div>
+              </div>
+              <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Listening</div>
+              <div style="font-size:22px;font-weight:600;letter-spacing:-0.02em;line-height:1.3;text-align:center;text-wrap:balance">“Set a five minute sausage”</div>
+            </div>
+            <div style="padding:0 12px">
+              <div style="height:48px;border-radius:16px;background:rgba(255,255,255,.66);border:1px solid rgba(255,255,255,.8);display:flex;align-items:center;justify-content:center;gap:8px;color:#116B26;font-size:15px;font-weight:600"><i data-lucide="clock" width="16" height="16" stroke-width="1.75"></i>Set on screen instead</div>
+            </div>
+          </div>
+
+        </div>
+      </x-import>
+      <div style="font-size:13px;line-height:1.5;color:#6E6E6B;max-width:402px">The iOS-grey sheet becomes the house glass over a dimmed screen, and the seven green dots become a level meter — same idea, but it reads as listening rather than as a loading state. "Listening" drops to a mono eyebrow so the transcript is the headline.</div>
+    </div>
+
+    <div id="4e" style="display:flex;flex-direction:column;gap:12px" data-screen-label="4e Timers">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.08em">4e</span>
+        <span style="font-size:17px;font-weight:600;letter-spacing:-0.01em">Timers</span>
+      </div>
+      <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="402px,874px">
+        <div style="height:100%;background:linear-gradient(160deg,#FBFEFB 0%,#E9F8EC 100%);display:flex;flex-direction:column;padding-top:54px;overflow:hidden;position:relative">
+
+          <div style="padding:6px 12px 12px;display:flex;align-items:center;gap:10px;opacity:.5">
+            <div style="display:flex;align-items:center;gap:7px;height:38px;padding:0 14px;border-radius:999px;background:rgba(255,255,255,.8);color:#116B26"><i data-lucide="timer" width="17" height="17" stroke-width="1.75"></i><span style="font-family:ui-monospace,Menlo,monospace;font-size:14px;font-weight:600;letter-spacing:.04em">04:51</span></div>
+            <div style="flex:1;display:flex;justify-content:center;font-size:16px;font-weight:600">Cooking</div>
+            <div style="display:flex;align-items:center;height:38px;padding:0 15px;border-radius:999px;background:#2BBF4E;color:#1B1B19;font-size:15px;font-weight:600">Finish</div>
+          </div>
+
+          <div style="opacity:.45;filter:blur(1px);padding:0 12px;display:flex;flex-direction:column;gap:14px">
+            <div style="background:#FFFFFF;border-radius:22px;padding:16px;display:flex;flex-direction:column;gap:8px"><div style="font-size:24px;font-weight:600;letter-spacing:-0.02em;line-height:1.2">Easy prawn green curry rice bowl</div><div style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#6E6E6B">15 MINS · SERVES 2</div></div>
+            <div style="background:#FFFFFF;border-radius:22px;padding:14px;display:flex;flex-direction:column;gap:14px"><div style="font-size:16px;color:#8A8A85;text-decoration:line-through">1 tbsp vegetable oil</div><div style="font-size:16px;color:#8A8A85;text-decoration:line-through">½ 170g jar Thai green curry paste</div><div style="font-size:16px">1 yellow pepper, chopped</div></div>
+          </div>
+
+          <div style="position:absolute;inset:54px 0 0;background:rgba(24,32,26,.22)"></div>
+
+          <div style="position:absolute;left:0;right:0;bottom:0;border-radius:36px 36px 0 0;background:rgba(250,253,249,.76);backdrop-filter:blur(38px) saturate(190%);-webkit-backdrop-filter:blur(38px) saturate(190%);border-top:1px solid rgba(255,255,255,.85);box-shadow:inset 0 1px 0 rgba(255,255,255,.6);display:flex;flex-direction:column;padding-bottom:30px">
+            <div style="display:flex;justify-content:center;padding:8px 0 2px"><div style="width:38px;height:5px;border-radius:999px;background:rgba(27,27,25,.20)"></div></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:8px 14px 12px">
+              <div style="width:82px"></div>
+              <div style="flex:1;display:flex;justify-content:center;font-size:16px;font-weight:600;letter-spacing:-0.01em">Timers</div>
+              <div style="display:flex;align-items:center;height:38px;padding:0 18px;border-radius:999px;background:#2BBF4E;box-shadow:inset 0 1px 0 rgba(255,255,255,.45);color:#1B1B19;font-size:15px;font-weight:600">Done</div>
+            </div>
+            <div style="padding:0 12px 8px;display:flex;flex-direction:column;gap:10px">
+              <div style="background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.7);border-radius:22px;padding:14px;display:flex;align-items:center;gap:12px">
+                <div style="flex:1;display:flex;flex-direction:column;gap:2px">
+                  <div style="font-size:17px;font-weight:600;letter-spacing:-0.01em">Sausage</div>
+                  <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">of 5m</div>
+                </div>
+                <div style="font-family:ui-monospace,Menlo,monospace;font-size:26px;font-weight:600;letter-spacing:-0.01em;color:#116B26">04:51</div>
+              </div>
+              <div style="padding:0 8px;font-size:13px;line-height:1.5;color:#6E6E6B">Swipe a timer to stop it.</div>
+              <div style="height:52px;border-radius:18px;background:rgba(255,255,255,.66);border:1px solid rgba(255,255,255,.8);display:flex;align-items:center;gap:10px;padding:0 14px;color:#1B1B19;font-size:16px;font-weight:600"><div style="width:28px;height:28px;border-radius:999px;background:#E3F7E8;display:flex;align-items:center;justify-content:center;color:#116B26"><i data-lucide="plus" width="16" height="16" stroke-width="2"></i></div>Add another timer</div>
+            </div>
+          </div>
+
+        </div>
+      </x-import>
+      <div style="font-size:13px;line-height:1.5;color:#6E6E6B;max-width:402px">The countdown is the one live instrument here, so it takes the mono numerals at 26px in deep green; the row it sits in is the sheet's own card. "Add another timer" keeps its green disc but the label goes ink, so the eye reads the timer first.</div>
+    </div>
+
+  </div>
+
+</section>
+
+<section style="font-family:-apple-system,'SF Pro Text',system-ui,sans-serif;color:#1B1B19;background:#E7E5DC;padding:48px 56px 64px;display:flex;flex-direction:column;gap:40px;-webkit-font-smoothing:antialiased">
+
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:820px">
+    <div style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Turn 3 · the other three tabs</div>
+    <div style="font-size:34px;font-weight:600;letter-spacing:-0.02em;line-height:1.15">Shop, Meals and Settings, on the Plan page's vocabulary.</div>
+    <div style="font-size:16px;line-height:1.6;color:#6E6E6B;text-wrap:pretty">Same green field, same 22px white cards on a 12px margin, same header (title, green full stop, one quiet sub-line, glass circle actions), same mono eyebrows, same row hairline, same tab bar. Shop items tick, Settings toggles and the day stepper work. Nothing is purple, nothing is pure black, and each screen spends its green once: the trolley bar, the picked filter, the switch that is on.</div>
+  </div>
+
+  <div style="display:flex;gap:36px;flex-wrap:wrap;align-items:flex-start">
+
+    <div id="3a" style="display:flex;flex-direction:column;gap:12px" data-screen-label="3a Shop">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.08em">3a</span>
+        <span style="font-size:17px;font-weight:600;letter-spacing:-0.01em">Shop</span>
+      </div>
+      <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="402px,874px">
+        <div style="height:100%;background:linear-gradient(160deg,#FBFEFB 0%,#E9F8EC 100%);display:flex;flex-direction:column;padding-top:54px;overflow:hidden;position:relative">
+
+          <div style="padding:6px 16px 12px;display:flex;align-items:center;gap:10px">
+            <div style="flex:1;display:flex;flex-direction:column;gap:2px">
+              <div style="display:flex;align-items:flex-end;gap:6px">
+                <div style="font-size:32px;font-weight:600;letter-spacing:-0.02em;line-height:1">Shop</div>
+                <div style="width:10px;height:10px;border-radius:3px;background:#2BBF4E;margin-bottom:3px"></div>
+              </div>
+              <div style="font-size:13px;color:#6E6E6B">{{ shopSub }}</div>
+            </div>
+            <div style="width:34px;height:34px;border-radius:999px;background:rgba(255,255,255,.8);display:flex;align-items:center;justify-content:center;color:#116B26"><i data-lucide="eye" width="17" height="17" stroke-width="1.75"></i></div>
+            <div style="width:34px;height:34px;border-radius:999px;background:rgba(255,255,255,.8);display:flex;align-items:center;justify-content:center;color:#116B26"><i data-lucide="trash-2" width="17" height="17" stroke-width="1.75"></i></div>
+          </div>
+
+          <div style="margin:0 12px 14px;background:#FFFFFF;border-radius:22px;padding:16px;display:flex;flex-direction:column;gap:12px">
+            <div style="display:flex;align-items:center;gap:8px">
+              <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">This week's list</div>
+              <div style="flex:1"></div>
+              <div style="display:flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;background:#F3F1EC;color:#1B1B19;font-size:12px;font-weight:600"><i data-lucide="shopping-cart" width="13" height="13" stroke-width="1.75"></i>Trolley</div>
+            </div>
+            <div style="font-size:26px;font-weight:600;letter-spacing:-0.02em;line-height:1.2">{{ shopHeadline }}</div>
+            <div style="height:8px;border-radius:999px;background:#EDEBE4;overflow:hidden"><div style="height:8px;border-radius:999px;background:#2BBF4E;transition:width 180ms cubic-bezier(.2,.6,.2,1);width:{{ shopPct }}"></div></div>
+            <div style="display:flex;gap:8px;padding-top:2px">
+              <div style="flex:1;height:44px;border-radius:12px;background:#F3F1EC;color:#1B1B19;display:flex;align-items:center;justify-content:center;gap:7px;font-size:15px;font-weight:600"><i data-lucide="eye" width="16" height="16" stroke-width="1.75"></i>Show checked</div>
+              <div style="flex:1;height:44px;border-radius:12px;background:#F3F1EC;color:#1B1B19;display:flex;align-items:center;justify-content:center;gap:7px;font-size:15px;font-weight:600"><i data-lucide="plus" width="16" height="16" stroke-width="2"></i>Add item</div>
+            </div>
+          </div>
+
+          <div class="mp-scroll" style="flex:1;overflow-y:auto;padding-bottom:80px;scrollbar-width:none">
+            <div style="margin:0 12px 14px;background:#FFFFFF;border-radius:22px;padding:14px;display:flex;align-items:center;gap:11px;cursor:pointer" style-active="background:#FAFCF9">
+              <div style="width:32px;height:32px;border-radius:999px;background:#E3F7E8;display:flex;align-items:center;justify-content:center;color:#116B26;flex:none"><i data-lucide="repeat" width="16" height="16" stroke-width="1.75"></i></div>
+              <div style="flex:1;font-size:15px;font-weight:500">You usually buy 8 other things</div>
+              <div style="color:#BFC4BF;display:flex"><i data-lucide="chevron-right" width="18" height="18" stroke-width="1.75"></i></div>
+            </div>
+
+            <sc-for list="{{ shopGroups }}" as="group" hint-placeholder-count="3">
+              <div style="display:flex;flex-direction:column;gap:8px;padding-bottom:16px">
+                <div style="padding:0 20px;display:flex;align-items:center">
+                  <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">{{ group.name }}</div>
+                  <div style="flex:1"></div>
+                  <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.06em;color:#6E6E6B">{{ group.count }}</div>
+                </div>
+                <div class="mp-rows" style="margin:0 12px;background:#FFFFFF;border-radius:22px;overflow:hidden;display:flex;flex-direction:column">
+                  <sc-for list="{{ group.items }}" as="item" hint-placeholder-count="3">
+                    <div onClick="{{ item.onToggle }}" style="display:flex;align-items:center;gap:12px;padding:13px 14px;border-top:1px solid rgba(20,40,10,.10);cursor:pointer" style-active="background:#F7FCF8">
+                      <sc-if value="{{ item.todo }}" hint-placeholder-val="{{ true }}">
+                        <div style="width:24px;height:24px;border-radius:999px;border:1.75px solid rgba(27,27,25,.28);flex:none"></div>
+                      </sc-if>
+                      <sc-if value="{{ item.done }}" hint-placeholder-val="{{ false }}">
+                        <div style="width:24px;height:24px;border-radius:999px;background:#2BBF4E;display:flex;align-items:center;justify-content:center;color:#1B1B19;flex:none"><i data-lucide="check" width="14" height="14" stroke-width="2.5"></i></div>
+                      </sc-if>
+                      <sc-if value="{{ item.todo }}" hint-placeholder-val="{{ true }}">
+                        <div style="flex:1;font-size:16px;line-height:1.35">{{ item.label }}</div>
+                      </sc-if>
+                      <sc-if value="{{ item.done }}" hint-placeholder-val="{{ false }}">
+                        <div style="flex:1;font-size:16px;line-height:1.35;color:#8A8A85;text-decoration:line-through">{{ item.label }}</div>
+                      </sc-if>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+
+          <div style="position:absolute;left:0;right:0;bottom:88px;display:flex;justify-content:center;pointer-events:none">
+            <div style="display:flex;align-items:center;gap:8px;height:48px;padding:0 22px;border-radius:999px;background:#2BBF4E;box-shadow:inset 0 1px 0 rgba(255,255,255,.45);color:#1B1B19;font-size:16px;font-weight:600"><i data-lucide="plus" width="18" height="18" stroke-width="2"></i>Add to list</div>
+          </div>
+
+          <div style="background:rgba(251,254,251,.94);display:flex;align-items:center;padding:8px 12px 26px;gap:4px">
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;color:#82817B"><i data-lucide="calendar-days" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Plan</span></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;border-radius:16px;background:#E3F7E8;color:#116B26"><i data-lucide="shopping-cart" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:600">Shop</span></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;color:#82817B"><i data-lucide="book" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Meals</span></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;color:#82817B"><i data-lucide="settings" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Settings</span></div>
+          </div>
+
+        </div>
+      </x-import>
+      <div style="font-size:13px;line-height:1.5;color:#6E6E6B;max-width:402px">Tap items to tick them — the hero headline and the group counts follow. The floating black pill became the house green capsule; the three-icon glass cluster became two header circles, with <em>Show checked</em> demoted into the card where it belongs.</div>
+    </div>
+
+    <div id="3b" style="display:flex;flex-direction:column;gap:12px" data-screen-label="3b Meals">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.08em">3b</span>
+        <span style="font-size:17px;font-weight:600;letter-spacing:-0.01em">Meals</span>
+      </div>
+      <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="402px,874px">
+        <div style="height:100%;background:linear-gradient(160deg,#FBFEFB 0%,#E9F8EC 100%);display:flex;flex-direction:column;padding-top:54px;overflow:hidden;position:relative">
+
+          <div style="padding:6px 16px 12px;display:flex;align-items:center;gap:10px">
+            <div style="flex:1;display:flex;flex-direction:column;gap:2px">
+              <div style="display:flex;align-items:flex-end;gap:6px">
+                <div style="font-size:32px;font-weight:600;letter-spacing:-0.02em;line-height:1">Meals</div>
+                <div style="width:10px;height:10px;border-radius:3px;background:#2BBF4E;margin-bottom:3px"></div>
+              </div>
+              <div style="font-size:13px;color:#6E6E6B">{{ mealsCount }}</div>
+            </div>
+            <div style="width:34px;height:34px;border-radius:999px;background:rgba(255,255,255,.8);display:flex;align-items:center;justify-content:center;color:#116B26"><i data-lucide="arrow-up-down" width="17" height="17" stroke-width="1.75"></i></div>
+            <div style="width:34px;height:34px;border-radius:999px;background:rgba(255,255,255,.8);display:flex;align-items:center;justify-content:center;color:#116B26"><i data-lucide="plus" width="18" height="18" stroke-width="1.75"></i></div>
+          </div>
+
+          <div style="padding:0 12px 10px;display:flex;gap:8px">
+            <div style="flex:1;height:44px;border-radius:14px;background:#FFFFFF;display:flex;align-items:center;gap:8px;padding:0 13px;color:#8A8A85;font-size:15px"><i data-lucide="search" width="16" height="16" stroke-width="1.75"></i>Search my meals</div>
+            <div style="width:44px;height:44px;border-radius:14px;background:#FFFFFF;display:flex;align-items:center;justify-content:center;color:#1B1B19"><i data-lucide="tag" width="16" height="16" stroke-width="1.75"></i></div>
+          </div>
+
+          <div style="padding:0 16px 10px;display:flex;gap:6px">
+            <div style="height:30px;padding:0 12px;border-radius:999px;background:#2BBF4E;box-shadow:inset 0 1px 0 rgba(255,255,255,.45);color:#1B1B19;display:flex;align-items:center;font-size:13px;font-weight:600">All</div>
+            <div style="height:30px;padding:0 12px;border-radius:999px;background:#FFFFFF;color:#1B1B19;display:flex;align-items:center;font-size:13px;font-weight:500">Favourites</div>
+            <div style="height:30px;padding:0 12px;border-radius:999px;background:#FFFFFF;color:#1B1B19;display:flex;align-items:center;font-size:13px;font-weight:500">Quick</div>
+            <div style="height:30px;padding:0 12px;border-radius:999px;background:#FFFFFF;color:#1B1B19;display:flex;align-items:center;font-size:13px;font-weight:500">Fish</div>
+          </div>
+
+          <div class="mp-scroll" style="flex:1;overflow-y:auto;padding:4px 12px 20px;scrollbar-width:none">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+              <sc-for list="{{ meals }}" as="meal" hint-placeholder-count="6">
+                <div style="background:#FFFFFF;border-radius:22px;overflow:hidden;display:flex;flex-direction:column;cursor:pointer" style-active="background:#FAFCF9">
+                  <div style="aspect-ratio:1/1;background:#EDEBE4;display:flex;align-items:center;justify-content:center;color:#B7B3A9"><i data-lucide="image" width="22" height="22" stroke-width="1.5"></i></div>
+                  <div style="padding:11px 13px 13px;display:flex;flex-direction:column;gap:6px">
+                    <div style="font-size:15px;font-weight:600;letter-spacing:-0.01em;line-height:1.3;text-wrap:pretty">{{ meal.title }}</div>
+                    <div style="display:flex;align-items:center;gap:7px">
+                      <div style="display:flex;align-items:center;gap:4px;color:#6E6E6B"><i data-lucide="star" width="13" height="13" stroke-width="1.75"></i><span style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.04em">{{ meal.rating }}</span></div>
+                      <div style="width:3px;height:3px;border-radius:999px;background:#CFCDC6"></div>
+                      <div style="font-size:12px;color:#6E6E6B">{{ meal.tag }}</div>
+                    </div>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+
+          <div style="background:rgba(251,254,251,.94);display:flex;align-items:center;padding:8px 12px 26px;gap:4px">
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;color:#82817B"><i data-lucide="calendar-days" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Plan</span></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;color:#82817B"><i data-lucide="shopping-cart" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Shop</span></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;border-radius:16px;background:#E3F7E8;color:#116B26"><i data-lucide="book" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:600">Meals</span></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;color:#82817B"><i data-lucide="settings" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Settings</span></div>
+          </div>
+
+        </div>
+      </x-import>
+      <div style="font-size:13px;line-height:1.5;color:#6E6E6B;max-width:402px">Cards are the Plan's white 22px card, not a grey tile: square photo, title, then one quiet meta line where the loose star and dash used to be. Filters are the picker's chips, so choosing a meal looks the same wherever you do it. Photos are placeholders — send me the real ones and they drop straight in.</div>
+    </div>
+
+    <div id="3c" style="display:flex;flex-direction:column;gap:12px" data-screen-label="3c Settings">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.08em">3c</span>
+        <span style="font-size:17px;font-weight:600;letter-spacing:-0.01em">Settings</span>
+      </div>
+      <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="402px,874px">
+        <div style="height:100%;background:linear-gradient(160deg,#FBFEFB 0%,#E9F8EC 100%);display:flex;flex-direction:column;padding-top:54px;overflow:hidden;position:relative">
+
+          <div style="padding:6px 16px 12px;display:flex;align-items:center;gap:10px">
+            <div style="flex:1;display:flex;flex-direction:column;gap:2px">
+              <div style="display:flex;align-items:flex-end;gap:6px">
+                <div style="font-size:32px;font-weight:600;letter-spacing:-0.02em;line-height:1">Settings</div>
+                <div style="width:10px;height:10px;border-radius:3px;background:#2BBF4E;margin-bottom:3px"></div>
+              </div>
+              <div style="font-size:13px;color:#6E6E6B">LPICs Plan · shared with Lois</div>
+            </div>
+            <div style="width:34px;height:34px;border-radius:999px;background:rgba(255,255,255,.8);display:flex;align-items:center;justify-content:center;color:#116B26"><i data-lucide="circle-help" width="17" height="17" stroke-width="1.75"></i></div>
+          </div>
+
+          <div class="mp-scroll" style="flex:1;overflow-y:auto;padding-bottom:16px;scrollbar-width:none">
+
+            <div style="padding:0 20px 8px;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Account</div>
+            <div class="mp-rows" style="margin:0 12px;background:#FFFFFF;border-radius:22px;overflow:hidden;display:flex;flex-direction:column">
+              <div style="display:flex;align-items:center;gap:12px;padding:13px 14px;border-top:1px solid rgba(20,40,10,.10);cursor:pointer" style-active="background:#F7FCF8">
+                <div style="width:38px;height:38px;border-radius:999px;background:#E8E3DC;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;color:#4A4843;flex:none">J</div>
+                <div style="flex:1;display:flex;flex-direction:column;gap:1px"><div style="font-size:16px;font-weight:500">Apple ID</div><div style="font-size:13px;color:#6E6E6B">Signed in with Apple</div></div>
+                <div style="color:#BFC4BF;display:flex"><i data-lucide="chevron-right" width="18" height="18" stroke-width="1.75"></i></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:12px;padding:13px 14px;border-top:1px solid rgba(20,40,10,.10);cursor:pointer" style-active="background:#F7FCF8">
+                <div style="width:38px;display:flex;justify-content:center;color:#1B1B19;flex:none"><i data-lucide="log-out" width="18" height="18" stroke-width="1.75"></i></div>
+                <div style="flex:1;font-size:16px;font-weight:500">Sign out</div>
+              </div>
+            </div>
+            <div style="padding:9px 20px 20px;font-size:13px;line-height:1.5;color:#6E6E6B;text-wrap:pretty">Tap your account to set an avatar — it appears wherever you do in the plan. Signing out keeps your data on this device.</div>
+
+            <div style="padding:0 20px 8px;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Plan</div>
+            <div class="mp-rows" style="margin:0 12px;background:#FFFFFF;border-radius:22px;overflow:hidden;display:flex;flex-direction:column">
+              <div style="display:flex;align-items:center;gap:12px;padding:13px 14px;border-top:1px solid rgba(20,40,10,.10)">
+                <div style="width:22px;display:flex;color:#116B26;flex:none"><i data-lucide="house" width="18" height="18" stroke-width="1.75"></i></div>
+                <div style="flex:1;font-size:16px;font-weight:500">My shared plan</div>
+                <div style="display:flex;align-items:center"><div style="width:26px;height:26px;border-radius:999px;background:#E8E3DC;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#4A4843">J</div><div style="width:26px;height:26px;border-radius:999px;background:#C8C1B7;margin-left:-7px;border:2px solid #FFFFFF;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#2E2C28">L</div></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:12px;padding:13px 14px;border-top:1px solid rgba(20,40,10,.10);cursor:pointer" style-active="background:#F7FCF8">
+                <div style="flex:1;font-size:16px">Plan name</div>
+                <div style="font-size:16px;color:#6E6E6B">LPICs Plan</div>
+                <div style="color:#BFC4BF;display:flex"><i data-lucide="chevron-right" width="18" height="18" stroke-width="1.75"></i></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:12px;padding:13px 14px;border-top:1px solid rgba(20,40,10,.10);cursor:pointer" style-active="background:#F7FCF8">
+                <div style="flex:1;font-size:16px">Plan code</div>
+                <div style="font-family:ui-monospace,Menlo,monospace;font-size:13px;letter-spacing:.06em;color:#6E6E6B">DUJWHSJBL6TT</div>
+                <div style="color:#116B26;display:flex"><i data-lucide="copy" width="16" height="16" stroke-width="1.75"></i></div>
+              </div>
+            </div>
+            <div style="padding:9px 20px 20px;font-size:13px;line-height:1.5;color:#6E6E6B;text-wrap:pretty">Shared with one collaborator. You manage sharing and plan setup.</div>
+
+            <div style="padding:0 20px 8px;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">People</div>
+            <div class="mp-rows" style="margin:0 12px;background:#FFFFFF;border-radius:22px;overflow:hidden;display:flex;flex-direction:column">
+              <div style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-top:1px solid rgba(20,40,10,.10)">
+                <div style="width:34px;height:34px;border-radius:999px;background:#E8E3DC;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:#4A4843;flex:none">J</div>
+                <div style="flex:1;display:flex;flex-direction:column;gap:1px"><div style="font-size:16px;font-weight:500">Jack</div><div style="font-size:13px;color:#6E6E6B">Plan owner</div></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-top:1px solid rgba(20,40,10,.10)">
+                <div style="width:34px;height:34px;border-radius:999px;background:#C8C1B7;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:#2E2C28;flex:none">L</div>
+                <div style="flex:1;display:flex;flex-direction:column;gap:1px"><div style="font-size:16px;font-weight:500">Lois</div><div style="font-size:13px;color:#6E6E6B">Remote collaborator</div></div>
+                <div style="width:32px;height:32px;border-radius:999px;background:#F3F1EC;display:flex;align-items:center;justify-content:center;color:#C4382C;cursor:pointer" style-active="background:#EDEBE4"><i data-lucide="user-minus" width="15" height="15" stroke-width="1.75"></i></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:12px;padding:13px 14px;border-top:1px solid rgba(20,40,10,.10);cursor:pointer" style-active="background:#F7FCF8">
+                <div style="width:34px;height:34px;border-radius:999px;background:rgba(27,27,25,.05);border:1px dashed rgba(27,27,25,.22);display:flex;align-items:center;justify-content:center;color:#6E6E6B;flex:none"><i data-lucide="user-plus" width="15" height="15" stroke-width="1.75"></i></div>
+                <div style="flex:1;font-size:16px;font-weight:500">Join a shared plan</div>
+                <div style="color:#BFC4BF;display:flex"><i data-lucide="chevron-right" width="18" height="18" stroke-width="1.75"></i></div>
+              </div>
+            </div>
+            <div style="padding:9px 20px 20px;font-size:13px;line-height:1.5;color:#6E6E6B;text-wrap:pretty">A collaborator edits the plan from their own device. Someone added for planning only appears in the plan without needing an account.</div>
+
+            <div style="padding:0 20px 8px;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Week setup</div>
+            <div class="mp-rows" style="margin:0 12px;background:#FFFFFF;border-radius:22px;overflow:hidden;display:flex;flex-direction:column">
+              <div style="display:flex;align-items:center;gap:12px;padding:13px 14px;border-top:1px solid rgba(20,40,10,.10);cursor:pointer" style-active="background:#F7FCF8">
+                <div style="flex:1;font-size:16px">Start day of week</div>
+                <div style="font-size:16px;color:#6E6E6B">Sunday</div>
+                <div style="color:#BFC4BF;display:flex"><i data-lucide="chevron-down" width="16" height="16" stroke-width="1.75"></i></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-top:1px solid rgba(20,40,10,.10)">
+                <div style="flex:1;font-size:16px">Include lunch</div>
+                <div onClick="{{ toggleLunch }}" style="cursor:pointer">
+                  <sc-if value="{{ lunchOn }}" hint-placeholder-val="{{ false }}">
+                    <div style="width:50px;height:30px;border-radius:999px;background:#2BBF4E;box-shadow:inset 0 1px 0 rgba(255,255,255,.4);display:flex;align-items:center;justify-content:flex-end;padding:2px"><div style="width:26px;height:26px;border-radius:999px;background:#FFFFFF"></div></div>
+                  </sc-if>
+                  <sc-if value="{{ lunchOff }}" hint-placeholder-val="{{ true }}">
+                    <div style="width:50px;height:30px;border-radius:999px;background:rgba(27,27,25,.16);display:flex;align-items:center;padding:2px"><div style="width:26px;height:26px;border-radius:999px;background:#FFFFFF"></div></div>
+                  </sc-if>
+                </div>
+              </div>
+              <div style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-top:1px solid rgba(20,40,10,.10)">
+                <div style="flex:1;font-size:16px">Include dinner</div>
+                <div onClick="{{ toggleDinner }}" style="cursor:pointer">
+                  <sc-if value="{{ dinnerOn }}" hint-placeholder-val="{{ true }}">
+                    <div style="width:50px;height:30px;border-radius:999px;background:#2BBF4E;box-shadow:inset 0 1px 0 rgba(255,255,255,.4);display:flex;align-items:center;justify-content:flex-end;padding:2px"><div style="width:26px;height:26px;border-radius:999px;background:#FFFFFF"></div></div>
+                  </sc-if>
+                  <sc-if value="{{ dinnerOff }}" hint-placeholder-val="{{ false }}">
+                    <div style="width:50px;height:30px;border-radius:999px;background:rgba(27,27,25,.16);display:flex;align-items:center;padding:2px"><div style="width:26px;height:26px;border-radius:999px;background:#FFFFFF"></div></div>
+                  </sc-if>
+                </div>
+              </div>
+            </div>
+            <div style="padding:9px 20px 20px;font-size:13px;line-height:1.5;color:#6E6E6B;text-wrap:pretty">Applies to your plan and is shared with your collaborator automatically.</div>
+
+            <div style="padding:0 20px 8px;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Shopping list</div>
+            <div class="mp-rows" style="margin:0 12px;background:#FFFFFF;border-radius:22px;overflow:hidden;display:flex;flex-direction:column">
+              <div style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-top:1px solid rgba(20,40,10,.10)">
+                <div style="flex:1;font-size:16px">Store checked items for</div>
+                <div style="font-size:15px;color:#6E6E6B">{{ storeDays }}</div>
+                <div style="display:flex;align-items:center;gap:2px;padding:2px;border-radius:999px;background:#F3F1EC">
+                  <div onClick="{{ daysMinus }}" style="width:30px;height:28px;border-radius:999px;display:flex;align-items:center;justify-content:center;color:#1B1B19;cursor:pointer" style-active="background:#E8E3DC"><i data-lucide="minus" width="15" height="15" stroke-width="2"></i></div>
+                  <div style="width:1px;height:16px;background:rgba(27,27,25,.14)"></div>
+                  <div onClick="{{ daysPlus }}" style="width:30px;height:28px;border-radius:999px;display:flex;align-items:center;justify-content:center;color:#1B1B19;cursor:pointer" style-active="background:#E8E3DC"><i data-lucide="plus" width="15" height="15" stroke-width="2"></i></div>
+                </div>
+              </div>
+              <div style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-top:1px solid rgba(20,40,10,.10)">
+                <div style="flex:1;display:flex;flex-direction:column;gap:1px"><div style="font-size:16px">Suggest things you usually buy</div></div>
+                <div onClick="{{ toggleSync }}" style="cursor:pointer">
+                  <sc-if value="{{ syncOn }}" hint-placeholder-val="{{ true }}">
+                    <div style="width:50px;height:30px;border-radius:999px;background:#2BBF4E;box-shadow:inset 0 1px 0 rgba(255,255,255,.4);display:flex;align-items:center;justify-content:flex-end;padding:2px"><div style="width:26px;height:26px;border-radius:999px;background:#FFFFFF"></div></div>
+                  </sc-if>
+                  <sc-if value="{{ syncOff }}" hint-placeholder-val="{{ false }}">
+                    <div style="width:50px;height:30px;border-radius:999px;background:rgba(27,27,25,.16);display:flex;align-items:center;padding:2px"><div style="width:26px;height:26px;border-radius:999px;background:#FFFFFF"></div></div>
+                  </sc-if>
+                </div>
+              </div>
+            </div>
+            <div style="padding:9px 20px 20px;font-size:13px;line-height:1.5;color:#6E6E6B;text-wrap:pretty">Checked items are hidden until you ask to see them, then removed for good. Anything added twice in the last three weeks is suggested at the foot of your list.</div>
+
+            <div style="padding:0 20px 8px;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Notifications</div>
+            <div class="mp-rows" style="margin:0 12px;background:#FFFFFF;border-radius:22px;overflow:hidden;display:flex;flex-direction:column">
+              <div style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-top:1px solid rgba(20,40,10,.10)">
+                <div style="flex:1;font-size:16px">Daily meal reminder</div>
+                <div onClick="{{ toggleReminder }}" style="cursor:pointer">
+                  <sc-if value="{{ reminderOn }}" hint-placeholder-val="{{ true }}">
+                    <div style="width:50px;height:30px;border-radius:999px;background:#2BBF4E;box-shadow:inset 0 1px 0 rgba(255,255,255,.4);display:flex;align-items:center;justify-content:flex-end;padding:2px"><div style="width:26px;height:26px;border-radius:999px;background:#FFFFFF"></div></div>
+                  </sc-if>
+                  <sc-if value="{{ reminderOff }}" hint-placeholder-val="{{ false }}">
+                    <div style="width:50px;height:30px;border-radius:999px;background:rgba(27,27,25,.16);display:flex;align-items:center;padding:2px"><div style="width:26px;height:26px;border-radius:999px;background:#FFFFFF"></div></div>
+                  </sc-if>
+                </div>
+              </div>
+              <div style="display:flex;align-items:center;gap:12px;padding:13px 14px;border-top:1px solid rgba(20,40,10,.10);cursor:pointer" style-active="background:#F7FCF8">
+                <div style="flex:1;font-size:16px">Remind me at</div>
+                <div style="font-family:ui-monospace,Menlo,monospace;font-size:15px;color:#6E6E6B">09:00</div>
+                <div style="color:#BFC4BF;display:flex"><i data-lucide="chevron-right" width="18" height="18" stroke-width="1.75"></i></div>
+              </div>
+            </div>
+            <div style="padding:9px 20px 20px;font-size:13px;line-height:1.5;color:#6E6E6B;text-wrap:pretty">Sent only on days with a meal, so you can check the ingredients are in and take anything out of the freezer in time.</div>
+
+          </div>
+
+          <div style="background:rgba(251,254,251,.94);display:flex;align-items:center;padding:8px 12px 26px;gap:4px">
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;color:#82817B"><i data-lucide="calendar-days" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Plan</span></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;color:#82817B"><i data-lucide="shopping-cart" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Shop</span></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;color:#82817B"><i data-lucide="book" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Meals</span></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;border-radius:16px;background:#E3F7E8;color:#116B26"><i data-lucide="settings" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:600">Settings</span></div>
+          </div>
+
+        </div>
+      </x-import>
+      <div style="font-size:13px;line-height:1.5;color:#6E6E6B;max-width:402px">Section headings were 22px grey titles competing with the page title; they are now mono eyebrows, so "Settings" is the only heading on screen. Footnotes sit at 13px under their group. Lois's purple avatar takes the house cream, and only the remove control carries the alert token.</div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:14px;max-width:320px;padding-top:44px">
+      <div style="font-size:17px;font-weight:600;letter-spacing:-0.01em">The four rules applied</div>
+      <div style="display:flex;flex-direction:column;gap:5px"><div style="font-size:15px;font-weight:600">One header shape</div><div style="font-size:14px;line-height:1.55;color:#6E6E6B">Title with the green full stop, a 13px status line under it, and the floating icon cluster unpacked into 34px glass circles on the same baseline — so the eye lands in the same place on all four tabs.</div></div>
+      <div style="display:flex;flex-direction:column;gap:5px"><div style="font-size:15px;font-weight:600">Mono eyebrows, not grey headings</div><div style="font-size:14px;line-height:1.55;color:#6E6E6B">"Green grocery", "Account", "Week setup" were 22px semibold greys — a second title on every screen. At 11px mono uppercase they label without competing.</div></div>
+      <div style="display:flex;flex-direction:column;gap:5px"><div style="font-size:15px;font-weight:600">One white card, 22px, 12px margin</div><div style="font-size:14px;line-height:1.55;color:#6E6E6B">Rows are separated by the house hairline rather than by gaps between floating capsules, which is what made Shop feel like a different app from Plan.</div></div>
+      <div style="display:flex;flex-direction:column;gap:5px"><div style="font-size:15px;font-weight:600">Green once per screen</div><div style="font-size:14px;line-height:1.55;color:#6E6E6B">The trolley bar and its ticks; the chosen filter; the switch that is on. Everything else is ink on white with a #F3F1EC neutral for secondary controls — and the black pill button is gone.</div></div>
+      <div style="display:flex;flex-direction:column;gap:5px"><div style="font-size:15px;font-weight:600">Text sizes match Plan</div><div style="font-size:14px;line-height:1.55;color:#6E6E6B">32 title, 26 hero, 16 row, 13 secondary, 11 mono. The screenshots ran rows at ~19px, which is why three items filled a screen.</div></div>
+    </div>
+
+  </div>
+
+</section>
+
+<section style="font-family:-apple-system,'SF Pro Text',system-ui,sans-serif;color:#1B1B19;background:#E7E5DC;padding:48px 56px 64px;display:flex;flex-direction:column;gap:40px;-webkit-font-smoothing:antialiased">
+
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:820px">
+    <div style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Turn 2 · tap a day, edit the meal</div>
+    <div style="font-size:34px;font-weight:600;letter-spacing:-0.02em;line-height:1.15">The day opens a glass sheet. The plan stays behind it.</div>
+    <div style="font-size:16px;line-height:1.6;color:#6E6E6B;text-wrap:pretty">Built on <a href="#1b">1b</a>, and working: tap tonight's card or any day below it to open the sheet, tap the meal or <em>Swap</em> to reach the picker, choose something and it lands back in the plan. A day with nothing planned skips the sheet and opens the picker directly. The sheet is liquid glass — translucent material over the plan, specular top edge, floating capsule controls — with the sheet's own colour rules applied: green is <em>Done</em>, remove is the alert token, nothing is purple.</div>
+  </div>
+
+  <div style="display:flex;gap:36px;flex-wrap:wrap;align-items:flex-start">
+
+    <div id="2a" style="display:flex;flex-direction:column;gap:12px" data-screen-label="2a Plan with edit sheet">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.08em">2a</span>
+        <span style="font-size:17px;font-weight:600;letter-spacing:-0.01em">Interactive — tap a day</span>
+      </div>
+      <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="402px,874px">
+        <div style="height:100%;background:linear-gradient(160deg,#FBFEFB 0%,#E9F8EC 100%);display:flex;flex-direction:column;padding-top:54px;overflow:hidden;position:relative">
+
+          <div style="padding:6px 16px 12px;display:flex;align-items:center;gap:10px">
+            <div style="flex:1;display:flex;flex-direction:column;gap:2px">
+              <div style="display:flex;align-items:flex-end;gap:6px">
+                <div style="font-size:32px;font-weight:600;letter-spacing:-0.02em;line-height:1">Plan</div>
+                <div style="width:10px;height:10px;border-radius:3px;background:#2BBF4E;margin-bottom:3px"></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:5px;font-size:13px;color:#6E6E6B">Week of Sun 30 Aug<i data-lucide="chevron-down" width="14" height="14" stroke-width="2"></i></div>
+            </div>
+            <div style="width:34px;height:34px;border-radius:999px;background:rgba(255,255,255,.8);display:flex;align-items:center;justify-content:center;color:#116B26"><i data-lucide="rotate-ccw" width="17" height="17" stroke-width="1.75"></i></div>
+            <div style="width:34px;height:34px;border-radius:999px;background:rgba(255,255,255,.8);display:flex;align-items:center;justify-content:center;color:#116B26"><i data-lucide="share" width="17" height="17" stroke-width="1.75"></i></div>
+          </div>
+
+          <div style="margin:0 12px 14px;background:#FFFFFF;border-radius:22px;padding:16px;display:flex;flex-direction:column;gap:12px;cursor:pointer" onClick="{{ openToday }}" style-active="background:#FAFCF9">
+            <div style="display:flex;align-items:center;gap:8px">
+              <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">{{ todayEyebrow }}</div>
+              <div style="flex:1"></div>
+              <div style="display:flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;background:#F3F1EC;color:#1B1B19;font-size:12px;font-weight:600"><i data-lucide="house" width="13" height="13" stroke-width="1.75"></i>Home</div>
+            </div>
+            <sc-if value="{{ todayHasMeal }}" hint-placeholder-val="{{ true }}">
+              <div style="display:flex;flex-direction:column;gap:12px">
+                <div style="font-size:26px;font-weight:600;letter-spacing:-0.02em;line-height:1.2;text-wrap:balance">{{ todayTitle }}</div>
+                <div style="display:flex;align-items:center;gap:10px">
+                  <div style="display:flex;align-items:center"><div style="width:24px;height:24px;border-radius:999px;background:#E8E3DC;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#4A4843">J</div><div style="width:24px;height:24px;border-radius:999px;background:#C8C1B7;margin-left:-7px;border:2px solid #FFFFFF;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#2E2C28">L</div></div>
+                  <div style="font-size:13px;color:#6E6E6B">{{ todayMeta }}</div>
+                </div>
+                <div style="display:flex;gap:8px;padding-top:2px">
+                  <div style="flex:1;height:44px;border-radius:12px;background:#F3F1EC;color:#1B1B19;display:flex;align-items:center;justify-content:center;gap:7px;font-size:15px;font-weight:600"><i data-lucide="book-open" width="16" height="16" stroke-width="1.75"></i>View</div>
+                  <div style="flex:1.4;height:44px;border-radius:12px;background:#2BBF4E;color:#1B1B19;display:flex;align-items:center;justify-content:center;gap:7px;font-size:15px;font-weight:600"><i data-lucide="flame" width="16" height="16" stroke-width="1.75"></i>Start cooking</div>
+                </div>
+              </div>
+            </sc-if>
+            <sc-if value="{{ todayNoMeal }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex;flex-direction:column;gap:12px">
+                <div style="font-size:22px;font-weight:600;letter-spacing:-0.02em;line-height:1.25;color:#6E6E6B">Nothing planned for tonight</div>
+                <div style="height:44px;border-radius:12px;background:#2BBF4E;color:#1B1B19;display:flex;align-items:center;justify-content:center;gap:7px;font-size:15px;font-weight:600"><i data-lucide="search" width="16" height="16" stroke-width="1.75"></i>Choose a meal</div>
+              </div>
+            </sc-if>
+          </div>
+
+          <div class="mp-scroll" style="flex:1;overflow-y:auto;padding-bottom:16px;scrollbar-width:none">
+
+          <div style="padding:0 20px 8px;display:flex;align-items:center"><div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">The rest of the week</div><div style="flex:1"></div><div style="font-size:13px;font-weight:600;color:#116B26">Edit</div></div>
+
+          <div class="mp-rows" style="margin:0 12px;background:#FFFFFF;border-radius:22px;overflow:hidden;display:flex;flex-direction:column">
+            <sc-for list="{{ days }}" as="day" hint-placeholder-count="6">
+              <div onClick="{{ day.onOpen }}" style="display:flex;align-items:center;gap:12px;padding:14px;cursor:pointer;border-top:1px solid rgba(20,40,10,.10);transition:background 120ms cubic-bezier(.2,.6,.2,1)" style-hover="background:#F7FCF8" style-active="background:#EFF7F0">
+                <div style="width:34px;display:flex;flex-direction:column;align-items:center;gap:1px">
+                  <div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.08em;color:#6E6E6B">{{ day.abbr }}</div>
+                  <div style="font-size:19px;font-weight:600;line-height:1">{{ day.date }}</div>
+                </div>
+                <div style="flex:1;display:flex;flex-direction:column;gap:6px;min-width:0">
+                  <sc-if value="{{ day.isToday }}" hint-placeholder-val="{{ false }}">
+                    <div style="display:flex;align-items:center;gap:7px">
+                      <div style="padding:2px 7px;border-radius:6px;background:#E3F7E8;color:#116B26;font-family:ui-monospace,Menlo,monospace;font-size:9px;letter-spacing:.1em">TODAY</div>
+                      <div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Dinner</div>
+                    </div>
+                  </sc-if>
+                  <sc-if value="{{ day.hasMeal }}" hint-placeholder-val="{{ true }}">
+                    <div style="font-size:16px;font-weight:600;letter-spacing:-0.01em;line-height:1.3">{{ day.title }}</div>
+                  </sc-if>
+                  <sc-if value="{{ day.isAway }}" hint-placeholder-val="{{ false }}">
+                    <div style="display:flex;align-items:center;gap:7px;color:#6E6E6B"><i data-lucide="plane" width="15" height="15" stroke-width="1.75"></i><span style="font-size:15px">Away — no meals planned</span></div>
+                  </sc-if>
+                  <sc-if value="{{ day.isEmpty }}" hint-placeholder-val="{{ false }}">
+                    <div style="font-size:15px;color:#6E6E6B">Nothing planned</div>
+                  </sc-if>
+                  <sc-if value="{{ day.hasMeal }}" hint-placeholder-val="{{ true }}">
+                    <div style="display:flex;align-items:center">
+                      <div style="width:22px;height:22px;border-radius:999px;background:#E8E3DC;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#4A4843">J</div>
+                      <div style="width:22px;height:22px;border-radius:999px;background:#C8C1B7;margin-left:-6px;border:2px solid #FFFFFF;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#2E2C28">L</div>
+                    </div>
+                  </sc-if>
+                </div>
+                <sc-if value="{{ day.isEmpty }}" hint-placeholder-val="{{ false }}">
+                  <div style="display:flex;align-items:center;gap:5px;height:32px;padding:0 12px;border-radius:999px;background:#F3F1EC;color:#1B1B19;font-size:13px;font-weight:600"><i data-lucide="plus" width="14" height="14" stroke-width="2"></i>Add</div>
+                </sc-if>
+                <sc-if value="{{ day.showChevron }}" hint-placeholder-val="{{ true }}">
+                  <div style="color:#BFC4BF;display:flex"><i data-lucide="chevron-right" width="18" height="18" stroke-width="1.75"></i></div>
+                </sc-if>
+              </div>
+            </sc-for>
+          </div>
+
+          <div style="padding:14px 16px 0;display:flex;align-items:center;gap:7px;font-size:13px;color:#6E6E6B"><i data-lucide="shopping-cart" width="14" height="14" stroke-width="1.75"></i>{{ weekSummary }}</div>
+
+          </div>
+
+          <div style="margin-top:auto;background:rgba(251,254,251,.94);display:flex;align-items:center;padding:8px 12px 26px;gap:4px">
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;border-radius:16px;background:#E3F7E8;color:#116B26"><i data-lucide="calendar-days" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:600">Plan</span></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;color:#82817B"><i data-lucide="shopping-cart" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Shop</span></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;color:#82817B"><i data-lucide="book" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Meals</span></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;color:#82817B"><i data-lucide="settings" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Settings</span></div>
+          </div>
+
+          <sc-if value="{{ sheetOpen }}" hint-placeholder-val="{{ false }}">
+            <div style="position:absolute;inset:0;background:rgba(24,32,26,.26);animation:mp-fade 180ms cubic-bezier(.2,.6,.2,1) both" onClick="{{ close }}"></div>
+          </sc-if>
+
+          <sc-if value="{{ sheetOpen }}" hint-placeholder-val="{{ false }}">
+            <div style="position:absolute;left:0;right:0;bottom:0;top:92px;border-radius:40px 40px 0 0;background:rgba(250,253,249,.74);backdrop-filter:blur(38px) saturate(190%);-webkit-backdrop-filter:blur(38px) saturate(190%);border-top:1px solid rgba(255,255,255,.85);box-shadow:inset 0 1px 0 rgba(255,255,255,.6);display:flex;flex-direction:column;animation:mp-sheet-up 320ms cubic-bezier(.2,.7,.2,1) both;overflow:hidden">
+
+              <div style="display:flex;justify-content:center;padding:8px 0 2px"><div style="width:38px;height:5px;border-radius:999px;background:rgba(27,27,25,.20)"></div></div>
+
+              <sc-if value="{{ isEdit }}" hint-placeholder-val="{{ true }}">
+                <div style="display:flex;flex-direction:column;height:100%;overflow:hidden">
+
+                  <div style="display:flex;align-items:center;gap:10px;padding:8px 14px 12px">
+                    <div onClick="{{ close }}" style="display:flex;align-items:center;height:38px;padding:0 16px;border-radius:999px;background:rgba(255,255,255,.66);border:1px solid rgba(255,255,255,.8);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:#116B26;font-size:15px;font-weight:600;cursor:pointer" style-active="background:rgba(255,255,255,.9)">Cancel</div>
+                    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:1px">
+                      <div style="font-size:16px;font-weight:600;letter-spacing:-0.01em">{{ sheetTitle }}</div>
+                      <div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">{{ sheetDate }}</div>
+                    </div>
+                    <div onClick="{{ close }}" style="display:flex;align-items:center;height:38px;padding:0 18px;border-radius:999px;background:#2BBF4E;box-shadow:inset 0 1px 0 rgba(255,255,255,.45);color:#1B1B19;font-size:15px;font-weight:600;cursor:pointer" style-active="background:#116B26;color:#EFE9DA">Done</div>
+                  </div>
+
+                  <div class="mp-scroll" style="flex:1;overflow-y:auto;padding:0 12px 20px;display:flex;flex-direction:column;gap:12px;scrollbar-width:none">
+
+                    <div style="background:rgba(255,255,255,.58);border:1px solid rgba(255,255,255,.68);border-radius:22px;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);display:flex;flex-direction:column">
+                      <div style="display:flex;align-items:center;gap:9px;padding:13px 14px 11px">
+                        <div style="color:#1B1B19;display:flex"><i data-lucide="utensils" width="16" height="16" stroke-width="1.75"></i></div>
+                        <div style="font-size:15px;font-weight:600;flex:1">Meal</div>
+                        <sc-if value="{{ hasMeal }}" hint-placeholder-val="{{ true }}">
+                          <div onClick="{{ openPicker }}" style="display:flex;align-items:center;gap:6px;height:32px;padding:0 12px;border-radius:999px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.85);color:#1B1B19;font-size:13px;font-weight:600;cursor:pointer" style-active="background:#FFFFFF"><i data-lucide="repeat" width="14" height="14" stroke-width="1.75"></i>Swap</div>
+                        </sc-if>
+                        <sc-if value="{{ hasMeal }}" hint-placeholder-val="{{ true }}">
+                          <div onClick="{{ removeMeal }}" style="width:32px;height:32px;border-radius:999px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.85);display:flex;align-items:center;justify-content:center;color:#C4382C;cursor:pointer" style-active="background:#FFFFFF"><i data-lucide="trash-2" width="15" height="15" stroke-width="1.75"></i></div>
+                        </sc-if>
+                      </div>
+                      <sc-if value="{{ hasMeal }}" hint-placeholder-val="{{ true }}">
+                        <div style="padding:0 14px 6px;display:flex;flex-direction:column;gap:8px">
+                          <div onClick="{{ openPicker }}" style="display:flex;align-items:center;gap:10px;padding:12px;border-radius:16px;background:rgba(255,255,255,.72);border:1px solid rgba(20,40,10,.06);cursor:pointer" style-active="background:#FFFFFF">
+                            <div style="width:34px;height:34px;border-radius:10px;background:#EDEBE4;display:flex;align-items:center;justify-content:center;color:#B7B3A9;flex:none"><i data-lucide="image" width="16" height="16" stroke-width="1.5"></i></div>
+                            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px">
+                              <div style="font-size:15px;font-weight:600;line-height:1.3">{{ mealTitle }}</div>
+                              <div style="font-size:12px;color:#6E6E6B">{{ mealMeta }}</div>
+                            </div>
+                            <div style="color:#116B26;display:flex"><i data-lucide="book-open" width="17" height="17" stroke-width="1.75"></i></div>
+                          </div>
+                          <div onClick="{{ openPicker }}" style="display:flex;align-items:center;gap:8px;padding:4px 2px 10px;color:#116B26;font-size:14px;font-weight:600;cursor:pointer"><i data-lucide="plus" width="16" height="16" stroke-width="2"></i>Add another item</div>
+                        </div>
+                      </sc-if>
+                      <sc-if value="{{ noMeal }}" hint-placeholder-val="{{ false }}">
+                        <div style="padding:0 14px 14px;display:flex;flex-direction:column;gap:10px">
+                          <div style="font-size:14px;line-height:1.5;color:#6E6E6B">Nothing planned for this meal yet.</div>
+                          <div onClick="{{ openPicker }}" style="height:44px;border-radius:14px;background:#2BBF4E;box-shadow:inset 0 1px 0 rgba(255,255,255,.45);color:#1B1B19;display:flex;align-items:center;justify-content:center;gap:8px;font-size:15px;font-weight:600;cursor:pointer" style-active="background:#116B26;color:#EFE9DA"><i data-lucide="search" width="16" height="16" stroke-width="1.75"></i>Choose a meal</div>
+                        </div>
+                      </sc-if>
+                    </div>
+
+                    <div style="background:rgba(255,255,255,.58);border:1px solid rgba(255,255,255,.68);border-radius:22px;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);display:flex;flex-direction:column">
+                      <div style="display:flex;align-items:center;gap:9px;padding:13px 14px 10px">
+                        <div style="color:#1B1B19;display:flex"><i data-lucide="users" width="16" height="16" stroke-width="1.75"></i></div>
+                        <div style="font-size:15px;font-weight:600;flex:1">Who's in</div>
+                        <div style="font-size:13px;color:#6E6E6B">{{ cookingFor }}</div>
+                      </div>
+                      <div style="display:flex;align-items:center;gap:11px;padding:9px 14px;border-top:1px solid rgba(20,40,10,.07)">
+                        <div style="width:30px;height:30px;border-radius:999px;background:#E8E3DC;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:#4A4843">J</div>
+                        <div style="flex:1;display:flex;flex-direction:column"><div style="font-size:15px;font-weight:500">Jack</div><div style="font-size:12px;color:#6E6E6B">Plan owner</div></div>
+                        <div onClick="{{ toggleJack }}" style="cursor:pointer">
+                          <sc-if value="{{ jackOn }}" hint-placeholder-val="{{ true }}">
+                            <div style="width:50px;height:30px;border-radius:999px;background:#2BBF4E;box-shadow:inset 0 1px 0 rgba(255,255,255,.4);display:flex;align-items:center;justify-content:flex-end;padding:2px;transition:background 120ms"><div style="width:26px;height:26px;border-radius:999px;background:#FFFFFF"></div></div>
+                          </sc-if>
+                          <sc-if value="{{ jackOff }}" hint-placeholder-val="{{ false }}">
+                            <div style="width:50px;height:30px;border-radius:999px;background:rgba(27,27,25,.16);display:flex;align-items:center;padding:2px;transition:background 120ms"><div style="width:26px;height:26px;border-radius:999px;background:#FFFFFF"></div></div>
+                          </sc-if>
+                        </div>
+                      </div>
+                      <div style="display:flex;align-items:center;gap:11px;padding:9px 14px;border-top:1px solid rgba(20,40,10,.07)">
+                        <div style="width:30px;height:30px;border-radius:999px;background:#C8C1B7;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:#2E2C28">L</div>
+                        <div style="flex:1;display:flex;flex-direction:column"><div style="font-size:15px;font-weight:500">Lois</div><div style="font-size:12px;color:#6E6E6B">iCloud collaborator</div></div>
+                        <div onClick="{{ toggleLois }}" style="cursor:pointer">
+                          <sc-if value="{{ loisOn }}" hint-placeholder-val="{{ true }}">
+                            <div style="width:50px;height:30px;border-radius:999px;background:#2BBF4E;box-shadow:inset 0 1px 0 rgba(255,255,255,.4);display:flex;align-items:center;justify-content:flex-end;padding:2px;transition:background 120ms"><div style="width:26px;height:26px;border-radius:999px;background:#FFFFFF"></div></div>
+                          </sc-if>
+                          <sc-if value="{{ loisOff }}" hint-placeholder-val="{{ false }}">
+                            <div style="width:50px;height:30px;border-radius:999px;background:rgba(27,27,25,.16);display:flex;align-items:center;padding:2px;transition:background 120ms"><div style="width:26px;height:26px;border-radius:999px;background:#FFFFFF"></div></div>
+                          </sc-if>
+                        </div>
+                      </div>
+                      <div style="display:flex;align-items:center;gap:11px;padding:9px 14px 13px;border-top:1px solid rgba(20,40,10,.07)">
+                        <div style="width:30px;height:30px;border-radius:999px;background:rgba(27,27,25,.06);border:1px dashed rgba(27,27,25,.22);display:flex;align-items:center;justify-content:center;color:#6E6E6B"><i data-lucide="user-plus" width="14" height="14" stroke-width="1.75"></i></div>
+                        <div style="flex:1;display:flex;flex-direction:column"><div style="font-size:15px;font-weight:500">Guests</div><div style="font-size:12px;color:#6E6E6B">{{ guestLabel }}</div></div>
+                        <sc-if value="{{ guestsOn }}" hint-placeholder-val="{{ false }}">
+                          <div style="display:flex;align-items:center;gap:2px;padding:2px;border-radius:999px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.85)">
+                            <div onClick="{{ guestMinus }}" style="width:28px;height:26px;border-radius:999px;display:flex;align-items:center;justify-content:center;color:#1B1B19;cursor:pointer" style-active="background:#F1EFEA"><i data-lucide="minus" width="14" height="14" stroke-width="2"></i></div>
+                            <div style="min-width:16px;text-align:center;font-size:14px;font-weight:600">{{ guestCount }}</div>
+                            <div onClick="{{ guestPlus }}" style="width:28px;height:26px;border-radius:999px;display:flex;align-items:center;justify-content:center;color:#1B1B19;cursor:pointer" style-active="background:#F1EFEA"><i data-lucide="plus" width="14" height="14" stroke-width="2"></i></div>
+                          </div>
+                        </sc-if>
+                        <div onClick="{{ toggleGuests }}" style="cursor:pointer">
+                          <sc-if value="{{ guestsOn }}" hint-placeholder-val="{{ false }}">
+                            <div style="width:50px;height:30px;border-radius:999px;background:#2BBF4E;box-shadow:inset 0 1px 0 rgba(255,255,255,.4);display:flex;align-items:center;justify-content:flex-end;padding:2px"><div style="width:26px;height:26px;border-radius:999px;background:#FFFFFF"></div></div>
+                          </sc-if>
+                          <sc-if value="{{ guestsOff }}" hint-placeholder-val="{{ true }}">
+                            <div style="width:50px;height:30px;border-radius:999px;background:rgba(27,27,25,.16);display:flex;align-items:center;padding:2px"><div style="width:26px;height:26px;border-radius:999px;background:#FFFFFF"></div></div>
+                          </sc-if>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div style="background:rgba(255,255,255,.58);border:1px solid rgba(255,255,255,.68);border-radius:22px;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:13px 14px 14px;display:flex;flex-direction:column;gap:10px">
+                      <div style="display:flex;align-items:center;gap:9px">
+                        <div style="color:#1B1B19;display:flex"><i data-lucide="notebook-pen" width="16" height="16" stroke-width="1.75"></i></div>
+                        <div style="font-size:15px;font-weight:600;flex:1">Notes</div>
+                        <div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Optional</div>
+                      </div>
+                      <div style="min-height:66px;border-radius:16px;background:rgba(255,255,255,.66);border:1px solid rgba(20,40,10,.07);padding:11px 12px;font-size:14px;line-height:1.5;color:#8A8A85">Prawns are in the freezer — out by lunchtime.</div>
+                    </div>
+
+                    <div onClick="{{ setAway }}" style="display:flex;align-items:center;gap:9px;padding:12px 14px;border-radius:18px;background:rgba(255,255,255,.42);border:1px solid rgba(255,255,255,.6);color:#1B1B19;font-size:14px;font-weight:600;cursor:pointer" style-active="background:rgba(255,255,255,.7)"><i data-lucide="plane" width="15" height="15" stroke-width="1.75"></i>Mark this day away<div style="flex:1"></div><div style="color:#BFC4BF;display:flex"><i data-lucide="chevron-right" width="16" height="16" stroke-width="1.75"></i></div></div>
+
+                  </div>
+                </div>
+              </sc-if>
+
+              <sc-if value="{{ isPicker }}" hint-placeholder-val="{{ false }}">
+                <div style="display:flex;flex-direction:column;height:100%;overflow:hidden;animation:mp-slide-in 180ms cubic-bezier(.2,.6,.2,1) both">
+
+                  <div style="display:flex;align-items:center;gap:10px;padding:8px 14px 12px">
+                    <div onClick="{{ backToEdit }}" style="display:flex;align-items:center;gap:4px;height:38px;padding:0 14px 0 11px;border-radius:999px;background:rgba(255,255,255,.66);border:1px solid rgba(255,255,255,.8);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:#116B26;font-size:15px;font-weight:600;cursor:pointer" style-active="background:rgba(255,255,255,.9)"><i data-lucide="chevron-left" width="17" height="17" stroke-width="2"></i>Back</div>
+                    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:1px">
+                      <div style="font-size:16px;font-weight:600;letter-spacing:-0.01em">Choose a meal</div>
+                      <div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">{{ sheetDate }}</div>
+                    </div>
+                    <div style="width:38px;height:38px;border-radius:999px;background:rgba(255,255,255,.66);border:1px solid rgba(255,255,255,.8);display:flex;align-items:center;justify-content:center;color:#116B26"><i data-lucide="plus" width="18" height="18" stroke-width="1.75"></i></div>
+                  </div>
+
+                  <div style="padding:0 12px 10px;display:flex;gap:8px">
+                    <div style="flex:1;height:40px;border-radius:14px;background:rgba(255,255,255,.66);border:1px solid rgba(255,255,255,.8);display:flex;align-items:center;gap:8px;padding:0 12px;color:#8A8A85;font-size:15px"><i data-lucide="search" width="16" height="16" stroke-width="1.75"></i>Search my meals</div>
+                    <div style="width:40px;height:40px;border-radius:14px;background:rgba(255,255,255,.66);border:1px solid rgba(255,255,255,.8);display:flex;align-items:center;justify-content:center;color:#1B1B19"><i data-lucide="sliders-horizontal" width="16" height="16" stroke-width="1.75"></i></div>
+                  </div>
+
+                  <div style="padding:0 16px 8px;display:flex;gap:6px">
+                    <div style="height:30px;padding:0 12px;border-radius:999px;background:#2BBF4E;box-shadow:inset 0 1px 0 rgba(255,255,255,.45);color:#1B1B19;display:flex;align-items:center;font-size:13px;font-weight:600">Recent</div>
+                    <div style="height:30px;padding:0 12px;border-radius:999px;background:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.8);color:#1B1B19;display:flex;align-items:center;font-size:13px;font-weight:500">Quick</div>
+                    <div style="height:30px;padding:0 12px;border-radius:999px;background:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.8);color:#1B1B19;display:flex;align-items:center;font-size:13px;font-weight:500">Fish</div>
+                    <div style="height:30px;padding:0 12px;border-radius:999px;background:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.8);color:#1B1B19;display:flex;align-items:center;font-size:13px;font-weight:500">Veg</div>
+                  </div>
+
+                  <div class="mp-scroll" style="flex:1;overflow-y:auto;padding:4px 12px 20px;scrollbar-width:none">
+                    <div style="background:rgba(255,255,255,.58);border:1px solid rgba(255,255,255,.68);border-radius:22px;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);overflow:hidden;display:flex;flex-direction:column">
+                      <sc-for list="{{ library }}" as="meal" hint-placeholder-count="6">
+                        <div onClick="{{ meal.onPick }}" style="display:flex;align-items:center;gap:11px;padding:11px 14px;border-top:1px solid rgba(20,40,10,.07);cursor:pointer" style-active="background:rgba(255,255,255,.85)">
+                          <div style="width:40px;height:40px;border-radius:12px;background:#EDEBE4;display:flex;align-items:center;justify-content:center;color:#B7B3A9;flex:none"><i data-lucide="image" width="16" height="16" stroke-width="1.5"></i></div>
+                          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px">
+                            <div style="font-size:15px;font-weight:500;line-height:1.3">{{ meal.title }}</div>
+                            <div style="font-size:12px;color:#6E6E6B">{{ meal.meta }}</div>
+                          </div>
+                          <sc-if value="{{ meal.picked }}" hint-placeholder-val="{{ false }}">
+                            <div style="width:24px;height:24px;border-radius:999px;background:#2BBF4E;display:flex;align-items:center;justify-content:center;color:#1B1B19"><i data-lucide="check" width="14" height="14" stroke-width="2.5"></i></div>
+                          </sc-if>
+                          <sc-if value="{{ meal.unpicked }}" hint-placeholder-val="{{ true }}">
+                            <div style="color:#BFC4BF;display:flex"><i data-lucide="chevron-right" width="17" height="17" stroke-width="1.75"></i></div>
+                          </sc-if>
+                        </div>
+                      </sc-for>
+                    </div>
+                  </div>
+                </div>
+              </sc-if>
+
+            </div>
+          </sc-if>
+
+        </div>
+      </x-import>
+      <div style="font-size:13px;line-height:1.5;color:#6E6E6B;max-width:402px">Tap tonight's card, or any row — including Thursday's away day and Saturday's empty one. <em>Swap</em> or <em>Add another item</em> opens the picker; picking writes straight back into the plan, and the bin clears the day.</div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:14px;max-width:340px;padding-top:44px">
+      <div style="font-size:17px;font-weight:600;letter-spacing:-0.01em">What changed in the sheet</div>
+      <div style="display:flex;flex-direction:column;gap:5px"><div style="font-size:15px;font-weight:600">The title bar does the job of the title card</div><div style="font-size:14px;line-height:1.55;color:#6E6E6B">"Tuesday Dinner" was said twice — once in the nav bar, once in a full-width card. The card is gone and the date became the mono line under the title, which returns about 120pt to the content.</div></div>
+      <div style="display:flex;flex-direction:column;gap:5px"><div style="font-size:15px;font-weight:600">Glass, but layered properly</div><div style="font-size:14px;line-height:1.55;color:#6E6E6B">One material for the sheet, a lighter one for the cards, a brighter one for the capsule controls, and specular top edges on all three — so depth comes from the material rather than from shadows.</div></div>
+      <div style="display:flex;flex-direction:column;gap:5px"><div style="font-size:15px;font-weight:600">Swap and remove lost their own hues</div><div style="font-size:14px;line-height:1.55;color:#6E6E6B">Purple and pink tinted circles became glass capsules: <em>Swap</em> is labelled rather than guessed at, and remove keeps the house alert token as its glyph colour only.</div></div>
+      <div style="display:flex;flex-direction:column;gap:5px"><div style="font-size:15px;font-weight:600">"Cooking for" moved up</div><div style="font-size:14px;line-height:1.55;color:#6E6E6B">It is the answer the toggles produce, so it sits on the section header and updates as you switch people. Guests gained a stepper instead of a bare on/off.</div></div>
+      <div style="display:flex;flex-direction:column;gap:5px"><div style="font-size:15px;font-weight:600">One green per state</div><div style="font-size:14px;line-height:1.55;color:#6E6E6B"><em>Done</em> in edit, the filter chip in the picker, and the tick on the chosen meal. Toggles are the one exception the platform earns.</div></div>
+    </div>
+
+  </div>
+
+</section>
+
+<section style="font-family:-apple-system,'SF Pro Text',system-ui,sans-serif;color:#1B1B19;background:#E7E5DC;padding:48px 56px 96px;display:flex;flex-direction:column;gap:40px;-webkit-font-smoothing:antialiased">
+
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:820px">
+    <div style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Turn 1 · Meal Planner plan screen</div>
+    <div style="font-size:34px;font-weight:600;letter-spacing:-0.02em;line-height:1.15">Three ways to read a week.</div>
+    <div style="font-size:16px;line-height:1.6;color:#6E6E6B;text-wrap:pretty">The shipping screen shows one and a half days per viewport: every day is a card, every day repeats the Home/Away switch, and every meal repeats a pair of full-width buttons. All three redesigns keep the six Meal Planner tokens and spend the accent once per view — they differ in how much of the week you can see at once.</div>
+  </div>
+
+  <div style="display:flex;gap:20px;flex-wrap:wrap;font-size:13px;line-height:1.5;color:#6E6E6B;max-width:820px">
+    <div style="flex:1;min-width:200px;display:flex;flex-direction:column;gap:4px"><div style="font-weight:600;color:#1B1B19">Fixed everywhere</div><div>Title and its controls share one line. Home/Away leaves the day header — it appears only when a day is away, or inside the day you are looking at.</div></div>
+    <div style="flex:1;min-width:200px;display:flex;flex-direction:column;gap:4px"><div style="font-weight:600;color:#1B1B19">One accent per view</div><div>Green is the cook action. Today is marked by a mono pill and weight, not by a green band; a filled green header with a green button under it was two golds.</div></div>
+    <div style="flex:1;min-width:200px;display:flex;flex-direction:column;gap:4px"><div style="font-weight:600;color:#1B1B19">People stay neutral</div><div>Avatars are warm greys at 22px. Nothing in the plan is purple, and no colour is used to identify a person.</div></div>
+  </div>
+
+  <div style="display:flex;gap:36px;flex-wrap:wrap;align-items:flex-start">
+
+    <!-- 1a -->
+    <div id="1a" style="display:flex;flex-direction:column;gap:12px" data-screen-label="1a Week as one list">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.08em">1a</span>
+        <span style="font-size:17px;font-weight:600;letter-spacing:-0.01em">The week as one list</span>
+      </div>
+      <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="402px,874px">
+        <div style="height:100%;background:linear-gradient(160deg,#FBFEFB 0%,#E9F8EC 100%);display:flex;flex-direction:column;padding-top:54px;overflow:hidden">
+
+          <div style="padding:6px 16px 10px;display:flex;align-items:center;gap:10px">
+            <div style="display:flex;align-items:flex-end;gap:6px;flex:1">
+              <div style="font-size:32px;font-weight:600;letter-spacing:-0.02em;line-height:1">Plan</div>
+              <div style="width:10px;height:10px;border-radius:3px;background:#2BBF4E;margin-bottom:3px"></div>
+            </div>
+            <div style="width:34px;height:34px;border-radius:999px;background:rgba(255,255,255,.8);display:flex;align-items:center;justify-content:center;color:#116B26"><i data-lucide="rotate-ccw" width="17" height="17" stroke-width="1.75"></i></div>
+            <div style="width:34px;height:34px;border-radius:999px;background:rgba(255,255,255,.8);display:flex;align-items:center;justify-content:center;color:#116B26"><i data-lucide="share" width="17" height="17" stroke-width="1.75"></i></div>
+          </div>
+
+          <div style="padding:0 16px 12px;display:flex;align-items:center;gap:8px">
+            <div style="display:flex;align-items:center;gap:6px;font-size:15px;font-weight:600">Week of Sun 30 Aug<i data-lucide="chevron-down" width="16" height="16" stroke-width="2"></i></div>
+            <div style="flex:1"></div>
+            <div style="font-size:13px;font-weight:600;color:#116B26">Show 2 past days</div>
+          </div>
+
+          <div style="margin:0 12px;background:#FFFFFF;border-radius:22px;overflow:hidden;display:flex;flex-direction:column">
+
+            <div style="display:flex;align-items:center;gap:12px;padding:14px;background:#F7FCF8">
+              <div style="width:34px;display:flex;flex-direction:column;align-items:center;gap:1px">
+                <div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.08em;color:#116B26">TUE</div>
+                <div style="font-size:19px;font-weight:600;line-height:1">1</div>
+              </div>
+              <div style="flex:1;display:flex;flex-direction:column;gap:6px;min-width:0">
+                <div style="display:flex;align-items:center;gap:7px">
+                  <div style="padding:2px 7px;border-radius:6px;background:#E3F7E8;color:#116B26;font-family:ui-monospace,Menlo,monospace;font-size:9px;letter-spacing:.1em">TODAY</div>
+                  <div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Dinner</div>
+                </div>
+                <div style="font-size:17px;font-weight:600;letter-spacing:-0.01em;line-height:1.25">Easy prawn green curry rice bowl</div>
+                <div style="display:flex;align-items:center"><div style="width:22px;height:22px;border-radius:999px;background:#E8E3DC;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#4A4843">J</div><div style="width:22px;height:22px;border-radius:999px;background:#C8C1B7;margin-left:-6px;border:2px solid #FFFFFF;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#2E2C28">L</div></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:6px;height:34px;padding:0 14px;border-radius:999px;background:#2BBF4E;color:#1B1B19;font-size:14px;font-weight:600"><i data-lucide="flame" width="15" height="15" stroke-width="1.75"></i>Cook</div>
+            </div>
+
+            <div style="height:1px;background:rgba(20,40,10,.10);margin-left:60px"></div>
+
+            <div style="display:flex;align-items:center;gap:12px;padding:14px">
+              <div style="width:34px;display:flex;flex-direction:column;align-items:center;gap:1px">
+                <div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.08em;color:#6E6E6B">WED</div>
+                <div style="font-size:19px;font-weight:600;line-height:1">2</div>
+              </div>
+              <div style="flex:1;display:flex;flex-direction:column;gap:5px;min-width:0">
+                <div style="font-size:16px;font-weight:600;letter-spacing:-0.01em;line-height:1.3">Fishcake tacos with mango, lime and cumin yoghurt</div>
+                <div style="display:flex;align-items:center"><div style="width:22px;height:22px;border-radius:999px;background:#E8E3DC;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#4A4843">J</div><div style="width:22px;height:22px;border-radius:999px;background:#C8C1B7;margin-left:-6px;border:2px solid #FFFFFF;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#2E2C28">L</div></div>
+              </div>
+              <div style="color:#BFC4BF;display:flex"><i data-lucide="chevron-right" width="18" height="18" stroke-width="1.75"></i></div>
+            </div>
+
+            <div style="height:1px;background:rgba(20,40,10,.10);margin-left:60px"></div>
+
+            <div style="display:flex;align-items:center;gap:12px;padding:14px">
+              <div style="width:34px;display:flex;flex-direction:column;align-items:center;gap:1px">
+                <div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.08em;color:#6E6E6B">THU</div>
+                <div style="font-size:19px;font-weight:600;line-height:1;color:#8A8A85">3</div>
+              </div>
+              <div style="flex:1;display:flex;align-items:center;gap:7px;color:#6E6E6B"><i data-lucide="plane" width="15" height="15" stroke-width="1.75"></i><span style="font-size:15px">Away — no meals planned</span></div>
+              <div style="color:#BFC4BF;display:flex"><i data-lucide="chevron-right" width="18" height="18" stroke-width="1.75"></i></div>
+            </div>
+
+            <div style="height:1px;background:rgba(20,40,10,.10);margin-left:60px"></div>
+
+            <div style="display:flex;align-items:center;gap:12px;padding:14px">
+              <div style="width:34px;display:flex;flex-direction:column;align-items:center;gap:1px">
+                <div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.08em;color:#6E6E6B">FRI</div>
+                <div style="font-size:19px;font-weight:600;line-height:1">4</div>
+              </div>
+              <div style="flex:1;display:flex;flex-direction:column;gap:5px;min-width:0">
+                <div style="font-size:16px;font-weight:600;letter-spacing:-0.01em;line-height:1.3">Quick salmon fishcakes</div>
+                <div style="display:flex;align-items:center"><div style="width:22px;height:22px;border-radius:999px;background:#E8E3DC;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#4A4843">J</div></div>
+              </div>
+              <div style="color:#BFC4BF;display:flex"><i data-lucide="chevron-right" width="18" height="18" stroke-width="1.75"></i></div>
+            </div>
+
+            <div style="height:1px;background:rgba(20,40,10,.10);margin-left:60px"></div>
+
+            <div style="display:flex;align-items:center;gap:12px;padding:14px">
+              <div style="width:34px;display:flex;flex-direction:column;align-items:center;gap:1px">
+                <div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.08em;color:#6E6E6B">SAT</div>
+                <div style="font-size:19px;font-weight:600;line-height:1">5</div>
+              </div>
+              <div style="flex:1;font-size:15px;color:#6E6E6B">Nothing planned</div>
+              <div style="display:flex;align-items:center;gap:5px;height:32px;padding:0 12px;border-radius:999px;background:#F3F1EC;color:#1B1B19;font-size:13px;font-weight:600"><i data-lucide="plus" width="14" height="14" stroke-width="2"></i>Add</div>
+            </div>
+
+            <div style="height:1px;background:rgba(20,40,10,.10);margin-left:60px"></div>
+
+            <div style="display:flex;align-items:center;gap:12px;padding:14px">
+              <div style="width:34px;display:flex;flex-direction:column;align-items:center;gap:1px">
+                <div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.08em;color:#6E6E6B">SUN</div>
+                <div style="font-size:19px;font-weight:600;line-height:1">6</div>
+              </div>
+              <div style="flex:1;display:flex;flex-direction:column;gap:5px;min-width:0">
+                <div style="font-size:16px;font-weight:600;letter-spacing:-0.01em;line-height:1.3">Roast chicken and all the trimmings</div>
+                <div style="display:flex;align-items:center"><div style="width:22px;height:22px;border-radius:999px;background:#E8E3DC;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#4A4843">J</div><div style="width:22px;height:22px;border-radius:999px;background:#C8C1B7;margin-left:-6px;border:2px solid #FFFFFF;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#2E2C28">L</div></div>
+              </div>
+              <div style="color:#BFC4BF;display:flex"><i data-lucide="chevron-right" width="18" height="18" stroke-width="1.75"></i></div>
+            </div>
+          </div>
+
+          <div style="padding:14px 16px 0;display:flex;align-items:center;gap:7px;font-size:13px;color:#6E6E6B"><i data-lucide="shopping-cart" width="14" height="14" stroke-width="1.75"></i>4 meals this week · 11 things to buy</div>
+
+          <div style="margin-top:auto;background:rgba(251,254,251,.94);display:flex;align-items:center;padding:8px 12px 26px;gap:4px">
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;border-radius:16px;background:#E3F7E8;color:#116B26"><i data-lucide="calendar-days" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:600">Plan</span></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;color:#82817B"><i data-lucide="shopping-cart" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Shop</span></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;color:#82817B"><i data-lucide="book" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Meals</span></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;color:#82817B"><i data-lucide="settings" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Settings</span></div>
+          </div>
+        </div>
+      </x-import>
+      <div style="font-size:13px;line-height:1.5;color:#6E6E6B;max-width:402px">Six days in one viewport instead of one and a half. The date column carries the day, so no day needs a header; Cook only exists on today, and Home/Away only surfaces on the day that is away.</div>
+    </div>
+
+    <!-- 1b -->
+    <div id="1b" style="display:flex;flex-direction:column;gap:12px" data-screen-label="1b Today, then the week">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.08em">1b</span>
+        <span style="font-size:17px;font-weight:600;letter-spacing:-0.01em">Today, then the week</span>
+      </div>
+      <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="402px,874px">
+        <div style="height:100%;background:linear-gradient(160deg,#FBFEFB 0%,#E9F8EC 100%);display:flex;flex-direction:column;padding-top:54px;overflow:hidden">
+
+          <div style="padding:6px 16px 12px;display:flex;align-items:center;gap:10px">
+            <div style="flex:1;display:flex;flex-direction:column;gap:2px">
+              <div style="display:flex;align-items:flex-end;gap:6px">
+                <div style="font-size:32px;font-weight:600;letter-spacing:-0.02em;line-height:1">Plan</div>
+                <div style="width:10px;height:10px;border-radius:3px;background:#2BBF4E;margin-bottom:3px"></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:5px;font-size:13px;color:#6E6E6B">Week of Sun 30 Aug<i data-lucide="chevron-down" width="14" height="14" stroke-width="2"></i></div>
+            </div>
+            <div style="width:34px;height:34px;border-radius:999px;background:rgba(255,255,255,.8);display:flex;align-items:center;justify-content:center;color:#116B26"><i data-lucide="rotate-ccw" width="17" height="17" stroke-width="1.75"></i></div>
+            <div style="width:34px;height:34px;border-radius:999px;background:rgba(255,255,255,.8);display:flex;align-items:center;justify-content:center;color:#116B26"><i data-lucide="share" width="17" height="17" stroke-width="1.75"></i></div>
+          </div>
+
+          <div style="margin:0 12px 14px;background:#FFFFFF;border-radius:22px;padding:16px;display:flex;flex-direction:column;gap:12px">
+            <div style="display:flex;align-items:center;gap:8px">
+              <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">Tuesday 1 Sept · Dinner</div>
+              <div style="flex:1"></div>
+              <div style="display:flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;background:#F3F1EC;color:#1B1B19;font-size:12px;font-weight:600"><i data-lucide="house" width="13" height="13" stroke-width="1.75"></i>Home</div>
+            </div>
+            <div style="font-size:26px;font-weight:600;letter-spacing:-0.02em;line-height:1.2;text-wrap:balance">Easy prawn green curry rice bowl</div>
+            <div style="display:flex;align-items:center;gap:10px">
+              <div style="display:flex;align-items:center"><div style="width:24px;height:24px;border-radius:999px;background:#E8E3DC;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#4A4843">J</div><div style="width:24px;height:24px;border-radius:999px;background:#C8C1B7;margin-left:-7px;border:2px solid #FFFFFF;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#2E2C28">L</div></div>
+              <div style="font-size:13px;color:#6E6E6B">Serves 2 · 25 min</div>
+            </div>
+            <div style="display:flex;gap:8px;padding-top:2px">
+              <div style="flex:1;height:44px;border-radius:12px;background:#F3F1EC;color:#1B1B19;display:flex;align-items:center;justify-content:center;gap:7px;font-size:15px;font-weight:600"><i data-lucide="book-open" width="16" height="16" stroke-width="1.75"></i>View</div>
+              <div style="flex:1.4;height:44px;border-radius:12px;background:#2BBF4E;color:#1B1B19;display:flex;align-items:center;justify-content:center;gap:7px;font-size:15px;font-weight:600"><i data-lucide="flame" width="16" height="16" stroke-width="1.75"></i>Start cooking</div>
+            </div>
+          </div>
+
+          <div style="padding:0 20px 8px;display:flex;align-items:center"><div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6B">The rest of the week</div><div style="flex:1"></div><div style="font-size:13px;font-weight:600;color:#116B26">Edit</div></div>
+
+          <div style="margin:0 12px;background:#FFFFFF;border-radius:22px;overflow:hidden;display:flex;flex-direction:column">
+            <div style="display:flex;align-items:center;gap:12px;padding:13px 14px">
+              <div style="width:40px;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.08em;color:#6E6E6B">WED 2</div>
+              <div style="flex:1;font-size:15px;font-weight:500;line-height:1.35;min-width:0">Fishcake tacos with mango, lime and cumin yoghurt</div>
+              <div style="color:#BFC4BF;display:flex"><i data-lucide="chevron-right" width="17" height="17" stroke-width="1.75"></i></div>
+            </div>
+            <div style="height:1px;background:rgba(20,40,10,.10);margin-left:66px"></div>
+            <div style="display:flex;align-items:center;gap:12px;padding:13px 14px">
+              <div style="width:40px;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.08em;color:#6E6E6B">THU 3</div>
+              <div style="flex:1;display:flex;align-items:center;gap:6px;color:#6E6E6B;font-size:15px"><i data-lucide="plane" width="14" height="14" stroke-width="1.75"></i>Away</div>
+              <div style="color:#BFC4BF;display:flex"><i data-lucide="chevron-right" width="17" height="17" stroke-width="1.75"></i></div>
+            </div>
+            <div style="height:1px;background:rgba(20,40,10,.10);margin-left:66px"></div>
+            <div style="display:flex;align-items:center;gap:12px;padding:13px 14px">
+              <div style="width:40px;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.08em;color:#6E6E6B">FRI 4</div>
+              <div style="flex:1;font-size:15px;font-weight:500;line-height:1.35;min-width:0">Quick salmon fishcakes</div>
+              <div style="color:#BFC4BF;display:flex"><i data-lucide="chevron-right" width="17" height="17" stroke-width="1.75"></i></div>
+            </div>
+            <div style="height:1px;background:rgba(20,40,10,.10);margin-left:66px"></div>
+            <div style="display:flex;align-items:center;gap:12px;padding:13px 14px">
+              <div style="width:40px;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.08em;color:#6E6E6B">SAT 5</div>
+              <div style="flex:1;font-size:15px;color:#6E6E6B">Nothing planned</div>
+              <div style="display:flex;align-items:center;gap:5px;height:30px;padding:0 11px;border-radius:999px;background:#F3F1EC;color:#1B1B19;font-size:13px;font-weight:600"><i data-lucide="plus" width="14" height="14" stroke-width="2"></i>Add</div>
+            </div>
+            <div style="height:1px;background:rgba(20,40,10,.10);margin-left:66px"></div>
+            <div style="display:flex;align-items:center;gap:12px;padding:13px 14px">
+              <div style="width:40px;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.08em;color:#6E6E6B">SUN 6</div>
+              <div style="flex:1;font-size:15px;font-weight:500;line-height:1.35;min-width:0">Roast chicken and all the trimmings</div>
+              <div style="color:#BFC4BF;display:flex"><i data-lucide="chevron-right" width="17" height="17" stroke-width="1.75"></i></div>
+            </div>
+          </div>
+
+          <div style="margin-top:auto;background:rgba(251,254,251,.94);display:flex;align-items:center;padding:8px 12px 26px;gap:4px">
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;border-radius:16px;background:#E3F7E8;color:#116B26"><i data-lucide="calendar-days" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:600">Plan</span></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;color:#82817B"><i data-lucide="shopping-cart" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Shop</span></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;color:#82817B"><i data-lucide="book" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Meals</span></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;color:#82817B"><i data-lucide="settings" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Settings</span></div>
+          </div>
+        </div>
+      </x-import>
+      <div style="font-size:13px;line-height:1.5;color:#6E6E6B;max-width:402px">Tonight is the question the app is usually opened to answer, so it gets the only card and the only pair of buttons. The other five days are one line each and still all visible.</div>
+    </div>
+
+    <!-- 1c -->
+    <div id="1c" style="display:flex;flex-direction:column;gap:12px" data-screen-label="1c Week strip">
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:999px;background:#1B1B19;color:#F6F1E3;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.08em">1c</span>
+        <span style="font-size:17px;font-weight:600;letter-spacing:-0.01em">Week strip, one day at a time</span>
+      </div>
+      <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="402px,874px">
+        <div style="height:100%;background:linear-gradient(160deg,#FBFEFB 0%,#E9F8EC 100%);display:flex;flex-direction:column;padding-top:54px;overflow:hidden">
+
+          <div style="padding:6px 16px 12px;display:flex;align-items:center;gap:10px">
+            <div style="display:flex;align-items:flex-end;gap:6px;flex:1">
+              <div style="font-size:32px;font-weight:600;letter-spacing:-0.02em;line-height:1">Plan</div>
+              <div style="width:10px;height:10px;border-radius:3px;background:#2BBF4E;margin-bottom:3px"></div>
+            </div>
+            <div style="width:34px;height:34px;border-radius:999px;background:rgba(255,255,255,.8);display:flex;align-items:center;justify-content:center;color:#116B26"><i data-lucide="rotate-ccw" width="17" height="17" stroke-width="1.75"></i></div>
+            <div style="width:34px;height:34px;border-radius:999px;background:rgba(255,255,255,.8);display:flex;align-items:center;justify-content:center;color:#116B26"><i data-lucide="share" width="17" height="17" stroke-width="1.75"></i></div>
+          </div>
+
+          <div style="display:flex;gap:5px;padding:0 12px 14px">
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;padding:9px 0 8px;border-radius:16px;color:#8A8A85"><div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.06em">S</div><div style="font-size:16px;font-weight:500">30</div><div style="width:4px;height:4px;border-radius:999px;background:#C9CFC7"></div></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;padding:9px 0 8px;border-radius:16px;color:#8A8A85"><div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.06em">M</div><div style="font-size:16px;font-weight:500">31</div><div style="width:4px;height:4px;border-radius:999px;background:#C9CFC7"></div></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;padding:9px 0 8px;border-radius:16px;background:#2BBF4E;color:#1B1B19"><div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.06em">T</div><div style="font-size:16px;font-weight:600">1</div><div style="width:4px;height:4px;border-radius:999px;background:#1B1B19"></div></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;padding:9px 0 8px;border-radius:16px;background:#FFFFFF;color:#1B1B19"><div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.06em">W</div><div style="font-size:16px;font-weight:500">2</div><div style="width:4px;height:4px;border-radius:999px;background:#6E6E6B"></div></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;padding:9px 0 8px;border-radius:16px;background:#FFFFFF;color:#1B1B19"><div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.06em">T</div><div style="font-size:16px;font-weight:500">3</div><i data-lucide="plane" width="11" height="11" stroke-width="2"></i></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;padding:9px 0 8px;border-radius:16px;background:#FFFFFF;color:#1B1B19"><div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.06em">F</div><div style="font-size:16px;font-weight:500">4</div><div style="width:4px;height:4px;border-radius:999px;background:#6E6E6B"></div></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;padding:9px 0 8px;border-radius:16px;background:#FFFFFF;color:#1B1B19"><div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.06em">S</div><div style="font-size:16px;font-weight:500">5</div><div style="width:4px;height:4px;border-radius:999px;background:transparent"></div></div>
+          </div>
+
+          <div style="padding:0 20px 10px;display:flex;align-items:center;gap:8px">
+            <div style="font-size:20px;font-weight:600;letter-spacing:-0.02em">Tuesday</div>
+            <div style="padding:2px 7px;border-radius:6px;background:#E3F7E8;color:#116B26;font-family:ui-monospace,Menlo,monospace;font-size:9px;letter-spacing:.1em">TODAY</div>
+            <div style="flex:1"></div>
+            <div style="display:flex;padding:2px;border-radius:999px;background:#F1EFEA">
+              <div style="display:flex;align-items:center;gap:5px;padding:5px 10px;border-radius:999px;background:#FFFFFF;color:#1B1B19;font-size:12px;font-weight:600"><i data-lucide="house" width="13" height="13" stroke-width="1.75"></i>Home</div>
+              <div style="display:flex;align-items:center;gap:5px;padding:5px 10px;border-radius:999px;color:#6E6E6B;font-size:12px;font-weight:500"><i data-lucide="plane" width="13" height="13" stroke-width="1.75"></i>Away</div>
+            </div>
+          </div>
+
+          <div style="margin:0 12px 12px;background:#FFFFFF;border-radius:22px;overflow:hidden;display:flex;flex-direction:column">
+            <div style="height:132px;background:#EDEBE4;display:flex;align-items:center;justify-content:center;color:#B7B3A9"><i data-lucide="image" width="26" height="26" stroke-width="1.5"></i></div>
+            <div style="padding:14px;display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;align-items:center;gap:7px;color:#6E6E6B"><i data-lucide="moon" width="13" height="13" stroke-width="1.75"></i><span style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase">Dinner</span><div style="flex:1"></div><span style="font-size:12px">Serves 2 · 25 min</span></div>
+              <div style="font-size:21px;font-weight:600;letter-spacing:-0.015em;line-height:1.22">Easy prawn green curry rice bowl</div>
+              <div style="display:flex;align-items:center"><div style="width:24px;height:24px;border-radius:999px;background:#E8E3DC;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#4A4843">J</div><div style="width:24px;height:24px;border-radius:999px;background:#C8C1B7;margin-left:-7px;border:2px solid #FFFFFF;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#2E2C28">L</div></div>
+              <div style="display:flex;gap:8px;padding-top:2px">
+                <div style="flex:1;height:42px;border-radius:12px;background:#F3F1EC;color:#1B1B19;display:flex;align-items:center;justify-content:center;gap:7px;font-size:15px;font-weight:600"><i data-lucide="book-open" width="16" height="16" stroke-width="1.75"></i>View</div>
+                <div style="flex:1;height:42px;border-radius:12px;background:#2BBF4E;color:#1B1B19;display:flex;align-items:center;justify-content:center;gap:7px;font-size:15px;font-weight:600"><i data-lucide="flame" width="16" height="16" stroke-width="1.75"></i>Cook</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin:0 12px;background:#FFFFFF;border-radius:18px;padding:12px 14px;display:flex;align-items:center;gap:10px">
+            <div style="display:flex;align-items:center;gap:7px;color:#6E6E6B"><i data-lucide="sun" width="13" height="13" stroke-width="1.75"></i><span style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase">Lunch</span></div>
+            <div style="flex:1;font-size:15px;color:#6E6E6B">Nothing planned</div>
+            <div style="display:flex;align-items:center;gap:5px;height:32px;padding:0 12px;border-radius:999px;background:#F3F1EC;color:#1B1B19;font-size:13px;font-weight:600"><i data-lucide="plus" width="14" height="14" stroke-width="2"></i>Add</div>
+          </div>
+
+          <div style="padding:14px 20px 0;display:flex;align-items:center;gap:8px;font-size:13px;color:#6E6E6B"><span style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase">Next</span><span style="color:#1B1B19">Wed — fishcake tacos</span><i data-lucide="chevron-right" width="15" height="15" stroke-width="1.75"></i></div>
+
+          <div style="margin-top:auto;background:rgba(251,254,251,.94);display:flex;align-items:center;padding:8px 12px 26px;gap:4px">
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;border-radius:16px;background:#E3F7E8;color:#116B26"><i data-lucide="calendar-days" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:600">Plan</span></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;color:#82817B"><i data-lucide="shopping-cart" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Shop</span></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;color:#82817B"><i data-lucide="book" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Meals</span></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;color:#82817B"><i data-lucide="settings" width="22" height="22" stroke-width="1.75"></i><span style="font-size:10px;font-weight:500">Settings</span></div>
+          </div>
+        </div>
+      </x-import>
+      <div style="font-size:13px;line-height:1.5;color:#6E6E6B;max-width:402px">The week becomes a strip you tap, and the day below it becomes a proper page — room for a photo, lunch as well as dinner, and no scrolling to reach tomorrow. Costs the at-a-glance week.</div>
+    </div>
+
+  </div>
+
+  <div style="max-width:900px;padding:22px 24px;background:#FCFCF6;border:1px solid rgba(20,40,10,.10);border-radius:20px;display:flex;flex-direction:column;gap:8px">
+    <div style="font-size:17px;font-weight:600">What each one costs you</div>
+    <div style="font-size:15px;line-height:1.6;color:#6E6E6B;text-wrap:pretty"><a href="#1a">1a</a> is the cheapest to build and the best for editing a week, but tonight is no more prominent than Friday. <a href="#1b">1b</a> answers "what am I cooking?" instantly and still shows the week, at the cost of one screen doing two jobs. <a href="#1c">1c</a> is the only one with room for photos and more than one meal a day — say the word if lunches and breakfasts are coming, because that is the one that survives them.</div>
+  </div>
+
+</section>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const DAYS = [
+  { key: 'tue', abbr: 'TUE', date: '1', name: 'Tuesday', long: 'Tue 1 Sept', today: true },
+  { key: 'wed', abbr: 'WED', date: '2', name: 'Wednesday', long: 'Wed 2 Sept' },
+  { key: 'thu', abbr: 'THU', date: '3', name: 'Thursday', long: 'Thu 3 Sept' },
+  { key: 'fri', abbr: 'FRI', date: '4', name: 'Friday', long: 'Fri 4 Sept' },
+  { key: 'sat', abbr: 'SAT', date: '5', name: 'Saturday', long: 'Sat 5 Sept' },
+  { key: 'sun', abbr: 'SUN', date: '6', name: 'Sunday', long: 'Sun 6 Sept' }
+];
+
+const LIBRARY = [
+  { title: 'Easy prawn green curry rice bowl', meta: 'Serves 2 · 25 min' },
+  { title: 'Fishcake tacos with mango, lime and cumin yoghurt', meta: 'Serves 4 · 30 min' },
+  { title: 'Quick salmon fishcakes', meta: 'Serves 2 · 20 min' },
+  { title: 'Roast chicken and all the trimmings', meta: 'Serves 6 · 1 hr 40' },
+  { title: 'Chorizo and butterbean stew', meta: 'Serves 4 · 35 min' },
+  { title: 'Miso aubergine with steamed rice', meta: 'Serves 2 · 30 min' }
+];
+
+const SHOP = [
+  { name: 'Green grocery', items: ['0.17 mango', '2 limes: finely grate the zest of all 4', '1 bunch coriander', '400g new potatoes'] },
+  { name: 'Bakery', items: ['6 corn or flour tortillas'] },
+  { name: 'Fresh meat and fish', items: ['225g plaice fillets', '300g raw king prawns'] }
+];
+
+const MEALS = [
+  { title: 'Caesar sauce dressing', rating: '—', tag: 'From a book' },
+  { title: 'Classic lasagne', rating: '7/10', tag: 'Serves 6' },
+  { title: 'Coastal fish curry', rating: '7/10', tag: 'Serves 4' },
+  { title: 'Easy prawn green curry rice bowl', rating: '8/10', tag: 'Serves 2' },
+  { title: 'Fishcake tacos with mango', rating: '8/10', tag: 'Serves 4' },
+  { title: 'Miso aubergine with rice', rating: '6/10', tag: 'Serves 2' }
+];
+
+class Component extends DCLogic {
+  state = {
+    checked: { '0.17 mango': false, '2 limes: finely grate the zest of all 4': false, '1 bunch coriander': true, '400g new potatoes': true, '6 corn or flour tortillas': false, '225g plaice fillets': false, '300g raw king prawns': true },
+    lunch: false,
+    dinner: true,
+    storeDays: 3,
+    reminder: true,
+    shopSync: true,
+    open: null,
+    view: 'edit',
+    jack: true,
+    lois: true,
+    guests: false,
+    guestCount: 2,
+    away: { thu: true },
+    meals: {
+      tue: 'Easy prawn green curry rice bowl',
+      wed: 'Fishcake tacos with mango, lime and cumin yoghurt',
+      fri: 'Quick salmon fishcakes',
+      sun: 'Roast chicken and all the trimmings'
+    }
+  };
+
+  metaFor(title) {
+    const hit = LIBRARY.find(m => m.title === title);
+    return hit ? hit.meta : 'Serves 2';
+  }
+
+  icons() { if (window.lucide) window.lucide.createIcons(); }
+  componentDidMount() {
+    this.icons();
+    [120, 400, 1200, 2500].forEach(t => setTimeout(() => this.icons(), t));
+  }
+  componentDidUpdate() { this.icons(); }
+
+  renderVals() {
+    const s = this.state;
+    const day = s.open == null ? null : DAYS[s.open];
+    const dayKey = day ? day.key : null;
+    const mealTitle = dayKey ? s.meals[dayKey] : null;
+    const heads = (s.jack ? 1 : 0) + (s.lois ? 1 : 0) + (s.guests ? s.guestCount : 0);
+    const plannedCount = DAYS.filter(d => s.meals[d.key]).length;
+
+    const t = DAYS[0];
+    const todayTitle = s.meals[t.key];
+
+    const allItems = SHOP.reduce((n, g) => n + g.items.length, 0);
+    const doneItems = SHOP.reduce((n, g) => n + g.items.filter(i => s.checked[i]).length, 0);
+    const leftItems = allItems - doneItems;
+
+    return {
+      shopGroups: SHOP.map(g => {
+        const done = g.items.filter(i => s.checked[i]).length;
+        return {
+          name: g.name,
+          count: done + '/' + g.items.length,
+          items: g.items.map(i => ({
+            label: i,
+            done: !!s.checked[i],
+            todo: !s.checked[i],
+            onToggle: () => this.setState(st => ({ checked: Object.assign({}, st.checked, { [i]: !st.checked[i] }) }))
+          }))
+        };
+      }),
+      shopHeadline: leftItems === 0 ? 'Everything is in the trolley' : leftItems + (leftItems === 1 ? ' thing left to get' : ' things left to get'),
+      shopSub: doneItems + ' of ' + allItems + ' in the trolley',
+      shopPct: Math.round((doneItems / allItems) * 100) + '%',
+
+      meals: MEALS,
+      mealsCount: MEALS.length + ' meals · 4 planned this week',
+
+      lunchOn: s.lunch, lunchOff: !s.lunch,
+      dinnerOn: s.dinner, dinnerOff: !s.dinner,
+      reminderOn: s.reminder, reminderOff: !s.reminder,
+      syncOn: s.shopSync, syncOff: !s.shopSync,
+      storeDays: s.storeDays + ' days',
+      toggleLunch: () => this.setState(st => ({ lunch: !st.lunch })),
+      toggleDinner: () => this.setState(st => ({ dinner: !st.dinner })),
+      toggleReminder: () => this.setState(st => ({ reminder: !st.reminder })),
+      toggleSync: () => this.setState(st => ({ shopSync: !st.shopSync })),
+      daysPlus: () => this.setState(st => ({ storeDays: Math.min(30, st.storeDays + 1) })),
+      daysMinus: () => this.setState(st => ({ storeDays: Math.max(1, st.storeDays - 1) })),
+
+      todayEyebrow: t.long + ' · Dinner',
+      todayTitle: todayTitle || '',
+      todayMeta: todayTitle ? this.metaFor(todayTitle).replace('Serves', 'Serves') : '',
+      todayHasMeal: !!todayTitle,
+      todayNoMeal: !todayTitle,
+      openToday: () => this.setState({ open: 0, view: todayTitle ? 'edit' : 'picker' }),
+
+      days: DAYS.slice(1).map((d, idx) => {
+        const i = idx + 1;
+        const title = s.meals[d.key];
+        const isAway = !!s.away[d.key] && !title;
+        return {
+          abbr: d.abbr, date: d.date, title: title || '',
+          isToday: !!d.today,
+          hasMeal: !!title,
+          isAway,
+          isEmpty: !title && !isAway,
+          showChevron: !!title || isAway,
+          onOpen: () => this.setState({ open: i, view: 'edit' })
+        };
+      }),
+      weekSummary: plannedCount + ' meals this week · 11 things to buy',
+
+      sheetOpen: s.open != null,
+      isEdit: s.open != null && s.view === 'edit',
+      isPicker: s.open != null && s.view === 'picker',
+      sheetTitle: day ? day.name + ' dinner' : '',
+      sheetDate: day ? day.long : '',
+
+      hasMeal: !!mealTitle,
+      noMeal: s.open != null && !mealTitle,
+      mealTitle: mealTitle || '',
+      mealMeta: mealTitle ? this.metaFor(mealTitle) : '',
+
+      jackOn: s.jack, jackOff: !s.jack,
+      loisOn: s.lois, loisOff: !s.lois,
+      guestsOn: s.guests, guestsOff: !s.guests,
+      guestCount: s.guestCount,
+      guestLabel: s.guests ? 'Cooking extra' : 'Nobody extra',
+      cookingFor: heads === 1 ? 'Cooking for 1' : 'Cooking for ' + heads,
+
+      library: LIBRARY.map(m => ({
+        title: m.title, meta: m.meta,
+        picked: m.title === mealTitle,
+        unpicked: m.title !== mealTitle,
+        onPick: () => this.setState(st => ({
+          view: 'edit',
+          meals: Object.assign({}, st.meals, { [dayKey]: m.title }),
+          away: Object.assign({}, st.away, { [dayKey]: false })
+        }))
+      })),
+
+      close: () => this.setState({ open: null, view: 'edit' }),
+      openPicker: () => this.setState({ view: 'picker' }),
+      backToEdit: () => this.setState({ view: 'edit' }),
+      removeMeal: () => this.setState(st => {
+        const meals = Object.assign({}, st.meals);
+        delete meals[dayKey];
+        return { meals };
+      }),
+      setAway: () => this.setState(st => {
+        const meals = Object.assign({}, st.meals);
+        delete meals[dayKey];
+        return { meals, away: Object.assign({}, st.away, { [dayKey]: true }), open: null };
+      }),
+      toggleJack: () => this.setState(st => ({ jack: !st.jack })),
+      toggleLois: () => this.setState(st => ({ lois: !st.lois })),
+      toggleGuests: () => this.setState(st => ({ guests: !st.guests })),
+      guestPlus: () => this.setState(st => ({ guestCount: Math.min(8, st.guestCount + 1) })),
+      guestMinus: () => this.setState(st => ({ guestCount: Math.max(1, st.guestCount - 1) }))
+    };
+  }
+}
+
+</script>
+</body>
+</html>

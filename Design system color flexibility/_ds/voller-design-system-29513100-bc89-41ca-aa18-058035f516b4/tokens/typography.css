@@ -1,0 +1,32 @@
+/* One family: the platform system sans. Never pair two. No webfont, no
+   fonts.googleapis.com anywhere in the family — this is a documented
+   substitution ladder (SF Pro / Segoe UI / Roboto), not a claim about SF Pro.
+
+   VOLLER.md §2 and MIGRATION.md §1 write the stack with 'SF Pro Text' named
+   explicitly. It is dropped here because -apple-system and BlinkMacSystemFont
+   already resolve to SF Pro on every Apple platform, so the named entry changed
+   nothing visually while reading as a missing webfont to tooling. Rendering is
+   identical on all three platforms; if the spec text is ever regenerated from
+   this file, put the name back and ignore the font warning. */
+:root{
+  --sans:-apple-system,BlinkMacSystemFont,system-ui,'Segoe UI',Roboto,sans-serif; /* @kind font */
+  --mono:ui-monospace,'SF Mono',Menlo,monospace; /* @kind font */
+
+  /* One ladder. 400 / 500 / 600 only — 700 and above are unused. */
+  --size-display:44px;   --lh-display:1.05; /* @kind other */  --track-display:-0.02em; /* @kind other */
+  --size-h1:34px;        --lh-h1:1.15; /* @kind other */       --track-h1:-0.02em; /* @kind other */
+  --size-h2:22px;        --lh-h2:1.3; /* @kind other */        --track-h2:-0.02em; /* @kind other */
+  --size-body:16px;      --lh-body:1.6; /* @kind other */
+  --size-small:14px;     --lh-small:1.55; /* @kind other */
+  --size-caption:12px;   --lh-caption:1.5; /* @kind other */
+  --size-eyebrow:11px;   --track-eyebrow:.1em; /* @kind other */
+  --size-control:15px;   --track-control:-0.01em; /* @kind other */
+
+  --weight-regular:400; /* @kind font */
+  --weight-medium:500; /* @kind font */
+  --weight-semibold:600; /* @kind font */
+
+  /* Web-only hero exception, as shipped on voller.uk: the display step bends to
+     the pre-brand hero size. Tracking is -.045em, not the -.065em cut for Inter. */
+  --size-hero:clamp(42px,7vw,78px); --lh-hero:1.03; /* @kind other */ --track-hero:-0.045em; /* @kind other */
+}

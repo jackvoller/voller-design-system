@@ -1,0 +1,11 @@
+/* Restrained. No bounces, springs, parallax or scroll reveals. */
+:root{
+  --ease:cubic-bezier(.2,.6,.2,1); /* @kind other */
+  --dur-colour:120ms; /* @kind other */   /* colour, opacity */
+  --dur-move:180ms; /* @kind other */     /* position, size, transforms */
+  --transition-colour:color var(--dur-colour) var(--ease),background-color var(--dur-colour) var(--ease),border-color var(--dur-colour) var(--ease); /* @kind other */
+  --transition-move:transform var(--dur-move) var(--ease),opacity var(--dur-move) var(--ease); /* @kind other */
+}
+@media (prefers-reduced-motion:reduce){
+  :root{--dur-colour:1ms; /* @kind other */ --dur-move:1ms /* @kind other */}
+}

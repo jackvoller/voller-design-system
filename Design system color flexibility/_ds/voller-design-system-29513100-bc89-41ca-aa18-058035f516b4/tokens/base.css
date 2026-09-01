@@ -1,0 +1,21 @@
+/* Element defaults, lifted from voller.uk's index.css so a consumer linking
+   styles.css gets the real baseline — including both link states. */
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--sans);font-size:var(--size-body);line-height:var(--lh-body);color:var(--text);background:var(--page);-webkit-font-smoothing:antialiased;font-synthesis:none}
+h1,h2,h3{margin:0;font-weight:var(--weight-semibold);letter-spacing:-.02em;line-height:1.15}
+h1{font-size:var(--size-h1)}
+h2{font-size:var(--size-h2)}
+h3{font-size:var(--size-body)}
+p{margin:0;text-wrap:pretty}
+strong{font-weight:var(--weight-semibold)}
+code,kbd,samp{font-family:var(--mono);font-size:var(--size-small)}
+/* Prose links carry the underline; structural links (nav, cards, tabs) do not.
+   Hover goes to --text, not --green: VOLLER §9 says green, but the §1.1 contrast
+   table rates green on the light field 2.2:1 and marks it Never. The table wins. */
+a{color:var(--tint);text-decoration:none;border-bottom:1px solid var(--link-rule);transition:var(--transition-colour)}
+a:hover{color:var(--text)}
+a.plain,nav a,a:has(img){border-bottom:0}
+:focus-visible{outline:2px solid var(--tint);outline-offset:3px;border-radius:4px}
+/* Eyebrows and spec labels are the only monospace. */
+.eyebrow{font-family:var(--mono);font-size:var(--size-caption);font-weight:400;letter-spacing:var(--track-eyebrow);text-transform:uppercase;color:var(--text-muted)}
+.field{background:var(--field)}

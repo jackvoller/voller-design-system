@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>MealPlanner app icon — dark appearance (transparent background by design)</title>
+  <circle cx="512" cy="512" r="330" fill="#2BBF4E"></circle><circle cx="512" cy="512" r="228" fill="#EFE9DA"></circle><g fill="none" stroke="#2BBF4E" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"><path d="M368 470 L 404 506 L 470 438"></path><path d="M520 472 L656 472"></path><path d="M368 596 L656 596"></path></g>
+</svg>

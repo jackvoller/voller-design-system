@@ -934,6 +934,10 @@ app's own accent (§4.1). The older green-and-gold sets still sitting at `<App>/
 **superseded**; they are kept only until the two open items in `MIGRATION.md` are closed and the new
 PNGs are promoted into their place. Do not copy from `<App>/` into an app repo.
 
+`MealPlanner/` is already gone — Meal Planner shipped the containerless plate, so the old
+green-and-gold masters had nothing left to serve. Its current artwork ships from the app repo, at
+`mealplanner/MealPlanner-icons/`. Recover the retired set from git history if it is ever wanted.
+
 Migration state and per-repo find/replace: **`MIGRATION.md`**.
 
 Two live references, and **both now predate the yellow change**:

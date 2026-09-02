@@ -34,14 +34,15 @@ followed without seeing the original designs.
 
 Colour splits in two, and the halves do not borrow from each other.
 
-- **The house palette** — the twelve values below. It draws the Voller mark, the wordmark,
-  voller.uk, the App Store presence, and every neutral, surface, hairline and alert inside a
-  product. It is fixed. Do not introduce a thirteenth without adding it here first.
+- **The house palette** — the twelve values below plus the yellow field and hairline. It draws the
+  Voller mark, the wordmark, voller.uk, and the App Store presence **for the Voller brand only**.
+  It is fixed. Do not introduce a fourteenth without adding it here first.
 - **The app accent** — six tokens, published once per app (§1.2). They carry action and state
   inside that app's own UI, **and they draw that app's icon** (§4.1).
 
-An app may not put `yellow` in its chrome. The house may not take an app's accent. Everything an app
-does not publish in its six, it inherits from the twelve.
+An app may not put `yellow` in its chrome. The house may not take an app's accent. **An app may not
+use house `yellow`, `cream`, `muted`, `ink`, `alert`, or house hairline in product UI** — each app
+publishes its own complete palette in its own hue.
 
 **The house no longer owns a green.** Green is not deleted from the family — it is demoted out of the
 house palette and lives on as Meal Planner's and UnPickle's published `accent` (§1.2). With four apps
@@ -182,11 +183,14 @@ fields, always with an `ink` label. It can be a *tint* only on dark. On light it
 down to `yellow-dark`, and takes a `cream` label when it does.
 
 
-### 1.2 The app accent
+### 1.2 The app palette
 
-**Every app publishes exactly six tokens, and inherits everything else.** One accent per app, one
-accent per role per view. An app may not add a seventh colour to its chrome; if it needs a
-distinction, it moves inside its own accent ramp.
+**Every app publishes a complete palette in its own hue**: the accent ramp (six roles) plus a full
+neutral ramp cast in that app's hue. One accent per app, one accent per role per view. An app may
+not add a seventeenth colour to its chrome; if it needs a distinction, it moves inside its own
+accent ramp.
+
+#### The accent ramp (six roles)
 
 | Token | Role |
 |---|---|
@@ -197,7 +201,22 @@ distinction, it moves inside its own accent ramp.
 | `field-dark` | The same hue at a tenth of the light. Replaces `--field-dark` inside that app. |
 | `accent-dark` | The tint on dark. `accent` is too heavy there for glyphs and links. |
 
-Published values:
+#### The neutral ramp (ten roles, cast in the app's hue)
+
+|| Token | Role |
+||---|---|
+|| `cream` | Light panels, chip fills, **tag badge fills**, negative space. **Not** house `#F6F1E3` — each app's own cream in that app's hue. |
+|| `cream-dark` | Body text and surfaces on dark. |
+|| `ink` | Body text on light. Dark base. Labels on accent fills (for light accents). |
+|| `ink-raised` | Cards and list rows on dark. |
+|| `muted` | Secondary text, eyebrows, and **tag badge labels** on light. |
+|| `muted-dark` | Secondary text and eyebrows on dark. |
+|| `alert` | Safety and destruction only, on light. Cast in the app's hue. |
+|| `alert-light` | The alert substitute on dark. |
+|| `hairline` | Light field hairline, rgba cast in the app's hue. |
+|| `hairline-dark` | Dark field hairline. |
+
+Published values — accent ramp:
 
 | Token | UnJumble — coral | Meal Planner + UnPickle — green | Riverly — river blue |
 |---|---|---|---|
@@ -208,6 +227,35 @@ Published values:
 | `field-dark` | `#2C2320 → #1A1413` | `#1F2A21 → #141A15` | *not yet published* |
 | `accent-dark` | `#FF7358` | `#45D268` | `#4E9BF5` |
 | **label on `accent`** | `ink` | `ink` | `cream` |
+
+Published values — neutral ramp (app-hue-cast, **not** house neutrals):
+
+|| Token | UnJumble — coral-cast | Meal Planner + UnPickle — green-cast | Riverly — blue-cast |
+||---|---|---|---|
+|| `cream` | `#FFF4F0` | **proposal** | **proposal** |
+|| `cream-dark` | `#F0E6E2` | **proposal** | **proposal** |
+|| `ink` | `#1B1615` | **proposal** | **proposal** |
+|| `ink-raised` | `#241E1C` | **proposal** | **proposal** |
+|| `muted` | `#6E6563` | **proposal** | **proposal** |
+|| `muted-dark` | `#B09A94` | **proposal** | **proposal** |
+|| `alert` | `#C44538` | **proposal** | **proposal** |
+|| `alert-light` | `#E8786A` | **proposal** | **proposal** |
+|| `hairline` light | `rgba(80, 30, 20, .12)` | **proposal** | **proposal** |
+|| `hairline-dark` | `rgba(240, 230, 226, .12)` (`cream-dark` at 12%) | **proposal** | **proposal** |
+
+**UnJumble047s neutral chip (`NeutralChip` / library tag badge)**: `cream` fill + `muted` label. Filter
+chips unselected: app `muted` on glass; selected stays `accent-wash` + `accent-tint`.
+
+**UnJumble contrast figures** (derived with WCAG relative luminance): `muted` `#6E6563` vs `field`
+bottom `#FFEDE6` ≈ 5.0:1, vs `cream` `#FFF4F0` ≈ 5.3:1. `muted-dark` `#B09A94` vs `field-dark`
+top `#2C2320` ≈ 5.8:1.
+
+**Meal Planner + UnPickle and Riverly**: add the same slot names. Publish green/blue-cast neutrals
+that mirror UnJumble047s roles (`cream` = a quiet chip/panel in that hue, not house cream). If you
+cannot honestly derive AA-safe values, mark them **proposal** and leave a TODO rather than copying
+UnJumble coral or house yellow. Do not copy UnJumble hexes into other apps.
+
+**Riverly `field-dark`** was already unpublished — keep it unpublished if still unknown.
 
 All fields are `linear-gradient(160deg, …)` — the same angle as the two house fields.
 
@@ -228,19 +276,19 @@ Light accents carry an `ink` label — ink on coral is 5.6:1 and on green 7.1:1,
 **Each app publishes which of the two its fill takes, in the table above, and never guesses per
 screen.**
 
-#### Inherited, never overridden
+#### Inherited: geometry and type only
 
-`ink`, `cream`, `muted` / `muted-dark`, white and the `ink-raised` dark surface family, the
-hairlines, the radii, the type ladder, and the alert pair `#C4382C` / `#E8705F` for destruction
-only. An app publishes six tokens. It does not publish a seventh, and it does not restate a house
-value under an app name.
+The radii, the type ladder, and the 8px spacing base — these remain house-governed. **Colour does
+not.** An app publishes sixteen tokens (six accent + ten neutral). It does not publish a
+seventeenth, and it does not use house neutrals in product UI. An app's `cream`, `muted`, `ink`,
+`alert`, and hairline are **not** the house values — they are cast in that app's own hue.
 
 #### Neutral by default
 
-Counts, tags, dates, durations, avatars, photo slots and speaker names are **ink, muted or white** —
-never the accent. The accent marks the action, the current thing, and the danger. This is the rule
-that keeps a screen minimal at speed, and it is the one that breaks first: a second hue creeps in
-for "types of thing". The type is carried by the label and the icon.
+Counts, tags, dates, durations, avatars, photo slots and speaker names are **the app's ink, muted
+or white** — never the accent. The accent marks the action, the current thing, and the danger. This
+is the rule that keeps a screen minimal at speed, and it is the one that breaks first: a second hue
+creeps in for "types of thing". The type is carried by the label and the icon.
 
 **A status label divides.** One that only *names a kind* — "Podcast", "Family", "Transcribed" — is a
 tag, and is neutral. One that marks a state the person still has to resolve — "Draft", "Overdue",
@@ -250,8 +298,9 @@ if it is only a description, it does not. Once per row, not once per view — a 
 shows six, and that is the label doing its job.
 
 ```css
-/* UnJumble. Swap these six and the component set is another app. */
+/* UnJumble. Swap these sixteen and the component set is another app. */
 :root {
+  /* Accent ramp (6) */
   --accent:       #FF5A3C;
   --accent-deep:  #B92F14;
   --accent-wash:  #FFE7E0;
@@ -259,17 +308,32 @@ shows six, and that is the label doing its job.
   --field-app:      linear-gradient(160deg, #FFFCFA 0%, #FFEDE6 100%);
   --field-app-dark: linear-gradient(160deg, #2C2320 0%, #1A1413 100%);
 
+  /* Neutral ramp (10) — coral-cast, NOT house neutrals */
+  --cream:        #FFF4F0;
+  --cream-dark:   #F0E6E2;
+  --ink:          #1B1615;
+  --ink-raised:   #241E1C;
+  --muted:        #6E6563;
+  --muted-dark:   #B09A94;
+  --alert:        #C44538;
+  --alert-light:  #E8786A;
+  --hairline:      rgba(80, 30, 20, .12);
+  --hairline-dark: rgba(240, 230, 226, .12);
+
   --on-accent: var(--ink);            /* this app's published label. Riverly's is --cream */
   --accent-tint: var(--accent-deep);  /* flips, exactly as --tint does */
 }
 @media (prefers-color-scheme: dark) {
-  :root { --accent-tint: var(--accent-dark); }
+  :root {
+    --accent-tint: var(--accent-dark);
+    --muted: var(--muted-dark);       /* the neutral ramp flips too */
+  }
 }
 ```
 
 Fills keep `accent` and its published label in **both** fields — one button, no variants, the same
 rule as `yellow`. Only the tint lightens. `accent-wash` is light-field only; on dark the quiet button
-becomes a `rgba(246,241,227,.20)` outline, per §9.
+becomes an outline in the app's own `cream-dark` at `.20` alpha, per §9.
 
 #### The accent draws the app's icon too
 
@@ -282,33 +346,36 @@ owned by the house.
 The accent's reach is therefore: product UI (§4.2), the app's icon (§4.1, §6), and nothing else. It
 still never appears on voller.uk or in the wordmark.
 
-#### 1.2.1 Accent contrast
+#### 1.2.1 Contrast — accent and neutral pairings
 
-Re-derive these if you add an app. Every pairing an accent is allowed to make:
+Re-derive these if you add an app. Every pairing an accent and its neutrals are allowed to make.
+**Note:** `ink`, `cream`, `muted` etc. are each app's own values, not house neutrals.
 
-| Surface | Content | Coral | Green | Blue |
-|---|---|---|---|---|
-| `accent` | published label | 5.6 ✓ ink | 7.1 ✓ ink | 5.2 ✓ cream |
-| `accent` | the other label | 2.7 ✗ cream | 2.1 ✗ cream | 2.9 ✗ ink |
-| `#FFFDF5` (house field top) | `accent-deep` | 5.9 ✓ | 6.5 ✓ | 7.9 ✓ |
-| `field` bottom | `accent-deep` | 5.3 ✓ | 6.1 ✓ | 7.0 ✓ |
-| `accent-wash` | `accent-deep` | 5.1 ✓ | 5.9 ✓ | 6.9 ✓ |
-| `accent-wash` | `ink` | 14.6 ✓ | 15.4 ✓ | 14.7 ✓ |
-| `accent-deep` (pressed fill) | `cream` | 5.3 ✓ | 5.9 ✓ | 7.2 ✓ |
-| `accent-deep` (pressed fill) | `ink` | 2.9 ✗ | 2.6 ✗ | 2.1 ✗ |
-| `field-dark` top | `accent-dark` | 5.7 ✓ | 7.6 ✓ | — |
-| `field-dark` bottom | `accent-dark` | 6.8 ✓ | 9.0 ✓ | — |
-| `ink-raised` | `accent-dark` | 5.9 ✓ | 8.0 ✓ | 5.5 ✓ |
-| `field` bottom | `muted` | 4.5 ✓ | 4.7 ✓ | 4.4 ✗ |
-| `field-dark` top | `muted-dark` | 5.4 ✓ | 5.2 ✓ | — |
+|| Surface | Content | Coral (UnJumble) | Green (Meal Planner/UnPickle) | Blue (Riverly) |
+||---|---|---|---|---|
+|| **Accent pairings** ||||
+|| `accent` | published label | 5.6 ✓ ink | 7.1 ✓ ink | 5.2 ✓ cream |
+|| `accent` | the other label | 2.7 ✗ cream | 2.1 ✗ cream | 2.9 ✗ ink |
+|| `field` bottom | `accent-deep` | 5.3 ✓ | 6.1 ✓ | 7.0 ✓ |
+|| `accent-wash` | `accent-deep` | 5.1 ✓ | 5.9 ✓ | 6.9 ✓ |
+|| `accent-wash` | `ink` (app) | 14.6 ✓ | **proposal** | **proposal** |
+|| `accent-deep` (pressed fill) | `cream` (app) | 5.3 ✓ | **proposal** | **proposal** |
+|| `accent-deep` (pressed fill) | `ink` (app) | 2.9 ✗ | **proposal** | **proposal** |
+|| `field-dark` top | `accent-dark` | 5.7 ✓ | 7.6 ✓ | — |
+|| `field-dark` bottom | `accent-dark` | 6.8 ✓ | 9.0 ✓ | — |
+|| `ink-raised` (app) | `accent-dark` | 5.9 ✓ | **proposal** | **proposal** |
+|| **Neutral pairings** (app-cast neutrals) ||||
+|| `field` bottom | `muted` (app) | ≈ 5.0 ✓ | **proposal** | **proposal** |
+|| `cream` (app) | `muted` (app) | ≈ 5.3 ✓ | **proposal** | **proposal** |
+|| `field-dark` top | `muted-dark` (app) | ≈ 5.8 ✓ | **proposal** | **proposal** |
+|| `field` bottom | `ink` (app) | 15.4+ ✓ | **proposal** | **proposal** |
+|| `ink-raised` (app) | `cream-dark` (app) | 13.0+ ✓ | **proposal** | **proposal** |
 
 `accent` is a fill only. It is never a tint, never text, and never a glyph on either field — that is
 `accent-deep` on light and `accent-dark` on dark, exactly as `yellow` steps down to `yellow-dark`.
 
-**One open failure.** `muted` on the bottom of Riverly's field is 4.4:1 — the only sanctioned pairing
-in this file that does not clear AA, and it is why Riverly stays a proposal. Resolve it before
-drawing the screens, either by lightening the bottom stop to `#EAF3FD` (4.6:1, and `accent-deep`
-still 7.2:1) or by putting Riverly's captions on `ink`. Do not ship the field as published.
+**Meal Planner/UnPickle and Riverly contrast figures are marked proposal** — derive AA-safe values
+in each app's hue before publishing. Do not copy UnJumble's coral hexes into green or blue apps.
 
 ---
 
@@ -683,13 +750,13 @@ category colour.
 
 ### The house governs
 
-Surfaces and fields · hairlines · the type family, scale and weight set · tint · primary and
-secondary actions · yellow and what it may mark · **the six accent tokens and the ration rule** ·
-alert and destructive affordances · radii · the 8px spacing base and section rhythm · icons,
-wordmark and app-tile geometry.
+The type family, scale and weight set · radii · the 8px spacing base and section rhythm · icons,
+wordmark and app-tile geometry · **the ration rule (§4)**.
 
-The app *publishes* its six (§1.2); it does not get to invent a seventh, or to use them outside the
-roles in §4.2.
+**The house does NOT govern product colour.** Yellow and the house neutrals (`#F6F1E3` cream,
+`#6E6E6B` muted, `#1B1B19` ink, `#C4382C` alert, yellow hairline) are for voller.uk and the Voller
+brand mark ONLY. The app *publishes* its sixteen (§1.2): six accent + ten neutral. It does not get
+to invent a seventeenth, or to use house neutrals in product UI.
 
 ### The app decides — under four rules
 
@@ -699,10 +766,10 @@ roles in §4.2.
    the work anyway.
 3. **Measured against its own field.** Every value clears 4.5:1 against the glyph or text it
    carries, on the surface it actually sits on — not on white.
-4. **Three reservations.** A category set may never use `yellow`, `alert`, or **the app's own six**,
-   and a category colour may never tint a button, a link, a nav item, a tab or a selection. Those
-   carry meaning across the whole family — a category colour that borrows the accent makes "this is
-   a vegetarian meal" and "this is the button" the same colour.
+4. **Reservations.** A category set may never use `yellow`, house neutrals, or **the app's own
+   sixteen**, and a category colour may never tint a button, a link, a nav item, a tab or a
+   selection. Those carry meaning across the whole family — a category colour that borrows the accent
+   makes "this is a vegetarian meal" and "this is the button" the same colour.
 
 A category colour naming its domain (`water`, `overdue`, `protein`) is correct and needs no entry in
 this file. A category colour named after its hue (`tagBlue`, `bg-indigo-500`) is a sign rule 1 has
@@ -913,13 +980,15 @@ canvases that explored the alternatives. It is a record, not a spec.
 4. Put your `accent` on the verb, once, at its brightest step against the body. The house colour
    does not appear in an app icon, and the accent does not follow you onto voller.uk.
 5. Check it at 29pt.
-6. **Publish your six** (§1.2) — accent, accent-deep, accent-wash, field, field-dark, accent-dark —
-   and state which label your fill takes. Derive `accent-deep` and `accent-dark` from the accent, not
-   from taste: deep must clear 4.5:1 on your own field and on your own wash; dark must clear it on
-   `ink-raised` and on both stops of your `field-dark`. Add the row to §1.2 and the figures to
-   §1.2.1 before writing any UI.
-   Before inventing a sixth palette, check whether an existing app's six already fits — UnPickle and
-   Meal Planner share one on purpose.
+6. **Publish your sixteen** (§1.2) — six accent + ten neutral, all cast in your app's hue. State
+   which label your fill takes. Derive `accent-deep` and `accent-dark` from the accent, not from
+   taste: deep must clear 4.5:1 on your own field and on your own wash; dark must clear it on your own
+   `ink-raised` and on both stops of your `field-dark`. **Your neutrals** (`cream`, `muted`, `ink`,
+   `alert`, hairline) must also be cast in your app's hue and clear AA against your app's fields —
+   **not** house neutrals. Add the accent row and the neutral row to §1.2 and the figures to §1.2.1
+   before writing any UI.
+   Before inventing a fifth palette, check whether an existing app's sixteen already fits — UnPickle
+   and Meal Planner share one on purpose.
 7. Declare any category colours in the app's own theme file, under §8's four rules.
 8. Line it up against the existing icons before shipping. It should be obvious they're siblings
    without being told.

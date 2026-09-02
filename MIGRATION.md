@@ -579,9 +579,13 @@ the Voller brand mark. Each product app publishes a **complete palette in its ow
 tokens (six accent + ten neutral). Apps may NOT use house `yellow`, `cream`, `muted`, `ink`,
 `alert`, or house hairline in product UI.
 
+**Architecture:** `VOLLER.md` is the central spec defining **rules and roles**, not a hex registry.
+Each app owns its theme file. The spec shows how to derive the sixteen tokens from one primary;
+each app's repo holds the actual hex values.
+
 **Trigger:** UnJumble library tag badges (`NeutralChip`) use house `cream` `#F6F1E3` fill + house
-`muted` `#6E6E6B` label, which reads brown-grey-yellow (wrong hue). UnJumble now publishes
-coral-cast neutrals: `cream` `#FFF4F0` + `muted` `#6E6563`.
+`muted` `#6E6E6B` label, which reads brown-grey-yellow (wrong hue). UnJumble will publish
+coral-cast neutrals in its own repo.
 
 ### What changed in `VOLLER.md`
 
@@ -593,37 +597,21 @@ coral-cast neutrals: `cream` `#FFF4F0` + `muted` `#6E6563`.
 - Updated §8 "The house governs" — house does NOT govern product colour
 - Updated §13 "Adding a fifth app" — publish sixteen, not six
 
-### UnJumble's published neutral ramp (coral-cast)
-
-|| Token | Hex | Use |
-||---|---|---|
-|| `cream` | `#FFF4F0` | **Tag badge fill**, light panels, chip fills |
-|| `cream-dark` | `#F0E6E2` | Body text and surfaces on dark |
-|| `ink` | `#1B1615` | Body text on light, dark base, label on accent fill |
-|| `ink-raised` | `#241E1C` | Dark cards |
-|| `muted` | `#6E6563` | Secondary text, **tag badge label**. Contrast vs `field` bottom `#FFEDE6` ≈ 5.0:1, vs `cream` `#FFF4F0` ≈ 5.3:1 |
-|| `muted-dark` | `#B09A94` | Secondary on dark. vs `field-dark` top `#2C2320` ≈ 5.8:1 |
-|| `alert` | `#C44538` | Destruction on light (coral-shifted vs house `#C4382C`) |
-|| `alert-light` | `#E8786A` | Destruction on dark |
-|| `hairline` light | `rgba(80, 30, 20, .12)` | |
-|| `hairline-dark` | `rgba(240, 230, 226, .12)` | `cream-dark` at 12% |
-
-UnJumble filter chips unselected: app `muted` on glass. Selected stays `accent-wash` + `accent-tint`.
-
 ### Per-repo implementation
 
-**Scope:** spec only. Do not edit UnJumble/Meal Planner/studio iOS/web app repos in this pass.
+**Scope:** voller-design-system spec only. Do NOT edit app repos from this PR. Each app will publish
+its hex values in its own repo.
 
-1. **UnJumble's neutral ramp** is published and ready to implement. Add the ten tokens to
-   `Theme/Colors.swift` or the web theme file. Update `NeutralChip` / library tag badges to use
-   `cream` fill + `muted` label.
-2. **Meal Planner + UnPickle** (share one palette): derive green-cast neutrals that mirror
-   UnJumble's roles. `cream` should be a quiet chip/panel in green hue, NOT house cream. If you
-   cannot honestly derive AA-safe values, mark them **proposal** and leave a TODO. Do not copy
-   UnJumble coral hexes.
-3. **Riverly**: derive blue-cast neutrals. Same guidance. Riverly `field-dark` was already
-   unpublished — keep it unpublished if still unknown.
-4. **No icon changes** — this pass does not touch icons or SVG files unless a hex in an SVG is
+1. **UnJumble** (`jackvoller/unjumble`): derive coral-cast neutrals (ten tokens) following `VOLLER.md`
+   §1.2 "How to derive a new palette". Publish them in UnJumble's theme file. Update `NeutralChip` /
+   library tag badges to use app `cream` fill + app `muted` label (not house neutrals).
+2. **Meal Planner** (`jackvoller/mealplanner`): derive green-cast neutrals. `cream` should be a quiet
+   chip/panel in green hue, NOT house cream. Follow the same lightness and contrast relationships as
+   house yellow (§1).
+3. **UnPickle** (studio): shares Meal Planner's sixteen exactly.
+4. **Riverly** (`jackvoller/riverly`): derive blue-cast neutrals. Same guidance. Riverly `field-dark`
+   was already unpublished — derive it or keep it unpublished if still unknown.
+5. **No icon changes** in this PR — this pass does not touch icons or SVG files.
    house cream used as product chrome.
 
 ### Verification

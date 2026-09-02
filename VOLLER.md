@@ -183,6 +183,7 @@ fields, always with an `ink` label. It can be a *tint* only on dark. On light it
 down to `yellow-dark`, and takes a `cream` label when it does.
 
 
+
 ### 1.2 The app palette
 
 **Every app publishes a complete palette in its own hue**: the accent ramp (six roles) plus a full
@@ -190,83 +191,62 @@ neutral ramp cast in that app's hue. One accent per app, one accent per role per
 not add a seventeenth colour to its chrome; if it needs a distinction, it moves inside its own
 accent ramp.
 
-#### The accent ramp (six roles)
+**Each app owns its theme file.** The values below define the **roles** and how to derive them, not
+a registry of every app's hexes. For actual published values, see each app's repo:
+- UnJumble's coral palette lives in `jackvoller/unjumble`
+- Meal Planner's green palette lives in `jackvoller/mealplanner`
+- UnPickle shares Meal Planner's green
+- Riverly's blue palette lives in `jackvoller/riverly`
 
-| Token | Role |
-|---|---|
-| `accent` | Fills. The primary button, the active tab, the live state. |
-| `accent-deep` | Glyphs, links and pressed states on the light field. The accent's `yellow-dark`. |
-| `accent-wash` | The quiet button, the tab pill, a selected row's ground. Light field only. |
-| `field` | The app's page gradient on light. Replaces `--field-light` inside that app. |
-| `field-dark` | The same hue at a tenth of the light. Replaces `--field-dark` inside that app. |
-| `accent-dark` | The tint on dark. `accent` is too heavy there for glyphs and links. |
+#### The sixteen roles
 
-#### The neutral ramp (ten roles, cast in the app's hue)
+| Token | Role | Usage |
+|---|---|---|
+| **Accent ramp (6)** |||
+| `accent` | Primary fills | The primary button, the active tab, the live state. Identical in both fields. |
+| `accent-deep` | Tint on light | Glyphs, links and pressed states on the light field. The accent's `yellow-dark`. |
+| `accent-dark` | Tint on dark | Glyphs, links on dark. `accent` is too heavy there. |
+| `accent-wash` | Quiet fills | The quiet button, the tab pill, a selected row's ground. Light field only. |
+| `field` | Page background | The app's page gradient on light, cast in that app's hue. Replaces `--field-light`. |
+| `field-dark` | Dark page | The same hue at a tenth of the light. Replaces `--field-dark`. |
+| **Neutral ramp (10, cast in app's hue)** |||
+| `cream` | Panels, chips, **tag badge fills** | Light panels, chip fills, negative space. **Not** house `#F6F1E3` — each app's own cream in that app's hue. |
+| `cream-dark` | Text on dark | Body text and surfaces on dark. |
+| `ink` | Text on light | Body text on light. Dark base. Labels on accent fills (for light accents). |
+| `ink-raised` | Dark cards | Cards and list rows on dark. |
+| `muted` | Secondary text, **tag badge labels** | Secondary text, eyebrows, and **tag badge labels** on light. |
+| `muted-dark` | Secondary on dark | Secondary text and eyebrows on dark. |
+| `alert` | Destruction on light | Safety and destruction only, on light. Cast in the app's hue. |
+| `alert-light` | Destruction on dark | The alert substitute on dark. |
+| `hairline` | Light hairline | Light field hairline, rgba cast in the app's hue. |
+| `hairline-dark` | Dark hairline | Dark field hairline. |
 
-|| Token | Role |
-||---|---|
-|| `cream` | Light panels, chip fills, **tag badge fills**, negative space. **Not** house `#F6F1E3` — each app's own cream in that app's hue. |
-|| `cream-dark` | Body text and surfaces on dark. |
-|| `ink` | Body text on light. Dark base. Labels on accent fills (for light accents). |
-|| `ink-raised` | Cards and list rows on dark. |
-|| `muted` | Secondary text, eyebrows, and **tag badge labels** on light. |
-|| `muted-dark` | Secondary text and eyebrows on dark. |
-|| `alert` | Safety and destruction only, on light. Cast in the app's hue. |
-|| `alert-light` | The alert substitute on dark. |
-|| `hairline` | Light field hairline, rgba cast in the app's hue. |
-|| `hairline-dark` | Dark field hairline. |
+#### How to derive a new palette
 
-Published values — accent ramp:
+**Start with one primary:** your app's `accent` (e.g. orange `#FF8C00`). Derive the fifteen others
+by following the same **lightness and contrast relationships** as the house yellow recipe (§1).
 
-| Token | UnJumble — coral | Meal Planner + UnPickle — green | Riverly — river blue |
-|---|---|---|---|
-| `accent` | `#FF5A3C` | `#2BBF4E` | `#0B5FD0` |
-| `accent-deep` | `#B92F14` | `#116B26` | `#0B4E9E` |
-| `accent-wash` | `#FFE7E0` | `#E3F7E8` | `#E2EEFC` |
-| `field` | `#FFFCFA → #FFEDE6` | `#FBFEFB → #E9F8EC` | `#FAFCFF → #E6F0FB` |
-| `field-dark` | `#2C2320 → #1A1413` | `#1F2A21 → #141A15` | *not yet published* |
-| `accent-dark` | `#FF7358` | `#45D268` | `#4E9BF5` |
-| **label on `accent`** | `ink` | `ink` | `cream` |
+1. **`accent-deep`** — drop lightness until it hits 4.5:1 on your `field` bottom and your `accent-wash`. This is your pressed fill and your light tint.
+2. **`accent-dark`** — raise lightness from `accent` until it hits 4.5:1 on your `field-dark` top and on `ink-raised`. This is your dark tint.
+3. **`accent-wash`** — the accent at ~6% strength (same construction as the house field at §1). Light field only.
+4. **`field`** — your app's hue at ~6% strength, as a gradient. Match the house field's angle (160deg) and roughly its lightness range.
+5. **`field-dark`** — the hue at a tenth of the light field's strength.
+6. **Neutral ramp (10)** — cast in your app's hue:
+   - Start from your `field` hue, not from house yellow.
+   - `cream` = your field hue slightly more saturated, as a flat surface (chip fill, tag badge fill).
+   - `ink` = your field hue at 95% darkness. Body text on light.
+   - `muted` = midpoint that clears 4.5:1 on your `field` bottom and on your `cream`.
+   - `alert` = danger red shifted toward your hue.
+   - Derive the other five (`cream-dark`, `ink-raised`, `muted-dark`, `alert-light`, both hairlines) by following the same lightness steps as the house.
+7. **Verify contrast** — every pairing in §1.2.1 must clear AA (4.5:1). If it fails, adjust lightness until it passes.
 
-Published values — neutral ramp (app-hue-cast, **not** house neutrals):
-
-|| Token | UnJumble — coral-cast | Meal Planner + UnPickle — green-cast | Riverly — blue-cast |
-||---|---|---|---|
-|| `cream` | `#FFF4F0` | **proposal** | **proposal** |
-|| `cream-dark` | `#F0E6E2` | **proposal** | **proposal** |
-|| `ink` | `#1B1615` | **proposal** | **proposal** |
-|| `ink-raised` | `#241E1C` | **proposal** | **proposal** |
-|| `muted` | `#6E6563` | **proposal** | **proposal** |
-|| `muted-dark` | `#B09A94` | **proposal** | **proposal** |
-|| `alert` | `#C44538` | **proposal** | **proposal** |
-|| `alert-light` | `#E8786A` | **proposal** | **proposal** |
-|| `hairline` light | `rgba(80, 30, 20, .12)` | **proposal** | **proposal** |
-|| `hairline-dark` | `rgba(240, 230, 226, .12)` (`cream-dark` at 12%) | **proposal** | **proposal** |
-
-**UnJumble047s neutral chip (`NeutralChip` / library tag badge)**: `cream` fill + `muted` label. Filter
-chips unselected: app `muted` on glass; selected stays `accent-wash` + `accent-tint`.
-
-**UnJumble contrast figures** (derived with WCAG relative luminance): `muted` `#6E6563` vs `field`
-bottom `#FFEDE6` ≈ 5.0:1, vs `cream` `#FFF4F0` ≈ 5.3:1. `muted-dark` `#B09A94` vs `field-dark`
-top `#2C2320` ≈ 5.8:1.
-
-**Meal Planner + UnPickle and Riverly**: add the same slot names. Publish green/blue-cast neutrals
-that mirror UnJumble047s roles (`cream` = a quiet chip/panel in that hue, not house cream). If you
-cannot honestly derive AA-safe values, mark them **proposal** and leave a TODO rather than copying
-UnJumble coral or house yellow. Do not copy UnJumble hexes into other apps.
-
-**Riverly `field-dark`** was already unpublished — keep it unpublished if still unknown.
+**The label on `accent`**: light accents (coral, green) carry `ink`; dark accents (blue) carry `cream`. Publish which one yours takes and never guess per screen.
 
 All fields are `linear-gradient(160deg, …)` — the same angle as the two house fields.
 
 **In code the two field tokens are `--field-app` and `--field-app-dark`**, not `--field` and
 `--field-dark`. The house pair keeps its names so that voller.uk and any marketing surface inside
 an app repo still resolve correctly; the app pair is what a product view actually paints with.
-
-**UnPickle shares Meal Planner's six exactly.** It already went down the green route, and two apps
-on one palette is cheaper to hold than five. The icons keep them apart, not the colour.
-**Riverly and UnPickle are proposals** — their screens are not drawn, and Riverly's `field-dark` is
-deliberately blank rather than guessed. Derive it the way the other two were (the hue at roughly a
 tenth of the light) and add it here before shipping it.
 
 #### The label follows the fill
@@ -298,29 +278,29 @@ if it is only a description, it does not. Once per row, not once per view — a 
 shows six, and that is the label doing its job.
 
 ```css
-/* UnJumble. Swap these sixteen and the component set is another app. */
+/* Template: the sixteen tokens every app publishes. See each app's repo for actual hex values. */
 :root {
   /* Accent ramp (6) */
-  --accent:       #FF5A3C;
-  --accent-deep:  #B92F14;
-  --accent-wash:  #FFE7E0;
-  --accent-dark:  #FF7358;
-  --field-app:      linear-gradient(160deg, #FFFCFA 0%, #FFEDE6 100%);
-  --field-app-dark: linear-gradient(160deg, #2C2320 0%, #1A1413 100%);
+  --accent:       /* your primary */;
+  --accent-deep:  /* tint on light */;
+  --accent-wash:  /* quiet fills */;
+  --accent-dark:  /* tint on dark */;
+  --field-app:      linear-gradient(160deg, /* top */ 0%, /* bottom */ 100%);
+  --field-app-dark: linear-gradient(160deg, /* top */ 0%, /* bottom */ 100%);
 
-  /* Neutral ramp (10) — coral-cast, NOT house neutrals */
-  --cream:        #FFF4F0;
-  --cream-dark:   #F0E6E2;
-  --ink:          #1B1615;
-  --ink-raised:   #241E1C;
-  --muted:        #6E6563;
-  --muted-dark:   #B09A94;
-  --alert:        #C44538;
-  --alert-light:  #E8786A;
-  --hairline:      rgba(80, 30, 20, .12);
-  --hairline-dark: rgba(240, 230, 226, .12);
+  /* Neutral ramp (10) — cast in your app's hue, NOT house neutrals */
+  --cream:        /* chip fill, tag badge fill */;
+  --cream-dark:   /* text on dark */;
+  --ink:          /* text on light */;
+  --ink-raised:   /* dark cards */;
+  --muted:        /* secondary text, tag badge label */;
+  --muted-dark:   /* secondary on dark */;
+  --alert:        /* destruction on light */;
+  --alert-light:  /* destruction on dark */;
+  --hairline:      rgba(/* your hue */, .12);
+  --hairline-dark: rgba(/* cream-dark */, .12);
 
-  --on-accent: var(--ink);            /* this app's published label. Riverly's is --cream */
+  --on-accent: var(--ink);            /* or var(--cream) for dark accents */
   --accent-tint: var(--accent-deep);  /* flips, exactly as --tint does */
 }
 @media (prefers-color-scheme: dark) {
@@ -346,36 +326,37 @@ owned by the house.
 The accent's reach is therefore: product UI (§4.2), the app's icon (§4.1, §6), and nothing else. It
 still never appears on voller.uk or in the wordmark.
 
-#### 1.2.1 Contrast — accent and neutral pairings
+#### 1.2.1 Contrast — required pairings
 
-Re-derive these if you add an app. Every pairing an accent and its neutrals are allowed to make.
-**Note:** `ink`, `cream`, `muted` etc. are each app's own values, not house neutrals.
+Every pairing an app accent and its neutrals must make. Re-derive these for your app using the house
+yellow table (§1.1) as the worked example. **Minimum: 4.5:1 for AA compliance.** `ink`, `cream`,
+`muted` etc. are each app's own values, not house neutrals.
 
-|| Surface | Content | Coral (UnJumble) | Green (Meal Planner/UnPickle) | Blue (Riverly) |
-||---|---|---|---|---|
-|| **Accent pairings** ||||
-|| `accent` | published label | 5.6 ✓ ink | 7.1 ✓ ink | 5.2 ✓ cream |
-|| `accent` | the other label | 2.7 ✗ cream | 2.1 ✗ cream | 2.9 ✗ ink |
-|| `field` bottom | `accent-deep` | 5.3 ✓ | 6.1 ✓ | 7.0 ✓ |
-|| `accent-wash` | `accent-deep` | 5.1 ✓ | 5.9 ✓ | 6.9 ✓ |
-|| `accent-wash` | `ink` (app) | 14.6 ✓ | **proposal** | **proposal** |
-|| `accent-deep` (pressed fill) | `cream` (app) | 5.3 ✓ | **proposal** | **proposal** |
-|| `accent-deep` (pressed fill) | `ink` (app) | 2.9 ✗ | **proposal** | **proposal** |
-|| `field-dark` top | `accent-dark` | 5.7 ✓ | 7.6 ✓ | — |
-|| `field-dark` bottom | `accent-dark` | 6.8 ✓ | 9.0 ✓ | — |
-|| `ink-raised` (app) | `accent-dark` | 5.9 ✓ | **proposal** | **proposal** |
-|| **Neutral pairings** (app-cast neutrals) ||||
-|| `field` bottom | `muted` (app) | ≈ 5.0 ✓ | **proposal** | **proposal** |
-|| `cream` (app) | `muted` (app) | ≈ 5.3 ✓ | **proposal** | **proposal** |
-|| `field-dark` top | `muted-dark` (app) | ≈ 5.8 ✓ | **proposal** | **proposal** |
-|| `field` bottom | `ink` (app) | 15.4+ ✓ | **proposal** | **proposal** |
-|| `ink-raised` (app) | `cream-dark` (app) | 13.0+ ✓ | **proposal** | **proposal** |
+| Surface | Content | Rule | House yellow (worked example) |
+|---|---|---|---|
+| **Accent pairings** ||||
+| `accent` | published label | Must clear 4.5:1 | 10.8 ✓ `ink` on `yellow` |
+| `accent` | the other label | Never use | 1.4 ✗ `cream` on `yellow` |
+| `field` bottom | `accent-deep` | Must clear 4.5:1 | 5.3 ✓ `yellow-dark` on `#FFF1CE` |
+| `accent-wash` | `accent-deep` | Must clear 4.5:1 | 5.4 ✓ `yellow-dark` on `yellow-wash` |
+| `accent-wash` | `ink` (app) | Must clear 4.5:1 | 15.6 ✓ `ink` on `yellow-wash` |
+| `accent-deep` (pressed fill) | `cream` (app) | Must clear 4.5:1 | 5.3 ✓ `cream` on `yellow-dark` |
+| `accent-deep` (pressed fill) | `ink` (app) | Never use | 2.9 ✗ `ink` on `yellow-dark` |
+| `field-dark` top | `accent-dark` | Must clear 4.5:1 | 8.4 ✓ `yellow` on `#302F2C` |
+| `ink-raised` (app) | `accent-dark` | Must clear 4.5:1 | 9.9 ✓ `yellow` on `ink-raised` |
+| **Neutral pairings** (app-cast) ||||
+| `field` bottom | `muted` (app) | Must clear 4.5:1 | 4.6 ✓ `muted` on `#FFF1CE` |
+| `cream` (app) | `muted` (app) | Must clear 4.5:1 | 5.3 ✓ `muted` on `cream` |
+| `field-dark` top | `muted-dark` (app) | Must clear 4.5:1 | 4.7 ✓ `muted-dark` on `#302F2C` |
+| `field` bottom | `ink` (app) | Must clear 4.5:1 | 15.4 ✓ `ink` on `#FFF1CE` |
+| `ink-raised` (app) | `cream-dark` (app) | Must clear 4.5:1 | 13.0 ✓ `cream-dark` on `ink-raised` |
+| `alert` (app) | white | Must clear 4.5:1 | 5.3 ✓ white on `alert` |
 
 `accent` is a fill only. It is never a tint, never text, and never a glyph on either field — that is
 `accent-deep` on light and `accent-dark` on dark, exactly as `yellow` steps down to `yellow-dark`.
 
-**Meal Planner/UnPickle and Riverly contrast figures are marked proposal** — derive AA-safe values
-in each app's hue before publishing. Do not copy UnJumble's coral hexes into green or blue apps.
+**Derive your own contrast figures** using WCAG relative luminance for your app's hex values. If a
+pairing fails, adjust lightness until it passes. Do not copy house yellow hexes into your app.
 
 ---
 

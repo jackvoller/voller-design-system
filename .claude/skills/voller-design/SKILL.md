@@ -38,26 +38,21 @@ Each app publishes its complete palette in its own hue — sixteen tokens, not s
 2 Sep 2026). The app icons moved onto their own accents on 1 Sep 2026 — four containerless glyphs,
 each on a pale field of its own hue, no shared container and no glass ring (§4.1).
 
-The sixteen, per app — swap them and the same component set becomes another app. **UnJumble's
-coral-cast neutrals are published; Meal Planner/UnPickle (green) and Riverly (blue) are proposals.**
+**The sixteen roles** every app publishes: six accent (`accent`, `accent-deep`, `accent-dark`,
+`accent-wash`, `field`, `field-dark`) + ten neutral (`cream`, `cream-dark`, `ink`, `ink-raised`,
+`muted`, `muted-dark`, `alert`, `alert-light`, `hairline`, `hairline-dark`), all cast in that app's
+hue. See `VOLLER.md` §1.2 "The sixteen roles" and "How to derive a new palette".
 
-| | `accent` | `accent-deep` | `accent-wash` | `accent-dark` | label |
-|---|---|---|---|---|---|
-| UnJumble | `#FF5A3C` | `#B92F14` | `#FFE7E0` | `#FF7358` | `ink` |
-| Meal Planner + UnPickle | `#2BBF4E` | `#116B26` | `#E3F7E8` | `#45D268` | `ink` |
-| Riverly *(proposal)* | `#0B5FD0` | `#0B4E9E` | `#E2EEFC` | `#4E9BF5` | `cream` |
+**For actual hex values**, see each app's repo:
+- UnJumble's coral palette: `jackvoller/unjumble`
+- Meal Planner's green palette: `jackvoller/mealplanner`
+- UnPickle shares Meal Planner's green
+- Riverly's blue palette: `jackvoller/riverly`
 
-
-|| | `cream` | `ink` | `muted` | `alert` | `hairline` |
-||---|---|---|---|---|---|
-|| UnJumble | `#FFF4F0` chip/tag fill | `#1B1615` body on light | `#6E6563` tag label | `#C44538` coral-shifted | `rgba(80, 30, 20, .12)` coral-cast |
-|| Meal Planner + UnPickle | **proposal** — green-cast | **proposal** | **proposal** | **proposal** | **proposal** |
-|| Riverly *(proposal)* | **proposal** — blue-cast | **proposal** | **proposal** | **proposal** | **proposal** |
-
-Plus `cream-dark`, `ink-raised`, `muted-dark`, `alert-light`, `hairline-dark` for each app — see
-full table in `VOLLER.md` §1.2.
-Plus each app's two fields — see §1.2 or `tokens/colors.css`. Riverly's dark field is unpublished
-and its light field has an open AA failure; read §1.2.1 before using it.
+**Usage examples:**
+- Tag badges / `NeutralChip`: app `cream` fill + app `muted` label (NOT house neutrals)
+- Filter chips unselected: app `muted` on glass
+- Selected states: `accent-wash` + `accent-tint`
 
 ## The rules broken most often
 

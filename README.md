@@ -17,7 +17,10 @@ Canonical source of truth for colour, type, spacing, components and app icons ac
 The house palette is **yellow** (`#FFC400`) and is **only for voller.uk** as of 2 Sep 2026. Each
 product app publishes a **complete palette in its own hue** — sixteen tokens (six accent + ten
 neutral), not six. Apps do not inherit house `cream`, `muted`, `ink`, `alert`, or house hairline.
-`VOLLER.md` §1.2 and §4 are the sections to read first.
+
+**`VOLLER.md` is the central spec: rules and roles, not a hex registry.** Each app owns its theme
+file. `VOLLER.md` §1.2 defines the sixteen roles and how to derive them; each app's repo holds the
+actual hex values.
 
 Raw URL for consuming repos:
 

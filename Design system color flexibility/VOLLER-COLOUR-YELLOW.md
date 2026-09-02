@@ -1,5 +1,9 @@
 > **Folded into `VOLLER.md` on 1 Sep 2026 — this file is an archive, not a spec.**
 >
+> **Update 2 Sep 2026:** The house palette is now voller.uk only. Apps publish complete palettes
+> (sixteen tokens: six accent + ten neutral, all hue-cast). Apps may NOT use house neutrals in
+> product UI. See `../VOLLER.md` §1.2 and `../MIGRATION.md` §10.
+>
 > Everything below now lives in `../VOLLER.md`: §1 and §1.1 were replaced outright, and §4.1, §6,
 > §7, §11 and §12 were rewritten around it. The per-repo find/replace moved to `../MIGRATION.md` §9,
 > along with the open items.

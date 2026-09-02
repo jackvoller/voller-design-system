@@ -28,15 +28,18 @@ Colour splits in two (§1.2), and almost every mistake is using the wrong half.
 
 | Building | Colour comes from | Action colour |
 |---|---|---|
-| The Voller mark, wordmark, voller.uk, App Store, marketing | The twelve house values | `yellow` `#FFC400`, once per view |
-| **An app icon** | House neutrals **plus that app's six** | The app's `accent` |
-| Product UI — anything inside UnJumble, Meal Planner, UnPickle, Riverly | House neutrals **plus that app's six** | The app's `accent`, one per role |
+| The Voller mark, wordmark, voller.uk, App Store, marketing | The twelve house values + yellow field + yellow hairline | `yellow` `#FFC400`, once per view |
+| **An app icon** | That app's **sixteen tokens** (six accent + ten neutral, all hue-cast) | The app's `accent` |
+| Product UI — anything inside UnJumble, Meal Planner, UnPickle, Riverly | That app's **sixteen tokens** (six accent + ten neutral, all hue-cast) | The app's `accent`, one per role |
 
 **Yellow never appears in product UI, and never in an app icon. An app's accent never appears in the
-house.** The app icons moved onto their own accents on 1 Sep 2026 — four containerless glyphs, each
-on a pale field of its own hue, no shared container and no glass ring (§4.1).
+house. Apps may NOT use house `cream`, `muted`, `ink`, `alert`, or house hairline in product UI.**
+Each app publishes its complete palette in its own hue — sixteen tokens, not six (policy change
+2 Sep 2026). The app icons moved onto their own accents on 1 Sep 2026 — four containerless glyphs,
+each on a pale field of its own hue, no shared container and no glass ring (§4.1).
 
-The six, per app — swap them and the same component set becomes another app:
+The sixteen, per app — swap them and the same component set becomes another app. **UnJumble's
+coral-cast neutrals are published; Meal Planner/UnPickle (green) and Riverly (blue) are proposals.**
 
 | | `accent` | `accent-deep` | `accent-wash` | `accent-dark` | label |
 |---|---|---|---|---|---|
@@ -44,6 +47,15 @@ The six, per app — swap them and the same component set becomes another app:
 | Meal Planner + UnPickle | `#2BBF4E` | `#116B26` | `#E3F7E8` | `#45D268` | `ink` |
 | Riverly *(proposal)* | `#0B5FD0` | `#0B4E9E` | `#E2EEFC` | `#4E9BF5` | `cream` |
 
+
+|| | `cream` | `ink` | `muted` | `alert` | `hairline` |
+||---|---|---|---|---|---|
+|| UnJumble | `#FFF4F0` chip/tag fill | `#1B1615` body on light | `#6E6563` tag label | `#C44538` coral-shifted | `rgba(80, 30, 20, .12)` coral-cast |
+|| Meal Planner + UnPickle | **proposal** — green-cast | **proposal** | **proposal** | **proposal** | **proposal** |
+|| Riverly *(proposal)* | **proposal** — blue-cast | **proposal** | **proposal** | **proposal** | **proposal** |
+
+Plus `cream-dark`, `ink-raised`, `muted-dark`, `alert-light`, `hairline-dark` for each app — see
+full table in `VOLLER.md` §1.2.
 Plus each app's two fields — see §1.2 or `tokens/colors.css`. Riverly's dark field is unpublished
 and its light field has an open AA failure; read §1.2.1 before using it.
 
@@ -52,8 +64,9 @@ and its light field has an open AA failure; read §1.2.1 before using it.
 - **One accent per role per view.** One primary action, one active tab, one "current" marker.
   Not one accent element — one per role.
 - **Neutral by default.** Counts, tags, dates, durations, avatars, photo slots and speaker names
-  are `ink`, `muted` or white. Colour marks the action, the current thing, and the danger. This is
-  the rule that breaks first — a second hue creeps in for "types of thing".
+  are **the app's** `ink`, `muted` or white — never house neutrals, never the accent. Colour marks
+  the action, the current thing, and the danger. This is the rule that breaks first — a second hue
+  creeps in for "types of thing".
 - **Yellow appears exactly once per view, on voller.uk or in the Voller mark**, on the thing the
   user came to do. Not a warning, not a highlight, not decoration. A header already spends its
   yellow on the wordmark tile. Neither the field nor `yellow-wash` spends the ration. Inside an app
@@ -67,8 +80,9 @@ and its light field has an open AA failure; read §1.2.1 before using it.
   is 2.7:1. The fill and its label are identical in light and dark — no dark variant of a button.
 - **`accent` is a fill only** — never text, never a glyph. That is `accent-deep` on light and
   `accent-dark` on dark, the same step `yellow` makes down to `yellow-dark`.
-- **`--muted` (`#6E6E6B`) is the light field only.** `--muted-dark` is **`#A09892`**.
-  `#8A8A8A` is retired in both fields — it fails AA on light *and* on the dark field's top stop.
+- **`--muted` is the app's own value, not house `#6E6E6B`.** UnJumble's is `#6E6563` (coral-cast).
+  `--muted-dark` flips between fields. House `#8A8A8A` is retired — apps publish their own muted in
+  their own hue.
 - **No webfont.** The platform system sans, 400/500/600. No `<link>` to fonts.googleapis.com.
 - **No drop shadows.** Hierarchy comes from a 1px hairline or a background step. `inset` only.
 

@@ -14,9 +14,10 @@ Canonical source of truth for colour, type, spacing, components and app icons ac
 | `<App>/` | **Superseded** green-and-gold icon sets. Kept until the new ones are promoted — do not copy from these. |
 | `BRAND.md` | Retired stub. Superseded by `VOLLER.md`. |
 
-The house palette is **yellow** (`#FFC400`) as of 1 Sep 2026. Green and gold are retired from the
-house; green lives on as Meal Planner's and UnPickle's app accent. Each app icon is drawn in its own
-accent, not in a house colour. `VOLLER.md` §1 and §4.1 are the sections to read first.
+The house palette is **yellow** (`#FFC400`) and is **only for voller.uk** as of 2 Sep 2026. Each
+product app publishes a **complete palette in its own hue** — sixteen tokens (six accent + ten
+neutral), not six. Apps do not inherit house `cream`, `muted`, `ink`, `alert`, or house hairline.
+`VOLLER.md` §1.2 and §4 are the sections to read first.
 
 Raw URL for consuming repos:
 

@@ -10,8 +10,14 @@ Recommended order across the family: `voller_website` (smallest, becomes the ref
 `unjumble` (one asset unlocks eight call sites) → `mealplanner` (one file) → `riverly` (specced
 separately) → `studio` (largest).
 
-## State — 1 Sep 2026
+## State — 2 Sep 2026
 
+
+**NEW — §10: House palette is voller.uk only; apps publish full palettes.** Each app now publishes
+sixteen tokens (six accent + ten neutral), all cast in that app's hue. Apps may NOT use house
+`cream`, `muted`, `ink`, `alert`, or house hairline in product UI. UnJumble's coral-cast neutrals
+are published; Meal Planner/UnPickle (green) and Riverly (blue) are marked **proposal**. See §10
+below and `VOLLER.md` §1.2.
 | Repo | State | Left |
 |---|---|---|
 | `voller_website` | **done**, on `main` | `--muted-dark` → `#A09892` (§8) |
@@ -563,3 +569,71 @@ Nothing below is a find/replace. Each needs a decision.
    hand-editable, so it must be rebuilt rather than patched.
    (`voller-in-app-colour-reference.dc.html` is current: the yellow change does not reach in-app
    colour, and its one house-colour panel was corrected in place.)
+
+---
+
+## 10. House palette is voller.uk only; apps publish complete palettes — 2 Sep 2026
+
+**Policy change.** The house palette (yellow + twelve neutrals) is now **only for voller.uk** and
+the Voller brand mark. Each product app publishes a **complete palette in its own hue**: sixteen
+tokens (six accent + ten neutral). Apps may NOT use house `yellow`, `cream`, `muted`, `ink`,
+`alert`, or house hairline in product UI.
+
+**Trigger:** UnJumble library tag badges (`NeutralChip`) use house `cream` `#F6F1E3` fill + house
+`muted` `#6E6E6B` label, which reads brown-grey-yellow (wrong hue). UnJumble now publishes
+coral-cast neutrals: `cream` `#FFF4F0` + `muted` `#6E6563`.
+
+### What changed in `VOLLER.md`
+
+- §1.2 "The app accent" → "The app palette" — apps publish sixteen tokens, not six
+- Added "The neutral ramp (ten roles, cast in the app's hue)" subsection
+- Published UnJumble's coral-cast neutral values (ten hexes, see below)
+- Marked Meal Planner/UnPickle (green-cast) and Riverly (blue-cast) neutrals as **proposal**
+- Updated §1.2 "Inherited, never overridden" → "Inherited: geometry and type only" — colour is NOT inherited
+- Updated §8 "The house governs" — house does NOT govern product colour
+- Updated §13 "Adding a fifth app" — publish sixteen, not six
+
+### UnJumble's published neutral ramp (coral-cast)
+
+|| Token | Hex | Use |
+||---|---|---|
+|| `cream` | `#FFF4F0` | **Tag badge fill**, light panels, chip fills |
+|| `cream-dark` | `#F0E6E2` | Body text and surfaces on dark |
+|| `ink` | `#1B1615` | Body text on light, dark base, label on accent fill |
+|| `ink-raised` | `#241E1C` | Dark cards |
+|| `muted` | `#6E6563` | Secondary text, **tag badge label**. Contrast vs `field` bottom `#FFEDE6` ≈ 5.0:1, vs `cream` `#FFF4F0` ≈ 5.3:1 |
+|| `muted-dark` | `#B09A94` | Secondary on dark. vs `field-dark` top `#2C2320` ≈ 5.8:1 |
+|| `alert` | `#C44538` | Destruction on light (coral-shifted vs house `#C4382C`) |
+|| `alert-light` | `#E8786A` | Destruction on dark |
+|| `hairline` light | `rgba(80, 30, 20, .12)` | |
+|| `hairline-dark` | `rgba(240, 230, 226, .12)` | `cream-dark` at 12% |
+
+UnJumble filter chips unselected: app `muted` on glass. Selected stays `accent-wash` + `accent-tint`.
+
+### Per-repo implementation
+
+**Scope:** spec only. Do not edit UnJumble/Meal Planner/studio iOS/web app repos in this pass.
+
+1. **UnJumble's neutral ramp** is published and ready to implement. Add the ten tokens to
+   `Theme/Colors.swift` or the web theme file. Update `NeutralChip` / library tag badges to use
+   `cream` fill + `muted` label.
+2. **Meal Planner + UnPickle** (share one palette): derive green-cast neutrals that mirror
+   UnJumble's roles. `cream` should be a quiet chip/panel in green hue, NOT house cream. If you
+   cannot honestly derive AA-safe values, mark them **proposal** and leave a TODO. Do not copy
+   UnJumble coral hexes.
+3. **Riverly**: derive blue-cast neutrals. Same guidance. Riverly `field-dark` was already
+   unpublished — keep it unpublished if still unknown.
+4. **No icon changes** — this pass does not touch icons or SVG files unless a hex in an SVG is
+   house cream used as product chrome.
+
+### Verification
+
+After updating app theme files:
+
+- [ ] Grep for house `#F6F1E3` in product UI — zero hits except voller.uk
+- [ ] Grep for house `#6E6E6B` / `#A09892` in product UI — zero hits except voller.uk
+- [ ] Grep for house `#1B1B19` in product UI — zero hits except voller.uk
+- [ ] Grep for house `#C4382C` / `#E8705F` in product UI — zero hits except voller.uk
+- [ ] Grep for house hairline `rgba(60, 40, 0, .12)` or `rgba(246, 241, 227, .12)` in product UI — zero hits except voller.uk
+- [ ] Every app defines its own sixteen tokens (six accent + ten neutral)
+- [ ] Tag badges / neutral chips use app `cream` + app `muted`, not house neutrals

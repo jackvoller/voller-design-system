@@ -855,6 +855,30 @@ button, and do not use `accent-wash`, which cannot survive the dark field.
 - **The web has no equivalent, and does not fake one.** No `backdrop-filter` stand-in: voller.uk
   uses the flat surfaces above. This is the one place the two platforms deliberately diverge.
 
+#### System chrome = consistent liquid-glass
+
+Settings / back / Done pills, search fields, and share/filter sheet chrome use **the same**
+liquid-glass treatment: same control size/height/corner radius, **transparent glass** — never solid
+fills. **NO Claude Design coral/red (or other accent) fills on those system-chrome controls.**
+Glass is the material; labels/glyphs still follow the normal token table. Do not invent a special
+filled pill for Done / Settings / back.
+
+#### Modal / filter sheets = tall
+
+Presentation detents for modal and filter sheets are **tall** (most of the screen height). Do
+**not** ship half-height or medium-detent sheets as the default for filters, share, or
+settings-style sheets.
+
+#### Agents must read before building
+
+Agents (Claude + Cursor factory) must read `VOLLER.md` and the app's `DESIGN.md` / `CLAUDE.md` (and
+`AGENTS.md` where present) **before building any UI**.
+
+#### Claude Design conflicts → flag Jack
+
+If Claude Design (or any mock/generated UI) conflicts with these rules or with `VOLLER.md`, **flag
+Jack and do not ship**. Spec wins over generated UI.
+
 ### Embedded platform surfaces are exempt
 
 Where a product embeds a platform's own view — MapKit's place card in Riverly, a Sign in with Apple
@@ -900,6 +924,9 @@ not the frame's contents. This is correct behaviour, not a bug: the whole promis
 - No mark-plus-wordmark in the header. Footer and social card only (§7).
 - No fixed font sizes on iOS for body or UI text.
 - No hex at a call site — tokens only.
+- No solid accent/coral/red fills on system chrome (Settings / back / Done / search / share-filter
+  chrome) — transparent liquid-glass only.
+- No half/medium detent as the default for modal/filter sheets — tall (most of screen) only.
 
 ---
 

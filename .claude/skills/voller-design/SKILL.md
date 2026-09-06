@@ -22,6 +22,19 @@ user-invocable: true
 Every component ships `<Name>.jsx`, `<Name>.d.ts` and `<Name>.prompt.md`. **Read the `.prompt.md`
 before using a component** — several carry rules that are easy to break.
 
+## MUST READ: Locked UI rules (liquid-glass chrome + tall sheets)
+
+**Before building any UI**, read `VOLLER.md` §9 "Liquid Glass (iOS 26+)" for these locked rules:
+
+- **System chrome = consistent liquid-glass.** Settings / back / Done pills, search fields, and
+  share/filter sheet chrome use **the same** liquid-glass treatment: transparent glass — **never
+  solid fills**. **NO Claude Design coral/red (or other accent) fills on those system-chrome
+  controls.** Do not invent a special filled pill for Done / Settings / back.
+- **Modal / filter sheets = tall** (most of the screen height). Do **not** ship half-height or
+  medium-detent sheets as the default for filters, share, or settings-style sheets.
+- **Claude Design conflicts → flag Jack.** If Claude Design (or any mock/generated UI) conflicts
+  with these rules or with `VOLLER.md`, **flag Jack and do not ship**. Spec wins over generated UI.
+
 ## First, which half of the system is this?
 
 Colour splits in two (§1.2), and almost every mistake is using the wrong half.

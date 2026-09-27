@@ -549,6 +549,14 @@ letterforms, hull and field. The repo-root `UnJumble/` folder is therefore **beh
 still holds the pre-yellow green-and-gold mic. Do not delete it and do not copy *from* it; it is
 the promotion's destination, and it is filled when §9.4 closes for the family.
 
+**UnJumble redrawn, 27 Sep 2026 (VOL-258).** The coral microphone was indistinguishable from every
+other voice app's. It is now the waveform-to-text mark — four bars settling into three lines of
+writing, ending in a `#FF7358` dot — so it says both "voice" and "sorted". Same three filenames,
+same `Contents.json`; `app-icons/UnJumble/` and the app still match byte for byte, and the SVG
+masters were replaced with the new artwork. The tinted variant moved from an opaque black square to
+white on transparent (Apple's template shape) — that is deliberate, not a missing background. The
+repo-root `UnJumble/` folder is now two generations behind and still waits on §9.4.
+
 ### 9.4 Open items
 
 Nothing below is a find/replace. Each needs a decision.

@@ -58,7 +58,7 @@ All 1024 × 1024 PNG. Xcode reads PNG only — `.ico` has no role in an appicons
 - **Light / Any** — fully opaque, the app's own pale accent field with the gloss baked in. Also the
   fallback on iOS 17 and earlier.
 - **Dark** — **transparent background, by design.** Apple composites its own backdrop behind it, which is what keeps these consistent with every other app on the home screen. If a tool reports "missing background" or offers to flatten it, decline.
-- **Tinted** — grayscale art on solid black, opaque. The system applies the user's tint to the luminance.
+- **Tinted** — grayscale art; the system applies the user's tint to the luminance. UnJumble's is white on a transparent background (Apple's template shape, 27 Sep 2026); the other three are still on solid black, opaque. Both work — do not add a black square to UnJumble's on export.
 
 ## Editable source
 

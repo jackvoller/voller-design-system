@@ -57,11 +57,8 @@ All 1024 × 1024 PNG. Xcode reads PNG only — `.ico` has no role in an appicons
 
 - **Light / Any** — fully opaque, the app's own pale accent field with the gloss baked in. Also the
   fallback on iOS 17 and earlier.
-  **UnJumble is the exception (5 Oct 2026, VOL-277):** a cream glyph on a coral → red gradient tile
-  (`#FF6A3F` → `#FF4D4D`), stop dot `#FFD2C2`. Those three hexes are icon art only — not tokens, never
-  in app UI. See `VOLLER.md` §6.
 - **Dark** — **transparent background, by design**, for MealPlanner, UnPickle and Riverly. Apple composites its own backdrop behind it, which is what keeps these consistent with every other app on the home screen. If a tool reports "missing background" or offers to flatten it, decline.
-  **UnJumble is the exception here too (5 Oct 2026, VOL-277):** its dark variant is opaque RGB on warm ink `#1B1B19`, because the system's grey gradient dulls coral and warm ink makes it glow. That tile is deliberate — do not knock it out to alpha. See `VOLLER.md` §6.
+  **UnJumble is the exception (5 Oct 2026, VOL-277):** its dark variant is opaque RGB on warm ink `#1B1B19`, because the system's grey gradient dulls coral and warm ink makes it glow. That tile is deliberate — do not knock it out to alpha. See `VOLLER.md` §6.
 - **Tinted** — grayscale art; the system applies the user's tint to the luminance. UnJumble's is white on a transparent background (Apple's template shape, 27 Sep 2026); the other three are still on solid black, opaque. Both work — do not add a black square to UnJumble's on export.
 
 ## Editable source

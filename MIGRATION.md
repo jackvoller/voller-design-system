@@ -557,15 +557,14 @@ masters were replaced with the new artwork. The tinted variant moved from an opa
 white on transparent (Apple's template shape) — that is deliberate, not a missing background. The
 repo-root `UnJumble/` folder is now two generations behind and still waits on §9.4.
 
-**UnJumble on a coral tile, 5 Oct 2026 (VOL-277).** Same waveform-to-text mark, now stroke 60 with
-the glyph at ~66% of the tile, dot r49 at (801, 627). **Light** is a cream glyph on a coral → red
-gradient tile (`#FF6A3F` → `#FF4D4D`) with a `#FFD2C2` stop dot, instead of coral on the pale field.
-**Dark** ships its own opaque ink tile `#1B1B19` instead of a transparent background, because the
-system's grey dulled the coral. Both are recorded UnJumble exceptions to `VOLLER.md` §6, not changes
-to the family rule, and the three tile/dot hexes are icon art only. Tinted stays white on transparent.
-PNGs still match the app byte for byte; the SVG masters were replaced. (A v2 draft, coral at stroke 68
-on the pale field, was superseded before it merged.) The repo-root `UnJumble/` folder is now three
-generations behind.
+**UnJumble redrawn again, 5 Oct 2026 (VOL-277).** Same waveform-to-text mark, now stroke 60 with the
+glyph at ~66% of the tile, dot r49 at (801, 627). **Light** is still coral `#FF5A3C` on the app's own
+field, with an `#FF7358` dot. **Dark** now ships its own opaque ink tile `#1B1B19` instead of a
+transparent background, because the system's grey dulled the coral. That is a recorded UnJumble
+exception to `VOLLER.md` §6, not a change to the family rule. Tinted stays white on transparent. PNGs
+still match the app byte for byte; the SVG masters were replaced. (Two drafts were superseded the same
+day before merging: stroke 68 on the pale field, and a cream glyph on a coral gradient tile.) The
+repo-root `UnJumble/` folder is now three generations behind.
 
 ### 9.4 Open items
 

@@ -626,6 +626,10 @@ alpha. Also the fallback below iOS 18.
 the art on transparency and let the system composite its own backdrop. Adjust the art for contrast
 (`cream` → `cream-dark`) but ship the background as alpha.
 
+**One exception: UnJumble.** Its dark variant is opaque, on warm ink `#1B1B19` (5 Oct 2026). The
+system's grey backdrop dulls coral; ink makes it glow. It is an exception for that app's accent, not
+a second rule — every other app still ships its dark background as alpha.
+
 **Tinted** — grayscale art on solid `#000000`, opaque. The system applies the user's tint to the
 luminance, so map for contrast, not hue.
 

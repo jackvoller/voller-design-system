@@ -57,7 +57,8 @@ All 1024 × 1024 PNG. Xcode reads PNG only — `.ico` has no role in an appicons
 
 - **Light / Any** — fully opaque, the app's own pale accent field with the gloss baked in. Also the
   fallback on iOS 17 and earlier.
-- **Dark** — **transparent background, by design.** Apple composites its own backdrop behind it, which is what keeps these consistent with every other app on the home screen. If a tool reports "missing background" or offers to flatten it, decline.
+- **Dark** — **transparent background, by design**, for MealPlanner, UnPickle and Riverly. Apple composites its own backdrop behind it, which is what keeps these consistent with every other app on the home screen. If a tool reports "missing background" or offers to flatten it, decline.
+  **UnJumble is the exception (5 Oct 2026, VOL-277):** its dark variant is opaque RGB on warm ink `#1B1B19`, because the system's grey gradient dulls coral and warm ink makes it glow. That tile is deliberate — do not knock it out to alpha. See `VOLLER.md` §6.
 - **Tinted** — grayscale art; the system applies the user's tint to the luminance. UnJumble's is white on a transparent background (Apple's template shape, 27 Sep 2026); the other three are still on solid black, opaque. Both work — do not add a black square to UnJumble's on export.
 
 ## Editable source
@@ -67,7 +68,7 @@ All 1024 × 1024 PNG. Xcode reads PNG only — `.ico` has no role in an appicons
 Sketch, Inkscape or a text editor. There is no `.fig` or `.ai` original; the SVG **is** the source.
 
 To change an icon: edit the SVG, then re-export the PNG at 1024 × 1024 with no scaling. Keep the
-dark variant's background transparent on export.
+dark variant's background transparent on export — except UnJumble's, which exports its ink tile.
 
 The full authoring environment (construction grids, size ladders, every direction explored) lives in
 the design project. The session that produced this family is archived in
@@ -75,7 +76,7 @@ the design project. The session that produced this family is archived in
 
 ## Common mistakes
 
-- Flattening the dark variant onto a dark colour. Breaks system consistency; leave the alpha.
+- Flattening the dark variant onto a dark colour. Breaks system consistency; leave the alpha. (UnJumble's ink tile is the one sanctioned exception — it is in the master, not added on export.)
 - Adding an `ios-marketing` 1024 entry *and* a universal one. The `Contents.json` here is the modern single-size form — use it as-is.
 - Leaving the tinted slot filenameless. That's the Xcode "unassigned image" warning; all three are filled here.
 - Renaming files without updating `Contents.json`. Copy both together.

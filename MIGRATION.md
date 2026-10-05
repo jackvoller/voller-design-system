@@ -557,6 +557,13 @@ masters were replaced with the new artwork. The tinted variant moved from an opa
 white on transparent (Apple's template shape) — that is deliberate, not a missing background. The
 repo-root `UnJumble/` folder is now two generations behind and still waits on §9.4.
 
+**UnJumble v2, 5 Oct 2026 (VOL-277).** Same mark, redrawn to read at Home Screen size: stroke 68
+(was 52), glyph at ~72% of the tile, dot r54 at (827, 637). **Dark now ships its own opaque ink tile**,
+`#1B1B19`, instead of a transparent background — the system's grey dulled the coral. That is a
+recorded UnJumble exception to `VOLLER.md` §6, not a change to the family rule. Tinted stays white on
+transparent. PNGs still match the app byte for byte; the SVG masters were replaced. The repo-root
+`UnJumble/` folder is now three generations behind.
+
 ### 9.4 Open items
 
 Nothing below is a find/replace. Each needs a decision.
